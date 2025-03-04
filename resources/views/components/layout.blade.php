@@ -13,7 +13,7 @@
 
 <x-navbar/>
 
-    <div class="min-vh-300">
+    <div class="min-vh-100">
         {{$slot}}
         </div>
 
