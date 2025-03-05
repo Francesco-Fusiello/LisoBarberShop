@@ -1,0 +1,19 @@
+/* Stile di base per il pulsante */
+.btn {
+    background-color: #FFD700; /* Colore oro */
+    color: #000000; /* Testo nero */
+    border: 2px solid #FFD700; /* Bordo oro */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Transizione per un effetto fluido */
+  }
+  
+  /* Effetto hover */
+  .btn:hover {
+    background-color: #ffcc00; /* Un oro più chiaro quando si passa sopra */
+    box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.8); /* Effetto luminoso attorno al pulsante */
+    transform: scale(1.1); /* Aumenta leggermente la dimensione per enfatizzare l'hover */
+  }
+  
