@@ -1,12 +1,14 @@
 <x-layout>
+  <div class="container-fluid p-2">
+
     <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
       <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="\images\1.jpg" class="d-block w-100 h-100" alt="Image1">
-      </div>
-          <div class="carousel-item">
-            <img src="\images\2.jpg"  class="d-block w-100 h-100 " alt="Image1">
-          </div>
+        <div class="carousel-item active">
+          <img src="\images\1.jpg" class="d-block w-100 h-100" alt="Image1">
+        </div>
+        <div class="carousel-item">
+          <img src="\images\2.jpg"  class="d-block w-100 h-100 " alt="Image1">
+        </div>
           <div class="carousel-item">
             <img src="\images\4.jpg"  class="d-block w-100 h-100" alt="Image1">
           </div>
@@ -21,7 +23,8 @@
         </button>
       </div>
     </div>
-
+  </div>
+    
      
 
 
