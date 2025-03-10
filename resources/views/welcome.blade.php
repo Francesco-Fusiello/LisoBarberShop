@@ -1,5 +1,5 @@
 <x-layout>
-  <div class="container-fluid p-2">
+  <div>
 
     <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
       <div class="carousel-inner">
