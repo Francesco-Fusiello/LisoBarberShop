@@ -15,22 +15,49 @@
                 Scopri il nostro listino prezzi e regalati un’esperienza indimenticabile.</em></p>
 
                 <ul class="list-group list-group-flush p-5">
-                    <li class="list-group-item">Taglio da 12€</li>
-                    <li class="list-group-item">Taglio Baby(0-7 anni) da 10€</li>
-                    <li class="list-group-item">Rasatura a 0 da 7€</li>
-                    <li class="list-group-item">Colore da 80€</li>
-                    <li class="list-group-item">Taglio e Shampo da 17€</li>
-                    <li class="list-group-item">Taglio e barba da 19€ </li>
-                    <li class="list-group-item">Barba da 7€</li>
-                    <li class="list-group-item">Barba Relax(barba hipster con vapore e panno caldo) da 14€</li>
-                    <li class="list-group-item">Pulizia Viso da 15€</li>
-                    <li class="list-group-item">Taglio + Shampo + Barba da 24€</li>
-                    <li class="list-group-item">Completo 26€</li>
-                    <li class="list-group-item">Colore barba da 13€</li>
-                    <li class="list-group-item">Meches capelli da 25€</li>
-                    <li class="list-group-item">Taglio e sopracciglia da 16€</li>
-                    <li class="list-group-item"></li>
-                </ul>
+                    <li class="list-group-item">
+                      <span class="service-name">Taglio </span> <span class="price">da 12€</span>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="service-name">Taglio Baby(0-7 anni) da</span> <span class="price">da 10€</span>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="service-name">Rasatura a 0 </span> <span class="price">da 7€</span>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="service-name">Colore </span> <span class="price">da 80€</span>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="service-name">Taglio e Shampo </span> <span class="price">da 17€</span>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="service-name">Taglio e barba </span> <span class="price">da 19€</span>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="service-name">Barba </span> <span class="price">da 7€</span>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="service-name">Barba Relax (barba hipster con vapore e panno caldo) </span> <span class="price">da 14€</span>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="service-name">Pulizia Viso </span> <span class="price">da 15€</span>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="service-name">Taglio + Shampo + Barba </span> <span class="price">da 24€</span>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="service-name">Completo</span> <span class="price">26€</span>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="service-name">Colore barba </span> <span class="price">da 13€</span>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="service-name">Meches capelli </span> <span class="price">da 25€</span>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="service-name">Taglio e sopracciglia </span> <span class="price">da 16€</span>
+                    </li>
+                  </ul>
             </div>
     </div>
 {{--     

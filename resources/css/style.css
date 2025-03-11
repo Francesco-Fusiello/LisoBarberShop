@@ -34,6 +34,23 @@ header img {
   }
 }
 
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem; /* Imposta il font più grande */
+}
+
+.service-name {
+  flex-grow: 1; /* Fa sì che il testo del servizio occupi tutto lo spazio disponibile */
+}
+
+.price {
+  margin-left: 10px;
+  font-size: 1.5rem; /* Imposta il font più grande per il prezzo */
+}
+
+
   .list-group-item {
     border-bottom: 2px solid #FFD700; /* Linea dorata tra gli elementi */
     padding: 10px 15px;
