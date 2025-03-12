@@ -8,7 +8,7 @@
     </header>
   
     <div class="container">
-            <h4 class="d-flex justify-content-center pt-5 fst-italic" style="color: #FFD700"><em>Listino prezzi</em></h4>
+            <h4 class="d-flex justify-content-center pt-5 fst-italic" style="color: #488B49"><em>Listino prezzi</em></h4>
             <h1 class="d-flex justify-content-center fst-italic"><em>Scopri i nostri Servizi</em></h1>
             <p class="text-center fst-italic"><em>Benvenuti da Liso Barber Shop, dove la bellezza incontra l’eccellenza! Il nostro team di professionisti dedicati è qui per offrirti servizi di alta qualità,
                 personalizzati per soddisfare le tue esigenze. 
@@ -56,6 +56,9 @@
                     </li>
                     <li class="list-group-item">
                       <span class="service-name">Taglio e sopracciglia </span> <span class="price">da 16€</span>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="service-name"></span>
                     </li>
                   </ul>
             </div>

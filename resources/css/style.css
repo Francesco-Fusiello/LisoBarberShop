@@ -1,12 +1,12 @@
 /* Effetto al passaggio del mouse (hover) */
 .nav-link:hover {
-  color: #FFD700;  /* Colore giallo per il testo al passaggio del mouse */
+  color: #488B49;  /* Colore giallo per il testo al passaggio del mouse */
   text-decoration: none; /* Rimuove la sottolineatura predefinita di Bootstrap */
 }
 
 /* Effetto per il link attivo */
 .nav-link.active {
-  color: #FFD700 !important;  /* Colore giallo per il testo quando il link è attivo */
+  color: #488B49 !important;  /* Colore giallo per il testo quando il link è attivo */
   font-weight: bold; /* Rende il testo più evidente quando attivo */
 }
 
@@ -52,7 +52,7 @@ header img {
 
 
   .list-group-item {
-    border-bottom: 2px solid #FFD700; /* Linea dorata tra gli elementi */
+    border-bottom: 2px solid #488B49; /* Linea dorata tra gli elementi */
     padding: 10px 15px;
   }
  

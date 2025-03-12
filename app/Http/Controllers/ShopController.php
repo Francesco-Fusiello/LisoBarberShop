@@ -12,7 +12,8 @@ class ShopController extends Controller
      */
     public function index()
     {
-        //
+        $shops = Shop::all();
+        return view('shops.index', compact('shops'));
     }
 
     /**
@@ -20,7 +21,7 @@ class ShopController extends Controller
      */
     public function create()
     {
-        //
+        return view('shops.create');
     }
 
     /**
@@ -28,7 +29,8 @@ class ShopController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Shop::create($request->all());
+        return redirect()->back()->with(['success'=>'Prodotto aggiunto con successo']);
     }
 
     /**
