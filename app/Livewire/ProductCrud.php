@@ -82,4 +82,7 @@ class ProductCrud extends Component
         $product->delete();
         session()->flash('message', 'Prodotto eliminato con successo!');
     }
+
+
+    
 }

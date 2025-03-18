@@ -19,7 +19,7 @@
           <a class="nav-link {{ request()->routeIs('priceList') ? 'active' : '' }}" href="{{ route('priceList') }}">Listino</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('prodotti') ? 'active' : '' }}" href="#">Prodotti</a>
+          <a class="nav-link {{ request()->routeIs('prodotti') ? 'active' : '' }}" href="{{ route('products') }}">Prodotti</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {{ request()->routeIs('chi-siamo') ? 'active' : '' }}" href="#">Chi Siamo</a>
