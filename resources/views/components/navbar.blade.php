@@ -13,13 +13,13 @@
           <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('servizi') ? 'active' : '' }}" href="{{ route('services') }}">Servizi</a>
+          <a class="nav-link {{ request()->routeIs('services') ? 'active' : '' }}" href="{{ route('services') }}">Servizi</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {{ request()->routeIs('priceList') ? 'active' : '' }}" href="{{ route('priceList') }}">Listino</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('prodotti') ? 'active' : '' }}" href="{{ route('products') }}">Prodotti</a>
+          <a class="nav-link {{ request()->routeIs('products') ? 'active' : '' }}" href="{{ route('products') }}">Prodotti</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {{ request()->routeIs('gallery') ? 'active' : '' }}" href="#">Gallery</a>

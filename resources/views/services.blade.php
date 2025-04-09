@@ -1,3 +1,6 @@
 <x-layout>
-    <h1 class="d-flex justify-content-center">I nostri servizi</h1>
+    <header>
+        <img src="\images\2.jpg" alt="services" class="header-img">
+   </header>
+    
 </x-layout>

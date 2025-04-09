@@ -81,7 +81,8 @@ header img {
   background-color: red !important;
 }
 
-
-
-
-
+.header-img {
+  height: 450px;      /* Imposta l'altezza dell'immagine */
+  width: 100%;        /* Imposta la larghezza dell'immagine al 100% del contenitore */
+  object-fit: cover;  /* Mantiene le proporzioni senza distorcere, ritagliando se necessario */
+}
