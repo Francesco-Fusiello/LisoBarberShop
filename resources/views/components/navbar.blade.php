@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-white">
+<nav class="navbar navbar-expand-lg bg-white sticky">
   <div class="container-fluid btn">
     <a class="navbar-brand" href="{{ route('home') }}">
       <img src="/images/3.jpg" style="width:120px;" alt="Logo sito">
@@ -13,13 +13,16 @@
           <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('servizi') ? 'active' : '' }}" href="#">Servizi</a>
+          <a class="nav-link {{ request()->routeIs('servizi') ? 'active' : '' }}" href="{{ route('service') }}">Servizi</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {{ request()->routeIs('priceList') ? 'active' : '' }}" href="{{ route('priceList') }}">Listino</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {{ request()->routeIs('prodotti') ? 'active' : '' }}" href="{{ route('products') }}">Prodotti</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ request()->routeIs('gallery') ? 'active' : '' }}" href="#">Gallery</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {{ request()->routeIs('chi-siamo') ? 'active' : '' }}" href="#">Chi Siamo</a>

@@ -69,4 +69,19 @@ header img {
     object-fit: cover;
 }
 
+.navbar {
+  position: sticky;
+  top: 0; 
+  z-index: 1000; 
+}
+
+.debug-btn {
+  position: relative !important;
+  z-index: 1000 !important;
+  background-color: red !important;
+}
+
+
+
+
 

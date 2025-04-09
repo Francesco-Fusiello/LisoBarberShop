@@ -15,6 +15,10 @@ class PageController extends Controller
         return view('priceList');
     }
 
+    public function service(){
+        return view('service');
+    }
+
     public function products()
     {
         // Recupera tutti i prodotti
