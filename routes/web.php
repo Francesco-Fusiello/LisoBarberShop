@@ -13,7 +13,7 @@ Route::get('/listino', [PageController::class, 'priceList'])->name('priceList');
 
 Route::get('/prodotti',[PageController::class, 'products'])->name('products');
 
-Route::get('/servizi', [PageController::class, 'service'])->name('service');
+Route::get('/servizi', [PageController::class, 'services'])->name('services');
 
 Route::get('/product-crud', ProductCrud::class);
 

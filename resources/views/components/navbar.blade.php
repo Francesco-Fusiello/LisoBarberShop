@@ -13,7 +13,7 @@
           <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('servizi') ? 'active' : '' }}" href="{{ route('service') }}">Servizi</a>
+          <a class="nav-link {{ request()->routeIs('servizi') ? 'active' : '' }}" href="{{ route('services') }}">Servizi</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {{ request()->routeIs('priceList') ? 'active' : '' }}" href="{{ route('priceList') }}">Listino</a>
