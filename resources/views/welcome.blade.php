@@ -86,7 +86,7 @@
 
 <div>
   <h1 class=" d-flex justify-content-center pt-5">
-    DEDICATO ALL’UOMO
+    <b>DEDICATO ALL’UOMO</b>
   </h1>
   <h3 class="d-flex justify-content-center pt-3">INNOVAZIONE, INTERPRETAZIONE E RICERCA</h3>
   <div class="container pt-5">
@@ -96,6 +96,25 @@
     <p class="pt-3">
       Sono disponibili inoltre numerosi trattamenti studiati per <b>rinvigorire e nutrire</b> la chioma o <b>per contrastare il fenomeno della perdita dei capelli.</b> Gli esperti di <b>Liso Barber Shop</b> sono a completa disposizione per individuare insieme al cliente la soluzione ideale per <b>ritrovare capelli forti e sani in breve tempo.</b> 
     </p>
+
+    <h3 class="d-flex justify-content-center pt-3">Scarica la nostra app per pronotare subito il tuo appuntamento...</h3>
+
+    
+    <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+      <!-- Badge App Store -->
+      <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank">
+          <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=250x83" 
+               alt="Scarica su App Store" 
+               style="height: 60px; max-width: 100%;">
+      </a>
+      
+      <!-- Badge Google Play -->
+      <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank">
+          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png" 
+               alt="Disponibile su Google Play" 
+               style="height: 78px; max-width: 100%;">
+      </a>
+  </div>
   </div>
 </div>
 
