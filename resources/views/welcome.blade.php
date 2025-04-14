@@ -90,12 +90,12 @@
   </h1>
   <h3 class="d-flex justify-content-center pt-3">INNOVAZIONE, INTERPRETAZIONE E RICERCA</h3>
   <div class="container pt-5">
-    <p>
+    <h5>
       <b>Per la bellezza e la cura dei capelli degli uomini</b> gli esperti di <strong>Liso Barber Shop propongono nel salone di Andria in viale Pietro Nenni, 324</strong> numerosi <b>tagli classici e moderni maschili</b>, personalizzabili e di tendenza, ideali per sottolineare il fascino naturale di ciascun cliente. I parrucchieri del salone faranno attenzione alle diverse richieste, cercando di interpretare al meglio e con rapidità i desideri di ciascuno.
-    </p>
-    <p class="pt-3">
+    </h5>
+    <h5 class="pt-3">
       Sono disponibili inoltre numerosi trattamenti studiati per <b>rinvigorire e nutrire</b> la chioma o <b>per contrastare il fenomeno della perdita dei capelli.</b> Gli esperti di <b>Liso Barber Shop</b> sono a completa disposizione per individuare insieme al cliente la soluzione ideale per <b>ritrovare capelli forti e sani in breve tempo.</b> 
-    </p>
+    </h5>
 
     <h3 class="d-flex justify-content-center pt-3">Scarica la nostra app per pronotare subito il tuo appuntamento...</h3>
 
