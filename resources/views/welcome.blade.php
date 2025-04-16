@@ -24,10 +24,6 @@
     </div>
   </div>
 
-  {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
-    Registrazione
-  </button>
-   --}}
   <!-- Login Modal -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -42,15 +38,9 @@
           </div>
       @endif
         <div class="modal-body">
-            <form method="POST" action="/register">
+          <form method="POST" action="{{ route('login') }}">
                 @csrf
-                <div class="mb-3">
-                    <label for="text" class="form-label">Nome</label>
-                    <input type="text" class="form-control" name="name" value="{{old('name')}}" required>
-                    @error('name')
-                    <span>{{$message}}</span>
-                    @enderror  
-                </div>
+                
                 <div class="mb-3">
                     <label for="email" class="form-label">Email address</label>
                     <input type="email" class="form-control" name="email" value="{{old('email')}}" required>
@@ -65,16 +55,8 @@
                     <span>{{$message}}</span>
                     @enderror
                 </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password Confirmation</label>
-                    <input type="password" class="form-control" name="password_confirmation" required>
-                </div>
-                <div class="form-group">
-                    <label for="is_admin">Amministratore</label>
-                    <input type="checkbox" name="is_admin" value="1"> Seleziona se amministratore
-                </div>
                
-                <button type="submit" class="btn btn-primary">Registrati</button>
+                <button type="submit" class="btn btn-primary">Accedi</button>
             </form>
         </div>
         <div class="modal-footer">

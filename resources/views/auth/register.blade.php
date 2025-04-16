@@ -1,7 +1,4 @@
 <x-layout>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
-        Registrazione
-</button>
 
 <!-- Login Modal -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -39,12 +36,8 @@
                         <label for="password" class="form-label">Password Confirmation</label>
                         <input type="password" class="form-control" name="password_confirmation" required>
                     </div>
-                    <div class="form-group">
-                        <label for="is_admin"> Amministratore</label>
-                        <input type="checkbox" name="is_admin" value="1"> Seleziona se amministratore
-                    </div>
-                   
-                    <button type="submit" class="btn btn-primary">Registrati</button>
+                    
+                    <button type="submit" class="btn btn-primary">Accedi</button>
                 </form>
             </div>
             <div class="modal-footer">

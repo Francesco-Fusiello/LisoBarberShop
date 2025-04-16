@@ -53,8 +53,11 @@
         @endif
         <p>{{ Auth::check() ? 'Utente autenticato' : 'Utente non autenticato' }}</p>
     </div> --}}
+    <header>
+        <img src="\images\11.jpg" alt="services" class="header-img py-5">
+   </header>
 
-<div class="container">
+<div class="container pt-5">
     <div class="row">
         @foreach($products as $product) 
             <div class="col-md-4 mb-4">
