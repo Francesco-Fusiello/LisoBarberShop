@@ -100,6 +100,11 @@
   </div>
 </div>
 
+<div id="counter" style="font-size: 48px; margin-top: 600px; text-align: center; color: #488B49;">
+  <p style="margin: 0; font-size: 20px;">Clienti Soddisfatti</p>
+  <span>+<span id="counter-number">0</span></span>
+</div>
+
  
 
 
