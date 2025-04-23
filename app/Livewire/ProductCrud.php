@@ -5,23 +5,24 @@ namespace App\Livewire;
 use Livewire\Component;
 use App\Models\Product;
 use Livewire\Attributes\Validate;
-use Livewire\WithFileUploads; // Per il caricamento file
+use Livewire\WithFileUploads; 
 use Illuminate\Support\Facades\Storage;
 
 class ProductCrud extends Component
 {
-    use WithFileUploads; // Permette di gestire il caricamento di file
+    use WithFileUploads; 
    
+    public $search = '';
     public $name, $description, $price, $image, $productId;
     public $products;
 
     // Definizione delle regole di validazione
     protected $rules = [
-        'name' => 'required|string|max:50', // Nome obbligatorio, massimo 50 caratteri
-        'description' => 'required|string|max:300', // Descrizione obbligatoria, massimo 300 caratteri
-        'price' => 'required|numeric|min:0', // Prezzo obbligatorio e numerico, minimo 0
-        'image' => 'image|max:1024', // Immagine obbligatoria, massimo 1MB
-        'productId' => 'required|integer', // ID prodotto obbligatorio, intero
+        'name' => 'required|string|max:50', 
+        'description' => 'required|string|max:300', 
+        'price' => 'required|numeric|min:0', 
+        'image' => 'image|max:1024', 
+        'productId' => 'required|integer', 
     ];
     
     
@@ -34,10 +35,9 @@ class ProductCrud extends Component
             'image' => 'required|image|max:1024', 
         ]);
         
-        // Salva l'immagine
-        // $imagePath = $this->image->store('images', 'public'); 
+       
         if ($this->image) {
-            // Salva l'immagine nella cartella 'images' e ottieni il percorso
+           
             $imagePath = $this->image->store('images', 'public');
         } else {
             session()->flash('error', 'L\'immagine è obbligatoria');
@@ -58,15 +58,14 @@ class ProductCrud extends Component
         session()->flash('message', 'Prodotto creato con successo!');
        
         
-        // Reset dei campi
+        
         $this->reset();
         
     }
-
     public function render()
     {
-        $this->products = Product::all();
-       
+        $this->products = Product::where('name', 'like', '%' . $this->search . '%')->get();
+    
         return view('livewire.product-crud')->layout('components.layout');
     }
 
