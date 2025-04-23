@@ -57,16 +57,19 @@
         <img src="\images\11.jpg" alt="services" class="header-img py-5">
    </header>
 
-<div class="container pt-5">
+   <div class="container pt-5">
     <div class="row">
-        @foreach($products as $product) 
+        @foreach($products as $product)
             <div class="col-md-4 mb-4">
-                <div class="card shadow rounded" style="width: 100%; height: 100%; transition: transform 0.3s ease;">
-                    <img src="{{ Storage::url($product->image_path) }}" class="card-img-top" alt="{{ $product->name }}" style="height: 200px; object-fit: cover;">
+                <div class="card shadow-lg rounded border-0" style="width: 100%; height: 100%; transition: transform 0.3s ease;">
+                    <img src="{{ Storage::url($product->image_path) }}" class="card-img-top" alt="{{ $product->name }}" style="height: 300px; object-fit: cover; border-radius: 10px;">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $product->name }}</h5>
-                        <p class="card-text">{{ Str::limit($product->description, 100) }}</p> 
-                        <p class="card-text"><strong>Prezzo:</strong> €{{ number_format($product->price, 2) }}</p>
+                        <h5 class="card-title font-weight-bold text-dark">{{ $product->name }}</h5>
+                        <p class="card-text text-muted">{{ Str::limit($product->description, 100) }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="card-text text-dark"><strong>€{{ number_format($product->price, 2) }}</strong></p>
+                            <a href="#" class="btn btn-dark btn-sm" style="border-radius: 50px;">Acquista</a>
+                        </div>
                     </div>
                 </div>
             </div>
