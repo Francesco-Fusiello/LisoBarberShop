@@ -25,6 +25,9 @@ class PageController extends Controller
         return view('user.products', compact('products'));
     }
 
-    
+    public function showProduct(Product $product)
+    {
+        return view('user.products.show', compact('product'));
+    }
 
 }
