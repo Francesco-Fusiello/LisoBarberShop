@@ -14,7 +14,7 @@
                                 <p class="card-text text-muted">{{ Str::limit($product->description, 100) }}</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <p class="card-text text-dark"><strong>€{{ number_format($product->price, 2) }}</strong></p>
-                                    <a href="#" class="btn btn-dark btn-sm" style="border-radius: 50px;">Acquista</a>
+                                    <a href="#" class="btn btn-dark btn-sm" style="border-radius: 50px;">Visualizza</a>
                                 </div>
                             </div>
                         </div>
