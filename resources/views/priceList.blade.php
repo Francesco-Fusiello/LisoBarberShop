@@ -64,7 +64,14 @@
             </div>
     </div>
 
-    <h2 class="d-flex justify-content-center pt-3 fst-italic">Che Aspetti!!! Scarica la nostra app per pronotare subito il tuo appuntamento...</h2>
+    <div class="container pt-5">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10">
+          <h2 class="pt-3 fst-italic">Che Aspetti!!!</h2>
+          <h2 class="fst-italic">Scarica la nostra app per prenotare subito il tuo appuntamento...</h2>
+        </div>
+      </div>
+    </div>
 
     <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
       <!-- Badge App Store -->
