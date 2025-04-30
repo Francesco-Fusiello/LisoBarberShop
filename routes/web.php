@@ -17,10 +17,8 @@ Route::get('/servizi', [PageController::class, 'services'])->name('services');
 
 Route::get('/product-crud', ProductCrud::class);
 
-// Route::middleware(['guest'])->group(function () {
-//     Route::get('admin/login', [AuthenticatedSessionController::class, 'create'])
-//         ->name('admin.login');
-// });
+Route::get('/products/{product}', [PageController::class, 'showProduct'])->name('products.show');
+
 
 
 

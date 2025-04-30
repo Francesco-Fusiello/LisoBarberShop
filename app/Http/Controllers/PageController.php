@@ -21,9 +21,10 @@ class PageController extends Controller
 
     public function products()
     {
-       
         $products = Product::paginate(6);
         return view('user.products', compact('products'));
     }
+
+    
 
 }
