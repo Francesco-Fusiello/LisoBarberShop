@@ -63,9 +63,25 @@
                   </ul>
             </div>
     </div>
-{{--     
-    <div class=" container col-12 lg-col-12 d-flex justify-content-center"> --}}
-    </div>
+
+    <h2 class="d-flex justify-content-center pt-3 fst-italic">Che Aspetti!!! Scarica la nostra app per pronotare subito il tuo appuntamento...</h2>
+
+    <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+      <!-- Badge App Store -->
+      <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank">
+          <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=250x83" 
+               alt="Scarica su App Store" 
+               style="height: 60px; max-width: 100%;">
+      </a>
+      
+      <!-- Badge Google Play -->
+      <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank">
+          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png" 
+               alt="Disponibile su Google Play" 
+               style="height: 78px; max-width: 100%;">
+      </a>
+  </div>
+
 
 
 
