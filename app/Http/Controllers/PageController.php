@@ -21,10 +21,8 @@ class PageController extends Controller
 
     public function products()
     {
-        // Recupera tutti i prodotti
-        $products = Product::all();
-
-        // Passa i prodotti alla vista
+       
+        $products = Product::paginate(6);
         return view('user.products', compact('products'));
     }
 

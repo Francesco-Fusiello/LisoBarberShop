@@ -23,7 +23,12 @@
             </div>
         </div>
     </div>
-    
+
+<div class="container pt-5">
+    <div class="pagination-custom">
+        {{ $products->links() }}
+    </div>    
+</div>
     
 </x-layout>
 

@@ -55,6 +55,7 @@ header img {
     border-bottom: 2px solid #488B49; /* Linea dorata tra gli elementi */
     padding: 10px 15px;
   }
+
   /* Card */
   .card {
     transition: transform 0.3s ease-in-out;
@@ -94,3 +95,39 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
 }
+
+/* Paginate Custom */
+.pagination-custom {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    font-size: 0.85rem; /* Più piccolo il testo */
+}
+
+.pagination-custom .page-link {
+    color: #000;
+    padding: 6px 14px; /* Riduci spazio interno */
+    font-size: 0.85rem; /* Riduci la dimensione del font */
+    border-radius: 50px;
+    background-color: #f8f9fa;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.pagination-custom .page-link:hover {
+    transform: scale(1.05);
+    background-color: #212529;
+    color: #fff;
+}
+
+.pagination-custom .page-item.active .page-link {
+    background-color: #212529;
+    color: #fff;
+}
+
+.pagination-custom .page-item.disabled .page-link {
+    background-color: #f8f9fa;
+    color: #ccc;
+}
+
