@@ -22,12 +22,13 @@ class PageController extends Controller
     public function products()
     {
         $products = Product::paginate(6);
-        return view('user.products', compact('products'));
+        return view('user.products.products', compact('products'));
     }
 
     public function showProduct(Product $product)
     {
-        return view('user.products.show', compact('product'));
+        $otherProducts = Product::where('id', '!=', $product->id)->take(3)->get();
+        return view('user.products.show', compact('product', 'otherProducts'));
     }
 
 }
