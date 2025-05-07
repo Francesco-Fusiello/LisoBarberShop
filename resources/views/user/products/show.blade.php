@@ -9,7 +9,6 @@
                 <h2 class="fw-bold text-center mt-5">{{ $product->name }}</h2>
                 <p class="text-muted mt-3 text-center">{{ $product->description }}</p>
                 <h4 class="text-dark mt-4 text-center">€{{ number_format($product->price, 2) }}</h4>
-                <button class="btn btn-dark mt-4 px-4 py-2 rounded-pill text-center">Aggiungi al carrello</button>
             </div>
         </div>
 
