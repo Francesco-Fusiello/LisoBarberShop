@@ -3,88 +3,46 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\GalleryImage;
 use Livewire\WithFileUploads;
-use App\Models\Gallery;
 use Illuminate\Support\Facades\Storage;
 
 class GalleryManager extends Component
 {
     use WithFileUploads;
 
-    public $images = [];
     public $image;
-    public $selectedImageIndex = null;
 
-    
-    public function upload()
+    public function create()
     {
-        // // Validazione dell'immagine
-        // $this->validate([
-        //     'image' => 'image|max:2048', // Limite di dimensione dell'immagine
-        // ]);
-        dd('Metodo upload chiamato!');
+        $this->validate([
+            'image' => 'required|image|max:2048',
+        ]);
 
-        // Salvataggio dell'immagine nella cartella gallery
         $path = $this->image->store('gallery', 'public');
 
-        // Aggiunta dell'immagine al database
-        Gallery::create([
+        GalleryImage::create([
             'image_path' => 'storage/' . $path,
         ]);
 
-        // Messaggio di successo
-        session()->flash('message', 'Immagine caricata con successo!');
-
-        // Reset del campo immagine
         $this->reset('image');
+        session()->flash('message', 'Immagine caricata con successo!');
     }
 
-    // Metodo per eliminare un'immagine
     public function delete($id)
     {
-        $img = Gallery::find($id);
+        $img = GalleryImage::find($id);
         if ($img) {
-            // Elimina il file dalla cartella public
             Storage::disk('public')->delete(str_replace('storage/', '', $img->image_path));
             $img->delete();
         }
     }
 
-    // Metodo per aprire il lightbox
-    public function openLightbox($index)
-    {
-        $this->selectedImageIndex = $index;
-    }
-
-    // Metodo per chiudere il lightbox
-    public function closeLightbox()
-    {
-        $this->selectedImageIndex = null;
-    }
-
-    // Metodo per la navigazione tra le immagini nel lightbox
-    public function prev()
-    {
-        if ($this->selectedImageIndex > 0) {
-            $this->selectedImageIndex--;
-        }
-    }
-
-    public function next()
-    {
-        if ($this->selectedImageIndex < $this->images->count() - 1) {
-            $this->selectedImageIndex++;
-        }
-    }
-
-    // Recupera tutte le immagini
-    public function getImagesProperty()
-    {
-        return Gallery::latest()->get();
-    }
-
     public function render()
     {
-        return view('livewire.gallery-manager')->layout('components.layout');
+        return view('livewire.gallery-manager', [
+            'images' => GalleryImage::latest()->get(),
+        ])->layout('components.layout');
     }
 }
+
