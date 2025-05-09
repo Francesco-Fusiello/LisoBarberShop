@@ -22,6 +22,8 @@ Route::get('/products/{product}', [PageController::class, 'showProduct'])->name(
 
 Route::get('/gallery', GalleryManager::class);
 
+Route::get('/user/gallery', [PageController::class, 'showGallery'])->name('user.gallery');
+
 
 
 
