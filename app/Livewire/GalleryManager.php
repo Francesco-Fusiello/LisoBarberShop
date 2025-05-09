@@ -40,7 +40,7 @@ class GalleryManager extends Component
 
     public function render()
     {
-        return view('livewire.gallery-manager', [
+        return view('livewire.gallery', [
             'images' => GalleryImage::latest()->get(),
         ])->layout('components.layout');
     }
