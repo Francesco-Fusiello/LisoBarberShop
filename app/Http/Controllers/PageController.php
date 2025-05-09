@@ -31,4 +31,10 @@ class PageController extends Controller
         return view('user.products.show', compact('product', 'otherProducts'));
     }
 
+    public function showGallery()
+    {        
+        $galleryImages = GalleryImage::all();
+        return view('user.gallery', compact('galleryImages'));
+    }
+
 }

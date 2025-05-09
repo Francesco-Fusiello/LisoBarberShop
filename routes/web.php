@@ -20,7 +20,9 @@ Route::get('/product-crud', ProductCrud::class);
 
 Route::get('/products/{product}', [PageController::class, 'showProduct'])->name('products.show');
 
-Route::get('/gallery', GalleryManager::class)->name('gallery');;
+Route::get('/gallery', GalleryManager::class);
+
+
 
 
 
