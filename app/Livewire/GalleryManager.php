@@ -21,8 +21,8 @@ class GalleryManager extends Component
 
         $path = $this->image->store('gallery', 'public');
 
-        GalleryImage::create([
-            'image_path' => 'storage/' . $path,
+         GalleryImage::create([
+        'image_path' => 'storage/' . $path,
         ]);
 
         $this->reset('image');
@@ -40,7 +40,7 @@ class GalleryManager extends Component
 
     public function render()
     {
-        return view('livewire.gallery', [
+        return view('livewire.gallery-manager', [
             'images' => GalleryImage::latest()->get(),
         ])->layout('components.layout');
     }

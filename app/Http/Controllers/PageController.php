@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\GalleryImage;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -33,8 +34,8 @@ class PageController extends Controller
 
     public function showGallery()
     {        
-        $galleryImages = GalleryImage::all();
-        return view('user.gallery', compact('galleryImages'));
+        $images = GalleryImage::all();
+        return view('user.gallery', compact('images'));
     }
 
 }

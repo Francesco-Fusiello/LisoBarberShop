@@ -4,10 +4,10 @@
             @foreach($images as $image)
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                     <img 
-                        src="{{ asset('storage/' . $image->image_path) }}" 
+                        src="{{ asset($image->image_path) }}" 
                         class="img-fluid rounded shadow-sm cursor-pointer" 
                         style="cursor: pointer;" 
-                        data-image="{{ asset('storage/' . $image->image_path) }}" 
+                        data-image="{{ asset($image->image_path) }}" 
                         data-bs-toggle="modal" 
                         data-bs-target="#imageModal"
                     >
