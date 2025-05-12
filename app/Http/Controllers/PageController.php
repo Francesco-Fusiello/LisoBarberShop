@@ -22,7 +22,7 @@ class PageController extends Controller
 
     public function products()
     {
-        $products = Product::paginate(6);
+        $products = Product::paginate(9);
         return view('user.products.products', compact('products'));
     }
 
@@ -38,4 +38,7 @@ class PageController extends Controller
         return view('user.gallery', compact('images'));
     }
 
+    public function chiSiamo(){
+    return view('chiSiamo');
+}
 }

@@ -24,6 +24,8 @@ Route::get('/gallery-manager', GalleryManager::class);
 
 Route::get('/user/gallery', [PageController::class, 'showGallery'])->name('user.gallery');
 
+Route::get('/chi/siamo', [PageController::class, 'chiSiamo'])->name('chiSiamo');
+
 
 
 

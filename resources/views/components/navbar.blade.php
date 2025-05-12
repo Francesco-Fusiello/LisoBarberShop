@@ -27,7 +27,7 @@
           <a class="nav-link {{ request()->routeIs('gallery') ? 'active' : '' }}" href="{{  route('user.gallery') }}">Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('chi-siamo') ? 'active' : '' }}" href="#">Chi Siamo</a>
+          <a class="nav-link {{ request()->routeIs('chi-siamo') ? 'active' : '' }}" href="{{  route('chiSiamo') }}">Chi Siamo</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {{ request()->routeIs('contatti') ? 'active' : '' }}" href="#">Contatti</a>
