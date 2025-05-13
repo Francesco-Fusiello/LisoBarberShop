@@ -26,7 +26,7 @@ Route::get('/user/gallery', [PageController::class, 'showGallery'])->name('user.
 
 Route::get('/chi/siamo', [PageController::class, 'chiSiamo'])->name('chiSiamo');
 
-Route::get('contatti',[PageController::class, 'contatti'])->name('contatti');
+Route::get('/contatti',[PageController::class, 'contatti'])->name('contatti');
 
 
 

@@ -40,5 +40,9 @@ class PageController extends Controller
 
     public function chiSiamo(){
     return view('chiSiamo');
-}
+    }
+
+    public function contatti(){
+    return view('contatti');
+    }
 }
