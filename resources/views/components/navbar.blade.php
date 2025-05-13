@@ -30,7 +30,7 @@
           <a class="nav-link {{ request()->routeIs('chiSiamo') ? 'active' : '' }}" href="{{  route('chiSiamo') }}">Chi Siamo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('contatti') ? 'active' : '' }}" href="#">Contatti</a>
+          <a class="nav-link {{ request()->routeIs('contatti') ? 'active' : '' }}" href="{{  route('contatti') }}">Contatti</a>
         </li> 
       </ul>
     </div>
