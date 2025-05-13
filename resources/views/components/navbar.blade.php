@@ -24,10 +24,10 @@
           <a class="nav-link {{ request()->routeIs('products') ? 'active' : '' }}" href="{{ route('products') }}">Prodotti</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('gallery') ? 'active' : '' }}" href="{{  route('user.gallery') }}">Gallery</a>
+          <a class="nav-link {{ request()->routeIs('user.gallery') ? 'active' : '' }}" href="{{  route('user.gallery') }}">Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('chi-siamo') ? 'active' : '' }}" href="{{  route('chiSiamo') }}">Chi Siamo</a>
+          <a class="nav-link {{ request()->routeIs('chiSiamo') ? 'active' : '' }}" href="{{  route('chiSiamo') }}">Chi Siamo</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {{ request()->routeIs('contatti') ? 'active' : '' }}" href="#">Contatti</a>
