@@ -32,29 +32,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // per gallery
 
-document.addEventListener('DOMContentLoaded', function () {
-    const imageElements = Array.from(document.querySelectorAll('[data-image]'));
-    const modalImage = document.getElementById('modalImage');
-    const prevBtn = document.getElementById('prevImage');
-    const nextBtn = document.getElementById('nextImage');
-    let currentIndex = 0;
+ document.addEventListener("DOMContentLoaded", function () {
+            const images = Array.from(document.querySelectorAll('[data-image]'));
+            let currentIndex = 0;
+            const modalImage = document.getElementById('modalImage');
 
-    const images = imageElements.map(el => el.dataset.image);
+            images.forEach((img, index) => {
+                img.addEventListener('click', () => {
+                    currentIndex = index;
+                    modalImage.src = img.dataset.image;
+                });
+            });
 
-    imageElements.forEach((el, index) => {
-        el.addEventListener('click', function () {
-            currentIndex = index;
-            modalImage.src = images[currentIndex];
+            document.getElementById('prevImage').addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                modalImage.src = images[currentIndex].dataset.image;
+            });
+
+            document.getElementById('nextImage').addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                modalImage.src = images[currentIndex].dataset.image;
+            });
         });
-    });
-
-    prevBtn.addEventListener('click', function () {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        modalImage.src = images[currentIndex];
-    });
-
-    nextBtn.addEventListener('click', function () {
-        currentIndex = (currentIndex + 1) % images.length;
-        modalImage.src = images[currentIndex];
-    });
-});
