@@ -1,6 +1,6 @@
 <x-layout>
   <div>
-    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false">
+    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false" data-bs-interval="3000">>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="\images\1.jpg" class="d-block w-100 h-100" alt="Image1">

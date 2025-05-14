@@ -79,7 +79,7 @@
                         <img src="/images/3.jpg" class="img-fluid" alt="Giuseppe" style="object-fit: cover; transition: transform 0.5s;">
                     </div>
                     <div class="mt-4">
-                        <h3 style="color: #d4af37; letter-spacing: 1px;">Giuseppe</h3>
+                        <h3 style="color: #d4af37; letter-spacing: 1px;">Giuseppe Zingaro</h3>
                         <p class="text-muted" style="letter-spacing: 1px;">Collaboratore</p>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                         <img src="/images/3.jpg" class="img-fluid" alt="Anthony Elia" style="object-fit: cover; transition: transform 0.5s;">
                     </div>
                     <div class="mt-4">
-                        <h3 style="color: #d4af37; letter-spacing: 1px;">Anthony Elia</h3>
+                        <h3 style="color: #d4af37; letter-spacing: 1px;">Salvatore Lomuscio</h3>
                         <p class="text-muted" style="letter-spacing: 1px;">Collaboratore</p>
                     </div>
                 </div>

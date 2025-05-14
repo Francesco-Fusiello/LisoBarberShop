@@ -9,8 +9,7 @@
                         style="cursor: pointer;" 
                         data-image="{{ asset($image->image_path) }}" 
                         data-bs-toggle="modal" 
-                        data-bs-target="#imageModal"
-                    >
+                        data-bs-target="#imageModal">
                 </div>
             @endforeach
         </div>
