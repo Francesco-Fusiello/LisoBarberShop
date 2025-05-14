@@ -2,6 +2,7 @@
 
 use App\Livewire\ProductCrud;
 use Laravel\Fortify\Features;
+use App\Livewire\AdminDashboard;
 use App\Livewire\GalleryManager;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
@@ -27,6 +28,10 @@ Route::get('/user/gallery', [PageController::class, 'showGallery'])->name('user.
 Route::get('/chi/siamo', [PageController::class, 'chiSiamo'])->name('chiSiamo');
 
 Route::get('/contatti',[PageController::class, 'contatti'])->name('contatti');
+
+Route::get('/admin-dashboard', AdminDashboard::class)->middleware('auth');
+
+
 
 
 
