@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-white sticky">
   <div class="container-fluid">
 
-    {{-- Logo sempre cliccabile per aprire il modale --}}
+    
     <button type="button" data-bs-toggle="modal" data-bs-target="#loginModal" style="border: none; outline: none; background: none;">
       <img src="/images/3.jpg" style="width:120px;" alt="Logo sito">
     </button>
@@ -35,7 +35,7 @@
           <a class="nav-link {{ request()->routeIs('contatti') ? 'active' : '' }}" href="{{ route('contatti') }}">Contatti</a>
         </li>
 
-        {{-- Se loggato, mostra dropdown con nome utente --}}
+       
         @auth
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-uppercase" href="#" id="userDropdown" role="button"
@@ -58,7 +58,6 @@
   </div>
 </nav>
 
-{{-- Modale di login sempre incluso --}}
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
