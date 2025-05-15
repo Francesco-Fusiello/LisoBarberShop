@@ -6,6 +6,7 @@ use App\Livewire\AdminDashboard;
 use App\Livewire\GalleryManager;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 
 
@@ -30,6 +31,8 @@ Route::get('/chi/siamo', [PageController::class, 'chiSiamo'])->name('chiSiamo');
 Route::get('/contatti',[PageController::class, 'contatti'])->name('contatti');
 
 Route::get('/admin-dashboard', AdminDashboard::class)->middleware('auth');
+
+Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
 
 
 
