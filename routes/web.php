@@ -30,7 +30,7 @@ Route::get('/chi/siamo', [PageController::class, 'chiSiamo'])->name('chiSiamo');
 
 Route::get('/contatti',[PageController::class, 'contatti'])->name('contatti');
 
-Route::get('/admin-dashboard', AdminDashboard::class)->middleware('custom.auth');
+Route::get('/admin-dashboard', AdminDashboard::class)->middleware('custom.auth')->name('admin.dashboard');
 
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
 
