@@ -1,20 +1,22 @@
 <div class="container py-5">
-    <div class="text-center mb-4">
-        <h1 class="mb-3">Pannello di Amministrazione</h1>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="text-center w-100">
+            <h1 class="mb-3">Pannello di Amministrazione</h1>
 
-        @php
-            $section = request('section', 'prodotti');
-        @endphp
+            @php
+                $section = request('section', 'prodotti');
+            @endphp
 
-        <div class="btn-group" role="group">
-            <a href="{{ route('admin.dashboard', ['section' => 'prodotti']) }}"
-               class="btn btn-outline-primary {{ $section === 'prodotti' ? 'active' : '' }}">
-                Gestione Prodotti
-            </a>
-            <a href="{{ route('admin.dashboard', ['section' => 'galleria']) }}"
-               class="btn btn-outline-secondary {{ $section === 'galleria' ? 'active' : '' }}">
-                Gestione Galleria
-            </a>
+            <div class="btn-group" role="group">
+                <a href="{{ route('admin.dashboard', ['section' => 'prodotti']) }}"
+                   class="btn btn-outline-primary {{ $section === 'prodotti' ? 'active' : '' }}">
+                    Gestione Prodotti
+                </a>
+                <a href="{{ route('admin.dashboard', ['section' => 'galleria']) }}"
+                   class="btn btn-outline-secondary {{ $section === 'galleria' ? 'active' : '' }}">
+                    Gestione Galleria
+                </a>
+            </div>
         </div>
     </div>
 
