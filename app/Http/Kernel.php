@@ -4,7 +4,12 @@ namespace App\Http;
 
 
 
+use Illuminate\Http\Middleware\HandleCors;
+use Illuminate\Http\Middleware\TrustHosts;
+use App\Http\Middleware\CustomAuthenticate;
+use Illuminate\Http\Middleware\TrustProxies;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance;
 
 class Kernel extends HttpKernel
 {
