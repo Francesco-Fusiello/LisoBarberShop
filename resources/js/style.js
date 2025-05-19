@@ -54,3 +54,4 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalImage.src = images[currentIndex].dataset.image;
             });
         });
+        
