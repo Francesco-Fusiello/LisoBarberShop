@@ -60,6 +60,7 @@ class ProductCrud extends Component
         $this->description = $product->description;
         $this->price = $product->price;
         $this->image = null; 
+        $this->dispatch('scrollToForm');
     }
 
     public function update()

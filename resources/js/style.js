@@ -54,4 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalImage.src = images[currentIndex].dataset.image;
             });
         });
-        
+// Modifica prodotto 
+document.addEventListener('DOMContentLoaded', function () {
+    window.Livewire.on('scrollToForm', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
