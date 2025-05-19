@@ -59,7 +59,7 @@ class ProductCrud extends Component
         $this->name = $product->name;
         $this->description = $product->description;
         $this->price = $product->price;
-        $this->image = null; // Non si modifica
+        $this->image = null; 
     }
 
     public function update()
