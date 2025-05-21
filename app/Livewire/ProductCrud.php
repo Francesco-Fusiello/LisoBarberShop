@@ -6,10 +6,11 @@ use Livewire\Component;
 use App\Models\Product;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Storage;
+use Livewire\WithPagination;
 
 class ProductCrud extends Component
 {
-    use WithFileUploads;
+    use WithFileUploads, WithPagination;
 
     public $name, $description, $price, $image;
     public $editingProductId = null;
@@ -115,7 +116,7 @@ public function deleteProduct()
     public function render()
     {
         return view('livewire.product-crud', [
-            'products' => Product::all()
+            'products' => Product::latest()->paginate(3)
         ])->layout('components.layout');
     }
 }

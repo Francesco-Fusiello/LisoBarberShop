@@ -109,4 +109,10 @@
             </div>
         </div>
     </div>
+<div class="container pt-5">
+    <div class="pagination-custom">
+        {{ $products->links('pagination::bootstrap-5') }}
+    </div>    
+</div>
+
 </div>
