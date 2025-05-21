@@ -1,7 +1,6 @@
 <x-layout>
-    <div class="p-6 max-w-6xl mx-auto">
-
-       
+    <h2 class="text-center mb-5 display-4">I Nostri Prodotti</h2>
+    <div class="p-6 max-w-6xl mx-auto">      
         <div class="container pt-5">
             <div class="row">
                 @foreach($products as $product)

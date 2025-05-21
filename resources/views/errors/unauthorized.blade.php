@@ -12,7 +12,7 @@
                     </h1>
                 </div>
                 <div class="modal-body">
-                    <p class="lead">Questa sezione è accessibile solo agli utenti autenticati.</p>
+                    <p class="lead">Questa sezione è accessibile solo agli Amministratori.</p>
                 </div>
                 <div class="modal-footer border-0 justify-content-center">
                     <a href="{{ url('/') }}" class="btn btn-danger px-4">Torna alla Home</a>

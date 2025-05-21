@@ -32,7 +32,7 @@ class ProductCrud extends Component
                 'name' => 'required|string|max:255',
                 'description' => 'required|string',
                 'price' => 'required|numeric|min:0',
-                'image' => 'required|image|max:1024',
+                'image' => 'required|image|max:2048',
             ];
         }
     }
