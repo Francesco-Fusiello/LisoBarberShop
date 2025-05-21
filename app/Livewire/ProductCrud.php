@@ -13,18 +13,20 @@ class ProductCrud extends Component
 
     public $name, $description, $price, $image;
     public $editingProductId = null;
+    public $selectedProductId;
+    public $showDeleteModal = false;
 
     protected function rules()
     {
         if ($this->editingProductId) {
-            // Modifica: niente validazione immagine
+            
             return [
                 'name' => 'required|string|max:255',
                 'description' => 'required|string',
                 'price' => 'required|numeric|min:0',
             ];
         } else {
-            // Creazione: immagine richiesta
+            
             return [
                 'name' => 'required|string|max:255',
                 'description' => 'required|string',
@@ -51,7 +53,7 @@ class ProductCrud extends Component
         $this->resetForm();
     }
 
-    public function edit($id)
+    public function editProduct($id)
     {
         $product = Product::findOrFail($id);
 
@@ -84,24 +86,32 @@ class ProductCrud extends Component
         $this->reset(['name', 'description', 'price', 'image', 'editingProductId']);
     }
 
-    public function deleteProduct($id)
-    {
-        $product = Product::find($id);
+   public function confirmDelete($id)
+{
+    $this->selectedProductId = $id;
+    $this->showDeleteModal = true;
+}
 
-        if (!$product) {
-            session()->flash('error', 'Prodotto non trovato.');
-            return;
-        }
+public function deleteProduct()
+{
+    $product = Product::find($this->selectedProductId);
 
-        if (Storage::exists('public/' . $product->image_path)) {
-            Storage::delete('public/' . $product->image_path);
-        }
-
-        $product->delete();
-
-        session()->flash('message', 'Prodotto eliminato con successo!');
+    if (!$product) {
+        session()->flash('error', 'Prodotto non trovato.');
+        return;
     }
 
+    if (Storage::exists('public/' . $product->image_path)) {
+        Storage::delete('public/' . $product->image_path);
+    }
+
+    $product->delete();
+
+    $this->showDeleteModal = false;
+    $this->selectedProductId = null;
+
+    session()->flash('message', 'Prodotto eliminato con successo!');
+}
     public function render()
     {
         return view('livewire.product-crud', [
