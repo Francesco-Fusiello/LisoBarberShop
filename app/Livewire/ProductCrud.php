@@ -113,10 +113,10 @@ public function deleteProduct()
 
     session()->flash('message', 'Prodotto eliminato con successo!');
 }
-    public function render()
-    {
-        return view('livewire.product-crud', [
-            'products' => Product::latest()->paginate(3)
-        ])->layout('components.layout');
-    }
+  public function render()
+{
+    return view('livewire.product-crud', [
+        'products' => Product::latest()->paginate(6)
+    ]);
+}
 }
