@@ -1,9 +1,13 @@
 <div class="container mt-4">
     
 
-    @if (session()->has('message'))
-        <div class="alert alert-success">{{ session('message') }}</div>
-    @endif
+   @if (session()->has('message'))
+    <div class="toast-elegant">
+        <span class="toast-icon">✅</span>
+        <div>{{ session('message') }}</div>
+        <button type="button" class="btn-close" wire:click="$set('showSuccess', false)">&times;</button>
+    </div>
+@endif
 
     <form wire:submit.prevent="create" class="mb-4">
         <div class="mb-3">
