@@ -19,22 +19,18 @@ class ProductCrud extends Component
 
     protected function rules()
     {
-        if ($this->editingProductId) {
-            
-            return [
+        return $this->editingProductId
+            ? [
                 'name' => 'required|string|max:255',
                 'description' => 'required|string',
                 'price' => 'required|numeric|min:0',
-            ];
-        } else {
-            
-            return [
+            ]
+            : [
                 'name' => 'required|string|max:255',
                 'description' => 'required|string',
                 'price' => 'required|numeric|min:0',
                 'image' => 'required|image|max:2048',
             ];
-        }
     }
 
     public function store()
@@ -62,7 +58,8 @@ class ProductCrud extends Component
         $this->name = $product->name;
         $this->description = $product->description;
         $this->price = $product->price;
-        $this->image = null; 
+        $this->image = null;
+
         $this->dispatch('scrollToForm');
     }
 
@@ -87,36 +84,37 @@ class ProductCrud extends Component
         $this->reset(['name', 'description', 'price', 'image', 'editingProductId']);
     }
 
-   public function confirmDelete($id)
-{
-    $this->selectedProductId = $id;
-    $this->showDeleteModal = true;
-}
-
-public function deleteProduct()
-{
-    $product = Product::find($this->selectedProductId);
-
-    if (!$product) {
-        session()->flash('error', 'Prodotto non trovato.');
-        return;
+    public function confirmDelete($id)
+    {
+        $this->selectedProductId = $id;
+        $this->showDeleteModal = true;
     }
 
-    if (Storage::exists('public/' . $product->image_path)) {
-        Storage::delete('public/' . $product->image_path);
+    public function deleteProduct()
+    {
+        $product = Product::find($this->selectedProductId);
+
+        if (!$product) {
+            session()->flash('error', 'Prodotto non trovato.');
+            return;
+        }
+
+        if (Storage::exists('public/' . $product->image_path)) {
+            Storage::delete('public/' . $product->image_path);
+        }
+
+        $product->delete();
+
+        $this->showDeleteModal = false;
+        $this->selectedProductId = null;
+
+        session()->flash('message', 'Prodotto eliminato con successo!');
     }
 
-    $product->delete();
-
-    $this->showDeleteModal = false;
-    $this->selectedProductId = null;
-
-    session()->flash('message', 'Prodotto eliminato con successo!');
-}
-  public function render()
-{
-    return view('livewire.product-crud', [
-        'products' => Product::latest()->paginate(6)
-    ]);
-}
+    public function render()
+    {
+        return view('livewire.product-crud', [
+            'products' => Product::latest()->paginate(6)
+        ]);
+    }
 }

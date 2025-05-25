@@ -63,3 +63,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+//Messaggi di conferma
+document.addEventListener('DOMContentLoaded', function () {
+    const successToastEl = document.getElementById('successToast');
+    if (successToastEl) {
+        const toast = new bootstrap.Toast(successToastEl);
+        toast.show();
+    }
+});
