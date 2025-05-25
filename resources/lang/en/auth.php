@@ -1,6 +1,7 @@
 <?php
 
 return [
- 'failed' => 'Email o password errati. Riprova.'
+ 'failed' => 'Email o password errati. Riprova.',
+ 
 
 ];
