@@ -42,7 +42,7 @@ class GalleryManager extends Component
     {
         return view('livewire.gallery-manager', [
             'images' => GalleryImage::latest()->get(),
-        ])->layout('components.layout');
+        ]);
     }
 }
 
