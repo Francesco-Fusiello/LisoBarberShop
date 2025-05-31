@@ -73,7 +73,11 @@
         @endforeach
     </div>
 
-    {{ $products->links() }}
+      <div class="container pt-5">
+            <div class="pagination-custom">
+                {{ $products->links() }}
+            </div>    
+        </div>
 
    
     <div class="modal fade @if ($showDeleteModal) show d-block @endif" tabindex="-1" style="@if ($showDeleteModal) display: block; background-color: rgba(0,0,0,0.5); @endif">

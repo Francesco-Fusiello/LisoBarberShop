@@ -1,93 +1,91 @@
-/* Effetto al passaggio del mouse (hover) */
-.nav-link:hover {
-  color: #488B49;  /* Colore giallo per il testo al passaggio del mouse */
-  text-decoration: none; /* Rimuove la sottolineatura predefinita di Bootstrap */
-}
-
-/* Effetto per il link attivo */
-.nav-link.active {
-  color: #488B49 !important;  /* Colore giallo per il testo quando il link è attivo */
-  font-weight: bold; /* Rende il testo più evidente quando attivo */
-}
-
-/* Stile di base per i link */
+/* Navbar Links */
 .nav-link {
-  color: black;  /* Colore di testo di default (nero) */
+  color: black; /* Colore di testo di default */
 }
 
-/* Imposta una larghezza massima per il logo Pricelist */
-header img {
-  /* width: 120px;  /* Imposta una larghezza fissa per desktop */
-  /* height: auto;  Mantiene le proporzioni dell'immagine */
-} 
+.nav-link:hover {
+  color: #488B49; /* Colore verde al passaggio del mouse */
+  text-decoration: none; /* Rimuove la sottolineatura predefinita */
+}
 
-/* Media Query per dispositivi mobili e schermi più piccoli */
+.nav-link.active {
+  color: #488B49 !important; /* Colore verde per il link attivo */
+  font-weight: bold; /* Maggiore evidenza */
+}
+
+/* Logo Header */
+header img {
+  /* desktop: lasciare dinamico per ora */
+  height: auto;
+}
+
 @media (max-width: 768px) {
   header img {
-      width: 120px;  /* Riduci la larghezza su schermi piccoli (ad esempio, 80px su mobile) */
+    width: 120px;
   }
 }
 
 @media (max-width: 480px) {
   header img {
-      width: 300px;  /* Riduci ulteriormente su schermi molto piccoli */
+    width: 100px;
   }
 }
 
+/* Lista Servizi */
 .list-group-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5rem; /* Imposta il font più grande */
+  font-size: 1.5rem;
+  border-bottom: 2px solid #488B49;
+  padding: 10px 15px;
 }
 
 .service-name {
-  flex-grow: 1; /* Fa sì che il testo del servizio occupi tutto lo spazio disponibile */
+  flex-grow: 1;
 }
 
 .price {
   margin-left: 10px;
-  font-size: 1.5rem; /* Imposta il font più grande per il prezzo */
+  font-size: 1.5rem;
 }
 
-
-  .list-group-item {
-    border-bottom: 2px solid #488B49; /* Linea dorata tra gli elementi */
-    padding: 10px 15px;
-  }
-
-  /* Card */
-  .card {
-    transition: transform 0.3s ease-in-out;
+/* Card Generiche */
+.card {
+  transition: transform 0.3s ease-in-out;
 }
 
 .card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .card-img-top {
-    height: 200px;
-    object-fit: cover;
+  height: 200px;
+  object-fit: cover;
 }
 
+/* Navbar Fissa */
 .navbar {
   position: sticky;
-  top: 0; 
-  z-index: 1000; 
+  top: 0;
+  z-index: 1000;
 }
 
+/* Pulsante Debug */
 .debug-btn {
   position: relative !important;
   z-index: 1000 !important;
   background-color: red !important;
 }
 
+/* Immagine Header */
 .header-img {
-  height: 450px;      
-  width: 100%;        
-  object-fit: cover;  
+  height: 450px;
+  width: 100%;
+  object-fit: cover;
 }
 
+/* Font */
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -96,216 +94,197 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
 }
 
-/* Paginate Custom */
+/* Paginazione Personalizzata */
 .pagination-custom {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 30px;
-    font-size: 0.85rem; /* Più piccolo il testo */
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  font-size: 0.85rem;
 }
 
 .pagination-custom .page-link {
-    color: #000;
-    padding: 6px 14px; /* Riduci spazio interno */
-    font-size: 0.85rem; /* Riduci la dimensione del font */
-    border-radius: 50px;
-    background-color: #f8f9fa;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    border: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+  color: #000;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  border-radius: 50px;
+  background-color: #f8f9fa;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .pagination-custom .page-link:hover {
-    transform: scale(1.05);
-    background-color: #212529;
-    color: #fff;
+  transform: scale(1.05);
+  background-color: #212529;
+  color: #fff;
 }
 
 .pagination-custom .page-item.active .page-link {
-    background-color: #212529;
-    color: #fff;
+  background-color: #212529;
+  color: #fff;
 }
 
 .pagination-custom .page-item.disabled .page-link {
-    background-color: #f8f9fa;
-    color: #ccc;
+  background-color: #f8f9fa;
+  color: #ccc;
 }
 
-/* Chi Siamo */
+/* Sezione "Chi Siamo" */
 .containerCard {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5rem; /* Ridotto il gap tra le card per renderle più compatte */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .containerCard .box {
-    position: relative;
-    width: 15rem;
-    height: 15rem;
-    margin: 0.5rem; /* Ridotto il margine tra le card */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px; /* Aggiunto per arrotondare gli angoli delle card */
-    overflow: hidden;
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .imgBoxCard {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
 }
 
 .imgBoxCard img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .contentCard {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.85); /* Leggera trasparenza */
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    text-align: center;
-    transition: 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  transition: 0.5s ease-in-out;
 }
 
 .contentCard h2 {
-    display: block;
-    font-size: 1.2rem;
-    color: #111;
-    font-weight: 600;
-    line-height: 1.5rem;
+  font-size: 1.2rem;
+  color: #111;
+  font-weight: 600;
+  line-height: 1.5rem;
 }
 
 .contentCard span {
-    color: #413e3e;
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+  color: #413e3e;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-/* Hover Effects */
+/* Hover Chi Siamo */
 .containerCard .box:hover .imgBoxCard {
-    transform: scale(1.05); /* Ingrandimento più lieve */
+  transform: scale(1.05);
 }
 
 .containerCard .box:hover .contentCard {
-    transform: translateY(10px); /* Spostamento meno pronunciato per un effetto più morbido */
+  transform: translateY(10px);
 }
 
-/* Media Queries */
+/* Responsive Cards */
 @media (max-width: 600px) {
-    .containerCard .box {
-        width: 13rem;
-        height: 13rem;
-    }
+  .containerCard .box {
+    width: 13rem;
+    height: 13rem;
+  }
 
-    .containerCard .box:hover .contentCard {
-        transform: translateY(10px);
-    }
+  .containerCard .box:hover .contentCard {
+    transform: translateY(10px);
+  }
 
-    .containerCard .box:hover .imgBoxCard {
-        transform: scale(1.03);
-    }
+  .containerCard .box:hover .imgBoxCard {
+    transform: scale(1.03);
+  }
 
-    .card:hover {
-        transform: scale(1.03);
-    }
+  .card:hover {
+    transform: scale(1.03);
+  }
 
-    .grayscale-img {
-        filter: grayscale(100%);
-    }
+  .grayscale-img {
+    filter: grayscale(100%);
+  }
 
-    .grayscale-img:hover {
-        filter: grayscale(0%);
-        transform: scale(1.05);
-    }
+  .grayscale-img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
 }
 
-/* Custom Toast Styles */
+/* Toast Personalizzato */
 .toast-elegant {
-    position: fixed;
-    top: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1055;
-    min-width: 300px;
-    max-width: 90%;
-    padding: 1rem 1.5rem;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    border-radius: 1rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    color: #1a1a1a;
-    animation: toastSlideDown 0.6s ease-out, toastFadeOut 0.4s ease-in 4s forwards;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1055;
+  min-width: 300px;
+  max-width: 90%;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  color: #1a1a1a;
+  animation: toastSlideDown 0.6s ease-out, toastFadeOut 0.4s ease-in 4s forwards;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Icona a sinistra */
 .toast-elegant .toast-icon {
-    margin-right: 0.75rem;
-    font-size: 1.2rem;
-    color: #198754;
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+  color: #198754;
 }
 
-/* Pulsante chiudi */
 .toast-elegant .btn-close {
-    background: none;
-    border: none;
-    font-size: 1rem;
-    color: #555;
-    margin-left: 1rem;
-    opacity: 0.8;
-}
-.toast-elegant .btn-close:hover {
-    opacity: 1;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #000;
 }
 
-/* Animazioni */
+/* Animazioni Toast */
 @keyframes toastSlideDown {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -50%);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(-50%, 0);
-    }
+  0% {
+    transform: translateX(-50%) translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes toastFadeOut {
-    to {
-        opacity: 0;
-        transform: translate(-50%, -50%);
-        visibility: hidden;
-    }
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
 }
-
-
-
-
-
-
-
-    
-
-
