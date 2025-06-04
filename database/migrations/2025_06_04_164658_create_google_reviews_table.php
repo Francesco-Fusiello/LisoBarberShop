@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('google_reviews', function (Blueprint $table) {
             $table->id();
+            $table->string('author_name');
+            $table->string('profile_photo_url')->nullable();
+            $table->unsignedTinyInteger('rating');
+            $table->text('text')->nullable();
+            $table->timestamp('review_time')->nullable();
             $table->timestamps();
         });
     }
