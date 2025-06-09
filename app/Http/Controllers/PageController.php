@@ -2,21 +2,31 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\Review;
 use App\Models\Product;
 use App\Models\GalleryImage;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function home(){
-        return view('welcome');
+    public function home()
+    {
+        $latestReviews = Review::where('is_approved', true)
+            ->latest()
+            ->take(6)
+            ->get();
+
+        return view('welcome', compact('latestReviews'));
     }
 
-    public function priceList(){
+    public function priceList()
+    {
         return view('priceList');
     }
 
-    public function services(){
+    public function services()
+    {
         return view('services');
     }
 
@@ -33,16 +43,18 @@ class PageController extends Controller
     }
 
     public function showGallery()
-    {        
+    {
         $images = GalleryImage::all();
         return view('user.gallery', compact('images'));
     }
 
-    public function chiSiamo(){
-    return view('chiSiamo');
+    public function chiSiamo()
+    {
+        return view('chiSiamo');
     }
 
-    public function contatti(){
-    return view('contatti');
+    public function contatti()
+    {
+        return view('contatti');
     }
 }

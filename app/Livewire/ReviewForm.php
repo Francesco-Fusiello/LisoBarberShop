@@ -32,6 +32,7 @@ class ReviewForm extends Component
 
     public function render()
     {
-        return view('livewire.review-form');
+        return view('livewire.review-form')->layout('components.layout');
+;
     }
 }

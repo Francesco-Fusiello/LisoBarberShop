@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\ReviewForm;
+use App\Livewire\ReviewList;
 use App\Livewire\ProductCrud;
 use Laravel\Fortify\Features;
 use App\Livewire\AdminDashboard;
@@ -33,6 +35,10 @@ Route::get('/contatti',[PageController::class, 'contatti'])->name('contatti');
 Route::get('/admin-dashboard', AdminDashboard::class)->middleware('custom.auth')->name('admin.dashboard');
 
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
+
+Route::get('/recensioni/nuova', ReviewForm::class)->name('recensioni.form');
+
+Route::get('/recensioni', ReviewList::class)->name('recensioni.index');
 
 
 
