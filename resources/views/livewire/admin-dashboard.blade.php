@@ -9,15 +9,15 @@
 
             <div class="btn-group" role="group">
                 <a href="{{ route('admin.dashboard', ['section' => 'prodotti']) }}"
-                    class="btn btn-outline-primary {{ $section === 'prodotti' ? 'active' : '' }}">
+                   class="btn btn-outline-primary {{ $section === 'prodotti' ? 'active' : '' }}">
                     Gestione Prodotti
                 </a>
                 <a href="{{ route('admin.dashboard', ['section' => 'galleria']) }}"
-                    class="btn btn-outline-secondary {{ $section === 'galleria' ? 'active' : '' }}">
+                   class="btn btn-outline-secondary {{ $section === 'galleria' ? 'active' : '' }}">
                     Gestione Galleria
                 </a>
                 <a href="{{ route('admin.dashboard', ['section' => 'recensioni']) }}"
-                    class="btn btn-outline-success {{ $section === 'recensioni' ? 'active' : '' }}">
+                   class="btn btn-outline-warning {{ $section === 'recensioni' ? 'active' : '' }}">
                     Gestione Recensioni
                 </a>
             </div>
@@ -26,9 +26,12 @@
 
     <hr class="my-4">
 
-    @if ($section === 'galleria')
+    @if($section === 'galleria')
         <h2 class="mb-3">Gestione Galleria Immagini</h2>
         <livewire:gallery-manager />
+    @elseif($section === 'recensioni')
+        <h2 class="mb-3">Gestione Recensioni</h2>
+        <livewire:admin.review-manager />
     @else
         <h2 class="mb-3">Gestione Prodotti</h2>
         <livewire:product-crud />
