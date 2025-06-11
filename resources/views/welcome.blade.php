@@ -92,9 +92,9 @@
                 @foreach ($latestReviews as $index => $review)
                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                         <div class="card mx-auto shadow-sm p-4" style="max-width: 600px; border-left: 5px solid #198754;">
-                            <h5 class="card-title text-dark mb-2">
+                            <h5 class="card-title text-dark mb-1">
                                 {{ $review->name }}
-                                <small class="text-warning float-end">
+                                <small class="text-warning float-end" style="font-size: 1.2rem;">
                                     @for ($i = 0; $i < $review->rating; $i++)
                                         ★
                                     @endfor
@@ -103,6 +103,9 @@
                                     @endfor
                                 </small>
                             </h5>
+                            <small class="text-muted fst-italic d-block mb-2" style="font-size: 0.85rem;">
+                                {{ $review->created_at->format('d M Y') }}
+                            </small>
                             <p class="card-text text-muted fst-italic">"{{ $review->content }}"</p>
                         </div>
                     </div>
