@@ -17,7 +17,9 @@ class PageController extends Controller
             ->take(6)
             ->get();
 
-        return view('welcome', compact('latestReviews'));
+        $products = Product::latest()->take(9)->get();
+
+        return view('welcome', compact('latestReviews', 'products'));
     }
 
     public function priceList()

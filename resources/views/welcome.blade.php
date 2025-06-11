@@ -81,38 +81,45 @@
   <span>+<span id="counter-number">0</span></span>
 </div>
 
+{{-- Recensioni --}}
+
 <div class="container my-5">
-    <h2 class="text-center mb-4">Cosa dicono di noi</h2>
+    <h2 class="text-center mb-4 text-success">Cosa dicono di noi</h2>
 
     @if ($latestReviews->count())
         <div id="carouselRecensioni" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 @foreach ($latestReviews as $index => $review)
                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                        <div class="card p-4 shadow-sm">
-                            <h5 class="card-title">{{ $review->name }}</h5>
-                            <p class="card-text">"{{ $review->content }}"</p>
-                            <p class="text-warning">
-                                @for ($i = 0; $i < $review->rating; $i++)
-                                    ★
-                                @endfor
-                                @for ($i = $review->rating; $i < 5; $i++)
-                                    ☆
-                                @endfor
-                            </p>
+                        <div class="card mx-auto shadow-sm p-4" style="max-width: 600px; border-left: 5px solid #198754;">
+                            <h5 class="card-title text-dark mb-2">
+                                {{ $review->name }}
+                                <small class="text-warning float-end">
+                                    @for ($i = 0; $i < $review->rating; $i++)
+                                        ★
+                                    @endfor
+                                    @for ($i = $review->rating; $i < 5; $i++)
+                                        ☆
+                                    @endfor
+                                </small>
+                            </h5>
+                            <p class="card-text text-muted fst-italic">"{{ $review->content }}"</p>
                         </div>
                     </div>
                 @endforeach
             </div>
+
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselRecensioni" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+                <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                <span class="visually-hidden">Precedente</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselRecensioni" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
+                <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                <span class="visually-hidden">Successivo</span>
             </button>
         </div>
     @else
-        <p class="text-center">Ancora nessuna recensione.</p>
+        <p class="text-center text-muted">Ancora nessuna recensione.</p>
     @endif
 
     <div class="text-center mt-4">
@@ -120,6 +127,11 @@
         <a href="{{ route('recensioni.index') }}" class="btn btn-outline-dark">Mostra Tutte</a>
     </div>
 </div>
+
+{{-- Carousel Prodotti --}}
+
+
+
 
 
     
