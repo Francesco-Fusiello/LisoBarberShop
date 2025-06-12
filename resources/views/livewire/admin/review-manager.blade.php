@@ -1,6 +1,4 @@
 <div>
-   
-
     @if (session()->has('message'))
         <div class="alert alert-info">
             {{ session('message') }}
@@ -12,10 +10,10 @@
             Tutte
         </button>
         <button wire:click="setFilter('approved')" class="btn btn-outline-success btn-sm {{ $filter === 'approved' ? 'active' : '' }}">
-            Approvate
+            Pubblicate
         </button>
         <button wire:click="setFilter('unapproved')" class="btn btn-outline-warning btn-sm {{ $filter === 'unapproved' ? 'active' : '' }}">
-            Non approvate
+            Non pubblicate
         </button>
     </div>
 
@@ -23,16 +21,20 @@
         <div class="card mb-3">
             <div class="card-body">
                 <h5>
-                    {{ $review->name }} — 
+                    {{ $review->name }} —
                     <small>{!! str_repeat('⭐', $review->rating) !!}</small>
                 </h5>
                 <p>{{ $review->content }}</p>
 
                 <div class="d-flex justify-content-between">
-                    <button wire:click="toggleApproval({{ $review->id }})" 
-                            class="btn btn-sm {{ $review->is_approved ? 'btn-success' : 'btn-outline-secondary' }}">
-                        {{ $review->is_approved ? 'Approvata' : 'Non approvata' }}
-                    </button>
+                    @if (!$review->is_approved)
+                        <button wire:click="toggleApproval({{ $review->id }})" 
+                                class="btn btn-sm btn-primary">
+                            Pubblica
+                        </button>
+                    @else
+                        <span class="badge bg-success">Pubblicata</span>
+                    @endif
 
                     <button wire:click="deleteReview({{ $review->id }})" 
                             class="btn btn-sm btn-danger"
