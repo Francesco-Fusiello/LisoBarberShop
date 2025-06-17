@@ -1,6 +1,6 @@
 <x-layout>
  
-   @livewire('product-filter')
+
 
    
     
