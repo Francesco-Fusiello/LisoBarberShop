@@ -17,6 +17,12 @@ class ProductCrud extends Component
     public $selectedProductId;
     public $showDeleteModal = false;
 
+    // Qui memorizziamo gli ID filtrati o null se nessun filtro
+    public $filteredProductIds = null;
+
+    // Ascoltiamo l'evento dal filtro
+    protected $listeners = ['filteredProducts' => 'applyFilter'];
+
     protected function rules()
     {
         return $this->editingProductId
@@ -111,10 +117,23 @@ class ProductCrud extends Component
         session()->flash('message', 'Prodotto eliminato con successo!');
     }
 
+    // Metodo chiamato quando riceviamo l'array degli ID filtrati
+    public function applyFilter($ids)
+    {
+        $this->filteredProductIds = is_array($ids) && count($ids) > 0 ? $ids : null;
+        $this->resetPage(); // Reset paginazione quando filtro cambia
+    }
+
     public function render()
     {
+        $query = Product::query();
+
+        if ($this->filteredProductIds !== null) {
+            $query->whereIn('id', $this->filteredProductIds);
+        }
+
         return view('livewire.product-crud', [
-            'products' => Product::latest()->paginate(6)
+            'products' => $query->latest()->paginate(6)
         ]);
     }
 }
