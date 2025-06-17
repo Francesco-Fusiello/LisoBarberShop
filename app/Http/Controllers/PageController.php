@@ -34,8 +34,7 @@ class PageController extends Controller
 
     public function products()
     {
-        $products = Product::paginate(9);
-        return view('user.products.products', compact('products'));
+        return view('user.products.products');
     }
 
     public function showProduct(Product $product)

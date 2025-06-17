@@ -1,8 +1,4 @@
 <div>
-    <input 
-        type="text" 
-        class="form-control form-control-lg mb-4 shadow-sm" 
-        placeholder="Cerca prodotti..." 
-        wire:model.debounce.500ms="search"
-    >
+   <input type="text" wire:model.debounce.500ms="search" class="form-control" placeholder="Cerca prodotti...">
+
 </div>
