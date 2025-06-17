@@ -1,34 +1,41 @@
+//counter home
 document.addEventListener('DOMContentLoaded', () => {
-    let counterStarted = false;
+  const counters = document.querySelectorAll('.counter');
 
-    window.addEventListener('scroll', () => {
-        const numberElement = document.getElementById('counter-number');
-        const counterContainer = document.getElementById('counter');
+  const startCounter = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    let current = 0;
+    const increment = Math.ceil(target / 100);
 
-        if (!numberElement || !counterContainer) return;
+    const update = () => {
+      if (current < target) {
+        current += increment;
+        counter.innerText = current > target ? target : current;
+        setTimeout(update, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
 
-        const rect = counterContainer.getBoundingClientRect();
+    update();
+  };
 
-        if (!counterStarted && rect.top < window.innerHeight) {
-            counterStarted = true;
-
-            let value = 0;
-            const endValue = 370;
-            const duration = 1000; // durata in ms
-            const stepTime = 10;
-            const increment = endValue / (duration / stepTime);
-
-            const interval = setInterval(() => {
-                value += increment;
-                if (value >= endValue) {
-                    value = endValue;
-                    clearInterval(interval);
-                }
-                numberElement.textContent = Math.floor(value);
-            }, stepTime);
-        }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        startCounter(counter);
+        observer.unobserve(counter); 
+      }
     });
+  }, { threshold: 0.6 }); 
+
+  counters.forEach(counter => {
+    observer.observe(counter);
+  });
 });
+
+
 
 // per gallery
 

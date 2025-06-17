@@ -76,10 +76,45 @@
   </div>
 </div>
 
-<div id="counter" style="font-size: 48px; margin-top: 600px; text-align: center; color: #488B49;">
-  <p style="margin: 0; font-size: 20px;">Clienti Soddisfatti</p>
-  <span>+<span id="counter-number">0</span></span>
+{{-- Counter --}}
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col-6 col-md-3 mb-4">
+      <div class="card border-0">
+        <div class="card-body">
+          <p class="mb-1">Clienti Soddisfatti</p>
+          <h3>+<span class="counter" data-target="800">0</span></h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+      <div class="card border-0">
+        <div class="card-body">
+          <p class="mb-1">Tagli Eseguiti</p>
+          <h3>+<span class="counter" data-target="1200">0</span></h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+      <div class="card border-0">
+        <div class="card-body">
+          <p class="mb-1">Anni di Esperienza</p>
+          <h3>+<span class="counter" data-target="15">0</span></h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+      <div class="card border-0">
+        <div class="card-body">
+          <p class="mb-1">Recensioni Positive</p>
+          <h3>+<span class="counter" data-target="500">0</span></h3>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
 
 {{-- Recensioni --}}
 
