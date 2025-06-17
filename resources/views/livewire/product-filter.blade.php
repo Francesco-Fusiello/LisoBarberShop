@@ -1,3 +1,8 @@
-<div class="mb-4 text-center">
-    <input type="text" wire:model.debounce.300ms="search" placeholder="Cerca prodotto..." class="form-control w-50 mx-auto" />
+<div>
+    <input 
+        type="text" 
+        class="form-control form-control-lg mb-4 shadow-sm" 
+        placeholder="Cerca prodotti..." 
+        wire:model.debounce.500ms="search"
+    >
 </div>
