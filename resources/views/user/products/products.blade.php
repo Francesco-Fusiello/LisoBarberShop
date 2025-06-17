@@ -1,12 +1,18 @@
 <x-layout>
- 
 
-
-   
-    
     <h2 class="text-center mb-5 display-4">I Nostri Prodotti</h2>
+
     <div class="p-6 max-w-6xl mx-auto">      
         <div class="container pt-5">
+
+            {{-- Filtro livewire --}}
+            <div class="row mb-4">
+                <div class="col-12">
+                    <livewire:product-filter />
+                </div>
+            </div>
+
+            {{-- Prodotti filtrati --}}
             <div class="row">
                 @foreach($products as $product)
                     <div class="col-md-4 mb-4 d-flex">
@@ -26,7 +32,7 @@
             </div>
         </div>
 
-      
+        {{-- Paginazione --}}
         <div class="container pt-5">
             <div class="pagination-custom">
                 {{ $products->links() }}
@@ -34,4 +40,5 @@
         </div>
 
     </div>
+
 </x-layout>
