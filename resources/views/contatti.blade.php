@@ -52,9 +52,9 @@
 
                     <h3 style="color: #d4af37;">Orari di apertura</h3>
                     <ul style="color: #ccc;">
-                        <li>Lunedì - Giovedì: 08:00/13:00 - 15:00/20:00</li>
+                        <li>Martedì - Giovedì: 08:00/13:00 - 15:00/20:00</li>
                         <li>Venerdì - Sabato: 08:00 - 20:00</li>
-                        <li>Domenica: Chiuso</li>
+                        <li>Lunedì e Domenica: Chiuso</li>
                     </ul>
 
                     <h3 style="color: #d4af37;">Contattaci</h3>

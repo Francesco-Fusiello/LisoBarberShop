@@ -117,34 +117,57 @@
     </section>
 
     {{-- Carosello Prodotti --}}
-    <section class="container my-5 text-center" style="color: #d4af37;">
-      <h2 class="mb-4" style="font-family: 'Playfair Display', serif; font-weight: 700;">I Nostri Prodotti</h2>
-      <div id="carouselProdotti" class="carousel slide" data-bs-ride="carousel" style="max-width: 900px; margin: auto;">
-        <div class="carousel-inner">
-          @foreach($products as $index => $product)
-          <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-            <div class="card bg-black bg-opacity-50 rounded-3 shadow p-3">
-              <img src="{{ Storage::url($product->image_path) }}" class="card-img-top" alt="{{ $product->name }}" style="height: 300px; object-fit: cover; border-radius: 10px 10px 0 0;">
-              <div class="card-body">
-                <h5 class="card-title" style="color: #d4af37;">{{ $product->name }}</h5>
-                <p class="card-text" style="color: #c1b26a;">{{ $product->description }}</p>
+   <h2 class="text-center mb-5 display-4" style="color: #d4af37; font-family: 'Playfair Display', serif; font-weight: 700;">
+   Scelti per te
+  </h2>
+
+  <div id="carouselProdotti" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500" style="max-width: 1140px; margin: auto;">
+    <div class="carousel-inner">
+      @foreach(array_chunk($products->all(), 3) as $chunkIndex => $productChunk)
+      <div class="carousel-item {{ $chunkIndex === 0 ? 'active' : '' }}">
+        <div class="container pt-5">
+          <div class="row">
+            @foreach($productChunk as $product)
+              <div class="col-md-4 mb-4 d-flex">
+                <div class="card shadow-lg rounded border-0 w-100 d-flex flex-column" style="height: 100%; background-color: rgba(11,46,29,0.8);">
+                  <img src="{{ Storage::url($product->image_path) }}" class="card-img-top" alt="{{ $product->name }}" style="height: 300px; object-fit: cover; border-radius: 10px 10px 0 0;">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title font-weight-bold" style="color: #d4af37; font-family: 'Playfair Display', serif;">
+                      {{ $product->name }}
+                    </h5>
+                    <p class="card-text flex-grow-1" style="color: #c1b26a;">
+                      {{ Str::limit($product->description, 100) }}
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                      <p class="card-text mb-0" style="color: #d4af37; font-weight: 700;">
+                        €{{ number_format($product->price, 2) }}
+                      </p>
+                      <a href="{{ route('products.show', $product->id) }}" class="btn btn-outline-warning btn-sm" style="border-radius: 50px; font-weight: 700;">
+                        Visualizza
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            @endforeach
           </div>
-          @endforeach
         </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProdotti" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(90%) sepia(90%) saturate(300%) hue-rotate(20deg) brightness(95%) contrast(85%);"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselProdotti" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(90%) sepia(90%) saturate(300%) hue-rotate(20deg) brightness(95%) contrast(85%);"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-    </section>
+      @endforeach
+    </div>
 
-  </section>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProdotti" data-bs-slide="prev" style="width: 5%;">
+      <span class="carousel-control-prev-icon" aria-hidden="true" 
+            style="filter: invert(79%) sepia(68%) saturate(3384%) hue-rotate(6deg) brightness(98%) contrast(86%); background-color: transparent;">
+      </span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselProdotti" data-bs-slide="next" style="width: 5%;">
+      <span class="carousel-control-next-icon" aria-hidden="true" 
+            style="filter: invert(79%) sepia(68%) saturate(3384%) hue-rotate(6deg) brightness(98%) contrast(86%); background-color: transparent;">
+      </span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 </x-layout>
