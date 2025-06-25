@@ -57,25 +57,25 @@
 
     {{-- Counter section --}}
     <section class="container my-5">
-      <div class="row text-center text-warning">
-        <div class="col-6 col-md-3 mb-4">
-          <h3 class="display-6 fw-bold" style="text-shadow: 1px 1px 3px #000;">+800</h3>
-          <p>Clienti Soddisfatti</p>
-        </div>
-        <div class="col-6 col-md-3 mb-4">
-          <h3 class="display-6 fw-bold" style="text-shadow: 1px 1px 3px #000;">+1200</h3>
-          <p>Tagli Eseguiti</p>
-        </div>
-        <div class="col-6 col-md-3 mb-4">
-          <h3 class="display-6 fw-bold" style="text-shadow: 1px 1px 3px #000;">+15</h3>
-          <p>Anni di Esperienza</p>
-        </div>
-        <div class="col-6 col-md-3 mb-4">
-          <h3 class="display-6 fw-bold" style="text-shadow: 1px 1px 3px #000;">+500</h3>
-          <p>Recensioni Positive</p>
-        </div>
-      </div>
-    </section>
+  <div class="row text-center text-warning">
+    <div class="col-6 col-md-3 mb-4">
+      <h3 class="display-6 fw-bold counter" data-target="800" style="text-shadow: 1px 1px 3px #000;">0</h3>
+      <p>Clienti Soddisfatti</p>
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+      <h3 class="display-6 fw-bold counter" data-target="66351" style="text-shadow: 1px 1px 3px #000;">0</h3>
+      <p>Tagli Eseguiti</p>
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+      <h3 class="display-6 fw-bold counter" data-target="15" style="text-shadow: 1px 1px 3px #000;">0</h3>
+      <p>Anni di Esperienza</p>
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+      <h3 class="display-6 fw-bold counter" data-target="500" style="text-shadow: 1px 1px 3px #000;">0</h3>
+      <p>Recensioni Positive</p>
+    </div>
+  </div>
+</section>
 
     {{-- Recensioni --}}
     <section class="container my-5" style="color: #d4af37;">
