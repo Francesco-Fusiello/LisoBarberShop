@@ -8,10 +8,9 @@
           <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
             <img src="/images/{{ $img }}" class="d-block w-100" alt="Image {{ $index + 1 }}" style="object-fit: cover; height: 600px;">
             <div class="carousel-caption d-flex flex-column justify-content-center align-items-center" style="background: rgba(11,46,29,0.5); top: 0; bottom: 0; left: 0; right: 0;">
-              @if($index === 0)
-                <h1 class="display-3 fw-bold" style="color: #d4af37; text-shadow: 2px 2px 6px #000;">DEDICATO ALL’UOMO</h1>
-                <h4 class="fst-italic" style="color: #e0c97a; text-shadow: 1px 1px 3px #000;">Innovazione, Interpretazione e Ricerca</h4>
-              @endif
+              {{-- Scritta identica per tutte le immagini --}}
+              <h1 class="display-3 fw-bold" style="color: #d4af37; text-shadow: 2px 2px 6px #000;">DEDICATO ALL’UOMO</h1>
+              <h4 class="fst-italic" style="color: #e0c97a; text-shadow: 1px 1px 3px #000;">Innovazione, Interpretazione e Ricerca</h4>
             </div>
           </div>
         @endforeach
@@ -27,6 +26,8 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+
+   
 
     {{-- Descrizione sotto carousel --}}
     <div class="container py-5 text-center" style="font-family: 'Lato', sans-serif; color: #f0e6c8;">
