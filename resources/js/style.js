@@ -86,13 +86,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //Ricerca prodotto
-function productSearch(initialProducts = []) {
+function productSearch() {
   return {
     query: '',
-    results: initialProducts, // uso prodotti iniziali
+    results: [],
     search() {
       if (this.query.trim().length < 1) {
-        this.results = initialProducts; // ripristina lista completa se campo vuoto
+        this.results = [];
         return;
       }
 
@@ -112,4 +112,3 @@ function productSearch(initialProducts = []) {
 }
 
 window.productSearch = productSearch;
-
