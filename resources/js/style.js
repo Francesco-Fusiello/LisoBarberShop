@@ -1,18 +1,13 @@
-import Alpine from 'alpinejs';
-
-window.Alpine = Alpine;
-
-Alpine.start();
 
 //counter home
 document.addEventListener('DOMContentLoaded', () => {
   const counters = document.querySelectorAll('.counter');
-
+  
   const startCounter = (counter) => {
     const target = +counter.getAttribute('data-target');
     let current = 0;
     const increment = Math.ceil(target / 100);
-
+    
     const update = () => {
       if (current < target) {
         current += increment;
@@ -45,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // per gallery
 
- document.addEventListener("DOMContentLoaded", function () {
-            const images = Array.from(document.querySelectorAll('[data-image]'));
+document.addEventListener("DOMContentLoaded", function () {
+  const images = Array.from(document.querySelectorAll('[data-image]'));
             let currentIndex = 0;
             const modalImage = document.getElementById('modalImage');
 
@@ -54,48 +49,47 @@ document.addEventListener('DOMContentLoaded', () => {
                 img.addEventListener('click', () => {
                     currentIndex = index;
                     modalImage.src = img.dataset.image;
+                  });
                 });
-            });
 
             document.getElementById('prevImage').addEventListener('click', () => {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
+              currentIndex = (currentIndex - 1 + images.length) % images.length;
                 modalImage.src = images[currentIndex].dataset.image;
             });
 
             document.getElementById('nextImage').addEventListener('click', () => {
-                currentIndex = (currentIndex + 1) % images.length;
+              currentIndex = (currentIndex + 1) % images.length;
                 modalImage.src = images[currentIndex].dataset.image;
             });
         });
 // Modifica prodotto 
 document.addEventListener('DOMContentLoaded', function () {
     window.Livewire.on('scrollToForm', () => {
-        window.scrollTo({
-            top: 0,
+      window.scrollTo({
+        top: 0,
             behavior: 'smooth'
         });
-    });
+      });
 });
 //Messaggi di conferma
 document.addEventListener('DOMContentLoaded', function () {
-    const successToastEl = document.getElementById('successToast');
-    if (successToastEl) {
+  const successToastEl = document.getElementById('successToast');
+  if (successToastEl) {
         const toast = new bootstrap.Toast(successToastEl);
         toast.show();
     }
 });
 
 //Ricerca prodotto
-function productSearch() {
+function productSearch(initialProducts = []) {
   return {
     query: '',
-    results: [],
+    results: [...initialProducts],  // carica i prodotti iniziali
     search() {
       if (this.query.trim().length < 1) {
-        this.results = [];
+        this.results = [...initialProducts]; // torna alla lista iniziale se campo vuoto
         return;
       }
-
       fetch(`/search-products?q=${encodeURIComponent(this.query)}`)
         .then(res => res.json())
         .then(data => {
@@ -112,3 +106,9 @@ function productSearch() {
 }
 
 window.productSearch = productSearch;
+
+import Alpine from 'alpinejs';
+
+window.Alpine = Alpine;
+
+Alpine.start();
