@@ -1,3 +1,9 @@
+import Alpine from 'alpinejs';
+
+window.Alpine = Alpine;
+
+Alpine.start();
+
 //counter home
 document.addEventListener('DOMContentLoaded', () => {
   const counters = document.querySelectorAll('.counter');
@@ -78,3 +84,31 @@ document.addEventListener('DOMContentLoaded', function () {
         toast.show();
     }
 });
+
+//Ricerca prodotto
+function productSearch() {
+  return {
+    query: '',
+    results: [],
+    search() {
+      if (this.query.trim().length < 1) {
+        this.results = [];
+        return;
+      }
+
+      fetch(`/search-products?q=${encodeURIComponent(this.query)}`)
+        .then(res => res.json())
+        .then(data => {
+          this.results = data;
+        });
+    },
+    truncate(text, maxLength) {
+      return text.length > maxLength ? text.substring(0, maxLength) + '…' : text;
+    },
+    formatPrice(price) {
+      return parseFloat(price).toFixed(2).replace('.', ',');
+    }
+  };
+}
+
+window.productSearch = productSearch;
