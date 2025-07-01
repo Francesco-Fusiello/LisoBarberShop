@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Product;
 use App\Livewire\ReviewForm;
 use App\Livewire\ReviewList;
 use App\Livewire\ProductCrud;
@@ -39,6 +40,17 @@ Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('l
 Route::get('/recensioni/nuova', ReviewForm::class)->name('recensioni.form');
 
 Route::get('/recensioni', ReviewList::class)->name('recensioni.index');
+
+Route::get('/search-products', function (\Illuminate\Http\Request $request) {
+    $query = $request->get('q');
+
+    $products = Product::query()
+        ->where('name', 'like', "%$query%")
+        ->orWhere('description', 'like', "%$query%")
+        ->get();
+
+    return response()->json($products);
+});
 
 
 
