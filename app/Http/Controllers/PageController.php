@@ -32,11 +32,13 @@ class PageController extends Controller
         return view('services');
     }
 
-    public function products()
-    {
-        $products = Product::paginate(9);
-        return view('user.products.products', compact('products'));
-    }
+  public function products()
+{
+    $products = Product::paginate(9);
+    $productsJson = $products->items(); 
+
+    return view('user.products.products', compact('products', 'productsJson'));
+}
 
     public function showProduct(Product $product)
     {
