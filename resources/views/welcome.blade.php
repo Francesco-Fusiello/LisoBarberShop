@@ -78,29 +78,28 @@
         </div>
 
         {{-- Counter section --}}
-        <section class="container my-5">
-            <div class="row text-center text-warning">
-                <div class="col-6 col-md-3 mb-4">
-                    <h3 class="display-6 fw-bold counter" data-target="800" style="text-shadow: 1px 1px 3px #000;">0
-                    </h3>
-                    <p>Clienti Soddisfatti</p>
-                </div>
-                <div class="col-6 col-md-3 mb-4">
-                    <h3 class="display-6 fw-bold counter" data-target="66351" style="text-shadow: 1px 1px 3px #000;">0
-                    </h3>
-                    <p>Tagli Eseguiti</p>
-                </div>
-                <div class="col-6 col-md-3 mb-4">
-                    <h3 class="display-6 fw-bold counter" data-target="15" style="text-shadow: 1px 1px 3px #000;">0</h3>
-                    <p>Anni di Esperienza</p>
-                </div>
-                <div class="col-6 col-md-3 mb-4">
-                    <h3 class="display-6 fw-bold counter" data-target="500" style="text-shadow: 1px 1px 3px #000;">0
-                    </h3>
-                    <p>Recensioni Positive</p>
-                </div>
-            </div>
-        </section>
+        <section class="container my-5 section-divider counter-section">
+    <div class="row text-center text-warning">
+        <div class="col-6 col-md-3 mb-4 counter-box">
+            <h3 class="display-6 fw-bold counter" data-target="800" style="text-shadow: 1px 1px 3px #000;">0</h3>
+            <p>Clienti Soddisfatti</p>
+        </div>
+        <div class="col-6 col-md-3 mb-4 counter-box">
+            <h3 class="display-6 fw-bold counter" data-target="66351" style="text-shadow: 1px 1px 3px #000;">0</h3>
+            <p>Tagli Eseguiti</p>
+        </div>
+        <div class="col-6 col-md-3 mb-4 counter-box">
+            <h3 class="display-6 fw-bold counter" data-target="15" style="text-shadow: 1px 1px 3px #000;">0</h3>
+            <p>Anni di Esperienza</p>
+        </div>
+        <div class="col-6 col-md-3 mb-4 counter-box">
+            <h3 class="display-6 fw-bold counter" data-target="500" style="text-shadow: 1px 1px 3px #000;">0</h3>
+            <p>Recensioni Positive</p>
+        </div>
+    </div>
+</section>
+
+
 
         {{-- Recensioni --}}
         <section class="container my-5" style="color: #d4af37;">
@@ -170,17 +169,15 @@
         </section>
 
         {{-- Carosello Prodotti --}}
-<div class="position-relative mb-3" style="max-width: 1140px; margin: auto;">
-    <h2 class="text-center mb-0 display-4"
-        style="color: #d4af37; font-family: 'Playfair Display', serif; font-weight: 700;">
-        Scelti per te
-    </h2>
-    <a href="{{ route('products') }}"
-       class="header-link"
-    >
-        ▸ La selezione completa
-    </a>
-</div>
+        <div class="position-relative mb-3" style="max-width: 1140px; margin: auto;">
+            <h2 class="text-center mb-0 display-4"
+                style="color: #d4af37; font-family: 'Playfair Display', serif; font-weight: 700;">
+                Scelti per te
+            </h2>
+            <a href="{{ route('products') }}" class="header-link">
+                ▸ La selezione completa
+            </a>
+        </div>
 
 
         <div id="carouselProdotti" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500"

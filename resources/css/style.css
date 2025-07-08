@@ -319,3 +319,24 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 0.5rem !important;
     }
 }
+
+/* Sezione Contatori */
+.counter-section {
+    background-color: rgba(11, 46, 29, 0.85);
+    border-radius: 12px;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.counter-box {
+    border-right: 1px solid rgba(212, 175, 55, 0.4);
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Rimuove la linea sull'ultimo box */
+.counter-box:last-child {
+    border-right: none;
+}
