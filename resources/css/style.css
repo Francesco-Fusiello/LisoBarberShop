@@ -289,3 +289,33 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+ .header-link {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c1b26a;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.header-link:hover {
+    color: #d4af37;
+}
+
+/* Responsivo per schermi piccoli */
+@media (max-width: 576px) {
+    .header-link {
+        position: static !important;
+        transform: none !important;
+        right: auto !important;
+        top: auto !important;
+        display: block !important;
+        text-align: center !important;
+        margin-top: 0.5rem !important;
+    }
+}

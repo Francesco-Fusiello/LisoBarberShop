@@ -170,19 +170,18 @@
         </section>
 
         {{-- Carosello Prodotti --}}
-        <div class="position-relative mb-3" style="max-width: 1140px; margin: auto;">
-            <h2 class="text-center mb-0 display-4"
-                style="color: #d4af37; font-family: 'Playfair Display', serif; font-weight: 700;">
-                Scelti per te
-            </h2>
-            <a href="{{ route('products') }}"
-                style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);
-            color: #c1b26a; font-weight: 600; text-decoration: none;
-            font-family: 'Playfair Display', serif; font-size: 1.1rem;"
-                onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#c1b26a'">
-                ▸ La selezione completa
-            </a>
-        </div>
+<div class="position-relative mb-3" style="max-width: 1140px; margin: auto;">
+    <h2 class="text-center mb-0 display-4"
+        style="color: #d4af37; font-family: 'Playfair Display', serif; font-weight: 700;">
+        Scelti per te
+    </h2>
+    <a href="{{ route('products') }}"
+       class="header-link"
+    >
+        ▸ La selezione completa
+    </a>
+</div>
+
 
         <div id="carouselProdotti" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500"
             style="max-width: 1140px; margin: auto;">
