@@ -104,8 +104,9 @@
         {{-- Recensioni --}}
         <section class="container my-5" style="color: #d4af37;">
             <h2 class="text-center mb-4"
-                style="font-family: 'Playfair Display', serif; font-weight: 700; text-shadow: 1px 1px 3px #000;">Cosa
-                dicono di noi</h2>
+                style="font-family: 'Playfair Display', serif; font-weight: 700; text-shadow: 1px 1px 3px #000;">
+                Cosa dicono di noi
+            </h2>
 
             @if ($latestReviews->count())
                 <div id="carouselRecensioni" class="carousel slide" data-bs-ride="carousel"
@@ -151,22 +152,42 @@
                 <p class="text-center fst-italic">Nessuna recensione disponibile.</p>
             @endif
 
+            {{-- Pulsanti --}}
             <div class="d-flex justify-content-center gap-4 mt-4" style="font-family: 'Playfair Display', serif;">
-                <a href="{{ route('recensioni.form') }}"
-                    style="color: #c1b26a; font-weight: 600; text-decoration: none; font-size: 1.2rem;"
-                    onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#c1b26a'">
-                    ✂️ Racconta la tua esperienza
-                </a>
+    <a href="#" data-bs-toggle="modal" data-bs-target="#recensioneModal"
+        style="color: #c1b26a; font-weight: 600; text-decoration: none; font-size: 1.2rem;"
+        onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#c1b26a'">
+        ✂️ Racconta la tua esperienza
+    </a>
 
-                <a href="{{ route('recensioni.index') }}"
-                    style="color: #c1b26a; font-weight: 600; text-decoration: none; font-size: 1.2rem;"
-                    onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#c1b26a'">
-                    💈 Cosa dicono i nostri clienti
-                </a>
-            </div>
-
+    <a href="{{ route('recensioni.index') }}"
+        style="color: #c1b26a; font-weight: 600; text-decoration: none; font-size: 1.2rem;"
+        onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#c1b26a'">
+        💈 Cosa dicono i nostri clienti
+    </a>
+</div>
 
         </section>
+
+         {{-- MODALE RECENSIONI --}}
+    <div class="modal fade" id="recensioneModal" tabindex="-1" aria-labelledby="recensioneModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background-color: #0b2e1d; color: white; font-family: 'Playfair Display', serif;">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="recensioneModalLabel" style="color: #d4af37; font-weight: 700;">
+                    ✂️ Lascia la tua recensione
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body">
+                @livewire('review-form')
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
         {{-- Carosello Prodotti --}}
         <div class="position-relative mb-3" style="max-width: 1140px; margin: auto;">
@@ -239,4 +260,6 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+
+        
 </x-layout>
