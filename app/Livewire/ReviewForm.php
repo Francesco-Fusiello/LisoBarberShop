@@ -26,8 +26,9 @@ class ReviewForm extends Component
             'is_approved' => false,
         ]);
 
-        session()->flash('message', "Grazie la vostra opinione è fondamentale per noi! /n Sarà visibile dopo l'approvazioe dei nostri amministratori");
+        session()->flash('message', "Grazie la vostra opinione è fondamentale per noi! Sarà visibile dopo l'approvazioe dei nostri amministratori");
         $this->reset();
+        $this->emit('reviewSubmitted');
     }
 
     public function render()
