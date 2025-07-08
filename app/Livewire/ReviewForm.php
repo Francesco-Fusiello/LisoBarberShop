@@ -28,7 +28,8 @@ class ReviewForm extends Component
 
         session()->flash('message', "Grazie la vostra opinione è fondamentale per noi! Sarà visibile dopo l'approvazioe dei nostri amministratori");
         $this->reset();
-        $this->emit('reviewSubmitted');
+         
+        
     }
 
     public function render()

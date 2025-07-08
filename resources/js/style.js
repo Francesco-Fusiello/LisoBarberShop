@@ -105,6 +105,8 @@ function productSearch(initialProducts = []) {
   };
 }
 
+
+
 window.productSearch = productSearch;
 
 import Alpine from 'alpinejs';
