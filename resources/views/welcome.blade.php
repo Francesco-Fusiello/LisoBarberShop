@@ -103,8 +103,8 @@
 
         {{-- Recensioni --}}
         <section class="container my-5" style="color: #d4af37;">
-            <h2 class="text-center mb-4"
-                style="font-family: 'Playfair Display', serif; font-weight: 700; text-shadow: 1px 1px 3px #000;">
+            <h2 class="text-center mb-5 display-4"
+                style="color: #d4af37; font-family: 'Playfair Display', serif; font-weight: 700;">
                 Cosa dicono di noi
             </h2>
 
@@ -190,7 +190,7 @@
 
 
         {{-- Carosello Prodotti --}}
-        <div class="position-relative mb-3" style="max-width: 1140px; margin: auto;">
+        <div class="position-relative" style="max-width: 1140px; margin: auto;">
             <h2 class="text-center mb-0 display-4"
                 style="color: #d4af37; font-family: 'Playfair Display', serif; font-weight: 700;">
                 Scelti per te

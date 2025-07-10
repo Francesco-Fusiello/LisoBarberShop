@@ -8,6 +8,12 @@ use App\Models\Review;
 class ReviewManager extends Component
 {
     public $filter = 'all';
+    public $message;
+
+    public function mount()
+    {
+        $this->message = null;
+    }
 
     public function setFilter($value)
     {
@@ -20,13 +26,13 @@ class ReviewManager extends Component
         $review->is_approved = !$review->is_approved;
         $review->save();
 
-        session()->flash('message', 'Lo stato della recensione è stato aggiornato.');
+        $this->message = 'Lo stato della recensione è stato aggiornato.';
     }
 
     public function deleteReview($id)
     {
         Review::findOrFail($id)->delete();
-        session()->flash('message', 'Recensione eliminata con successo.');
+        $this->message = 'Recensione eliminata con successo.';
     }
 
     public function render()
