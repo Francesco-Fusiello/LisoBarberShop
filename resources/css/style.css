@@ -340,3 +340,54 @@ h1, h2, h3, h4, h5, h6 {
 .counter-box:last-child {
     border-right: none;
 }
+
+/* Drawer per le recensioni */
+    
+    .review-drawer {
+        position: fixed;
+        top: 0;
+        right: -400px; /* nascosto fuori dallo schermo */
+        width: 400px;
+        height: 100vh;
+        background-color: #0b2e1d;
+        color: white;
+        font-family: 'Playfair Display', serif;
+        box-shadow: -4px 0 8px rgba(0,0,0,0.5);
+        transition: right 0.3s ease;
+        z-index: 1050;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .review-drawer.open {
+        right: 0;
+    }
+
+    .drawer-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #d4af37;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .drawer-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        z-index: 1040;
+    }
+
+    .drawer-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+

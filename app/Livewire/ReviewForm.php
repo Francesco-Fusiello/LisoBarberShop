@@ -26,15 +26,20 @@ class ReviewForm extends Component
             'is_approved' => false,
         ]);
 
-        session()->flash('message', "Grazie la vostra opinione è fondamentale per noi! Sarà visibile dopo l'approvazioe dei nostri amministratori");
-        $this->reset();
-         
         
+        session()->flash('message', "Grazie la vostra opinione è fondamentale per noi! Sarà visibile dopo l'approvazione dei nostri amministratori");
+
+       
+        $this->reset(['name', 'content', 'rating']);
+        
+        
+        $this->dispatch('closeModal');
+        
+
     }
 
     public function render()
     {
         return view('livewire.review-form')->layout('components.layout');
-;
     }
 }
