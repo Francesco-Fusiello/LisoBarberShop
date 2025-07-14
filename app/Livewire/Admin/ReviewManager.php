@@ -7,6 +7,8 @@ use App\Models\Review;
 
 class ReviewManager extends Component
 {
+    public $reviewToDelete = null;
+
     public $filter = 'all';
     public $message;
 
@@ -34,6 +36,16 @@ class ReviewManager extends Component
         Review::findOrFail($id)->delete();
         $this->message = 'Recensione eliminata con successo.';
     }
+
+    public function confirmDelete()
+{
+    if ($this->reviewToDelete) {
+        Review::findOrFail($this->reviewToDelete)->delete();
+        $this->message = 'Recensione eliminata con successo.';
+        $this->reviewToDelete = null;
+    }
+}
+
 
     public function render()
     {

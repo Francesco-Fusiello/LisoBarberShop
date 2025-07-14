@@ -41,13 +41,35 @@
                         <span class="badge bg-success">Pubblicata</span>
                     @endif
 
-                    <button class="btn btn-sm btn-danger" wire:click.prevent="deleteReview({{ $review->id }})"
-                        onclick="if(!confirm('Sei sicuro di voler eliminare questa recensione?')) event.stopImmediatePropagation();">
+                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"
+                        wire:click="$set('reviewToDelete', {{ $review->id }})">
                         Elimina
                     </button>
+
                 </div>
             </div>
         </div>
     @endforeach
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteLabel"
+        aria-hidden="true" wire:ignore.self>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="confirmDeleteLabel">Conferma Eliminazione</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+                </div>
+                <div class="modal-body">
+                    Sei sicuro di voler eliminare questa recensione?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                    <button type="button" class="btn btn-danger" wire:click="confirmDelete"
+                        data-bs-dismiss="modal">Elimina</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 </div>
