@@ -1,25 +1,23 @@
 <div>
     {{-- Messaggio con auto-hide grazie a Alpine.js --}}
     @if ($message)
-        <div 
-            class="alert alert-info" 
-            x-data="{ show: true }" 
-            x-init="setTimeout(() => show = false, 3000)" 
-            x-show="show"
-        >
+        <div class="alert alert-info" x-data="{ show: true }" x-init="setTimeout(() => show = false, 3000)" x-show="show">
             {{ $message }}
         </div>
     @endif
 
     {{-- Filtro --}}
     <div class="mb-3">
-        <button wire:click="setFilter('all')" class="btn btn-outline-primary btn-sm {{ $filter === 'all' ? 'active' : '' }}">
+        <button wire:click="setFilter('all')"
+            class="btn btn-outline-primary btn-sm {{ $filter === 'all' ? 'active' : '' }}">
             Tutte
         </button>
-        <button wire:click="setFilter('approved')" class="btn btn-outline-success btn-sm {{ $filter === 'approved' ? 'active' : '' }}">
+        <button wire:click="setFilter('approved')"
+            class="btn btn-outline-success btn-sm {{ $filter === 'approved' ? 'active' : '' }}">
             Pubblicate
         </button>
-        <button wire:click="setFilter('unapproved')" class="btn btn-outline-warning btn-sm {{ $filter === 'unapproved' ? 'active' : '' }}">
+        <button wire:click="setFilter('unapproved')"
+            class="btn btn-outline-warning btn-sm {{ $filter === 'unapproved' ? 'active' : '' }}">
             Non pubblicate
         </button>
     </div>
@@ -43,13 +41,13 @@
                         <span class="badge bg-success">Pubblicata</span>
                     @endif
 
-                    <button wire:click="deleteReview({{ $review->id }})" 
-                            class="btn btn-sm btn-danger"
-                            onclick="return confirm('Sei sicuro di voler eliminare questa recensione?')">
+                    <button class="btn btn-sm btn-danger" wire:click.prevent="deleteReview({{ $review->id }})"
+                        onclick="if(!confirm('Sei sicuro di voler eliminare questa recensione?')) event.stopImmediatePropagation();">
                         Elimina
                     </button>
                 </div>
             </div>
         </div>
     @endforeach
+
 </div>
