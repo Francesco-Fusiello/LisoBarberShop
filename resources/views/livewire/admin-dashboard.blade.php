@@ -1,8 +1,10 @@
-<div class="container py-5">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <div class="text-center w-100">
-            <h1 class="mb-3">Pannello di Amministrazione</h1>
+<div style="background-color: white">
 
+    <div class="container py-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="text-center w-100">
+                <h1 class="mb-3">Pannello di Amministrazione</h1>
+                
             @php
                 $section = request('section', 'prodotti');
             @endphp
@@ -25,15 +27,16 @@
     </div>
 
     <hr class="my-4">
-
+    
     @if($section === 'galleria')
         <h2 class="mb-3">Gestione Galleria Immagini</h2>
         <livewire:gallery-manager />
     @elseif($section === 'recensioni')
-        <h2 class="mb-3">Gestione Recensioni</h2>
+    <h2 class="mb-3">Gestione Recensioni</h2>
         <livewire:admin.review-manager />
-    @else
+        @else
         <h2 class="mb-3">Gestione Prodotti</h2>
         <livewire:product-crud />
     @endif
+</div>
 </div>

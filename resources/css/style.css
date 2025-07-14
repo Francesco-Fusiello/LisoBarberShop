@@ -1,3 +1,6 @@
+body{
+  background-color: #0b2e1d; /* Colore di sfondo verde scuro */
+}
 /* Navbar Links */
 .nav-link {
   color: black; /* Colore di testo di default */
@@ -426,4 +429,66 @@ h1, h2, h3, h4, h5, h6 {
       padding: 0 1rem;
     }
   } 
+  
+  /* === Reviews Section - Liso Barber Shop Style === */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.review-card {
+  background-color: rgba(11, 46, 29, 0.95);
+  border-left: 5px solid #d4af37;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  color: #f0e6c8;
+  font-family: 'Lato', sans-serif;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.review-card h5 {
+  color: #d4af37;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.review-card small {
+  color: #c1b26a;
+  font-size: 0.85rem;
+}
+
+.review-card .stars {
+  color: #ffb400;
+  font-size: 1.3rem;
+}
+
+.review-card .review-content {
+  color: #f0e6c8;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
