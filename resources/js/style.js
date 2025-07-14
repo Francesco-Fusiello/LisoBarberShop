@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
   Livewire.on('closeModal', () => {
     setTimeout(() => {
       closeDrawer();
-    }, 2000);
+    }, 2500);
   });
 });
 

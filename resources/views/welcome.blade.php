@@ -156,7 +156,7 @@
             @endif
 
             {{-- Pulsanti per aprire/chiudere drawer --}}
-            <div class="d-flex justify-content-center gap-4 mt-4" style="font-family: 'Playfair Display', serif;">
+            <div class=" container ps-4 d-flex justify-content-center gap-4 mt-4" style="font-family: 'Playfair Display', serif;">
                 <a href="#" id="openReviewDrawer"
                     style="color: #c1b26a; font-weight: 600; text-decoration: none; font-size: 1.2rem;"
                     onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#c1b26a'">
