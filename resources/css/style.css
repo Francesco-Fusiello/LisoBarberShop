@@ -391,3 +391,39 @@ h1, h2, h3, h4, h5, h6 {
         visibility: visible;
     }
 
+   /*Reviews grid layout */
+   .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1140px;
+    margin: auto;
+  }
+
+  .review-card {
+    background-color: #f9f9f9;
+    border-left: 4px solid #333;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive: 1 col on small screens */
+  @media (max-width: 768px) {
+    .reviews-grid {
+      grid-template-columns: 1fr;
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+  } 
+
