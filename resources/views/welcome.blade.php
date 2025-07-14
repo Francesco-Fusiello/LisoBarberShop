@@ -61,21 +61,17 @@
                 Scarica la nostra app per prenotare subito il tuo appuntamento...
             </h3>
 
-            <div class="d-flex justify-content-center align-items-center flex-wrap gap-4 mt-4">
-                <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank"
-                    class="btn btn-outline-warning shadow"
-                    style="font-weight: 700; border-radius: 8px; padding: 0.3rem 1rem;">
-                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=150x50"
-                        alt="App Store" style="height: 50px;">
-                </a>
-                <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank"
-                    class="btn btn-outline-warning shadow"
-                    style="font-weight: 700; border-radius: 8px; padding: 0.3rem 1rem;">
-                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png"
-                        alt="Google Play" style="height: 50px;">
-                </a>
-            </div>
-        </div>
+        <div class="d-flex justify-content-center align-items-center flex-wrap gap-4 mt-4">
+  <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank" style="display: inline-block;">
+    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=150x50"
+         alt="App Store" style="height: 50px;">
+  </a>
+  <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank" style="display: inline-block;">
+    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png"
+         alt="Google Play" style="height: 66px;">
+  </a>
+</div>
+
 
         {{-- Counter section --}}
         <section class="container my-5 section-divider counter-section">
