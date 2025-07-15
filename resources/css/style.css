@@ -2,13 +2,11 @@ body{
   background-color: #0b2e1d; /* Colore di sfondo verde scuro */
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,h2,{
   color: #d4af37; /* Colore oro per i titoli */
 }
 
-p{
-  color: white; /* Colore bianco per il testo */
-}
+
 /* Navbar Links */
 .nav-link {
   color: black; /* Colore di testo di default */
