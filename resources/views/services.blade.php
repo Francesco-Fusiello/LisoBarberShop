@@ -1,7 +1,23 @@
 <x-layout>
-    <header>
-        <img src="/images/2.jpg" alt="services" class="header-img">
-    </header>
+  <header style="position: relative; width: 100%; height: 450px; overflow: hidden;">
+    <img src="/images/2.jpg" alt="services" class="header-img"
+         style="width: 100%; height: 100%; object-fit: cover; display: block;">
+
+    <div class="d-flex flex-column justify-content-center align-items-center"
+         style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+                background: rgba(11,46,29,0.4); text-align: center;">
+        <h1 class="fw-bold mb-3" style="color: #d4af37; text-shadow: 2px 2px 6px #000; font-size: 4rem;">
+            DEDICATO ALL’UOMO
+        </h1>
+        <h3 class="fst-italic" style="color: #e0c97a; text-shadow: 1px 1px 3px #000; font-size: 2rem;">
+            Innovazione, Interpretazione e Ricerca
+        </h3>
+    </div>
+</header>
+
+
+
+
 
     <section class="py-5" style="background-color: #0b2e1d; color: white; font-family: 'Lato', sans-serif;">
         <div class="container">
