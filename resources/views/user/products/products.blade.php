@@ -24,6 +24,15 @@
     >
 </div>
 
+<template x-if="query.length > 0">
+    <div class="container mb-3 text-center fst-italic"
+         style="color: #d4af37; font-family: 'Lato', sans-serif; font-weight: 700;">
+        <span x-text="results.length"></span>&nbsp;
+        <span x-text="results.length === 1 ? 'prodotto' : 'prodotti'"></span>&nbsp;
+        <span x-text="results.length === 1 ? 'trovato' : 'trovati'"></span>
+    </div>
+</template>
+
 
         <div class="container pt-3">
             <div class="row">
