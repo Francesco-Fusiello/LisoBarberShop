@@ -100,71 +100,76 @@
 
 
 
-        {{-- Recensioni --}}
-        <section class="container my-5" style="color: #d4af37;">
-            <h2 class="text-center mb-5 display-4"
-                style="color: #d4af37; font-family: 'Playfair Display', serif; font-weight: 700;">
-                Cosa dicono di noi
-            </h2>
+       {{-- Recensioni --}}
+<section class="container my-5" style="color: #d4af37;">
+    <h2 class="text-center mb-3 display-4"
+        style="color: #d4af37; font-family: 'Playfair Display', serif; font-weight: 700;">
+        Cosa dicono di noi
+    </h2>
 
-            @if ($latestReviews->count())
-                <div id="carouselRecensioni" class="carousel slide" data-bs-ride="carousel"
-                    style="max-width: 700px; margin: auto;">
-                    <div class="carousel-inner">
-                        @foreach ($latestReviews as $index => $review)
-                            <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                                <div class="card bg-black bg-opacity-75 shadow rounded-3 p-4">
-                                    <h5 class="card-title mb-1" style="color: #e0c97a;">
-                                        {{ $review->name }}
-                                        <small class="float-end" style="color: #d4af37; font-size: 1.3rem;">
-                                            @for ($i = 0; $i < $review->rating; $i++)
-                                                ★
-                                            @endfor
-                                            @for ($i = $review->rating; $i < 5; $i++)
-                                                ☆
-                                            @endfor
-                                        </small>
-                                    </h5>
-                                    <small class="fst-italic d-block mb-2"
-                                        style="color: #aaa;">{{ $review->created_at->format('d M Y') }}</small>
-                                    <p class="fst-italic" style="color: #ccc;">{{ $review->content }}</p>
-                                </div>
-                            </div>
-                        @endforeach
+    @if ($latestReviews->count())
+        <div id="carouselRecensioni" class="carousel slide" data-bs-ride="carousel"
+            style="max-width: 700px; margin: auto;">
+            <div class="carousel-inner">
+                @foreach ($latestReviews as $index => $review)
+                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                        <div class="card bg-black bg-opacity-75 shadow rounded-3 p-4">
+                            <h5 class="card-title mb-1 d-flex justify-content-between align-items-center" style="color: #e0c97a;">
+                                <span>{{ $review->name }}</span>
+                                <small style="color: #d4af37; font-size: 1.3rem; line-height: 1;">
+                                    @for ($i = 0; $i < $review->rating; $i++)
+                                        <span style="color: #d4af37;">&#9733;</span>
+                                    @endfor
+                                    @for ($i = $review->rating; $i < 5; $i++)
+                                        <span style="color: #555;">&#9734;</span>
+                                    @endfor
+                                </small>
+                            </h5>
+                            <small class="fst-italic d-block mb-2"
+                                style="color: #aaa;">{{ $review->created_at->format('d M Y') }}</small>
+                            <p class="fst-italic" style="color: #ccc;">{{ $review->content }}</p>
+                        </div>
                     </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselRecensioni"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"
-                            style="filter: invert(90%) sepia(90%) saturate(300%) hue-rotate(20deg) brightness(95%) contrast(85%);"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselRecensioni"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"
-                            style="filter: invert(90%) sepia(90%) saturate(300%) hue-rotate(20deg) brightness(95%) contrast(85%);"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            @else
-                <p class="text-center fst-italic">Nessuna recensione disponibile.</p>
-            @endif
-
-            {{-- Pulsanti per aprire/chiudere drawer --}}
-            <div class=" container ps-4 d-flex justify-content-center gap-4 mt-4" style="font-family: 'Playfair Display', serif;">
-                <a href="#" id="openReviewDrawer"
-                    style="color: #c1b26a; font-weight: 600; text-decoration: none; font-size: 1.2rem;"
-                    onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#c1b26a'">
-                    ✂️ Racconta la tua esperienza
-                </a>
-
-                <a href="{{ route('recensioni.index') }}"
-                    style="color: #c1b26a; font-weight: 600; text-decoration: none; font-size: 1.2rem;"
-                    onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#c1b26a'">
-                    💈 Cosa dicono i nostri clienti
-                </a>
+                @endforeach
             </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselRecensioni"
+                data-bs-slide="prev" style="width: 5%;">
+                <span class="carousel-control-prev-icon" aria-hidden="true"
+                    style="filter: invert(79%) sepia(68%) saturate(3384%) hue-rotate(6deg) brightness(98%) contrast(86%); background-color: transparent;">
+                </span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselRecensioni"
+                data-bs-slide="next" style="width: 5%;">
+                <span class="carousel-control-next-icon" aria-hidden="true"
+                    style="filter: invert(79%) sepia(68%) saturate(3384%) hue-rotate(6deg) brightness(98%) contrast(86%); background-color: transparent;">
+                </span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    @else
+        <p class="text-center fst-italic" style="color: #d4af37;">Nessuna recensione disponibile.</p>
+    @endif
+</section>
+
+        {{-- Pulsanti per aprire/chiudere drawer --}}
+<div class="container d-flex justify-content-center gap-4" 
+     style="font-family: 'Playfair Display', serif; margin-top: -1.5rem;">
+    <a href="#" id="openReviewDrawer"
+       style="color: #c1b26a; font-weight: 600; text-decoration: none; font-size: 1.2rem;"
+       onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#c1b26a'">
+       ✂️ Racconta la tua esperienza
+    </a>
+
+    <a href="{{ route('recensioni.index') }}"
+       style="color: #c1b26a; font-weight: 600; text-decoration: none; font-size: 1.2rem;"
+       onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#c1b26a'">
+       💈 Cosa dicono i nostri clienti
+    </a>
+</div>
+
 
             {{-- Drawer recensioni laterale --}}
             <div id="reviewDrawer" class="review-drawer" aria-hidden="true" tabindex="-1" role="dialog"
@@ -188,77 +193,89 @@
 
 
             {{-- Carosello Prodotti --}}
-            <div class="position-relative" style="max-width: 1140px; margin: auto;">
-                <h2 class="text-center mb-0 display-4"
-                    style="color: #d4af37; font-family: 'Playfair Display', serif; font-weight: 700;">
-                    Scelti per te
-                </h2>
-                <a href="{{ route('products') }}" class="header-link">
-                    ▸ La selezione completa
-                </a>
-            </div>
+<div class="container d-flex justify-content-center align-items-center flex-wrap text-center"
+     style="max-width: 1140px; margin: auto; padding: 5rem 0 1rem 0;">
+
+    <h2 class="mb-0 display-5 flex-grow-1"
+        style="color: #d4af37; font-family: 'Playfair Display', serif; font-weight: 700; min-width: 0;">
+        Scelti per te
+    </h2>
+
+    <a href="{{ route('products') }}"
+       class="w-100 w-md-auto mt-2 mt-md-0"
+       style="font-size: 1.2rem; color: #c1b26a; text-decoration: none; font-family: 'Lato', sans-serif; font-weight: 600; white-space: nowrap;"
+       onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#c1b26a'">
+        ▸ La selezione completa
+    </a>
+
+</div>
 
 
-            <div id="carouselProdotti" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500"
-                style="max-width: 1140px; margin: auto;">
-                <div class="carousel-inner">
-                    @foreach (array_chunk($products->all(), 3) as $chunkIndex => $productChunk)
-                        <div class="carousel-item {{ $chunkIndex === 0 ? 'active' : '' }}">
-                            <div class="container pt-5">
-                                <div class="row">
-                                    @foreach ($productChunk as $product)
-                                        <div class="col-md-4 mb-4 d-flex">
-                                            <div class="card shadow-lg rounded border-0 w-100 d-flex flex-column"
-                                                style="height: 100%; background-color: rgba(11,46,29,0.8);">
-                                                <img src="{{ Storage::url($product->image_path) }}"
-                                                    class="card-img-top" alt="{{ $product->name }}"
-                                                    style="height: 300px; object-fit: cover; border-radius: 10px 10px 0 0;">
-                                                <div class="card-body d-flex flex-column">
-                                                    <h5 class="card-title font-weight-bold"
-                                                        style="color: #d4af37; font-family: 'Playfair Display', serif;">
-                                                        {{ $product->name }}
-                                                    </h5>
-                                                    <p class="card-text flex-grow-1" style="color: #c1b26a;">
-                                                        {{ Str::limit($product->description, 100) }}
-                                                    </p>
-                                                    <div
-                                                        class="d-flex justify-content-between align-items-center mt-auto">
-                                                        <p class="card-text mb-0"
-                                                            style="color: #d4af37; font-weight: 700;">
-                                                            €{{ number_format($product->price, 2) }}
-                                                        </p>
-                                                        <a href="{{ route('products.show', $product->id) }}"
-                                                            class="btn btn-outline-warning btn-sm"
-                                                            style="border-radius: 50px; font-weight: 700;">
-                                                            Visualizza
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
+
+
+
+<div id="carouselProdotti" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500"
+    style="max-width: 1140px; margin: auto;">
+    <div class="carousel-inner">
+        @foreach (array_chunk($products->all(), 3) as $chunkIndex => $productChunk)
+            <div class="carousel-item {{ $chunkIndex === 0 ? 'active' : '' }}">
+                <div class="container" style="padding-top: 0; margin-top: 0;"> {{-- NIENTE padding --}}
+                    <div class="row g-4"> {{-- g-4 per un po’ di spazio tra le card --}}
+                        @foreach ($productChunk as $product)
+                            <div class="col-md-4 d-flex">
+                                <div class="card shadow-lg rounded border-0 w-100 d-flex flex-column"
+                                    style="height: 100%; background-color: rgba(11,46,29,0.8);">
+                                    <img src="{{ Storage::url($product->image_path) }}"
+                                        class="card-img-top" alt="{{ $product->name }}"
+                                        style="height: 300px; object-fit: cover; border-radius: 10px 10px 0 0;">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title font-weight-bold"
+                                            style="color: #d4af37; font-family: 'Playfair Display', serif;">
+                                            {{ $product->name }}
+                                        </h5>
+                                        <p class="card-text flex-grow-1" style="color: #c1b26a;">
+                                            {{ Str::limit($product->description, 100) }}
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <p class="card-text mb-0"
+                                                style="color: #d4af37; font-weight: 700;">
+                                                €{{ number_format($product->price, 2) }}
+                                            </p>
+                                            <a href="{{ route('products.show', $product->id) }}"
+                                                class="btn btn-outline-warning btn-sm"
+                                                style="border-radius: 50px; font-weight: 700;">
+                                                Visualizza
+                                            </a>
                                         </div>
-                                    @endforeach
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProdotti"
-                    data-bs-slide="prev" style="width: 5%;">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"
-                        style="filter: invert(79%) sepia(68%) saturate(3384%) hue-rotate(6deg) brightness(98%) contrast(86%); background-color: transparent;">
-                    </span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselProdotti"
-                    data-bs-slide="next" style="width: 5%;">
-                    <span class="carousel-control-next-icon" aria-hidden="true"
-                        style="filter: invert(79%) sepia(68%) saturate(3384%) hue-rotate(6deg) brightness(98%) contrast(86%); background-color: transparent;">
-                    </span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
+        @endforeach
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProdotti"
+        data-bs-slide="prev" style="width: 5%;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"
+            style="filter: invert(79%) sepia(68%) saturate(3384%) hue-rotate(6deg) brightness(98%) contrast(86%); background-color: transparent;">
+        </span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselProdotti"
+        data-bs-slide="next" style="width: 5%;">
+        <span class="carousel-control-next-icon" aria-hidden="true"
+            style="filter: invert(79%) sepia(68%) saturate(3384%) hue-rotate(6deg) brightness(98%) contrast(86%); background-color: transparent;">
+        </span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+
 
            
 
