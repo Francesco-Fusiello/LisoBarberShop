@@ -1,39 +1,110 @@
-<footer class="py-4">
-	<div class="container">
-		<div class="row align-items-center py-4">
-			<div class="col-12 col-lg-3 text-center text-lg-start mb-3 mb-lg-0"></div>
-			<div class="col-12 col-lg-6 navbar-expand text-center mb-3 mb-lg-0">
-				<ul class="list-unstyled d-block d-lg-flex justify-content-center">
-					<li class="nav-item">
-						<a class="text-dark text-decoration-none me-lg-3" href="{{ route('home') }}">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="text-dark text-decoration-none me-lg-3" href="">Shop</a>
-					</li>
-					<li class="nav-item">
-						<a class="text-dark text-decoration-none me-lg-3" href="">Gallery</a>
-					</li>
-					<li class="nav-item">
-						<a class="text-dark text-decoration-none" href="">Contact</a>
-					</li>
-				</ul>
-			</div>
-			<div class="col-12 col-lg-3 small text-center text-lg-end">
-				
-				<path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" fill-rule="evenodd"></path></svg></a>
-			</div>
-		</div>
-		<div class="border-top d-lg-none"></div>
-		<div class="text-center py-3">
-			<a class="me-2" href="https://www.instagram.com/lisobarbershop/">
-        <svg class="bi bi-instagram text-primary" fill="currentColor" height="20" viewbox="0 0 448 512" width="20" xmlns="http://www.w3.org/2000/svg">
-          <path d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"/></svg></a> <a class="me-2" href="https://www.google.com/search?sca_esv=c9f009eecb267ae2&sxsrf=AHTn8zpVG2CgZBNtbML3pfWfnl27GFSJtg:1741640347402&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2Kzd1p_qmCaJNYIVAz4f43GuI0eRBVK1vmnmioWmvZlK5oMwC3gK42j-FmM6ZirmEEh5ma4KAVowUTWYcyZKu7Bq1IG7FE&q=Liso+Barber+Recensioni&sa=X&ved=2ahUKEwi-1e7xs4CMAxUK_rsIHS2oOoMQ0bkNegQIIxAD&biw=1536&bih=738&dpr=1.25"><svg class="bi bi-google text-primary" fill="currentColor" height="20" viewbox="0 0 488 512" width="20" xmlns="http://www.w3.org/2000/svg">
-            <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg></a> <a class="me-2" href="https://www.facebook.com/lisogianfranco?locale=it_IT"><svg class="bi bi-facebook text-primary" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
-			<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path></svg></a>
-		</div>
-		<div class="pt-lg-4 pb-4 pb-lg-3 text-center small">
-			<p class="mb-0"><a class="d-block d-lg-inline text-muted mx-lg-1 mb-2 mb-lg-0" href="">Privacy Policy</a> <a class="d-block d-lg-inline text-muted mx-lg-1 mb-2 mb-lg-0" href="">Terms of Service</a> <a class="d-block d-lg-inline text-muted mx-lg-1 mb-2 mb-lg-0" href="">Site Map</a></p>
-			<p class="text-muted mb-0">© 2025 Francesco Fusiello.</p>
-		</div>
-	</div>
+<footer style="background:#000; color:#D9C59B; padding:4rem 1rem; font-family: 'Lato', sans-serif;">
+  <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:3rem;">
+
+    <!-- Logo & Descrizione -->
+    <div style="flex:1 1 300px; min-width:280px;">
+      <img src="{{ asset('images/3.jpg') }}" alt="Logo" style="width:160px; margin-bottom:1rem;">
+      <p style="opacity:0.85; font-size:1rem; line-height:1.6; color:#C9B48F;">
+        Liso Barber Shop – Tradizione e stile, cura e passione per un look che parla di te.
+      </p>
+    </div>
+
+    <!-- Link Utili -->
+    <div style="flex:1 1 200px; min-width:180px;">
+      <h3 style="font-weight:700; font-size:1.3rem; margin-bottom:1rem; color:#D9C59B;">Link Utili</h3>
+      <ul style="list-style:none; padding:0; margin:0; font-size:1rem;">
+        <li style="margin-bottom:0.6rem;">
+          <a href="{{ route('home') }}" style="color:#D9C59B; text-decoration:none; transition:color 0.3s ease;">Home</a>
+        </li>
+        <li style="margin-bottom:0.6rem;">
+          <a href="{{ route('services') }}" style="color:#D9C59B; text-decoration:none; transition:color 0.3s ease;">Servizi</a>
+        </li>
+        <li style="margin-bottom:0.6rem;">
+          <a href="{{ route('priceList') }}" style="color:#D9C59B; text-decoration:none; transition:color 0.3s ease;">Listino</a>
+        </li>
+        <li>
+          <a href="{{ route('contatti') }}" style="color:#D9C59B; text-decoration:none; transition:color 0.3s ease;">Contatti</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contatti -->
+    <div style="flex:1 1 260px; min-width:220px;">
+      <h3 style="font-weight:700; font-size:1.3rem; margin-bottom:1rem; color:#D9C59B;">Contatti</h3>
+      <p style="font-size:1rem; line-height:1.6; color:#C9B48F;">
+        Via Roma 123, Napoli<br>
+        Tel: +39 081 1234567<br>
+        Email: info@lisobarbershop.it
+      </p>
+    </div>
+
+    <!-- Social -->
+    <div style="flex:1 1 220px; min-width:180px; display:flex; flex-direction:column; align-items:center;">
+      <h3 style="font-weight:700; font-size:1.3rem; margin-bottom:1rem; color:#D9C59B;">Seguici</h3>
+      <div style="display:flex; gap:1.5rem;">
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/tuoprofilo" target="_blank" aria-label="Instagram" style="display:inline-block; width:36px; height:36px; transition: transform 0.3s ease;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#E1306C" style="width:100%; height:100%;">
+            <path d="M7.75 2C4.11 2 2 4.11 2 7.75v8.5C2 19.89 4.11 22 7.75 22h8.5c3.64 0 5.75-2.11 5.75-5.75v-8.5C22 4.11 19.89 2 16.25 2h-8.5zm0 2h8.5c2.02 0 3.75 1.73 3.75 3.75v8.5c0 2.02-1.73 3.75-3.75 3.75h-8.5c-2.02 0-3.75-1.73-3.75-3.75v-8.5c0-2.02 1.73-3.75 3.75-3.75z"/>
+            <path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+            <circle cx="17.5" cy="6.5" r="1.5" fill="#E1306C"/>
+          </svg>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/tuoprofilo" target="_blank" aria-label="Facebook" style="display:inline-block; width:36px; height:36px; transition: transform 0.3s ease;">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#1877F2" viewBox="0 0 24 24" style="width:100%; height:100%;">
+            <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.406.593 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.504 0-1.796.715-1.796 1.764v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.324-.594 1.324-1.326V1.326C24 .593 23.406 0 22.675 0z"/>
+          </svg>
+        </a>
+
+        <!-- TikTok bianca -->
+        <a href="https://www.tiktok.com/@tuoprofilo" target="_blank" aria-label="TikTok" style="display:inline-block; width:36px; height:36px; transition: transform 0.3s ease;">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" viewBox="0 0 24 24" style="width:100%; height:100%;">
+            <path d="M9.75 3.083v14.556a4.5 4.5 0 1 1-4.5-4.5"/>
+            <path d="M14.812 3.75a6.375 6.375 0 0 0 3.814 1.416v2.806a9.75 9.75 0 0 1-3.5-1.028v10.1a4.5 4.5 0 1 1-4.5-4.5"/>
+          </svg>
+        </a>
+
+        <!-- Google -->
+        <a href="https://g.page/tuoprofilo" target="_blank" aria-label="Google" style="display:inline-block; width:36px; height:36px; transition: transform 0.3s ease;">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#4285F4" viewBox="0 0 24 24" style="width:100%; height:100%;">
+            <path d="M21.805 10.023h-9.427v3.975h5.918c-.255 1.47-1.648 4.309-5.918 4.309-3.566 0-6.47-2.958-6.47-6.59s2.903-6.59 6.47-6.59c2.034 0 3.395.873 4.182 1.63l2.847-2.73C17.838 5.06 15.77 4.125 13.06 4.125 7.34 4.125 3 8.722 3 14.334s4.34 10.208 10.06 10.208c5.8 0 9.67-4.067 9.67-9.8 0-.665-.075-1.1-.924-4.718z"/>
+          </svg>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:3rem; font-size:0.85rem; color:#C9B48F; opacity:0.9;">
+    © {{ date('Y') }} Liso Barber Shop. Tutti i diritti riservati.<br>
+    Realizzato con <span style="color:#D9C59B;">❤️</span> da 
+    <a href="https://webdesignstudiopro.it" target="_blank" style="color:#D9C59B; text-decoration:none; font-weight:600;">
+      WebDesign Studio Pro
+    </a>
+  </div>
+
+  <style>
+    footer a {
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+    footer a:hover {
+      transform: scale(1.15);
+      color: #fff !important;
+    }
+    @media (max-width: 767.98px) {
+      footer div[style*="flex-wrap"] {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+      }
+      footer div[style*="flex-wrap"] > div {
+        min-width: auto !important;
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
 </footer>

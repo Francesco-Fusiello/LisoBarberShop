@@ -1,4 +1,5 @@
 <x-layout>
+ 
     <div class="container py-4">
         <div class="row">
             @foreach($images as $image)
