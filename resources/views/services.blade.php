@@ -21,7 +21,7 @@
 
     <section class="py-5" style="background-color: #0b2e1d; color: white; font-family: 'Lato', sans-serif;">
         <div class="container">
-            <h2 class="text-center mb-5 display-4" style="color: #d4af37; font-family: 'Playfair Display', serif;">
+            <h2 id="taglio-uomo" class="text-center mb-5 display-4" style="color: #d4af37; font-family: 'Playfair Display', serif;">
                 I Nostri Servizi
             </h2>
 
@@ -31,7 +31,7 @@
                     <img src="/images/2.jpg" class="img-fluid rounded shadow" alt="Taglio Uomo">
                 </div>
                 <div class="col-md-6">
-                    <h3 class="mb-3 pt-3" style="color: #d4af37; font-family: 'Playfair Display', serif;">Taglio Uomo</h3>
+                    <h3 id="rasatura-tradizionale" class="mb-3 pt-3" style="color: #d4af37; font-family: 'Playfair Display', serif;">Taglio Uomo</h3>
                     <p>
                         Il nostro servizio di taglio uomo è pensato per valorizzare ogni tipo di volto e stile personale.
                         Attraverso una consulenza personalizzata, i nostri barbieri esperti realizzano tagli classici o moderni,
@@ -46,7 +46,7 @@
                     <img src="/images/2.jpg" class="img-fluid rounded shadow" alt="Rasatura Tradizionale">
                 </div>
                 <div class="col-md-6">
-                    <h3 class="mb-3 pt-3" style="color: #d4af37; font-family: 'Playfair Display', serif;">Rasatura Tradizionale</h3>
+                    <h3 id="modellatura-barba" class="mb-3 pt-3" style="color: #d4af37; font-family: 'Playfair Display', serif;">Rasatura Tradizionale</h3>
                     <p>
                         Riscopri il piacere della rasatura tradizionale con panno caldo. Un rituale che combina relax e cura della pelle,
                         utilizzando prodotti di alta qualità per una rasatura profonda e confortevole. Ideale per chi desidera un momento di benessere autentico.

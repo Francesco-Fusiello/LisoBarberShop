@@ -75,6 +75,77 @@
             </div>
 
 
+
+<section class="container py-5">
+  <h2 class="text-center mb-4" style="color: #d4af37; font-family: 'Playfair Display', serif; font-weight: 700;">
+    I nostri servizi
+  </h2>
+
+  <div class="row g-4 text-center">
+    <!-- Taglio Uomo -->
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow" style="background-color: #0b2e1d; color: #fff;">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
+          <i class="fa-solid fa-scissors fa-3x mb-3" style="color: #d4af37;"></i>
+          <h5 class="card-title" style="color: #d4af37; font-family: 'Playfair Display', serif;">Taglio Uomo</h5>
+          <p class="card-text" style="color: #c1b26a;">
+            Valorizziamo ogni tipo di volto e stile con tagli personalizzati e tecniche avanzate.
+          </p>
+          <a href="{{ route('services') }}#taglio-uomo" class="btn btn-outline-warning mt-auto" style="border-radius: 50px; font-weight: 700;">
+            Scopri di più
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rasatura Tradizionale -->
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow" style="background-color: #0b2e1d; color: #fff;">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
+          <i class="fa-solid fa-cut fa-3x mb-3" style="color: #d4af37;"></i>
+          <h5 class="card-title" style="color: #d4af37; font-family: 'Playfair Display', serif;">Rasatura Tradizionale</h5>
+          <p class="card-text" style="color: #c1b26a;">
+            Il piacere della rasatura con panno caldo e prodotti di alta qualità per un relax autentico.
+          </p>
+          <a href="{{ route('services') }}#rasatura-tradizionale" class="btn btn-outline-warning mt-auto" style="border-radius: 50px; font-weight: 700;">
+            Scopri di più
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modellatura Barba -->
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow" style="background-color: #0b2e1d; color: #fff;">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
+          <i class="fa-solid fa-user fa-3x mb-3" style="color: #d4af37;"></i>
+          <h5 class="card-title" style="color: #d4af37; font-family: 'Playfair Display', serif;">Modellatura Barba</h5>
+          <p class="card-text" style="color: #c1b26a;">
+            Definizione, regolazione e trattamenti per una barba morbida e curata.
+          </p>
+          <a href="{{ route('services') }}#modellatura-barba" class="btn btn-outline-warning mt-auto" style="border-radius: 50px; font-weight: 700;">
+            Scopri di più
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <a href="{{ route('services') }}" class="btn btn-warning btn-lg px-5" style="border-radius: 50px; font-weight: 700;">
+      Scopri tutti i servizi
+    </a>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
             {{-- Counter section --}}
             <section class="container my-5 section-divider counter-section">
                 <div class="row text-center text-warning">
