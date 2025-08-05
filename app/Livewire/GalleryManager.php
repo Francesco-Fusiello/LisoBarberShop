@@ -12,6 +12,8 @@ class GalleryManager extends Component
     use WithFileUploads;
 
     public $image;
+    public $confirmingDelete = false;
+    public $deleteId = null;
 
     public function create()
     {
@@ -21,28 +23,42 @@ class GalleryManager extends Component
 
         $path = $this->image->store('gallery', 'public');
 
-         GalleryImage::create([
-        'image_path' => 'storage/' . $path,
+        GalleryImage::create([
+            'image_path' => 'storage/' . $path,
         ]);
 
-        $this->reset('image');
-        session()->flash('message', 'Immagine caricata con successo!');
+        return redirect()->to(request()->header('Referer'))
+                         ->with('message', 'Immagine caricata con successo!');
     }
 
-    public function delete($id)
+    public function confirmDelete($id)
     {
-        $img = GalleryImage::find($id);
+        $this->confirmingDelete = true;
+        $this->deleteId = $id;
+    }
+
+    public function deleteConfirmed()
+    {
+        $img = GalleryImage::find($this->deleteId);
         if ($img) {
             Storage::disk('public')->delete(str_replace('storage/', '', $img->image_path));
             $img->delete();
         }
+
+        $this->confirmingDelete = false;
+        $this->deleteId = null;
+
+        return redirect()->to(request()->header('Referer'))
+                         ->with('message', 'Immagine eliminata con successo!');
+    }
+
+    public function getImagesProperty()
+    {
+        return GalleryImage::latest()->get();
     }
 
     public function render()
     {
-        return view('livewire.gallery-manager', [
-            'images' => GalleryImage::latest()->get(),
-        ]);
+        return view('livewire.gallery-manager');
     }
 }
-
