@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-//Messaggi di conferma
+
 document.addEventListener('DOMContentLoaded', function () {
   const successToastEl = document.getElementById('successToast');
   if (successToastEl) {
