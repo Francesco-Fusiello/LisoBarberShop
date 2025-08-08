@@ -22,6 +22,16 @@ h1,h2{
   font-weight: bold; /* Maggiore evidenza */
 }
 
+@media (max-width: 991.98px) { 
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-item {
+        display: inline-block;
+        width: 100%;
+    }
+}
+
 /* Logo Header */
 header img {
   /* desktop: lasciare dinamico per ora */
