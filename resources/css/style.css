@@ -506,5 +506,49 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr;
   }
 }
+.review-counter-box {
+  background-color: rgba(11, 46, 29, 0.85);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  
+  color: #fff;
+  text-align: center;
+}
+
+.review-counter-box h5 {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.review-counter-box .fa-star {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: #d4af37;
+}
+
+.review-counter-box .fa-star.far {
+  color: #555;
+}
+
+.review-counter-box small {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.review-counter-box p {
+  color: #fff;
+  font-size: 1.15rem;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+
 
 
