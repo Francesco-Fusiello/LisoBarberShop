@@ -176,59 +176,81 @@
 
 
             {{-- Recensioni --}}
-            <section class="container my-5" style="color: #d4af37;">
-                <h2 class="text-center mb-3 display-4"
-                    style="color: #d4af37; font-family: 'Playfair Display', serif; font-weight: 700;">
-                    Cosa dicono di noi
-                </h2>
+ <section class="container my-5">
+    <h2 class="text-center mb-3 display-4"
+        style="color: #d4af37; font-family: 'Playfair Display', serif; font-weight: 700;">
+        Cosa dicono di noi
+    </h2>
 
-                @if ($latestReviews->count())
-                    <div id="carouselRecensioni" class="carousel slide" data-bs-ride="carousel"
-                        style="max-width: 700px; margin: auto;">
-                        <div class="carousel-inner">
-                            @foreach ($latestReviews as $index => $review)
-                                <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                                    <div class="card bg-black bg-opacity-75 shadow rounded-3 p-4">
-                                        <h5 class="card-title mb-1 d-flex justify-content-between align-items-center"
-                                            style="color: #e0c97a;">
-                                            <span>{{ $review->name }}</span>
-                                            <small style="color: #d4af37; font-size: 1.3rem; line-height: 1;">
-                                                @for ($i = 0; $i < $review->rating; $i++)
-                                                    <span style="color: #d4af37;">&#9733;</span>
-                                                @endfor
-                                                @for ($i = $review->rating; $i < 5; $i++)
-                                                    <span style="color: #555;">&#9734;</span>
-                                                @endfor
-                                            </small>
-                                        </h5>
-                                        <small class="fst-italic d-block mb-2"
-                                            style="color: #aaa;">{{ $review->created_at->format('d M Y') }}</small>
-                                        <p class="fst-italic" style="color: #ccc;">{{ $review->content }}</p>
-                                    </div>
+    @if ($latestReviews->count())
+        <div id="carouselRecensioni" class="carousel slide" data-bs-ride="carousel"
+            style="max-width: 750px; margin: auto;">
+            <div class="carousel-inner">
+                @foreach ($latestReviews as $index => $review)
+                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                        <div class="card shadow-lg d-flex align-items-center"
+                             style="background-color: #000; border: 4px solid #d4af37; color: #fff; border-radius: 10px; gap: 25px; flex-direction: row; max-width: 700px; margin: auto; padding: 20px 30px;">
+
+                            <!-- Palo laterale -->
+                            <div style="font-size: 4.5rem; color: #d4af37; user-select: none; flex-shrink: 0;margin-right: 15px;">
+                                💈
+                            </div>
+
+                            <!-- Contenuto recensione -->
+                            <div style="text-align: center; flex: 1;">
+
+                                <!-- Nome -->
+                                <h5 class="mb-2" style="color: #fff; font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 8px;">
+                                    {{ $review->name }}
+                                </h5>
+
+                                <!-- Stelle -->
+                                <div class="mb-3" style="font-size: 1.4rem; letter-spacing: 1px;">
+                                    @for ($i = 0; $i < $review->rating; $i++)
+                                        <span style="color: #d4af37;">&#9733;</span>
+                                    @endfor
+                                    @for ($i = $review->rating; $i < 5; $i++)
+                                        <span style="color: #555;">&#9734;</span>
+                                    @endfor
                                 </div>
-                            @endforeach
+
+                                <!-- Data -->
+                                <small class="fst-italic d-block mb-3" style="color: #aaa; font-size: 0.9rem;">
+                                    {{ $review->created_at->format('d M Y') }}
+                                </small>
+
+                                <!-- Testo -->
+                                <p class="mb-0" style="color: #fff; font-size: 1.15rem; font-family: 'Lato', sans-serif; line-height: 1.5;">
+                                    {{ $review->content }}
+                                </p>
+                            </div>
                         </div>
-
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRecensioni"
-                            data-bs-slide="prev" style="width: 5%;">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"
-                                style="filter: invert(79%) sepia(68%) saturate(3384%) hue-rotate(6deg) brightness(98%) contrast(86%); background-color: transparent;">
-                            </span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselRecensioni"
-                            data-bs-slide="next" style="width: 5%;">
-                            <span class="carousel-control-next-icon" aria-hidden="true"
-                                style="filter: invert(79%) sepia(68%) saturate(3384%) hue-rotate(6deg) brightness(98%) contrast(86%); background-color: transparent;">
-                            </span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
-                @else
-                    <p class="text-center fst-italic" style="color: #d4af37;">Nessuna recensione disponibile.</p>
-                @endif
-            </section>
+                @endforeach
+            </div>
+
+            <!-- Frecce -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselRecensioni"
+                data-bs-slide="prev" style="width: 5%;">
+                <span class="carousel-control-prev-icon" aria-hidden="true"
+                      style="filter: invert(80%) sepia(60%) saturate(400%) hue-rotate(5deg);"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselRecensioni"
+                data-bs-slide="next" style="width: 5%;">
+                <span class="carousel-control-next-icon" aria-hidden="true"
+                      style="filter: invert(80%) sepia(60%) saturate(400%) hue-rotate(5deg);"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    @else
+        <p class="text-center fst-italic" style="color: #d4af37;">Nessuna recensione disponibile.</p>
+    @endif
+</section>
+
+
+
+
 
             {{-- Pulsanti per aprire/chiudere drawer --}}
             <div class="container d-flex justify-content-center gap-4"
