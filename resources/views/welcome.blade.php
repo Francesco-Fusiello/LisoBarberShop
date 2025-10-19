@@ -68,34 +68,32 @@
         </div>
 
 
- {{-- Sezione Foto del Salone --}}
-<section class="container my-5 py-5">
-    <div class="text-center mb-4">
-        <h2 class="fw-bold text-uppercase" style="letter-spacing: 1px;">Il Nostro Salone</h2>
-        <p class="text-muted">Uno spazio curato, moderno e accogliente — dove stile e comfort si incontrano.</p>
-    </div>
+   <!-- mosaic-section.blade.php (solo la sezione) -->
+<section class="mosaic-section">
+    <div class="text-center mb-4" style="color: #f5f5f5;">
+    <h2 class="fw-bold text-uppercase" style="letter-spacing: 1px; color: #f5f5f5;">Il Nostro Salone</h2>
+    <p  style="color: #f5f5f5;">Uno spazio curato, moderno e accogliente — dove stile e comfort si incontrano.</p>
+</div>
 
-    <div class="row g-3">
-        <div class="col-md-4 col-sm-6">
-            <img src="/images/2.jpg" class="img-fluid salon-photo" alt="Salone Liso Barber Shop">
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <img src="/images/2.jpg" class="img-fluid salon-photo" alt="Poltrone barbiere">
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <img src="/images/2.jpg" class="img-fluid salon-photo" alt="Dettagli interni salone">
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <img src="/images/2.jpg" class="img-fluid salon-photo" alt="Specchi del salone">
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <img src="/images/2.jpg" class="img-fluid salon-photo" alt="Sala d'attesa elegante">
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <img src="/images/2.jpg" class="img-fluid salon-photo" alt="Dettagli barber shop">
-        </div>
-    </div>
+  <div class="mosaic-inner">
+    <!-- 9 immagini di prova tutte uguali (2.jpg) -->
+    <div class="m-item m1"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+    <div class="m-item m2"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+    <div class="m-item m3"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+    <div class="m-item m4"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+    <div class="m-item m5"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+    <div class="m-item m6"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+    <div class="m-item m7"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+    <div class="m-item m8"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+    <div class="m-item m9"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+  </div>
 </section>
+
+
+
+
+
+
 
 
 

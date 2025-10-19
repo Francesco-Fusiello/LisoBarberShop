@@ -148,26 +148,32 @@ document.addEventListener("DOMContentLoaded", function () {
         new bootstrap.Tooltip(tooltipTriggerEl)
     })
 });
-/* --- IMMAGINI SALONE --- */
+// mosaic.js - reveal sequenziale lento con IntersectionObserver
 document.addEventListener("DOMContentLoaded", function() {
-    const photos = document.querySelectorAll(".salon-photo");
+  const imgs = Array.from(document.querySelectorAll(".m-img"));
 
-    // assegna ritardo progressivo via JS
-    photos.forEach((photo, index) => {
-        photo.style.transitionDelay = `${index * 0.3}s`; // 0.3s tra un'immagine e l'altra
+  // assegna order/index per ritardo progressivo (righe/colonne non influenzano)
+  imgs.forEach((img, i) => {
+    img.dataset.idx = i;
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        const i = parseInt(img.dataset.idx, 10) || 0;
+        // ritardo progressivo + leggero extra per look elegante
+        setTimeout(() => img.classList.add("visible"), i * 200);
+        observer.unobserve(img); // play once per immagine
+      }
     });
+  }, { threshold: 0.2 });
 
-    // osserva quando le immagini entrano nello schermo
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
-        });
-    }, { threshold: 0.2 });
-
-    photos.forEach(photo => observer.observe(photo));
+  imgs.forEach(img => observer.observe(img));
 });
+
+
+
 
 
 
