@@ -1,37 +1,68 @@
-
-h1,h2{
-  color: #d4af37; /* Colore oro per i titoli */
+/* ======= COLORI PRINCIPALI (stile Zara) ======= */
+/* Nero profondo, bianco sporco e grigio elegante */
+:root {
+  --nero: #111;
+  --antracite: #222;
+  --grigio: #555;
+  --bianco: #f5f5f5;
+  --bianco-puro: #fff;
 }
 
+/* ======= BASE ======= */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--bianco);
+  color: var(--nero);
+  line-height: 1.6;
+}
 
-/* Navbar Links */
+/* Titoli */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: var(--nero);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bianco-puro);
+  border-bottom: 1px solid #ddd;
+}
+
 .nav-link {
-  color: black; /* Colore di testo di default */
+  color: var(--nero);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: color 0.3s;
 }
 
 .nav-link:hover {
-  color: #488B49; /* Colore verde al passaggio del mouse */
-  text-decoration: none; /* Rimuove la sottolineatura predefinita */
+  color: var(--grigio);
+  text-decoration: none;
 }
 
 .nav-link.active {
-  color: #488B49 !important; /* Colore verde per il link attivo */
-  font-weight: bold; /* Maggiore evidenza */
+  color: var(--antracite) !important;
+  font-weight: 600;
 }
 
 @media (max-width: 991.98px) { 
-    .navbar-nav {
-        text-align: center;
-    }
-    .navbar-nav .nav-item {
-        display: inline-block;
-        width: 100%;
-    }
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-nav .nav-item {
+    display: inline-block;
+    width: 100%;
+  }
 }
 
 /* Logo Header */
 header img {
-  /* desktop: lasciare dinamico per ora */
   height: auto;
 }
 
@@ -47,14 +78,15 @@ header img {
   }
 }
 
-/* Lista Servizi */
+/* ======= LISTA SERVIZI ======= */
 .list-group-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5rem;
-  border-bottom: 2px solid #488B49;
-  padding: 10px 15px;
+  font-size: 1.4rem;
+  border-bottom: 1px solid var(--nero);
+  padding: 12px 15px;
+  background-color: transparent;
 }
 
 .service-name {
@@ -63,54 +95,37 @@ header img {
 
 .price {
   margin-left: 10px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
-/* Card Generiche */
+/* ======= CARD GENERICHE ======= */
 .card {
-  transition: transform 0.3s ease-in-out;
+  border: 1px solid var(--nero);
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .card-img-top {
   height: 200px;
   object-fit: cover;
+  border-bottom: 1px solid var(--nero);
 }
 
-/* Navbar Fissa */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-/* Pulsante Debug */
-.debug-btn {
-  position: relative !important;
-  z-index: 1000 !important;
-  background-color: red !important;
-}
-
-/* Immagine Header */
+/* ======= IMMAGINE HEADER ======= */
 .header-img {
   height: 450px;
   width: 100%;
   object-fit: cover;
+  border-bottom: 1px solid var(--nero);
 }
 
-/* Font */
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
-}
-
-/* Paginazione Personalizzata */
+/* ======= PAGINAZIONE ======= */
 .pagination-custom {
   display: flex;
   justify-content: flex-end;
@@ -119,139 +134,169 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pagination-custom .page-link {
-  color: #000;
+  color: var(--nero);
   padding: 6px 14px;
-  font-size: 0.85rem;
-  border-radius: 50px;
-  background-color: #f8f9fa;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  border: none;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 0;
+  background-color: var(--bianco-puro);
+  border: 1px solid var(--nero);
+  transition: all 0.3s ease;
 }
 
 .pagination-custom .page-link:hover {
-  transform: scale(1.05);
-  background-color: #212529;
-  color: #fff;
+  background-color: var(--nero);
+  color: var(--bianco-puro);
 }
 
 .pagination-custom .page-item.active .page-link {
-  background-color: #212529;
-  color: #fff;
+  background-color: var(--antracite);
+  color: var(--bianco-puro);
 }
 
-.pagination-custom .page-item.disabled .page-link {
-  background-color: #f8f9fa;
-  color: #ccc;
-}
-
-/* Sezione "Chi Siamo" */
+/* ======= SEZIONE CHI SIAMO ======= */
 .containerCard {
-  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .containerCard .box {
-  position: relative;
   width: 15rem;
   height: 15rem;
-  margin: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
+  border: 1px solid var(--nero);
   overflow: hidden;
-}
-
-.imgBoxCard {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  transition: all 0.5s ease-in-out;
+  border-radius: 0;
+  position: relative;
+  background-color: var(--bianco-puro);
 }
 
 .imgBoxCard img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.containerCard .box:hover .imgBoxCard img {
+  transform: scale(1.05);
 }
 
 .contentCard {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
   width: 100%;
-  height: 100%;
-  padding: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.85);
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  background-color: rgba(255,255,255,0.9);
   text-align: center;
-  transition: 0.5s ease-in-out;
+  padding: 1rem;
 }
 
 .contentCard h2 {
-  font-size: 1.2rem;
-  color: #111;
-  font-weight: 600;
-  line-height: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--nero);
 }
 
 .contentCard span {
-  color: #413e3e;
+  color: var(--grigio);
   font-size: 0.9rem;
+}
+
+/* ======= REVIEW DRAWER ======= */
+.review-drawer {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  background-color: var(--bianco-puro);
+  color: var(--nero);
+  box-shadow: -4px 0 8px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.review-drawer.open {
+  right: 0;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--nero);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1040;
+}
+
+.drawer-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ======= RECENSIONI GRID ======= */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.review-card {
+  background-color: var(--bianco-puro);
+  border: 1px solid var(--nero);
+  padding: 1.5rem;
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--nero);
+  font-style: italic;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.review-card h5 {
+  color: var(--nero);
+  font-family: 'Playfair Display', serif;
   font-weight: 600;
-  letter-spacing: 1px;
 }
 
-/* Hover Chi Siamo */
-.containerCard .box:hover .imgBoxCard {
-  transform: scale(1.05);
+.review-card .stars {
+  color: var(--antracite);
+  font-size: 1.2rem;
 }
 
-.containerCard .box:hover .contentCard {
-  transform: translateY(10px);
+.review-card small {
+  color: var(--grigio);
 }
 
-/* Responsive Cards */
-@media (max-width: 600px) {
-  .containerCard .box {
-    width: 13rem;
-    height: 13rem;
-  }
-
-  .containerCard .box:hover .contentCard {
-    transform: translateY(10px);
-  }
-
-  .containerCard .box:hover .imgBoxCard {
-    transform: scale(1.03);
-  }
-
-  .card:hover {
-    transform: scale(1.03);
-  }
-
-  .grayscale-img {
-    filter: grayscale(100%);
-  }
-
-  .grayscale-img:hover {
-    filter: grayscale(0%);
-    transform: scale(1.05);
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Toast Personalizzato */
+/* ======= TOAST ======= */
 .toast-elegant {
   position: fixed;
   top: 2rem;
@@ -259,34 +304,15 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-50%);
   z-index: 1055;
   min-width: 300px;
-  max-width: 90%;
   padding: 1rem 1.5rem;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border-radius: 1rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  color: #1a1a1a;
-  animation: toastSlideDown 0.6s ease-out, toastFadeOut 0.4s ease-in 4s forwards;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--nero);
+  color: var(--nero);
   font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  animation: toastSlideDown 0.6s ease-out, toastFadeOut 0.4s ease-in 4s forwards;
 }
 
-.toast-elegant .toast-icon {
-  margin-right: 0.75rem;
-  font-size: 1.2rem;
-  color: #198754;
-}
-
-.toast-elegant .btn-close {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  color: #000;
-}
-
-/* Animazioni Toast */
 @keyframes toastSlideDown {
   0% {
     transform: translateX(-50%) translateY(-50px);
@@ -305,247 +331,80 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
- .header-link {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #c1b26a;
-    font-weight: 600;
-    text-decoration: none;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    display: block;
-    transition: color 0.3s ease;
-}
-
-.header-link:hover {
-    color: #d4af37;
-}
-
-/* Responsivo per schermi piccoli */
-@media (max-width: 576px) {
-    .header-link {
-        position: static !important;
-        transform: none !important;
-        right: auto !important;
-        top: auto !important;
-        display: block !important;
-        text-align: center !important;
-        margin-top: 0.5rem !important;
-    }
-}
-
-/* Sezione Contatori */
-.counter-section {
-    background-color: rgba(11, 46, 29, 0.85);
-    border-radius: 12px;
-    padding: 2.5rem 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.counter-box {
-    border-right: 1px solid rgba(212, 175, 55, 0.4);
-    padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Rimuove la linea sull'ultimo box */
-.counter-box:last-child {
-    border-right: none;
-}
-
-/* Drawer per le recensioni */
-    
-    .review-drawer {
-        position: fixed;
-        top: 0;
-        right: -400px; /* nascosto fuori dallo schermo */
-        width: 400px;
-        height: 100vh;
-        background-color: #0b2e1d;
-        color: white;
-        font-family: 'Playfair Display', serif;
-        box-shadow: -4px 0 8px rgba(0,0,0,0.5);
-        transition: right 0.3s ease;
-        z-index: 1050;
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-    }
-
-    .review-drawer.open {
-        right: 0;
-    }
-
-    .drawer-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #d4af37;
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .drawer-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0,0,0,0.5);
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease;
-        z-index: 1040;
-    }
-
-    .drawer-overlay.active {
-        opacity: 1;
-        visibility: visible;
-    }
-
-   /*Reviews grid layout */
-   .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-    max-width: 1140px;
-    margin: auto;
-  }
-
-  .review-card {
-    background-color: #f9f9f9;
-    border-left: 4px solid #333;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s ease forwards;
-  }
-
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Responsive: 1 col on small screens */
-  @media (max-width: 768px) {
-    .reviews-grid {
-      grid-template-columns: 1fr;
-      max-width: 100%;
-      padding: 0 1rem;
-    }
-  } 
-  
-  /* === Reviews Section - Liso Barber Shop Style === */
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1140px;
-  margin: auto;
-  padding: 0 1rem;
-}
-
-.review-card {
-  background-color: rgba(11, 46, 29, 0.95);
-  border-left: 5px solid #d4af37;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  color: #f0e6c8;
-  font-family: 'Lato', sans-serif;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s ease forwards;
-}
-
-.review-card h5 {
-  color: #d4af37;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.review-card small {
-  color: #c1b26a;
-  font-size: 0.85rem;
-}
-
-.review-card .stars {
-  color: #ffb400;
-  font-size: 1.3rem;
-}
-
-.review-card .review-content {
-  color: #f0e6c8;
-  font-style: italic;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-top: 1rem;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 768px) {
-  .reviews-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.review-counter-box {
-  background-color: rgba(11, 46, 29, 0.85);
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  
-  color: #fff;
+/* ======= FOOTER ======= */
+footer {
+  background-color: var(--bianco-puro);
+  border-top: 1px solid #ddd;
+  padding: 2rem 0;
   text-align: center;
+  color: var(--nero);
 }
 
-.review-counter-box h5 {
-  color: #fff;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  margin-bottom: 12px;
+footer a {
+  color: var(--nero);
+  text-decoration: none;
 }
 
-.review-counter-box .fa-star {
-  font-size: 1.4rem;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-  color: #d4af37;
+footer a:hover {
+  color: var(--grigio);
 }
 
-.review-counter-box .fa-star.far {
-  color: #555;
+/* ======= CARD ======= */
+/* Effetto Zara minimal — card squadrate e flat */
+.card {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: 1px solid #e5e5e5 !important;
+    background-color: #f8f8f8 !important;
+    transition: all 0.2s ease-in-out;
 }
 
-.review-counter-box small {
-  color: #aaa;
-  font-size: 0.9rem;
-  margin-bottom: 15px;
-  display: block;
+.card:hover {
+    background-color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
-.review-counter-box p {
-  color: #fff;
-  font-size: 1.15rem;
-  font-family: 'Lato', sans-serif;
-  line-height: 1.5;
-  margin-bottom: 0;
+/* Bottoni neri stile Zara */
+.btn-dark {
+    border-radius: 0 !important;
+    background-color: #000 !important;
+    color: #fff !important;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 0.6rem 1.2rem;
 }
 
+.btn-dark:hover {
+    background-color: #333 !important;
+}
 
+/* Pulsante outline */
+.btn-outline-dark {
+    border-radius: 0 !important;
+    border: 1px solid #111 !important;
+    color: #111 !important;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
 
+.btn-outline-dark:hover {
+    background-color: #111 !important;
+    color: #fff !important;
+}
 
+/* Titoli e testo */
+h2, h3, h5 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+p, .lead {
+    color: #444;
+}
+
+/* Sfondo sezione chiara */
+section.container {
+    background-color: #fff;
+}
