@@ -408,3 +408,34 @@ p, .lead {
 section.container {
     background-color: #fff;
 }
+
+/* --- FOTO SALONE --- */
+.salon-photo {
+    border-radius: 0 !important;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.2s ease-out; /* più lento */
+}
+
+/* Mostra le immagini con effetto sequenziale */
+.salon-photo.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover leggero */
+.salon-photo:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    .salon-photo {
+        margin-bottom: 10px;
+    }
+}
+

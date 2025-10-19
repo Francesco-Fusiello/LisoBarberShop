@@ -148,6 +148,29 @@ document.addEventListener("DOMContentLoaded", function () {
         new bootstrap.Tooltip(tooltipTriggerEl)
     })
 });
+/* --- IMMAGINI SALONE --- */
+document.addEventListener("DOMContentLoaded", function() {
+    const photos = document.querySelectorAll(".salon-photo");
+
+    // assegna ritardo progressivo via JS
+    photos.forEach((photo, index) => {
+        photo.style.transitionDelay = `${index * 0.3}s`; // 0.3s tra un'immagine e l'altra
+    });
+
+    // osserva quando le immagini entrano nello schermo
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    photos.forEach(photo => observer.observe(photo));
+});
+
+
+
 
 
 
