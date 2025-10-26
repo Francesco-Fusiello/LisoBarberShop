@@ -1,80 +1,45 @@
 <x-layout>
-    <section class="py-5" style="background-color: #0b2e1d; font-family: 'Playfair Display', serif; color: #fff;">
+    <section class="py-5" style="background-color: #ffffff; font-family: 'Playfair Display', serif; color: #333;">
         <div class="container">
             <div class="text-center mb-5">
-                {{-- <img src="/images/3.jpg" alt="logo" class="img-fluid mb-4" style="max-height: 200px;"> --}}
-                <h1 style="font-size: 3.5rem; font-weight: 700; letter-spacing: 2px; color: #d4af37;">
+                <h1 style="font-size: 3.5rem; font-weight: 700; letter-spacing: 2px; color: #111;">
                     Listino Prezzi
                 </h1>
-                <h4 class="fst-italic text-white">Scopri i nostri Servizi</h4>
-                <p class="fst-italic fs-4" style="color: #ccc;">
-                    Benvenuti da Liso Barber Shop, dove la bellezza incontra l’eccellenza! Il nostro team di professionisti dedicati è qui per offrirti servizi di alta qualità,
-                    personalizzati per soddisfare le tue esigenze. Scopri il nostro listino prezzi e regalati un’esperienza indimenticabile.
+                <h4 class="fst-italic" style="color: #555;">Scopri i nostri Servizi</h4>
+                <p class="fst-italic fs-5" style="color: #555;">
+                    Benvenuti da Liso Barber Shop, dove la bellezza incontra l’eccellenza! Il nostro team di professionisti
+                    è qui per offrirti servizi di alta qualità, personalizzati per soddisfare le tue esigenze. Scopri il nostro listino prezzi e regalati un’esperienza indimenticabile.
                 </p>
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-8">
-                    <div class="list-group shadow">
-                        <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent" style="border-color: #d4af37; color: #fff;">
-                            <span>Taglio</span>
-                            <strong style="color: #d4af37;">da 12€</strong>
-                        </div>
-                        <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent" style="border-color: #d4af37; color: #fff;">
-                            <span>Taglio Baby (0-7 anni)</span>
-                            <strong style="color: #d4af37;">da 10€</strong>
-                        </div>
-                        <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent" style="border-color: #d4af37; color: #fff;">
-                            <span>Rasatura a 0</span>
-                            <strong style="color: #d4af37;">da 7€</strong>
-                        </div>
-                        <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent" style="border-color: #d4af37; color: #fff;">
-                            <span>Colore</span>
-                            <strong style="color: #d4af37;">da 80€</strong>
-                        </div>
-                        <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent" style="border-color: #d4af37; color: #fff;">
-                            <span>Taglio e Shampoo</span>
-                            <strong style="color: #d4af37;">da 17€</strong>
-                        </div>
-                        <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent" style="border-color: #d4af37; color: #fff;">
-                            <span>Taglio e Barba</span>
-                            <strong style="color: #d4af37;">da 19€</strong>
-                        </div>
-                        <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent" style="border-color: #d4af37; color: #fff;">
-                            <span>Barba</span>
-                            <strong style="color: #d4af37;">da 7€</strong>
-                        </div>
-                        <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent" style="border-color: #d4af37; color: #fff;">
-                            <span>Barba Relax (barba hipster con vapore e panno caldo)</span>
-                            <strong style="color: #d4af37;">da 14€</strong>
-                        </div>
-                        <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent" style="border-color: #d4af37; color: #fff;">
-                            <span>Pulizia Viso</span>
-                            <strong style="color: #d4af37;">da 15€</strong>
-                        </div>
-                        <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent" style="border-color: #d4af37; color: #fff;">
-                            <span>Taglio + Shampoo + Barba</span>
-                            <strong style="color: #d4af37;">da 24€</strong>
-                        </div>
-                        <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent" style="border-color: #d4af37; color: #fff;">
-                            <span>Completo</span>
-                            <strong style="color: #d4af37;">26€</strong>
-                        </div>
-                        <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent" style="border-color: #d4af37; color: #fff;">
-                            <span>Colore Barba</span>
-                            <strong style="color: #d4af37;">da 13€</strong>
-                        </div>
-                        <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent" style="border-color: #d4af37; color: #fff;">
-                            <span>Meches Capelli</span>
-                            <strong style="color: #d4af37;">da 25€</strong>
-                        </div>
-                        <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent" style="border-color: #d4af37; color: #fff;">
-                            <span>Taglio e Sopracciglia</span>
-                            <strong style="color: #d4af37;">da 16€</strong>
-                        </div>
+                    <div class="list-group shadow-sm">
+                        @foreach ([
+                            ['Taglio', '12€'],
+                            ['Taglio Baby (0-7 anni)', '10€'],
+                            ['Rasatura a 0', '7€'],
+                            ['Colore', '80€'],
+                            ['Taglio e Shampoo', '17€'],
+                            ['Taglio e Barba', '19€'],
+                            ['Barba', '7€'],
+                            ['Barba Relax (barba hipster con vapore e panno caldo)', '14€'],
+                            ['Pulizia Viso', '15€'],
+                            ['Taglio + Shampoo + Barba', '24€'],
+                            ['Completo', '26€'],
+                            ['Colore Barba', '13€'],
+                            ['Meches Capelli', '25€'],
+                            ['Taglio e Sopracciglia', '16€'],
+                        ] as $service)
+                            <div class="list-group-item d-flex justify-content-between align-items-center price-item bg-light mb-2 shadow-sm" 
+                                 style="border: 1px solid #ddd; border-radius: 0; transition: all 0.3s ease;">
+                                <span>{{ $service[0] }}</span>
+                                <strong>{{ $service[1] }}</strong>
+                            </div>
+                        @endforeach
                     </div>
 
-                    <h4 class="text-center mt-5 fs-4" style="color: #ccc;">
+                    <h4 class="text-center mt-5 fs-5" style="color: #555;">
                         I nostri servizi sono pensati per offrire sempre il massimo della qualità e dello stile.
                     </h4>
                 </div>
@@ -82,8 +47,8 @@
 
             <div class="row justify-content-center text-center mt-5">
                 <div class="col-lg-10">
-                    <h2 class="pt-3 fst-italic" style="color: #fff;">Che Aspetti!!!</h2>
-                    <h2 class="fst-italic" style="color: #fff;">Scarica la nostra app per prenotare subito il tuo appuntamento...</h2>
+                    <h2 class="pt-3 fst-italic" style="color: #111;">Che Aspetti!!!</h2>
+                    <h2 class="fst-italic" style="color: #111;">Scarica la nostra app per prenotare subito il tuo appuntamento...</h2>
                 </div>
             </div>
 
@@ -104,4 +69,24 @@
             </div>
         </div>
     </section>
+
+    <style>
+        /* Hover minimal sui box dei prezzi */
+        .price-item:hover {
+            background-color: #e0e0e0; /* grigio leggermente più scuro */
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+        .price-item span,
+        .price-item strong {
+            transition: color 0.3s ease;
+        }
+
+        .price-item:hover span,
+        .price-item:hover strong {
+            color: #000;
+        }
+    </style>
 </x-layout>
