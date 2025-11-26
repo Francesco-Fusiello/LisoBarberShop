@@ -1,5 +1,4 @@
 /* ======= COLORI PRINCIPALI (stile Zara) ======= */
-/* Nero profondo, bianco sporco e grigio elegante */
 :root {
   --nero: #111;
   --antracite: #222;
@@ -9,22 +8,38 @@
 }
 
 /* ======= BASE ======= */
-body {
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: #666; /* grigio minimal */
+  color: var(--bianco-puro);
   font-family: 'Lato', sans-serif;
-  background-color: var(--bianco);
-  color: var(--nero);
   line-height: 1.6;
 }
 
-/* Titoli */
+body {
+  background: url('/images/sfondo1.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.min-vh-100 {
+  background-color: transparent !important;
+}
+
+section {
+  background-color: transparent !important;
+}
+
+/* ======= TITOLI ======= */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
-  color: var(--nero);
+  color: var(--bianco-puro);
   font-weight: 400;
   letter-spacing: 0.5px;
 }
 
-/* Navbar */
+/* ======= NAVBAR ======= */
 .navbar {
   position: sticky;
   top: 0;
@@ -52,31 +67,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 991.98px) { 
-  .navbar-nav {
-    text-align: center;
-  }
-  .navbar-nav .nav-item {
-    display: inline-block;
-    width: 100%;
-  }
+  .navbar-nav { text-align: center; }
+  .navbar-nav .nav-item { display: inline-block; width: 100%; }
 }
 
-/* Logo Header */
 header img {
   height: auto;
 }
 
-@media (max-width: 768px) {
-  header img {
-    width: 120px;
-  }
-}
-
-@media (max-width: 480px) {
-  header img {
-    width: 100px;
-  }
-}
+@media (max-width: 768px) { header img { width: 120px; } }
+@media (max-width: 480px) { header img { width: 100px; } }
 
 /* ======= LISTA SERVIZI ======= */
 .list-group-item {
@@ -84,31 +84,29 @@ header img {
   justify-content: space-between;
   align-items: center;
   font-size: 1.4rem;
-  border-bottom: 1px solid var(--nero);
+  border-bottom: 1px solid var(--bianco-puro);
   padding: 12px 15px;
   background-color: transparent;
+  color: var(--bianco-puro);
 }
 
-.service-name {
-  flex-grow: 1;
-}
-
-.price {
-  margin-left: 10px;
-  font-size: 1.4rem;
-}
+.service-name { flex-grow: 1; }
+.price { margin-left: 10px; font-size: 1.4rem; }
 
 /* ======= CARD GENERICHE ======= */
 .card {
-  border: 1px solid var(--nero);
+  border: 1px solid var(--bianco-puro);
   border-radius: 0;
   box-shadow: none;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  background-color: #f8f8f8 !important;
+  color: var(--nero);
 }
 
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  background-color: #fff !important;
 }
 
 .card-img-top {
@@ -180,9 +178,7 @@ header img {
   transition: transform 0.5s ease;
 }
 
-.containerCard .box:hover .imgBoxCard img {
-  transform: scale(1.05);
-}
+.containerCard .box:hover .imgBoxCard img { transform: scale(1.05); }
 
 .contentCard {
   position: absolute;
@@ -193,15 +189,8 @@ header img {
   padding: 1rem;
 }
 
-.contentCard h2 {
-  font-size: 1.1rem;
-  color: var(--nero);
-}
-
-.contentCard span {
-  color: var(--grigio);
-  font-size: 0.9rem;
-}
+.contentCard h2 { font-size: 1.1rem; color: var(--nero); }
+.contentCard span { color: var(--grigio); font-size: 0.9rem; }
 
 /* ======= REVIEW DRAWER ======= */
 .review-drawer {
@@ -220,9 +209,7 @@ header img {
   padding: 1rem;
 }
 
-.review-drawer.open {
-  right: 0;
-}
+.review-drawer.open { right: 0; }
 
 .drawer-header {
   display: flex;
@@ -285,16 +272,9 @@ header img {
   font-size: 1.2rem;
 }
 
-.review-card small {
-  color: var(--grigio);
-}
+.review-card small { color: var(--grigio); }
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+@keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
 
 /* ======= TOAST ======= */
 .toast-elegant {
@@ -314,21 +294,12 @@ header img {
 }
 
 @keyframes toastSlideDown {
-  0% {
-    transform: translateX(-50%) translateY(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
-  }
+  0% { transform: translateX(-50%) translateY(-50px); opacity: 0; }
+  100% { transform: translateX(-50%) translateY(0); opacity: 1; }
 }
 
 @keyframes toastFadeOut {
-  to {
-    opacity: 0;
-    transform: translateX(-50%) translateY(-20px);
-  }
+  to { opacity: 0; transform: translateX(-50%) translateY(-20px); }
 }
 
 /* ======= FOOTER ======= */
@@ -340,32 +311,10 @@ footer {
   color: var(--nero);
 }
 
-footer a {
-  color: var(--nero);
-  text-decoration: none;
-}
+footer a { color: var(--nero); text-decoration: none; }
+footer a:hover { color: var(--grigio); }
 
-footer a:hover {
-  color: var(--grigio);
-}
-
-/* ======= CARD ======= */
-/* Effetto Zara minimal — card squadrate e flat */
-.card {
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    border: 1px solid #e5e5e5 !important;
-    background-color: #f8f8f8 !important;
-    transition: all 0.2s ease-in-out;
-}
-
-.card:hover {
-    background-color: #ffffff !important;
-    transform: translateY(-2px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-}
-
-/* Bottoni neri stile Zara */
+/* ======= BOTTONI ======= */
 .btn-dark {
     border-radius: 0 !important;
     background-color: #000 !important;
@@ -375,12 +324,8 @@ footer a:hover {
     font-size: 0.85rem;
     padding: 0.6rem 1.2rem;
 }
+.btn-dark:hover { background-color: #333 !important; }
 
-.btn-dark:hover {
-    background-color: #333 !important;
-}
-
-/* Pulsante outline */
 .btn-outline-dark {
     border-radius: 0 !important;
     border: 1px solid #111 !important;
@@ -388,28 +333,16 @@ footer a:hover {
     text-transform: uppercase;
     font-size: 0.85rem;
 }
+.btn-outline-dark:hover { background-color: #111 !important; color: #fff !important; }
 
-.btn-outline-dark:hover {
-    background-color: #111 !important;
-    color: #fff !important;
-}
-
-/* Titoli e testo */
-h2, h3, h5 {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-p, .lead {
-    color: #444;
-}
+/* ======= TESTO ======= */
+h2, h3, h5 { letter-spacing: 1px; text-transform: uppercase; }
+p, .lead { color: #f5f5f5; }
 
 /* Sfondo sezione chiara */
-section.container {
-    background-color: #fff;
-}
+section.container { background-color: #fff; }
 
-/* MOSAICO FOTO SALONE */
+/* ======= MOSAICO FOTO SALONE ======= */
 .mosaic-section {
   background: #000;
   padding: 40px 0;
@@ -418,7 +351,7 @@ section.container {
 
 .mosaic-inner {
   width: 100%;
-  max-width: 1300px; /* puoi cambiare se vuoi più largo */
+  max-width: 1300px;
   margin: 0 auto;
   display: grid;
   gap: 8px;
@@ -427,7 +360,6 @@ section.container {
   grid-auto-flow: dense;
 }
 
-/* Mosaico desktop - span ottimizzati senza overlap */
 .m-item { overflow: hidden; position: relative; }
 
 .m1 { grid-column: 1 / span 5; grid-row: 1 / span 6; }
@@ -454,22 +386,47 @@ section.container {
   will-change: transform, opacity;
 }
 
-/* reveal immagini */
 .m-img.visible {
   opacity: 1;
   transform: scale(1) translateY(0);
   filter: grayscale(0%);
 }
 
-/* hover effetto leggero */
 .m-item:hover .m-img {
   transform: scale(1.03);
   transition: transform 0.5s ease;
 }
 
-/* RESPONSIVE */
+/* ======= CONTATORI ======= */
+.counter-section {
+  background-color: #f5f5f5;
+  padding: 60px 0;
+}
 
-/* tablet-large */
+.counter-section .counter {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.counter-section p {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.counter-section .col-6 {
+  transition: transform 0.3s ease;
+}
+
+.counter-section .col-6:hover {
+  transform: translateY(-5px);
+}
+
 @media (max-width: 1100px) {
   .mosaic-inner { grid-template-columns: repeat(8, 1fr); grid-auto-rows: 80px; }
 
@@ -484,64 +441,28 @@ section.container {
   .m9 { grid-column: 7 / span 2; grid-row: 7 / span 2; }
 }
 
-/* mobile medium */
 @media (max-width: 768px) {
   .mosaic-inner { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; gap: 6px; }
-  .m1, .m2, .m3, .m4, .m5, .m6, .m7, .m8, .m9 {
-    grid-column: auto / span 1; grid-row: auto / span 1;
-  }
+  .m1, .m2, .m3, .m4, .m5, .m6, .m7, .m8, .m9 { grid-column: auto / span 1; grid-row: auto / span 1; }
 }
 
-/* mobile piccolo */
 @media (max-width: 420px) {
   .mosaic-inner { grid-template-columns: 1fr; grid-auto-rows: 220px; }
 }
 
-/* box-sizing */
 .mosaic-section, .mosaic-inner, .m-item { box-sizing: border-box; }
 
-/* ======= SEZIONE CONTATORI MINIMAL ======= */
-.counter-section {
-  background-color: #f5f5f5; /* grigio chiaro minimal */
-  padding: 60px 0;
+/* ======= CARD MINIMAL ZARA ======= */
+.card {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: 1px solid #e5e5e5 !important;
+  background-color: #f8f8f8 !important;
+  transition: all 0.2s ease-in-out;
 }
 
-.counter-section .counter {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  color: #222; /* grigio scuro */
-  margin-bottom: 0.5rem;
-}
-
-.counter-section p {
-  font-family: 'Lato', sans-serif;
-  font-size: 0.95rem;
-  color: #555; /* grigio medio */
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Animazione contatori */
-.counter {
-  display: inline-block;
-  transition: all 0.3s ease-in-out;
-}
-
-.counter-section .col-6 {
-  transition: transform 0.3s ease;
-}
-
-.counter-section .col-6:hover {
-  transform: translateY(-5px);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .counter-section .counter {
-    font-size: 2rem;
-  }
-  .counter-section p {
-    font-size: 0.85rem;
-  }
+.card:hover {
+  background-color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
