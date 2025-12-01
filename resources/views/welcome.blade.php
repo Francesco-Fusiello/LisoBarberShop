@@ -106,7 +106,7 @@
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
                             <i class="fa-solid fa-scissors fa-3x mb-3"></i>
                             <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Taglio Uomo</h5>
-                            <p class="card-text">Valorizziamo ogni tipo di volto e stile con tagli personalizzati.</p>
+                            <p class="card-text" style="color: #000">Valorizziamo ogni tipo di volto e stile con tagli personalizzati.</p>
                             <a href="{{ route('services') }}#taglio-uomo"
                                 class="btn btn-dark mt-auto" style="font-weight: 700; border-radius: 0;">
                                 Scopri di più
@@ -120,7 +120,7 @@
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
                             <i class="fa-solid fa-cut fa-3x mb-3"></i>
                             <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Rasatura Tradizionale</h5>
-                            <p class="card-text">Rasatura con panno caldo e prodotti di alta qualità per un relax autentico.</p>
+                            <p class="card-text" style="color: #000">Rasatura con panno caldo e prodotti di alta qualità per un relax autentico.</p>
                             <a href="{{ route('services') }}#rasatura-tradizionale"
                                 class="btn btn-dark mt-auto" style="font-weight: 700; border-radius: 0;">
                                 Scopri di più
@@ -134,7 +134,7 @@
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
                             <i class="fa-solid fa-user fa-3x mb-3"></i>
                             <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Modellatura Barba</h5>
-                            <p class="card-text">Definizione e trattamenti per una barba morbida e curata.</p>
+                            <p class="card-text"style="color: #000">Definizione e trattamenti per una barba morbida e curata.</p>
                             <a href="{{ route('services') }}#modellatura-barba"
                                 class="btn btn-dark mt-auto" style="font-weight: 700; border-radius: 0;">
                                 Scopri di più
