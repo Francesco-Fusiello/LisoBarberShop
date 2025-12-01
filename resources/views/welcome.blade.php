@@ -153,26 +153,27 @@
         </section>
 
         {{-- Counter section --}}
-        <section class="container my-5 section-divider counter-section text-center">
-            <div class="row text-dark">
-                <div class="col-6 col-md-3 mb-4">
-                    <h3 class="display-6 fw-bold counter" data-target="800">0</h3>
-                    <p>Clienti Soddisfatti</p>
-                </div>
-                <div class="col-6 col-md-3 mb-4">
-                    <h3 class="display-6 fw-bold counter" data-target="66351">0</h3>
-                    <p>Tagli Eseguiti</p>
-                </div>
-                <div class="col-6 col-md-3 mb-4">
-                    <h3 class="display-6 fw-bold counter" data-target="8">0</h3>
-                    <p>Anni di Esperienza</p>
-                </div>
-                <div class="col-6 col-md-3 mb-4">
-                    <h3 class="display-6 fw-bold counter" data-target="500">0</h3>
-                    <p>Recensioni Positive</p>
-                </div>
-            </div>
-        </section>
+       <section class="container my-5 section-divider counter-section text-center">
+    <div class="row text-white">
+        <div class="col-6 col-md-3 mb-4">
+            <h3 class="display-6 fw-bold counter text-white" data-target="800">0</h3>
+            <p class="text-white">Clienti Soddisfatti</p>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+            <h3 class="display-6 fw-bold counter text-white" data-target="66351">0</h3>
+            <p class="text-white">Tagli Eseguiti</p>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+            <h3 class="display-6 fw-bold counter text-white" data-target="8">0</h3>
+            <p class="text-white">Anni di Esperienza</p>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+            <h3 class="display-6 fw-bold counter text-white" data-target="500">0</h3>
+            <p class="text-white">Recensioni Positive</p>
+        </div>
+    </div>
+</section>
+
 
         {{-- Recensioni --}}
         <section class="container my-5 text-center">
