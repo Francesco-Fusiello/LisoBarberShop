@@ -12,7 +12,7 @@
                             style="object-fit: cover; height: 600px;">
                         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center"
                             style="background: rgba(0,0,0,0.4); top: 0; bottom: 0; left: 0; right: 0;">
-                            <h1 class="display-3 fw-bold" style="color: #ffffff; text-shadow: 2px 2px 6px #000;">
+                            <h1 class="display-3 fw-bold" style="color: #f5f5f5; text-shadow: 2px 2px 6px #000;">
                                 DEDICATO ALL’UOMO</h1>
                             <h4 class="fst-italic" style="color: #f5f5f5;">Innovazione, Interpretazione e Ricerca</h4>
                         </div>
@@ -37,7 +37,7 @@
 
         {{-- Descrizione sotto carousel Header --}}
         <div class="container py-5 text-center" style="font-family: 'Lato', sans-serif; color: #333;">
-            <h2 class="mb-3" style="font-weight: 700;">Per la bellezza e la cura dei capelli degli uomini</h2>
+            <h2 class="mb-3" style="font-weight: 700; color:#ffffff">Per la bellezza e la cura dei capelli degli uomini</h2>
             <p class="lead mx-auto" style="max-width: 700px;">
                 Gli esperti di <strong>Liso Barber Shop</strong> propongono nel salone di Andria numerosi tagli classici
                 e moderni maschili, personalizzabili e di tendenza.
@@ -51,7 +51,7 @@
                 per ritrovare capelli forti e sani in breve tempo.
             </p>
 
-            <h3 class="mt-5" style="font-weight: 700;">
+            <h3 class="mt-5" style="font-weight: 700; color:#f5f5f5">
                 Scarica la nostra app per prenotare subito il tuo appuntamento
             </h3>
 
@@ -99,7 +99,7 @@
 
         {{-- Servizi --}}
         <section class="container py-5">
-            <h2 class="text-center mb-4" style="font-weight: 700;">I nostri servizi</h2>
+            <h2 class="text-center mb-4" style="font-weight: 700; color:#f5f5f5">I nostri servizi</h2>
             <div class="row g-4 text-center">
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow" style="background-color: #f5f5f5; color: #000;">
@@ -177,7 +177,7 @@
 
         {{-- Recensioni --}}
         <section class="container my-5 text-center">
-            <h2 class="mb-4" style="font-family: 'Playfair Display', serif; font-weight: 700;">Cosa dicono di noi</h2>
+            <h2 class="mb-4" style="font-family: 'Playfair Display', serif; font-weight: 700;  color:#f5f5f5">Cosa dicono di noi</h2>
             @if ($latestReviews->count())
                 <div id="carouselRecensioni" class="carousel slide" data-bs-ride="carousel"
                     style="max-width: 750px; margin: auto;">
