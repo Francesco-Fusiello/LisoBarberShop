@@ -2,11 +2,11 @@
     <section class="py-5" style="background-color: #ffffff; font-family: 'Playfair Display', serif; color: #333;">
         <div class="container">
             <div class="text-center mb-5">
-                <h1 style="font-size: 3.5rem; font-weight: 700; letter-spacing: 2px; color: #111;">
+                <h1 style="font-size: 3.5rem; font-weight: 700; letter-spacing: 2px; color: #ffffff;">
                     Listino Prezzi
                 </h1>
-                <h4 class="fst-italic" style="color: #555;">Scopri i nostri Servizi</h4>
-                <p class="fst-italic fs-5" style="color: #555;">
+                <h4 class="fst-italic" style="color: #ffffff;">Scopri i nostri Servizi</h4>
+                <p class="fst-italic fs-5" style="color: #ffffff;">
                     Benvenuti da Liso Barber Shop, dove la bellezza incontra l’eccellenza! Il nostro team di professionisti
                     è qui per offrirti servizi di alta qualità, personalizzati per soddisfare le tue esigenze. Scopri il nostro listino prezzi e regalati un’esperienza indimenticabile.
                 </p>
@@ -32,14 +32,14 @@
                             ['Taglio e Sopracciglia', '16€'],
                         ] as $service)
                             <div class="list-group-item d-flex justify-content-between align-items-center price-item bg-light mb-2 shadow-sm" 
-                                 style="border: 1px solid #ddd; border-radius: 0; transition: all 0.3s ease;">
+                                 style="border: 1px solid #ddd; border-radius: 0; transition: all 0.3s ease; color:#000">
                                 <span>{{ $service[0] }}</span>
                                 <strong>{{ $service[1] }}</strong>
                             </div>
                         @endforeach
                     </div>
 
-                    <h4 class="text-center mt-5 fs-5" style="color: #555;">
+                    <h4 class="text-center mt-5 fs-5" style="color: #ffffff;">
                         I nostri servizi sono pensati per offrire sempre il massimo della qualità e dello stile.
                     </h4>
                 </div>
@@ -47,8 +47,8 @@
 
             <div class="row justify-content-center text-center mt-5">
                 <div class="col-lg-10">
-                    <h2 class="pt-3 fst-italic" style="color: #111;">Che Aspetti!!!</h2>
-                    <h2 class="fst-italic" style="color: #111;">Scarica la nostra app per prenotare subito il tuo appuntamento...</h2>
+                    <h2 class="pt-3 fst-italic" style="color: #ffffff;">Che Aspetti!!!</h2>
+                    <h2 class="fst-italic" style="color: #ffffff;">Scarica la nostra app per prenotare subito il tuo appuntamento...</h2>
                 </div>
             </div>
 
