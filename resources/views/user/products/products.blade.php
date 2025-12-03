@@ -1,5 +1,5 @@
 <x-layout>
-    <h2 class="text-center mb-5 display-4" style="font-family: 'Playfair Display', serif; color:#000;">
+    <h2 class="text-center mb-5 display-4 py-5" style="font-family: 'Playfair Display', serif; color:#ffffff;">
         I Nostri Prodotti
     </h2>
 

@@ -1,7 +1,7 @@
 <x-layout>
     <section class="py-5" style="background-color: #0b2e1d; font-family: 'Playfair Display', serif; color: #fff;">
         <div class="container">
-            <h1 class="text-center mb-4" style="font-size: 3.5rem; font-weight: 700; letter-spacing: 2px; color: #d4af37;">
+            <h1 class="text-center mb-4" style="font-size: 3.5rem; font-weight: 700; letter-spacing: 2px; color: #ffffff;">
                 Contattaci
             </h1>
             
@@ -19,7 +19,7 @@
             </div>
         </div>
         
-        <p class="text-center fs-5 pt-5" style="color: #ccc;">
+        <p class="text-center fs-5 pt-5" style="color: #ffffff;">
             Scarica la nostra app per avere sempre Liso Barber Shop a portata di mano. Prenota facilmente il tuo appuntamento e scopri tutte le novità!
         </p>
             <!-- Badge App Store & Google Play -->
@@ -47,19 +47,19 @@
             <!-- Dettagli su come contattarci -->
             <div class="row justify-content-center mt-5">
                 <div class="col-md-6">
-                    <h3 style="color: #d4af37;">Dove trovarci</h3>
-                    <p style="color: #ccc;">Liso Barber Shop, Viale Pietro Nenni 324, Andria, IT</p>
+                    <h3 style="color: #ffffff;">Dove trovarci</h3>
+                    <p style="color: #ffffff;">Liso Barber Shop, Viale Pietro Nenni 324, Andria, IT</p>
 
-                    <h3 style="color: #d4af37;">Orari di apertura</h3>
-                    <ul style="color: #ccc;">
+                    <h3 style="color: #ffffff;">Orari di apertura</h3>
+                    <ul style="color: #ffffff;">
                         <li>Martedì - Giovedì: 08:00/13:00 - 15:00/20:00</li>
                         <li>Venerdì - Sabato: 08:00 - 20:00</li>
                         <li>Lunedì e Domenica: Chiuso</li>
                     </ul>
 
-                    <h3 style="color: #d4af37;">Contattaci</h3>
-                    <p style="color: #ccc;">Telefono: +39 123 456 789</p>
-                    <p style="color: #ccc;">Email: <a href="mailto:info@lisobarbershop.it" style="color: #d4af37;">info@lisobarbershop.it</a></p>
+                    <h3 style="color: #ffffff;">Contattaci</h3>
+                    <p style="color: #ffffff;">Telefono: +39 123 456 789</p>
+                    <p style="color: #ffffff;">Email: <a href="mailto:info@lisobarbershop.it" style="color: #ffffff;">info@lisobarbershop.it</a></p>
                 </div>
             </div>
         </div>

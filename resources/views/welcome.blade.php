@@ -37,7 +37,7 @@
 
         {{-- Descrizione sotto carousel Header --}}
         <div class="container py-5 text-center" style="font-family: 'Lato', sans-serif; color: #333;">
-            <h2 class="mb-3" style="font-weight: 700; color:#ffffff">Per la bellezza e la cura dei capelli degli uomini</h2>
+            <h2 class="dislpay-5 mb-3" style="font-weight: 700; color:#ffffff">Per la bellezza e la cura dei capelli degli uomini</h2>
             <p class="lead mx-auto" style="max-width: 700px;">
                 Gli esperti di <strong>Liso Barber Shop</strong> propongono nel salone di Andria numerosi tagli classici
                 e moderni maschili, personalizzabili e di tendenza.
