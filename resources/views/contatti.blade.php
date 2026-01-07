@@ -45,23 +45,36 @@
 
 
             <!-- Dettagli su come contattarci -->
-            <div class="row justify-content-center mt-5">
-                <div class="col-md-6">
-                    <h3 style="color: #ffffff;">Dove trovarci</h3>
-                    <p style="color: #ffffff;">Liso Barber Shop, Viale Pietro Nenni 324, Andria, IT</p>
+   <div class="row justify-content-center mt-5">
+    <div class="col-md-6 d-flex justify-content-center">
+        <div class="text-box p-4 w-100" style="background-color:#f5f5f5; display:flex; justify-content:center;">
+            <div style="width:auto;" class="text-start">
 
-                    <h3 style="color: #ffffff;">Orari di apertura</h3>
-                    <ul style="color: #ffffff;">
-                        <li>Martedì - Giovedì: 08:00/13:00 - 15:00/20:00</li>
-                        <li>Venerdì - Sabato: 08:00 - 20:00</li>
-                        <li>Lunedì e Domenica: Chiuso</li>
-                    </ul>
+                <h3 style="color:#000;">Dove trovarci</h3>
+                <p style="color:#000;">Liso Barber Shop, Viale Pietro Nenni 324, Andria, IT</p>
 
-                    <h3 style="color: #ffffff;">Contattaci</h3>
-                    <p style="color: #ffffff;">Telefono: +39 123 456 789</p>
-                    <p style="color: #ffffff;">Email: <a href="mailto:info@lisobarbershop.it" style="color: #ffffff;">info@lisobarbershop.it</a></p>
-                </div>
+                <h3 style="color:#000;">Orari di apertura</h3>
+                <ul class="list-unstyled" style="color:#000;">
+                    <li>Martedì - Giovedì: 08:00/13:00 - 15:00/20:00</li>
+                    <li>Venerdì - Sabato: 08:00 - 20:00</li>
+                    <li>Lunedì e Domenica: Chiuso</li>
+                </ul>
+
+                <h3 style="color:#000;">Contattaci</h3>
+                <p style="color:#000;">Telefono: +39 329 978 0152</p>
+                <p style="color:#000;">Email:<br>
+                    <a href="mailto:info@lisobarbershop.it" style="color:#000; text-decoration:none;">
+                        info@lisobarbershop.it
+                    </a>
+                </p>
+
             </div>
+
         </div>
+    </div>
+</div>
+
+
+
     </section>
 </x-layout>
