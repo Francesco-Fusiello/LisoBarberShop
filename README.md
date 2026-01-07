@@ -1,3 +1,16 @@
+<div style="text-align:center">
+  <a href="https://github.com/Francesco-Fusiello/LisoBarberShop">
+    <img src="https://img.shields.io/github/stars/Francesco-Fusiello/LisoBarberShop?style=social" alt="Stars">
+  </a>
+  <a href="https://github.com/Francesco-Fusiello/LisoBarberShop">
+    <img src="https://img.shields.io/github/forks/Francesco-Fusiello/LisoBarberShop?style=social" alt="Forks">
+  </a>
+  <img src="https://img.shields.io/badge/Laravel-12-red" alt="Laravel 12">
+  <img src="https://img.shields.io/badge/License-MIT-blue" alt="License MIT">
+</div>
+
+
+
 # 💈 Liso Barber Shop — Web App
 
 Liso Barber Shop è un'applicazione web full-stack sviluppata con **Laravel 12**, **Livewire** e **Bootstrap 5**, progettata per la gestione digitale di un barbershop moderno.
