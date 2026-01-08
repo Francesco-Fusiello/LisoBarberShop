@@ -35,7 +35,7 @@ Route::get('/contatti',[PageController::class, 'contatti'])->name('contatti');
 
 Route::get('/admin-dashboard', AdminDashboard::class)->middleware('custom.auth')->name('admin.dashboard');
 
-Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
+Route::post('/login', [AuthenticatedSessionController::class, 'store']);
 
 Route::get('/recensioni/nuova', ReviewForm::class)->name('recensioni.form');
 
