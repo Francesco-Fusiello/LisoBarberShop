@@ -153,7 +153,7 @@
         </section>
 
         {{-- Counter section --}}
-       <section class="container my-5 section-divider counter-section text-center">
+       <section class="container my-5 section-divider counter-section text-center px-1">
     <div class="row text-white">
         <div class="col-6 col-md-3 mb-4">
             <h3 class="display-6 fw-bold counter text-white" data-target="800">0</h3>
