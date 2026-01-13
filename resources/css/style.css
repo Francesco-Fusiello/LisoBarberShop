@@ -474,12 +474,8 @@ section.container { background-color: #fff; }
     justify-content: center;
     align-items: center;
     border: 1px solid #e5e5e5; /* sottile bordo tra quadrati */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.counter-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: none !important; /* rimuove qualsiasi transizione */
+    transform: none !important;   /* annulla qualsiasi trasformazione */
 }
 
 .counter-box h3.counter {
@@ -487,14 +483,15 @@ section.container { background-color: #fff; }
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: #000; /* nero totale */
+    color: #000;
 }
 
 .counter-box p {
     font-family: 'Lato', sans-serif;
-    font-size: 0.95rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0;
-    color: #000; /* nero totale */
+    color: #000;
 }
+

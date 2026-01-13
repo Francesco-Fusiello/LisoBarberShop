@@ -87,7 +87,7 @@
 
         <!-- mosaic-section.blade.php (solo la sezione) -->
         <section class="mosaic-section">
-            <div class="text-center mb-3" style="color: #fff;">
+            <div class="text-center mb-4" style="color: #fff;">
                 <h2 class="fw-bold text-uppercase display-5"
                     style="letter-spacing: 1px; color: #fff; margin-bottom:0.5rem;">
                     Il Nostro Salone
@@ -121,7 +121,7 @@
 
         {{-- Servizi --}}
         <section class="container py-5">
-            <h2 class="text-center display-5 mb-4" style="font-weight: 700; ">I nostri servizi</h2>
+            <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff ">I nostri servizi</h2>
             <div class="row g-4 text-center">
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow" style="background-color: #f5f5f5; color: #000;">
@@ -213,8 +213,7 @@
 
         {{-- Recensioni --}}
         <section class="container my-5 text-center">
-            <h2 class="mb-4" style="font-family: 'Playfair Display', serif; font-weight: 700;  color:#f5f5f5">Cosa
-                dicono di noi</h2>
+            <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff ">Cosa Dicono Di Noi </h2>
             @if ($latestReviews->count())
                 <div id="carouselRecensioni" class="carousel slide" data-bs-ride="carousel"
                     style="max-width: 750px; margin: auto;">
@@ -254,63 +253,62 @@
         {{-- Prodotti --}}
         <section class="pb-5">
             <div class="container text-center py-5">
-                <h2 class="display-5 mb-3" style="font-family: 'Playfair Display', serif; color:#ffffff;">Scelti per
-                    te</h2>
-                <a href="{{ route('products') }}" style="text-decoration: none; color: #ffffff; font-weight: 600;">
+                <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff ">Scelti per te</h2>
+                <a href="{{ route('products') }}"
+                    style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 1.1rem !important;">
                     ▸ La selezione completa
                 </a>
-            </div>
 
-            <div id="carouselProdotti" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500"
-                style="max-width: 1140px; margin: auto;">
-                <div class="carousel-inner">
-                    @foreach (array_chunk($products->all(), 3) as $chunkIndex => $productChunk)
-                        <div class="carousel-item {{ $chunkIndex === 0 ? 'active' : '' }}">
-                            <div class="container">
-                                <div class="row g-4">
-                                    @foreach ($productChunk as $product)
-                                        <div class="col-md-4 d-flex">
-                                            <div class="card border-0 shadow-sm w-100 d-flex flex-column bg-light">
-                                                <img src="{{ Storage::url($product->image_path) }}"
-                                                    class="card-img-top" alt="{{ $product->name }}"
-                                                    style="height: 300px; object-fit: cover;">
-                                                <div class="card-body d-flex flex-column" style="color:#000;">
-                                                    <h5 class="card-title"
-                                                        style="font-family: 'Playfair Display', serif; color:#000;">
-                                                        {{ $product->name }}
-                                                    </h5>
-                                                    <p class="card-text flex-grow-1" style="color:#000;">
-                                                        {{ Str::limit($product->description, 100) }}
-                                                    </p>
-                                                    <div
-                                                        class="d-flex justify-content-between align-items-center mt-auto">
-                                                        <p class="card-text mb-0 fw-bold" style="color:#000;">
-                                                            €{{ number_format($product->price, 2) }}
+                <div id="carouselProdotti" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500"
+                    style="max-width: 1140px; margin: auto; margin-top: 2rem;">
+                    <div class="carousel-inner">
+                        @foreach (array_chunk($products->all(), 3) as $chunkIndex => $productChunk)
+                            <div class="carousel-item {{ $chunkIndex === 0 ? 'active' : '' }}">
+                                <div class="container">
+                                    <div class="row g-4">
+                                        @foreach ($productChunk as $product)
+                                            <div class="col-md-4 d-flex">
+                                                <div class="card border-0 shadow-sm w-100 d-flex flex-column bg-light">
+                                                    <img src="{{ Storage::url($product->image_path) }}"
+                                                        class="card-img-top" alt="{{ $product->name }}"
+                                                        style="height: 300px; object-fit: cover;">
+                                                    <div class="card-body d-flex flex-column" style="color:#000;">
+                                                        <h5 class="card-title"
+                                                            style="font-family: 'Playfair Display', serif; color:#000;">
+                                                            {{ $product->name }}
+                                                        </h5>
+                                                        <p class="card-text flex-grow-1" style="color:#000;">
+                                                            {{ Str::limit($product->description, 100) }}
                                                         </p>
-                                                        <a href="{{ route('products.show', $product->id) }}"
-                                                            class="btn btn-dark btn-sm" style="border-radius: 0;">
-                                                            Visualizza
-                                                        </a>
+                                                        <div
+                                                            class="d-flex justify-content-between align-items-center mt-auto">
+                                                            <p class="card-text mb-0 fw-bold" style="color:#000;">
+                                                                €{{ number_format($product->price, 2) }}
+                                                            </p>
+                                                            <a href="{{ route('products.show', $product->id) }}"
+                                                                class="btn btn-dark btn-sm" style="border-radius: 0;">
+                                                                Visualizza
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    @endforeach
+                                        @endforeach
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    @endforeach
-                </div>
+                        @endforeach
+                    </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProdotti"
-                    data-bs-slide="prev" style="width: 5%;">
-                    <span class="carousel-control-prev-icon" style="filter: invert(0%);"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselProdotti"
-                    data-bs-slide="next" style="width: 5%;">
-                    <span class="carousel-control-next-icon" style="filter: invert(0%);"></span>
-                </button>
-            </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProdotti"
+                        data-bs-slide="prev" style="width: 5%;">
+                        <span class="carousel-control-prev-icon" style="filter: invert(0%);"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProdotti"
+                        data-bs-slide="next" style="width: 5%;">
+                        <span class="carousel-control-next-icon" style="filter: invert(0%);"></span>
+                    </button>
+                </div>
         </section>
 
 
