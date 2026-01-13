@@ -87,24 +87,28 @@
 
         <!-- mosaic-section.blade.php (solo la sezione) -->
         <section class="mosaic-section">
-            <div class="text-center mb-3" style="color: #000;">
-                <h2 class="fw-bold text-uppercase" style="letter-spacing: 1px; color: #000;">Il Nostro Salone</h2>
-                <p style="color: #000;">Uno spazio curato, moderno e accogliente — dove stile e comfort si
-                    incontrano.</p>
-            </div>
+            <div class="text-center mb-3" style="color: #fff;">
+                <h2 class="fw-bold text-uppercase display-5"
+                    style="letter-spacing: 1px; color: #fff; margin-bottom:0.5rem;">
+                    Il Nostro Salone
+                </h2>
+                <p
+                    style="color:#fff; font-size:1.3rem; line-height:1.6; text-align:center; max-width:700px; margin:0 auto; margin-bottom:2rem;">
+                    Uno spazio curato, moderno e accogliente dove stile e comfort si incontrano.
+                </p>
 
-            <div class="mosaic-inner">
-                <!-- 9 immagini di prova tutte uguali (2.jpg) -->
-                <div class="m-item m1"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
-                <div class="m-item m2"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
-                <div class="m-item m3"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
-                <div class="m-item m4"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
-                <div class="m-item m5"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
-                <div class="m-item m6"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
-                <div class="m-item m7"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
-                <div class="m-item m8"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
-                <div class="m-item m9"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
-            </div>
+                <div class="mosaic-inner">
+                    <!-- 9 immagini di prova tutte uguali (2.jpg) -->
+                    <div class="m-item m1"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+                    <div class="m-item m2"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+                    <div class="m-item m3"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+                    <div class="m-item m4"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+                    <div class="m-item m5"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+                    <div class="m-item m6"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+                    <div class="m-item m7"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+                    <div class="m-item m8"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+                    <div class="m-item m9"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+                </div>
         </section>
 
 
@@ -117,7 +121,7 @@
 
         {{-- Servizi --}}
         <section class="container py-5">
-            <h2 class="text-center mb-4" style="font-weight: 700; ">I nostri servizi</h2>
+            <h2 class="text-center display-5 mb-4" style="font-weight: 700; ">I nostri servizi</h2>
             <div class="row g-4 text-center">
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow" style="background-color: #f5f5f5; color: #000;">
@@ -176,26 +180,35 @@
         </section>
 
         {{-- Counter section --}}
-        <section class="container my-5 section-divider counter-section text-center px-1">
-            <div class="row text-white">
-                <div class="col-6 col-md-3 mb-4">
-                    <h3 class="display-6 fw-bold counter text-white" data-target="800">0</h3>
-                    <p class="text-white">Clienti Soddisfatti</p>
+        <section class="container my-5 counter-section text-center px-0">
+            <div class="row gx-0">
+                <div class="col-6 col-md-3">
+                    <div class="counter-box">
+                        <h3 class="counter" data-target="800">0</h3>
+                        <p>Clienti Soddisfatti</p>
+                    </div>
                 </div>
-                <div class="col-6 col-md-3 mb-4">
-                    <h3 class="display-6 fw-bold counter text-white" data-target="66351">0</h3>
-                    <p class="text-white">Tagli Eseguiti</p>
+                <div class="col-6 col-md-3">
+                    <div class="counter-box">
+                        <h3 class="counter" data-target="66351">0</h3>
+                        <p>Tagli Eseguiti</p>
+                    </div>
                 </div>
-                <div class="col-6 col-md-3 mb-4">
-                    <h3 class="display-6 fw-bold counter text-white" data-target="8">0</h3>
-                    <p class="text-white">Anni di Esperienza</p>
+                <div class="col-6 col-md-3">
+                    <div class="counter-box">
+                        <h3 class="counter" data-target="8">0</h3>
+                        <p>Anni di Esperienza</p>
+                    </div>
                 </div>
-                <div class="col-6 col-md-3 mb-4">
-                    <h3 class="display-6 fw-bold counter text-white" data-target="500">0</h3>
-                    <p class="text-white">Recensioni Positive</p>
+                <div class="col-6 col-md-3">
+                    <div class="counter-box">
+                        <h3 class="counter" data-target="500">0</h3>
+                        <p>Recensioni Positive</p>
+                    </div>
                 </div>
             </div>
         </section>
+
 
 
         {{-- Recensioni --}}
