@@ -40,9 +40,7 @@
 
             <div class="text-center mx-auto px-4 force-black" style="max-width: 900px;">
 
-                <h2 class="display-5 mb-4">
-                    Per la bellezza e la cura dei capelli degli uomini
-                </h2>
+                <h2 class="text-center display-5 mb-4" style="font-weight: 700;">Per la bellezza e la cura dei capelli degli uomini</h2> 
 
                 <p class="lead mx-auto" style="max-width: 700px; color: #000;">
                     Gli esperti di <strong>Liso Barber Shop</strong> propongono nel salone di Andria numerosi tagli
@@ -62,7 +60,7 @@
                     per ritrovare capelli forti e sani in breve tempo.
                 </p>
 
-                <h3 class="mb-4">
+                <h3 class="mb-4" style="font-weight: 700;">
                     Scarica la nostra app per prenotare subito il tuo appuntamento
                 </h3>
 
