@@ -87,9 +87,9 @@
 
         <!-- mosaic-section.blade.php (solo la sezione) -->
         <section class="mosaic-section">
-            <div class="text-center mb-4" style="color: #f5f5f5;">
-                <h2 class="fw-bold text-uppercase" style="letter-spacing: 1px; color: #f5f5f5;">Il Nostro Salone</h2>
-                <p style="color: #f5f5f5;">Uno spazio curato, moderno e accogliente — dove stile e comfort si
+            <div class="text-center mb-3" style="color: #000;">
+                <h2 class="fw-bold text-uppercase" style="letter-spacing: 1px; color: #000;">Il Nostro Salone</h2>
+                <p style="color: #000;">Uno spazio curato, moderno e accogliente — dove stile e comfort si
                     incontrano.</p>
             </div>
 
@@ -117,7 +117,7 @@
 
         {{-- Servizi --}}
         <section class="container py-5">
-            <h2 class="text-center mb-4" style="font-weight: 700; color:#f5f5f5">I nostri servizi</h2>
+            <h2 class="text-center mb-4" style="font-weight: 700; ">I nostri servizi</h2>
             <div class="row g-4 text-center">
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow" style="background-color: #f5f5f5; color: #000;">
