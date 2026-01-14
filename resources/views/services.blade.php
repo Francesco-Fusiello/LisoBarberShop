@@ -28,13 +28,13 @@
           <div class="row align-items-center mb-5" data-aos="fade-up">
     <!-- Immagine -->
     <div class="col-md-6 mt-3 mt-md-0">
-        <img src="/images/2.jpg" class="img-fluid" alt="Taglio Uomo" style="width: 100%; height: auto; object-fit: cover;">
+        <img src="/images/2.jpg" class="img-fluid" id="rasatura-tradizionale" alt="Taglio Uomo" style="width: 100%; height: auto; object-fit: cover;">
     </div>
 
     <!-- Riquadro testo minimal -->
     <div class="col-md-6 d-flex">
         <div class="text-box p-4 w-100" style="background-color: #f5f5f5;">
-            <h3 class="mb-3 pt-1" style="color: #000; font-family: 'Playfair Display', serif;">Taglio Uomo</h3>
+            <h3 class="mb-3 pt-1" style="color: #000; font-family:  'Playfair Display', serif;">Taglio Uomo</h3>
             <p style="color: #000;">
                 Il nostro servizio di taglio uomo è pensato per valorizzare ogni tipo di volto e stile personale.
                 Attraverso una consulenza personalizzata, i nostri barbieri esperti realizzano tagli classici o moderni,
@@ -50,7 +50,7 @@
             <div class="row align-items-center mb-5 flex-md-row-reverse" data-aos="fade-up">
     <!-- Immagine -->
     <div class="col-md-6 mt-3 mt-md-0">
-        <img src="/images/2.jpg" class="img-fluid" alt="Rasatura Tradizionale" style="width: 100%; height: auto; object-fit: cover;">
+        <img src="/images/2.jpg" class="img-fluid" id="modellatura-barba" alt="Rasatura Tradizionale" style="width: 100%; height: auto; object-fit: cover;">
     </div>
 
     <!-- Riquadro testo minimal -->
@@ -68,7 +68,7 @@
             <!-- Servizio: Modellatura Barba -->
             <div class="row align-items-center mb-5" data-aos="fade-up">
                 <div class="col-md-6 mt-3 mt-md-0">
-                    <img src="/images/2.jpg" class="img-fluid rounded shadow" alt="Modellatura Barba">
+                    <img src="/images/2.jpg" class="img-fluid rounded shadow"  alt="Modellatura Barba">
                 </div>
                 <div class="col-md-6">
                     <h3 class="mb-3 pt-3" style="color: #000; font-family: 'Playfair Display', serif;">Modellatura Barba</h3>
