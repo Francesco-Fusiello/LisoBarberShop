@@ -7,14 +7,14 @@
         </div>
 
         <div class="col-md-6 d-flex flex-column justify-content-center align-items-center" style="height: 500px;">
-            <h2 class="fw-bold text-center mt-5">{{ $product->name }}</h2>
-            <button class="btn btn-outline-dark mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#productDetails" aria-expanded="false" aria-controls="productDetails">
+            <h2 class="fw-bold text-center mt-5" style="color: #fff">{{ $product->name }}</h2>
+            <button class="btn btn-dark btn-lg px-5 mt-4"type="button"data-bs-toggle="collapse"data-bs-target="#productDetails"aria-expanded="false"aria-controls="productDetails"style="font-weight: 700 frs-italic; border-radius: 0;">
                 Mostra Dettagli
             </button>
 
             <div class="collapse mt-3 w-100" id="productDetails">
                 <div class="card card-body bg-light text-center border-0">
-                    <p class="text-muted mb-2">{{ $product->description }}</p>
+                    <p class="mb-2" style="color: #000">{{ $product->description }}</p>
                     <h4 class="text-dark">€{{ number_format($product->price, 2) }}</h4>
                 </div>
             </div>
@@ -25,7 +25,7 @@
 
         <!-- Altri prodotti -->
 
-   <h3 class="mb-4 fw-semibold px-5">Scopri anche</h3>
+   <h3 class="mb-4 fw-semibold px-5" style="color: #fff ">Scopri anche</h3>
 
 <div class="px-5">
     <div class="row">

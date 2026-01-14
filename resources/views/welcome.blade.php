@@ -171,7 +171,7 @@
 
             <div class="text-center mt-5">
                 <a href="{{ route('services') }}" class="btn btn-dark mt-auto btn-lg px-5"
-                    style="font-weight: 700; border-radius: 0;">
+                    style="font-weight: 700; border-radius: 0; frs-italic;">
                     Scopri tutti i servizi
                 </a>
             </div>
