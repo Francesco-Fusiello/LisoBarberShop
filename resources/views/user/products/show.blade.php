@@ -16,6 +16,7 @@
                 <div class="card card-body bg-light text-center border-0">
                     <p class="mb-2" style="color: #000">{{ $product->description }}</p>
                     <h4 class="text-dark">€{{ number_format($product->price, 2) }}</h4>
+                    <h5 style="frs-italic;" class="mt-2">Tutti i nostri prodotti sono disponibili presso il nostro salone</h5>
                 </div>
             </div>
         </div>
