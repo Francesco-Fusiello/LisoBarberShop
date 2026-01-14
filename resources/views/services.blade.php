@@ -1,5 +1,5 @@
 <x-layout>
-  <header style="position: relative; width: 100%; height: 450px; overflow: hidden;">
+  {{-- <header style="position: relative; width: 100%; height: 450px; overflow: hidden;">
     <img src="/images/2.jpg" alt="services" class="header-img"
          style="width: 100%; height: 100%; object-fit: cover; display: block;">
 
@@ -12,7 +12,7 @@
             <h4 class="fst-italic" style="color: #ffffff;">Innovazione, Interpretazione e Ricerca</h4>
             
     </div>
-</header>
+</header> --}}
 
 
 
@@ -20,7 +20,7 @@
 
     <section class="py-5" style=" color: white; font-family: 'Lato', sans-serif;">
         <div class="container">
-            <h2 id="taglio-uomo" class="text-center mb-5 display-4" style="color: #ffffff; font-family: 'Playfair Display', serif;">
+            <h2 id="taglio-uomo" class="text-center mb-5 display-4" style="color: #fff; font-family: 'Playfair Display', serif;font-weight: 700;">
                 I Nostri Servizi
             </h2>
 
