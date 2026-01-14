@@ -1,5 +1,5 @@
 <x-layout>
-    <h2 class="text-center mb-5 display-4 py-5" style="font-family: 'Playfair Display', serif; color:#ffffff;">
+    <h2 class="text-center mb-5 display-4 py-5" style="font-family: 'Playfair Display', serif; color:#ffffff; font-weight: 700;">
         I Nostri Prodotti
     </h2>
 
@@ -11,7 +11,6 @@
                 style="
                     background-color: #ffffff;
                     color: #000;
-                    border: 2px solid #000;
                     border-radius: 0;
                     font-weight: 600;
                     padding-left: 1.2rem;
@@ -23,7 +22,7 @@
 
         <template x-if="query.length > 0">
             <div class="container mb-3 text-center fst-italic"
-                style="color: #000; font-family: 'Lato', sans-serif; font-weight: 700;">
+                style="color: #fff; font-family: 'Lato', sans-serif; font-weight: 700;">
                 <span x-text="results.length"></span>&nbsp;
                 <span x-text="results.length === 1 ? 'prodotto' : 'prodotti'"></span>&nbsp;
                 <span x-text="results.length === 1 ? 'trovato' : 'trovati'"></span>
@@ -76,8 +75,8 @@
 
                 <!-- Messaggio se nessun risultato -->
                 <template x-if="results.length === 0">
-                    <div class="col-12 text-center text-muted mb-5">
-                        Nessun prodotto trovato.
+                    <div class="col-12 text-center  mb-5" style="color: #fff;">
+                        Nessun prodotto trovato
                     </div>
                 </template>
             </div>
