@@ -2,8 +2,8 @@
     <section class="py-5" style="background-color: #ffffff; font-family: 'Playfair Display', serif; color: #333;">
         <div class="container">
             <div class="text-center mb-5">
-                <h1 class="text-center display-4" style="font-family: 'Playfair Display', serif; color:#ffffff;">
-                    Listino Prezzi
+                <h1 class="text-center display-4" style="color: #fff; font-family: 'Playfair Display', serif;font-weight: 700;">
+                    LISTINO PREZZI
                 </h1>
                 <h4 class="fst-italic" style="color: #ffffff;">Scopri i nostri Servizi</h4>
                 <p class="fst-italic fs-5" style="color: #ffffff;">
