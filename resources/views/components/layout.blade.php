@@ -16,7 +16,7 @@
 
 <x-navbar/>
 
-    <div class="min-vh-100"style="background-image: url('/images/sfondo1.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+    <div class="min-vh-100">
         {{$slot}}
         </div>
 
