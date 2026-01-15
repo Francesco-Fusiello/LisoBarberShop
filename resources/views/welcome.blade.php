@@ -211,7 +211,7 @@
 
         {{-- Recensioni --}}
         <section class="container my-5 text-center">
-            <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff ">Cosa Dicono Di Noi </h2>
+            <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#ffffff ">Cosa Dicono Di Noi </h2>
             @if ($latestReviews->count())
                 <div id="carouselRecensioni" class="carousel slide" data-bs-ride="carousel"
                     style="max-width: 750px; margin: auto;">
