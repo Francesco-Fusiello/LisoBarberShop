@@ -101,11 +101,11 @@
                     <div class="m-item m2"><img src="/images/mosaic/mosaic2.jpeg" alt="salone" class="m-img"></div>
                     <div class="m-item m3"><img src="/images/mosaic/mosaic3.jpeg" alt="salone" class="m-img"></div>
                     <div class="m-item m4"><img src="/images/mosaic/mosaic4.JPG" alt="salone" class="m-img"></div>
-                    <div class="m-item m5"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
-                    <div class="m-item m6"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
-                    <div class="m-item m7"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
-                    <div class="m-item m8"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
-                    <div class="m-item m9"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
+                    <div class="m-item m5"><img src="/images/mosaic/mosaic9.jpeg" alt="salone" class="m-img"></div>
+                    <div class="m-item m6"><img src="/images/mosaic/mosaic6.JPG" alt="salone" class="m-img"></div>
+                    <div class="m-item m7"><img src="/images/mosaic/mosaic5.jpeg" alt="salone" class="m-img"></div>
+                    <div class="m-item m8"><img src="/images/mosaic/mosaic7.jpeg" alt="salone" class="m-img"></div>
+                    <div class="m-item m9"><img src="/images/mosaic/mosaic8.jpeg" alt="salone" class="m-img"></div>
                 </div>
         </section>
 
