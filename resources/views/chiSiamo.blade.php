@@ -1,9 +1,9 @@
 <x-layout>
-<section  style="background-color: #f2f2f2; font-family: 'Playfair Display', serif; color: #000;">
+<section class="py-5"  style="background-color: #f2f2f2; font-family: 'Playfair Display', serif; color: #000;">
 
-    <div class="container mt-5 mb-5">
+    <div class="container">
 
-        <h1 class="text-center display-5 mb-5 mt-5" style="font-weight: 700; color:#fff;">
+        <h1 class="text-center display-5 mb-5" style="font-weight: 700; color:#fff;">
             I PROFESSIONISTI DI LISO BARBER SHOP
         </h1>
 
