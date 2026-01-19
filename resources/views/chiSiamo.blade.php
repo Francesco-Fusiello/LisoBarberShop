@@ -51,25 +51,25 @@
     </div>
     
 
-<div class="container-fluid bg-white py-5 mt-5 px-0 mt-5">
+<div class="container-fluid py-5 mt-5 px-0 mt-5 text-center">
 
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-8">
 
-                <p style="line-height: 2; color: #000; font-weight: 300; font-size: 1.35rem;">
+                <p style="line-height: 2; color: #fff; font-weight: 300; font-size: 1.35rem;">
                     Liso Barber Shop nasce nel 2016 dalla passione e dall’energia di
                     <strong>Gianfranco Liso</strong>, con un’idea semplice ma potente: creare
                     un luogo dove il taglio di capelli o la cura della barba fossero momenti
                     di stile, benessere e autenticità.
                 </p>
 
-                <p style="line-height: 2; color: #000; font-weight: 300; font-size: 1.35rem;">
+                <p style="line-height: 2; color: #fff; font-weight: 300; font-size: 1.35rem;">
                     Da allora, accogliamo ogni cliente con professionalità, attenzione e un
                     tocco di simpatia che ci rende unici.
                 </p>
 
-                <p style="line-height: 2; color: #000; font-weight: 300; font-size: 1.35rem;">
+                <p style="line-height: 2; color: #fff; font-weight: 300; font-size: 1.35rem;">
                     Liso Barber Shop è lo specchio di chi ama distinguersi, valorizzarsi e
                     sentirsi sempre al meglio.
                     <em>Una poltrona è sempre pronta per te.</em>
