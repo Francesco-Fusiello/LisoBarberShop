@@ -32,8 +32,8 @@
     <div style="flex:1 1 260px; min-width:220px;">
       <h3 style="font-weight:700; font-size:1.3rem; margin-bottom:1rem; color:#D9C59B;">Contatti</h3>
       <p style="font-size:1rem; line-height:1.6; color:#C9B48F;">
-        Via Roma 123, Napoli<br>
-        Tel: +39 081 1234567<br>
+        Viale Pietro Nenni 324, Andria (BT)<br>
+        Tel: +39 329 978 01527<br>
         Email: info@lisobarbershop.it
       </p>
     </div>

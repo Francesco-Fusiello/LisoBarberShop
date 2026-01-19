@@ -62,7 +62,7 @@
 
                 <h3 class="display-5" style="color:#000 font-weight: 700;">Contatti</h3>
                 <h6 style="color:#000;">Telefono: +39 329 978 0152</h6>
-                <h6 style="color:#000;">Email:<br>
+                <h6 style="color:#000;">Email:
                     <a href="mailto:info@lisobarbershop.it" style="color:#000; text-decoration:none;">
                         info@lisobarbershop.it
                     </a>
