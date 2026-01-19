@@ -96,7 +96,6 @@
                 </p>
 
                 <div class="mosaic-inner">
-                    <!-- 9 immagini di prova tutte uguali (2.jpg) -->
                     <div class="m-item m1"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
                     <div class="m-item m2"><img src="/images/mosaic/mosaic2.jpeg" alt="salone" class="m-img"></div>
                     <div class="m-item m3"><img src="/images/mosaic/mosaic3.jpeg" alt="salone" class="m-img"></div>
