@@ -84,29 +84,26 @@
 
 
         <!-- mosaic-section.blade.php (solo la sezione) -->
-        <section class="mosaic-section">
-            <div class="text-center mb-4" style="color: #fff;">
-                <h2 class="fw-bold text-uppercase display-5"
-                    style="letter-spacing: 1px; color: #fff; margin-bottom:0.5rem;">
-                    Il Nostro Salone
-                </h2>
-                <p
-                    style="color:#fff; font-size:1.3rem; line-height:1.6; text-align:center; max-width:700px; margin:0 auto; margin-bottom:2rem;">
-                    Uno spazio curato, moderno e accogliente dove stile e comfort si incontrano.
-                </p>
+      <section class="mosaic-section">
+    <div class="text-center mb-4 text-white">
+        <h2 class="fw-bold text-uppercase display-5" style="color: #fff">Il Nostro Salone</h2>
+        <p class="lead">Uno spazio curato, moderno e accogliente.</p>
+    </div>
+    <div class="mosaic-grid">
+        <img src="/images/2.jpg" loading="lazy" decoding="async" alt="salone">
+        <img src="/images/mosaic/Mosaic2.jpeg" loading="lazy" decoding="async" alt="salone">
+        <img src="/images/mosaic/Mosaic3.jpeg" loading="lazy" decoding="async" alt="salone">
+        <img src="/images/mosaic/Mosaic4.JPG" loading="lazy" decoding="async" alt="salone">
+        <img src="/images/mosaic/Mosaic9.jpeg" loading="lazy" decoding="async" alt="salone">
+        <img src="/images/mosaic/Mosaic6.JPG" loading="lazy" decoding="async" alt="salone">
+        <img src="/images/mosaic/Mosaic5.jpeg" loading="lazy" decoding="async" alt="salone">
+        <img src="/images/mosaic/Mosaic7.jpeg" loading="lazy" decoding="async" alt="salone">
+        <img src="/images/mosaic/Mosaic8.jpeg" loading="lazy" decoding="async" alt="salone">
+         <img src="/images/mosaic/Mosaic2.jpeg" loading="lazy" decoding="async" alt="salone">
+        <img src="/images/mosaic/Mosaic3.jpeg" loading="lazy" decoding="async" alt="salone">
+    </div>
+</section>
 
-                <div class="mosaic-inner">
-                    <div class="m-item m1"><img src="/images/2.jpg" alt="salone" class="m-img"></div>
-                    <div class="m-item m2"><img src="/images/mosaic/mosaic2.jpeg" alt="salone" class="m-img"></div>
-                    <div class="m-item m3"><img src="/images/mosaic/mosaic3.jpeg" alt="salone" class="m-img"></div>
-                    <div class="m-item m4"><img src="/images/mosaic/mosaic4.JPG" alt="salone" class="m-img"></div>
-                    <div class="m-item m5"><img src="/images/mosaic/mosaic9.jpeg" alt="salone" class="m-img"></div>
-                    <div class="m-item m6"><img src="/images/mosaic/mosaic6.JPG" alt="salone" class="m-img"></div>
-                    <div class="m-item m7"><img src="/images/mosaic/mosaic5.jpeg" alt="salone" class="m-img"></div>
-                    <div class="m-item m8"><img src="/images/mosaic/mosaic7.jpeg" alt="salone" class="m-img"></div>
-                    <div class="m-item m9"><img src="/images/mosaic/mosaic8.jpeg" alt="salone" class="m-img"></div>
-                </div>
-        </section>
 
 
 
