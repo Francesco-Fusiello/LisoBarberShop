@@ -102,6 +102,13 @@
          <img src="/images/mosaic/Mosaic2.jpeg" loading="lazy" decoding="async" alt="salone">
         <img src="/images/mosaic/Mosaic3.jpeg" loading="lazy" decoding="async" alt="salone">
     </div>
+    <div class="text-center mt-2">
+    <a href="{{ route('user.gallery') }}" class="mosaic-cta-btn">
+        VISITA LA NOSTRA GALLERY
+    </a>
+</div>
+
+
 </section>
 
 
