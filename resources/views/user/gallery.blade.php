@@ -1,6 +1,14 @@
 <x-layout>
  
-    <div class="container py-4">
+    <div class="py-5">
+        <h1 class="text-center" style="font-size: 3.5rem; font-weight: 700; letter-spacing: 2px; color: #ffffff;">
+                    LA NOSTRA GALLERY
+                </h1>
+
+    </div>
+            
+
+    <div class="container">
         <div class="row">
             @foreach($images as $image)
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
