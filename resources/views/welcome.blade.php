@@ -182,33 +182,33 @@
 
         {{-- Counter section --}}
         <section class="container my-5 counter-section text-center px-0">
-            <div class="row gx-0">
-                <div class="col-6 col-md-3">
-                    <div class="counter-box">
-                        <h3 class="counter" data-target="800">0</h3>
-                        <p>Clienti Soddisfatti</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="counter-box">
-                        <h3 class="counter" data-target="66351">0</h3>
-                        <p>Tagli Eseguiti</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="counter-box">
-                        <h3 class="counter" data-target="8">0</h3>
-                        <p>Anni di Esperienza</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="counter-box">
-                        <h3 class="counter" data-target="500">0</h3>
-                        <p>Recensioni Positive</p>
-                    </div>
-                </div>
+    <div class="row gx-0 px-3 px-md-0"> <!-- qui -->
+        <div class="col-6 col-md-3">
+            <div class="counter-box">
+                <h3 class="counter" data-target="800">0</h3>
+                <p>Clienti Soddisfatti</p>
             </div>
-        </section>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="counter-box">
+                <h3 class="counter" data-target="66351">0</h3>
+                <p>Tagli Eseguiti</p>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="counter-box">
+                <h3 class="counter" data-target="8">0</h3>
+                <p>Anni di Esperienza</p>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="counter-box">
+                <h3 class="counter" data-target="500">0</h3>
+                <p>Recensioni Positive</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 

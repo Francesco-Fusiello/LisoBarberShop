@@ -559,5 +559,18 @@ section.container { background-color: #fff; }
         font-size: 1rem;
     }
 }
+/* Tutte le immagini dei servizi uguali */
+.row.align-items-center .col-md-6 img {
+    width: 100%;        /* occupa tutta la colonna */
+    height: 300px;      /* altezza fissa desktop */
+    object-fit: cover;  /* riempie senza deformarsi */
+    display: block;
+}
 
+/* Mobile */
+@media (max-width: 768px) {
+    .row.align-items-center .col-md-6 img {
+        height: 220px;  /* altezza più compatta su mobile */
+    }
+}
 

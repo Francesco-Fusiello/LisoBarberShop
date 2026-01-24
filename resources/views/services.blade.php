@@ -28,7 +28,7 @@
           <div class="row align-items-center mb-5" data-aos="fade-up">
     <!-- Immagine -->
     <div class="col-md-6 mt-3 mt-md-0">
-        <img src="/images/2.jpg" class="img-fluid" id="rasatura-tradizionale" alt="Taglio Uomo" style="width: 100%; height: auto; object-fit: cover;">
+        <img src="/images/services/taglioUomo.jpeg" class="img-fluid" id="rasatura-tradizionale" alt="Taglio Uomo">
     </div>
 
     <!-- Riquadro testo minimal -->
@@ -50,7 +50,7 @@
             <div class="row align-items-center mb-5 flex-md-row-reverse" data-aos="fade-up">
     <!-- Immagine -->
     <div class="col-md-6 mt-3 mt-md-0">
-        <img src="/images/2.jpg" class="img-fluid" id="modellatura-barba" alt="Rasatura Tradizionale" style="width: 100%; height: auto; object-fit: cover;">
+        <img src="/images/services/rasaturaTradizionale.jpeg" class="img-fluid" id="modellatura-barba" alt="Rasatura Tradizionale">
     </div>
 
     <!-- Riquadro testo minimal -->
@@ -68,7 +68,7 @@
             <!-- Servizio: Modellatura Barba -->
             <div class="row align-items-center mb-5" data-aos="fade-up">
     <div class="col-md-6 mt-3 mt-md-0">
-        <img src="/images/2.jpg" class="img-fluid" alt="Modellatura Barba">
+        <img src="/images/services/modellaturaBarba.JPG" class="img-fluid" alt="Modellatura Barba">
     </div>
 
     <div class="col-md-6 d-flex">
@@ -89,7 +89,7 @@
             <!-- Servizio: Trattamenti Capelli -->
             <div class="row align-items-center mb-5 flex-md-row-reverse" data-aos="fade-up">
     <div class="col-md-6 mt-3 mt-md-0">
-        <img src="/images/2.jpg" class="img-fluid" alt="Trattamenti Capelli">
+        <img src="/images/services/trattamentiCapelli.jpeg" class="img-fluid" alt="Trattamenti Capelli">
     </div>
 
     <div class="col-md-6 d-flex">
@@ -110,7 +110,7 @@
             <!-- Servizio: Colorazione Capelli -->
           <div class="row align-items-center mb-5" data-aos="fade-up">
     <div class="col-md-6 mt-3 mt-md-0">
-        <img src="/images/2.jpg" class="img-fluid" alt="Colorazione Capelli">
+        <img src="/images/services/colorazioneCapelli.PNG" class="img-fluid" alt="Colorazione Capelli">
     </div>
 
     <div class="col-md-6 d-flex">
@@ -130,7 +130,7 @@
             <!-- Servizio: Taglio Bambino -->
           <div class="row align-items-center mb-5 flex-md-row-reverse" data-aos="fade-up">
     <div class="col-md-6 mt-3 mt-md-0">
-        <img src="/images/2.jpg" class="img-fluid" alt="Taglio Bambino">
+        <img src="/images/services/taglioBambino.jpeg" class="img-fluid" alt="Taglio Bambino">
     </div>
 
     <div class="col-md-6 d-flex">
@@ -150,7 +150,7 @@
             <!-- Servizio: Styling e Piega Uomo -->
            <div class="row align-items-center mb-5" data-aos="fade-up">
     <div class="col-md-6 mt-3 mt-md-0">
-        <img src="/images/2.jpg" class="img-fluid" alt="Styling e Piega Uomo">
+        <img src="/images/services/stylingPiega.jpeg" class="img-fluid" alt="Styling e Piega Uomo">
     </div>
 
     <div class="col-md-6 d-flex">
@@ -170,7 +170,7 @@
             <!-- Servizio: Trattamenti Barba -->
             <div class="row align-items-center mb-5 flex-md-row-reverse" data-aos="fade-up">
     <div class="col-md-6 mt-3 mt-md-0">
-        <img src="/images/2.jpg" class="img-fluid" alt="Trattamenti Barba">
+        <img src="/images/services/trattamentiBarba.PNG" class="img-fluid" alt="Trattamenti Barba">
     </div>
 
     <div class="col-md-6 d-flex">
