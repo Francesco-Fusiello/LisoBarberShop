@@ -8,7 +8,7 @@
             <div class="carousel-inner">
                 @foreach (['home1.jpeg', 'home2.jpeg', 'home3.jpeg'] as $index => $img)
                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                        <img src="/images/carouselHome/{{ $img }}" class="d-block w-100" alt="Image {{ $index + 1 }}"
+                        <img src="/images/carouselHome/{{ $img }}" class="d-block w-100 carousel-img" alt="Image {{ $index + 1 }}"
                             style="object-fit: cover; height: 600px;">
                         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center"
                             style="background: rgba(0,0,0,0.4); top: 0; bottom: 0; left: 0; right: 0;">
@@ -40,7 +40,7 @@
 
             <div class="text-center mx-auto px-4 force-black" style="max-width: 900px;">
 
-                <h2 class="text-center display-5 mb-4" style="font-weight: 700;">Per la bellezza e la cura dei capelli degli uomini</h2> 
+                <h2 class="text-center display-5 mt-0" style="font-weight: 700;">Per la bellezza e la cura dei capelli degli uomini</h2> 
 
                 <p class="lead mx-auto" style="max-width: 700px; color: #000;">
                     Gli esperti di <strong>Liso Barber Shop</strong> propongono nel salone di Andria numerosi tagli
@@ -85,7 +85,7 @@
 
         <!-- mosaic-section.blade.php (solo la sezione) -->
       <section class="mosaic-section">
-    <div class="text-center mb-4 text-white">
+    <div class="text-center text-white">
         <h2 class="fw-bold text-uppercase display-5" style="color: #fff">Il Nostro Salone</h2>
         <p class="lead">Uno spazio curato, moderno e accogliente.</p>
     </div>
