@@ -99,8 +99,8 @@
         <img src="/images/mosaic/Mosaic5.jpeg" loading="lazy" decoding="async" alt="salone">
         <img src="/images/mosaic/Mosaic7.jpeg" loading="lazy" decoding="async" alt="salone">
         <img src="/images/mosaic/Mosaic8.jpeg" loading="lazy" decoding="async" alt="salone">
-         <img src="/images/mosaic/Mosaic2.jpeg" loading="lazy" decoding="async" alt="salone">
-        <img src="/images/mosaic/Mosaic3.jpeg" loading="lazy" decoding="async" alt="salone">
+         <img src="/images/mosaic/Mosaic10.jpeg" loading="lazy" decoding="async" alt="salone">
+        <img src="/images/mosaic/Mosaic11.png" loading="lazy" decoding="async" alt="salone">
     </div>
     <div class="text-center mt-2">
     <a href="{{ route('user.gallery') }}" class="mosaic-cta-btn">
