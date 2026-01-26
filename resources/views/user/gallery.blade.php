@@ -11,8 +11,8 @@
     <div class="container">
         <div class="row gallery">
             @foreach ($images as $image)
-                <div class="col-3 col-md-4 col-lg-3 mb-2">
-                    <img src="{{ asset($image->image_path) }}" class="img-fluid gallery-img cursor-pointer"
+                  <div class="col-4 col-md-4 col-lg-3 mb-2">
+                    <img src="{{ asset($image->image_path) }}"class="img-fluid gallery-img cursor-pointer"
                         data-image="{{ asset($image->image_path) }}" data-bs-toggle="modal" data-bs-target="#imageModal">
                 </div>
             @endforeach

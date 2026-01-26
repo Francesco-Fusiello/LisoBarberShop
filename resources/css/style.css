@@ -576,18 +576,27 @@ section.container { background-color: #fff; }
 /* GALLERY IMAGES */
 .gallery-img {
     width: 100%;
-    height: 250px; /* desktop */
+    height: 250px; 
     object-fit: cover;
     cursor: pointer;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+    .gallery-img {
+        height: 220px; 
+    }
 }
 
 /* MOBILE */
 @media (max-width: 576px) {
     .gallery-img {
-        height: auto; /* quadrate: 4 colonne */
-        aspect-ratio: 1 / 1;
-        padding: -10px;
+        height: auto;
+        aspect-ratio: 1 / 1; 
+        object-fit: cover;
     }
 }
+
+
 
 
