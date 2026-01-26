@@ -60,8 +60,8 @@
         </a>
 
         <!-- TikTok bianca -->
-        <a href="https://www.tiktok.com/@lisobarbershop?lang=it" target="_blank" aria-label="TikTok" style="display:inline-block; width:36px; height:36px;">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" viewBox="0 0 24 24" style="width:100%; height:100%;">
+        <a href="https://www.tiktok.com/@lisobarbershop?lang=it" target="_blank" aria-label="TikTok" style="display:inline-block; width:36px; height:36px; text-align:center; line-height:36px; color:#FFF; font-size:24px;">
+       <i class="fa-brands fa-tiktok"></i>
             <path d="M9.75 3.083v14.556a4.5 4.5 0 1 1-4.5-4.5"/>
             <path d="M14.812 3.75a6.375 6.375 0 0 0 3.814 1.416v2.806a9.75 9.75 0 0 1-3.5-1.028v10.1a4.5 4.5 0 1 1-4.5-4.5"/>
           </svg>
