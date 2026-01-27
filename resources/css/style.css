@@ -541,7 +541,6 @@ section.container { background-color: #fff; }
 
     /* centra correttamente l'immagine ed elimina spazio sotto */
     #carouselExampleControlsNoTouching .carousel-item {
-        display: flex;
         align-items: center;
     }
 

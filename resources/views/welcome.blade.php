@@ -4,7 +4,7 @@
 
         {{-- Carousel immagini Header --}}
         <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false"
-            data-bs-interval="4000" style="max-height: 600px; overflow: hidden;">
+            data-bs-interval="3000" style="max-height: 600px; overflow: hidden;">
             <div class="carousel-inner">
                 @foreach (['home1.jpeg', 'home2.jpeg', 'home3.jpeg'] as $index => $img)
                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
