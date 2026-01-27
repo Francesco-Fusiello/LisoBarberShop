@@ -110,7 +110,7 @@
 </section>
 
 {{-- Servizi --}}
-        <section class="container py-5">
+        <section class="container py-3">
             <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff ">I nostri servizi</h2>
             <div class="row g-4 text-center">
                 <div class="col-md-4">
@@ -161,7 +161,7 @@
                 </div>
             </div>
 
-            <div class="text-center mt-5">
+            <div class="text-center mt-3">
                 <a href="{{ route('services') }}" class="btn btn-dark mt-auto btn-lg px-5"
                     style="font-weight: 700; border-radius: 0; frs-italic;">
                     Scopri tutti i servizi
@@ -202,8 +202,8 @@
 
 
         {{-- Recensioni --}}
-        <section class="container my-5 text-center">
-            <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#ffffff ">Cosa Dicono Di Noi </h2>
+        <section class="container text-center">
+            <h2 class="text-center display-5 mb-2" style="font-weight: 700; color:#ffffff ">Dicono Di Noi </h2>
             @if ($latestReviews->count())
                 <div id="carouselRecensioni" class="carousel slide" data-bs-ride="carousel"
                     style="max-width: 750px; margin: auto;">
@@ -241,9 +241,9 @@
         </section>
 
         {{-- Prodotti --}}
-        <section class="pb-5">
+        <section>
             <div class="container text-center py-5">
-                <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff ">Scelti per te</h2>
+                <h2 class="text-center display-5" style="font-weight: 700; color:#fff ">Scelti per te</h2>
                 <a href="{{ route('products') }}"
                     style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 1.1rem !important;">
                     ▸ La selezione completa
