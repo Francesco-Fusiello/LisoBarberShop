@@ -7,48 +7,60 @@
             I PROFESSIONISTI DI LISO BARBER SHOP
         </h1>
 
-        <div class="row justify-content-center text-center g-4">
-            <!-- Card 1 -->
-            <div class="col-md-4">
-                <div class="card border-0 bg-transparent">
-                    <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
-                        <img src="/images/3.jpg" class="img-fluid" style="object-fit: cover;">
-                    </div>
-                    <div class="mt-3">
-                        <h3 style="font-weight:300; letter-spacing:2px;">Gianfranco Liso</h3>
-                        <p class="text-muted">Titolare</p>
-                    </div>
-                </div>
+       <div class="row justify-content-center text-center g-4">
+    <!-- Card 1 -->
+    <div class="col-md-4">
+        <div class="card border-0 bg-transparent">
+            <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
+                <img src="/images/WhoWeAre/Gianfranco.jpg" class="img-fluid" style="object-fit: cover;">
             </div>
-
-            <!-- Card 2 -->
-            <div class="col-md-4">
-                <div class="card border-0 bg-transparent">
-                    <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
-                        <img src="/images/3.jpg" class="img-fluid" style="object-fit: cover;">
-                    </div>
-                    <div class="mt-3">
-                        <h3 style="font-weight:300; letter-spacing:2px;">Giuseppe Zingaro</h3>
-                        <p class="text-muted">Collaboratore</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col-md-4">
-                <div class="card border-0 bg-transparent">
-                    <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
-                        <img src="/images/3.jpg" class="img-fluid" style="object-fit: cover;">
-                    </div>
-                    <div class="mt-3">
-                        <h3 style="font-weight:300; letter-spacing:2px;">Salvatore Lomuscio</h3>
-                        <p class="text-muted">Collaboratore</p>
-                    </div>
-                </div>
+            <div class="mt-3">
+                <h3 style="font-weight:300; letter-spacing:2px;">Gianfranco Liso</h3>
+                <p class="text-muted">Titolare</p>
             </div>
         </div>
-
     </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+        <div class="card border-0 bg-transparent">
+            <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
+                <img src="/images/WhoWeAre/Giuseppe.png" class="img-fluid" style="object-fit: cover;">
+            </div>
+            <div class="mt-3">
+                <h3 style="font-weight:300; letter-spacing:2px;">Giuseppe Zingaro</h3>
+                <p class="text-muted">Collaboratore</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+        <div class="card border-0 bg-transparent">
+            <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
+                <img src="/images/WhoWeAre/Salvatore.jpeg" class="img-fluid" style="object-fit: cover;">
+            </div>
+            <div class="mt-3">
+                <h3 style="font-weight:300; letter-spacing:2px;">Salvatore Lomuscio</h3>
+                <p class="text-muted">Collaboratore</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 4 – NUOVA -->
+    <div class="col-md-4">
+        <div class="card border-0 bg-transparent">
+            <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
+                <img src="/images/WhoWeAre/Dario.png" class="img-fluid" style="object-fit: cover;">
+            </div>
+            <div class="mt-3">
+                <h3 style="font-weight:300; letter-spacing:2px;">Dario</h3>
+                <p class="text-muted">Collaboratore</p>
+            </div>
+        </div>
+    </div>
+</div>
+
     
 
 <div class="container-fluid py-5 mt-5 px-0 mt-5 text-center">
