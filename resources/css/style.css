@@ -411,40 +411,60 @@ section.container { background-color: #fff; }
 
 .mosaic-section, .mosaic-inner, .m-item { box-sizing: border-box; }
 
-/* ======= CARD MINIMAL ZARA ======= */
-.counter-section {
-    padding: 60px 0;
-}
-
+/* Contatori singoli */
 .counter-box {
-    background-color: #fff; /* bianco puro */
-    color: #000; /* testi neri */
-    min-height: 150px;
+    background-color: #fff;
+    color: #000;
+    min-height: 161px; /* altezza uniforme per tutti i quadrati */
+    padding: 2rem 1rem;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid #e5e5e5; /* sottile bordo tra quadrati */
-    transition: none !important; /* rimuove qualsiasi transizione */
-    transform: none !important;   /* annulla qualsiasi trasformazione */
+
+    box-sizing: border-box; /* blocca dimensioni */
 }
 
+/* Numero */
 .counter-box h3.counter {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     color: #000;
 }
 
+/* Testo */
 .counter-box p {
     font-family: 'Lato', sans-serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0;
+    font-weight: 200;
+    text-align: center;
     color: #000;
 }
+
+/* Hover leggerissimo – solo outline trasparente */
+@media (hover: hover) and (pointer: fine) {
+    .counter-box:hover {
+        outline: 1px solid rgba(0,0,0,0.03);
+    }
+}
+
+/* RESPONSIVE FONT */
+@media (max-width: 992px) {
+    .counter-box h3.counter { font-size: 2.2rem; }
+}
+@media (max-width: 576px) {
+    .counter-box h3.counter { font-size: 2rem; }
+    .counter-box p { font-size: 0.85rem; letter-spacing: 0.8px; }
+}
+
+
+
 /*MOSAIC HOME*/
 .mosaic-section {
     
