@@ -116,7 +116,7 @@
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow" style="background-color: #fff; color: #000;">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
-                            <img src="{{ asset('images/forbici.png') }}" alt="Taglio Uomo" class="mb-3" style="width:64px; height:64px; object-fit:contain;">
+                            <img src="{{ asset('images/forbici1.png') }}" alt="Taglio Uomo" class="mb-3" style="width:64px; height:64px; object-fit:contain;">
                             <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Taglio Uomo</h5>
                             <p class="card-text" style="color: #000">Valorizziamo ogni tipo di volto e stile con tagli
                                 personalizzati.</p>
@@ -131,7 +131,7 @@
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow" style="background-color: #fff; color: #000;">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
-                            <img src="{{ asset('images/macchinetta.png') }}" alt="Rasatura Tradizionale" class="mb-3" style="width:64px; height:64px; object-fit:contain;">
+                            <img src="{{ asset('images/macchinetta1.png') }}" alt="Rasatura Tradizionale" class="mb-3" style="width:64px; height:64px; object-fit:contain;">
                             <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Rasatura
                                 Tradizionale</h5>
                             <p class="card-text" style="color: #000">Rasatura con panno caldo e prodotti di alta
@@ -147,7 +147,7 @@
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow" style="background-color: #fff; color: #000;">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
-                            <img src="{{ asset('images/baffi.png') }}" alt="Rasatura Tradizionale" class="mb-3" style="width:64px; height:64px; object-fit:contain;">
+                            <img src="{{ asset('images/baffi1.png') }}" alt="Rasatura Tradizionale" class="mb-3" style="width:64px; height:64px; object-fit:contain;">
                             <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Modellatura Barba
                             </h5>
                             <p class="card-text"style="color: #000">Definizione e trattamenti per una barba morbida e

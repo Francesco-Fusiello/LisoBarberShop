@@ -119,7 +119,7 @@
             <!-- Servizio: Colorazione Capelli -->
             <div class="row align-items-center mb-5" data-aos="fade-up">
                 <div class="col-md-6 mt-3 mt-md-0">
-                    <img src="/images/services/colorazioneCapelli.PNG" class="img-fluid" alt="Colorazione Capelli" >
+                    <img src="/images/services/ColorazioneCapelli1.jpeg" class="img-fluid" alt="Colorazione Capelli" >
                 </div>
 
                 <div class="col-md-6 d-flex">
