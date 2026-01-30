@@ -19,7 +19,7 @@
             </div>
         </div>
         
-        <p class="text-center fs-5 pt-5" style="color: #ffffff;">
+        <p class="text-center fst-italic fs-5 pt-5" style="color: #ffffff;  font-weight: 550;">
             Scarica la nostra app per avere sempre Liso Barber Shop a portata di mano. Prenota facilmente il tuo appuntamento e scopri tutte le novità!
         </p>
             <!-- Badge App Store & Google Play -->

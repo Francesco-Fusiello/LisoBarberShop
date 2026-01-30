@@ -7,7 +7,7 @@
     </div>
 
     <div class="social-section text-center mt-3">
-    <p class="social-text fst-italic text-white mb-2">
+    <p class="fst-italic fs-5" style="color: #ffffff;  font-weight: 550;">
         Seguici sui nostri canali social per rimanere sempre connesso!
     </p>
 

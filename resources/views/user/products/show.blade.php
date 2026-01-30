@@ -1,9 +1,9 @@
 <x-layout>
-  <div class="container py-5">
+  <div class="container py-5 mt-5">
     <!-- Dettaglio prodotto -->
     <div class="row mb-5">
         <div class="col-md-6">
-            <img src="{{ Storage::url($product->image_path) }}" alt="{{ $product->name }}" class="img-fluid rounded shadow-sm" style="object-fit: cover; width: 100%; height: 500px;">
+            <img src="{{ Storage::url($product->image_path) }}" alt="{{ $product->name }}" class="img-fluid shadow-sm" style="object-fit: cover; width: 100%; height: 500px;">
         </div>
 
         <div class="col-md-6 d-flex flex-column justify-content-center align-items-center" style="height: 500px;">

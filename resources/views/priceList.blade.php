@@ -5,8 +5,8 @@
                 <h1 class="text-center display-4" style="color: #fff; font-family: 'Playfair Display', serif;font-weight: 700;">
                     LISTINO PREZZI
                 </h1>
-                <h4 class="fst-italic" style="color: #ffffff;">Scopri i nostri Servizi</h4>
-                <p class="fst-italic fs-5" style="color: #ffffff;">
+                <h4 class="fst-italic" style="color: #ffffff; font-weight: 550;">Scopri i nostri Servizi</h4>
+                <p class="fst-italic fs-5" style="color: #ffffff;  font-weight: 550;">
                     Benvenuti da Liso Barber Shop, dove la bellezza incontra l’eccellenza! Il nostro team di professionisti
                     è qui per offrirti servizi di alta qualità, personalizzati per soddisfare le tue esigenze. Scopri il nostro listino prezzi e regalati un’esperienza indimenticabile.
                 </p>
@@ -39,13 +39,13 @@
                         @endforeach
                     </div>
 
-                    <h4 class="text-center mt-5 fs-5" style="color: #ffffff;">
+                    <h4 class="text-center fst-italic fs-5 mt-3 fs-5" style="color: #ffffff;  font-weight: 550;">
                         I nostri servizi sono pensati per offrire sempre il massimo della qualità e dello stile.
                     </h4>
                 </div>
             </div>
 
-            <div class="row justify-content-center text-center mt-5">
+            <div class="row justify-content-center text-center">
                 <div class="col-lg-10">
                     <h2 class="pt-3 fst-italic" style="color: #ffffff;">Che Aspetti!!!</h2>
                     <h2 class="fst-italic" style="color: #ffffff;">Scarica la nostra app per prenotare subito il tuo appuntamento...</h2>
