@@ -54,7 +54,7 @@
                 <img src="/images/WhoWeAre/Dario.png" class="img-fluid" style="object-fit: cover;">
             </div>
             <div class="mt-3">
-                <h3 style="font-weight:300; letter-spacing:2px;">Dario</h3>
+                <h3 style="font-weight:300; letter-spacing:2px;">Dario Leonetti</h3>
                 <p class="text-muted">Collaboratore</p>
             </div>
         </div>
