@@ -35,7 +35,7 @@
             <div class="row">
                 <!-- Lista prodotti filtrati / iniziali -->
                 <template x-for="product in results" :key="product.id">
-                    <div class="col-md-4 mb-4 d-flex">
+                    <div class="col-6 col-md-4 mb-4 d-flex">
                         <div class="card shadow-sm border-0 w-100 d-flex flex-column"
                             style="
                                 height: 100%;
@@ -58,9 +58,10 @@
                                     style="color: #000000; font-family: 'Playfair Display', serif;"
                                     x-text="product.name"></h5>
 
-                                <p class="card-text flex-grow-1" style="color: #333;"
-                                    x-text="truncate(product.description, 100)"></p>
-
+                                <p class="card-text flex-grow-1 d-none d-md-block" style="color: #333;"
+                                    x-text="truncate(product.description, 100)">
+                                </p>
+                                
                                 <div class="d-flex justify-content-between align-items-center mt-auto">
                                     <p class="card-text mb-0" style="color: #000; font-weight: 700;">
                                         €<span x-text="formatPrice(product.price)"></span>

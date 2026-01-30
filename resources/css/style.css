@@ -650,6 +650,118 @@ section.container { background-color: #fff; }
         font-size: 24px;
     }
 }
+/* ======= PRODOTTI MOBILE ======= */
+@media (max-width: 576px) {
+
+  .col-6 {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .card {
+    margin-bottom: 0.4rem;
+    border: 1px solid #eee;
+  }
+
+ /* ======= CARD PRODOTTI ======= */
+.card-img-top {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* MOBILE (fino a 576px) */
+@media (max-width: 576px) {
+    .card-img-top {
+        aspect-ratio: 1 / 1; /* quadrata */
+        height: auto !important;
+    }
+
+    /* Nascondi descrizione */
+    .card-text {
+        display: none;
+    }
+
+    /* Titolo e prezzo più piccoli */
+    .card-title {
+        font-size: 0.75rem;
+        line-height: 1.15;
+        margin-bottom: 0.15rem;
+    }
+
+    .card .d-flex.justify-content-between p {
+        font-size: 0.7rem;
+    }
+
+    .btn-dark {
+        font-size: 0.6rem;
+        padding: 0.25rem 0.45rem;
+    }
+}
+
+/* ======= CARD PRODOTTI – TABLET (576px - 991px) ======= */
+@media (min-width: 576px) and (max-width: 991.98px) {
+
+    .card-img-top {
+        aspect-ratio: 1 / 1; /* quadrata */
+        height: auto !important;
+    }
+
+    /* Nascondi la descrizione */
+    .card-text {
+        display: none;
+    }
+
+    /* Titolo più piccolo */
+    .card-title {
+        font-size: 0.85rem;
+        line-height: 1.1;
+        margin-bottom: 0.25rem;
+    }
+
+    /* Prezzo leggermente più piccolo */
+    .card .d-flex.justify-content-between p {
+        font-size: 0.75rem;
+    }
+
+    /* Pulsante più compatto */
+    .btn-dark {
+        font-size: 0.65rem;
+        padding: 0.35rem 0.6rem;
+    }
+
+    /* Rimuove margini extra */
+    .card {
+        margin-bottom: 0.6rem;
+    }
+}
+
+
+/* DESKTOP (oltre 992px) */
+@media (min-width: 993px) {
+    .card-img-top {
+        aspect-ratio: 4 / 3; /* leggermente rettangolare, mantiene descrizione */
+        height: auto !important;
+    }
+
+    .card-text {
+        display: block;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card .d-flex.justify-content-between p {
+        font-size: 0.85rem;
+    }
+
+    .btn-dark {
+        font-size: 0.75rem;
+        padding: 0.5rem 0.9rem;
+    }
+}
+}
+
 
 
 
