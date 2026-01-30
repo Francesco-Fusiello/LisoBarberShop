@@ -1,5 +1,6 @@
 <x-layout>
-    <h2 class="text-center mb-5 display-4 py-5" style="font-family: 'Playfair Display', serif; color:#ffffff; font-weight: 700;">
+    <h2 class="text-center mb-5 display-4 py-5"
+        style="font-family: 'Playfair Display', serif; color:#ffffff; font-weight: 700;">
         I Nostri Prodotti
     </h2>
 
@@ -45,8 +46,11 @@
                             onmouseover="this.style.transform='scale(1.02)'"
                             onmouseout="this.style.transform='scale(1)'">
 
-                            <img :src="'/storage/' + product.image_path" :alt="product.name" class="card-img-top"
-                                style="height: 300px; object-fit: cover; border-radius: 0;">
+
+                            <a :href="`/products/${product.id}`">
+                                <img :src="'/storage/' + product.image_path" :alt="product.name" class="card-img-top"
+                                    style="height: 300px; object-fit: cover; border-radius: 0;">
+                            </a>
 
                             <div class="card-body d-flex flex-column">
 
