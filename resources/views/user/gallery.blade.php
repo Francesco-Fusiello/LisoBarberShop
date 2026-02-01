@@ -34,7 +34,7 @@
 
 
 
-    <div class="container">
+    <div class="container pb-5">
         <div class="row gallery">
             @foreach ($images as $image)
                 <div class="col-4 col-md-4 col-lg-3 mb-2">
