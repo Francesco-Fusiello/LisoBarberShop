@@ -138,7 +138,7 @@ class ProductCrud extends Component
         }
 
         return view('livewire.product-crud', [
-            'products' => $q->latest()->paginate(6),
+            'products' => $q->latest()->paginate(50),
         ]);
     }
 }

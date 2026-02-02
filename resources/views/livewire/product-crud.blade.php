@@ -1,10 +1,12 @@
 <div class="container py-4">
-    @if (session()->has('message'))
-        <div class="toast-elegant">
-            <span class="toast-icon">✅</span> {{ session('message') }}
-            <button type="button" class="btn-close" wire:click="$set('showSuccess', false)">&times;</button>
+   @if (session()->has('message'))
+        <div class="toast-elegant alert alert-success d-flex align-items-center justify-content-between px-3 py-2 mb-4">
+            <span>✅</span>
+            <div class="mx-2" style="flex-grow:1;">{{ session('message') }}</div>
+            <button type="button" class="btn-close" wire:click="$set('showSuccess', false)"></button>
         </div>
     @endif
+
 
     <form
         wire:key="{{ $editingProductId ? 'edit-'.$editingProductId : 'create' }}"
