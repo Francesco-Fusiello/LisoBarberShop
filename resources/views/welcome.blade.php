@@ -259,9 +259,11 @@
                                         @foreach ($productChunk as $product)
                                             <div class="col-md-4 d-flex">
                                                 <div class="card border-0 shadow-sm w-100 d-flex flex-column bg-light">
+                                                     <a href="{{ route('products.show', $product->id) }}">
                                                     <img src="{{ Storage::url($product->image_path) }}"
                                                         class="card-img-top" alt="{{ $product->name }}"
                                                         style="height: 300px; object-fit: cover;">
+                                                    </a>
                                                     <div class="card-body d-flex flex-column" style="color:#000;">
                                                         <h5 class="card-title"
                                                             style="font-family: 'Playfair Display', serif; color:#000;">
