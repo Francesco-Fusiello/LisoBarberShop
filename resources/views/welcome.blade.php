@@ -202,43 +202,64 @@
 
 
         {{-- Recensioni --}}
-        <section class="container text-center">
-            <h2 class="text-center display-5 mb-2" style="font-weight: 700; color:#ffffff ">Dicono Di Noi </h2>
-            @if ($latestReviews->count())
-                <div id="carouselRecensioni" class="carousel slide" data-bs-ride="carousel"
-                    style="max-width: 750px; margin: auto;">
-                    <div class="carousel-inner">
-                        @foreach ($latestReviews as $index => $review)
-                            <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                                <div class="p-4 bg-light border rounded">
-                                    <h5 style="color: #000">{{ $review->name }}</h5>
-                                    <div>
-                                        @for ($i = 0; $i < $review->rating; $i++)
-                                            <i class="fas fa-star text-dark"></i>
-                                        @endfor
-                                        @for ($i = $review->rating; $i < 5; $i++)
-                                            <i class="far fa-star text-dark"></i>
-                                        @endfor
-                                    </div>
-                                    <small style="color: #000">{{ $review->created_at->format('d M Y') }}</small>
-                                    <p class="mt-3" style="color: #000">{{ $review->content }}</p>
-                                </div>
+     <section class="container text-center my-5">
+    <h2 class="display-5 mb-3" style="font-weight: 600; color:#111;">Dicono di Noi</h2>
+
+    @if ($latestReviews->count())
+        {{-- Informazioni generali --}}
+        <p class="text-muted mb-4">
+            {{ $latestReviews->count() }} recensioni totali da Google 
+            &middot; Valutazione media: {{ number_format($latestReviews->avg('rating'), 1) }}/5
+        </p>
+
+        <div id="carouselRecensioni" class="carousel slide" data-bs-ride="carousel" style="max-width: 750px; margin: auto;">
+            <div class="carousel-inner">
+                @foreach ($latestReviews as $index => $review)
+                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                        <div class="p-4 bg-white border-0 rounded-0 d-flex flex-column align-items-center" style="box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+
+                            {{-- Foto profilo --}}
+                            @if ($review->profile_photo)
+                                <img src="{{ $review->profile_photo }}" alt="{{ $review->author_name }}" class="rounded-circle mb-3" style="width: 50px; height: 50px; object-fit: cover;">
+                            @endif
+
+                            {{-- Nome autore e dicitura Google --}}
+                            <h5 class="fw-medium mb-1" style="color: #111;">{{ $review->author_name }}</h5>
+                            <small class="text-muted mb-2">⭐ Google</small>
+
+                            {{-- Stelle --}}
+                            <div class="mb-2">
+                                @for ($i = 0; $i < $review->rating; $i++)
+                                    <i class="fas fa-star text-dark"></i>
+                                @endfor
+                                @for ($i = $review->rating; $i < 5; $i++)
+                                    <i class="far fa-star text-dark"></i>
+                                @endfor
                             </div>
-                        @endforeach
+
+                            {{-- Testo recensione --}}
+                            <p class="text-dark text-center mt-2" style="font-size: 0.95rem;">"{{ $review->text }}"</p>
+
+                            {{-- Data --}}
+                            <small class="text-muted mt-1">{{ $review->relative_time }}</small>
+                        </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselRecensioni"
-                        data-bs-slide="prev" style="width: 5%;">
-                        <span class="carousel-control-prev-icon" style="filter: invert(100%);"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselRecensioni"
-                        data-bs-slide="next" style="width: 5%;">
-                        <span class="carousel-control-next-icon" style="filter: invert(100%);"></span>
-                    </button>
-                </div>
-            @else
-                <p class="fst-italic">Nessuna recensione disponibile.</p>
-            @endif
-        </section>
+                @endforeach
+            </div>
+
+            {{-- Controlli carousel --}}
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselRecensioni" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" style="filter: invert(30%);"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselRecensioni" data-bs-slide="next">
+                <span class="carousel-control-next-icon" style="filter: invert(30%);"></span>
+            </button>
+        </div>
+    @else
+        <p class="fst-italic text-muted">Nessuna recensione disponibile.</p>
+    @endif
+</section>
+
 
         {{-- Prodotti --}}
         <section>

@@ -6,20 +6,24 @@ namespace App\Http\Controllers;
 use App\Models\Review;
 use App\Models\Product;
 use App\Models\GalleryImage;
+use App\Models\GoogleReview;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function home()
     {
-        $latestReviews = Review::where('is_approved', true)
-            ->latest()
+        $latestReviews = GoogleReview::orderBy('created_at', 'desc')
             ->take(6)
             ->get();
 
+              // Calcola info generali per le recensioni
+        $totalReviews = GoogleReview::count();
+        $averageRating = GoogleReview::avg('rating'); // media stelle
+
         $products = Product::latest()->take(9)->get();
 
-        return view('welcome', compact('latestReviews', 'products'));
+         return view('welcome', compact('latestReviews', 'totalReviews', 'averageRating', 'products'));
     }
 
     public function priceList()
