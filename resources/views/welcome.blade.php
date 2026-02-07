@@ -206,79 +206,82 @@
 
 
         {{-- Recensioni --}}
-       <section class="container text-center my-5">
+        <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff ">DICONO DI NOI</h2>
+        <section class="container my-5 google-reviews-zara">
 
-    {{-- Statistiche Google --}}
-    @if($googleStats)
-        <div class="d-flex justify-content-center align-items-center gap-3 mb-4 flex-wrap">
-            <i class="fab fa-google" style="font-size:28px; color:#DB4437;"></i>
-            <div>
-                <span style="font-weight:700; font-size:1.2rem;">{{ number_format($googleStats->average_rating,1) }}/5</span>
-                <span style="color:#555;">· {{ $googleStats->total_reviews }} recensioni</span>
-            </div>
-        </div>
-    @endif
+            <!-- HEADER GOOGLE -->
+            <div class="google-header">
+                <div class="google-left">
+                    <i class="fab fa-google google-icon"></i>
+                    <span class="google-title">Recensioni</span>
+                </div>
 
-    {{-- Titolo --}}
-    <h2 class="mb-4" style="font-weight:700; font-size:2rem; letter-spacing:1px; color:#000;">
-        Dicono di Noi
-    </h2>
-
-    {{-- Carousel Recensioni --}}
-    @if($latestReviews->count())
-    <div id="carouselRecensioni" class="carousel slide" data-bs-ride="carousel" style="max-width:900px; margin:auto;">
-        <div class="carousel-inner">
-            @foreach ($latestReviews->chunk(3) as $chunkIndex => $reviewChunk)
-            <div class="carousel-item {{ $chunkIndex === 0 ? 'active' : '' }}">
-                <div class="row g-4 justify-content-center">
-                    @foreach ($reviewChunk as $review)
-                    <div class="col-12 col-md-4 d-flex align-items-stretch">
-                        <div class="review-card p-4 border rounded shadow-sm w-100 d-flex flex-column"
-                             style="background-color:#f8f8f8;">
-                            {{-- Foto profilo --}}
-                            <img src="{{ $review->profile_photo ?? 'https://via.placeholder.com/80' }}" 
-                                 alt="{{ $review->author_name }}" 
-                                 class="rounded-circle mx-auto mb-3" style="width:80px; height:80px; object-fit:cover;">
-
-                            {{-- Nome autore --}}
-                            <h5 class="text-center mb-2" style="font-weight:700; color:#000;">
-                                {{ $review->author_name }}
-                            </h5>
-
-                            {{-- Stelle --}}
-                            <div class="text-center mb-2">
-                                @for ($i=1; $i<=5; $i++)
-                                    <i class="fa-star {{ $i <= $review->rating ? 'fas text-warning' : 'far text-secondary' }}"></i>
-                                @endfor
-                            </div>
-
-                            {{-- Testo recensione --}}
-                            <p class="text-center mb-2" style="font-size:0.95rem; color:#333; flex-grow:1;">
-                                {{ $review->text }}
-                            </p>
-
-                            {{-- Tempo --}}
-                            <small class="text-muted text-center">{{ $review->relative_time }}</small>
-                        </div>
+                <div class="google-rating">
+                    <span class="rating-value">{{ number_format($googleStats->average_rating, 1) }}</span>
+                    <div class="stars">
+                        @for ($i = 0; $i < 5; $i++)
+                            <i class="fas fa-star {{ $i < round($googleStats->average_rating) ? 'filled' : '' }}"></i>
+                        @endfor
                     </div>
+                    <span class="rating-count">({{ $googleStats->total_reviews }})</span>
+                </div>
+
+                <a href="https://search.google.com/local/writereview?placeid={{ env('GOOGLE_PLACE_ID') }}"
+                    target="_blank" class="google-btn">
+                    Lascia la tua recensione su Google
+                </a>
+            </div>
+
+            <!-- SLIDER -->
+            <div class="reviews-slider">
+                <div class="row g-4 mt-4 reviews-track">
+
+                    @foreach ($latestReviews as $review)
+                        <div class="col-md-4 review-slide">
+                            <div class="review-card">
+
+                                <div class="review-user">
+                                    <img src="{{ $review->profile_photo }}"
+                                        onerror="this.src='/images/avatar-placeholder.png'">
+                                    <div class="user-meta">
+                                        <strong>
+                                            {{ $review->author_name }}
+                                            <i class="fab fa-google google-icon-user"></i>
+                                            <!-- icona accanto al nome -->
+                                        </strong>
+                                        <small>{{ $review->relative_time }}</small>
+                                    </div>
+                                </div>
+
+                                <div class="stars mb-2">
+                                    @for ($i = 0; $i < 5; $i++)
+                                        <i class="fas fa-star {{ $i < $review->rating ? 'filled' : '' }}"></i>
+                                    @endfor
+                                </div>
+
+                                <p class="review-text">
+                                    {{ Str::limit($review->text, 120) }}
+                                </p>
+
+                            </div>
+                        </div>
                     @endforeach
+
                 </div>
             </div>
-            @endforeach
-        </div>
 
-        {{-- Controlli --}}
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRecensioni" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" style="filter:invert(100%)"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselRecensioni" data-bs-slide="next">
-            <span class="carousel-control-next-icon" style="filter:invert(100%)"></span>
-        </button>
-    </div>
-    @else
-        <p class="fst-italic">Nessuna recensione disponibile.</p>
-    @endif
-</section>
+            <div class="text-center mt-3">
+                <a href="https://www.google.com/search?sca_esv=01e84e26bfa42c3c&hl=it-IT&sxsrf=ANbL-n60XhCx-BsqBUEBqTMkIXVIBCp5hA:1770472707659&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qORas8ytkq6_wqOh9SFVS7W7RAWT_ai5xuCJGmEQ1pLx_ncY2aU-kNpPzVyuPbgU9ezio5CxScPnaq3g7qpyJGDkabn4_bANqJxyu1LYTbqB5mpBU_g%3D%3D&q=Liso+Barber+shop+Recensioni&sa=X&ved=2ahUKEwiPgszmxMeSAxWi1AIHHavTIWcQ0bkNegQINBAF&cshid=1770472816556839&biw=1536&bih=738&dpr=1.25"
+                    class="btn btn-dark mt-auto btn-lg px-5" style="font-weight: 700; border-radius: 0; frs-italic;">
+                    Scopri tutte le recensioni
+                </a>
+            </div>
+
+        </section>
+
+
+
+
 
 
 
@@ -345,6 +348,9 @@
                     </button>
                 </div>
         </section>
+
+
+
 
 
 </x-layout>

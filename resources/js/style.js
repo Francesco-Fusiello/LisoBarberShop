@@ -172,6 +172,35 @@ document.addEventListener("DOMContentLoaded", function() {
   imgs.forEach(img => observer.observe(img));
 });
 
+//Recensioni 
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.reviews-track');
+    const slides = Array.from(document.querySelectorAll('.review-slide'));
+    const visible = 3;
+    let index = 0;
+
+    // DUPLICA le prime slide per un loop fluido
+    slides.slice(0, visible).forEach(slide => {
+        const clone = slide.cloneNode(true);
+        track.appendChild(clone);
+    });
+
+    setInterval(() => {
+        index++;
+        track.style.transition = 'transform 1s linear';
+        track.style.transform = `translateX(-${index * (100 / visible)}%)`;
+
+        // reset invisibile quando arriviamo alla duplicazione
+        if (index === slides.length) {
+            setTimeout(() => {
+                track.style.transition = 'none';
+                index = 0;
+                track.style.transform = 'translateX(0)';
+            }, 1000); // coincide con la durata della transizione
+        }
+    }, 4000);
+});
+
 
 
 
