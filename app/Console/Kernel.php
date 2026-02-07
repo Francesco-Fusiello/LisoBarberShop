@@ -7,22 +7,20 @@ use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
 class Kernel extends ConsoleKernel
 {
-    /**
-     * Define the application's command schedule.
-     */
+    // Registriamo il comando
+    protected $commands = [
+        \App\Console\Commands\FetchGoogleReviews::class,
+    ];
+
     protected function schedule(Schedule $schedule)
     {
-        // Comando per aggiornare le recensioni Google una volta al giorno
-        $schedule->command('fetch:google-reviews')->daily();
+        // Aggiorna le recensioni Google ogni giorno alle 3:00 AM
+        $schedule->command('fetch:google-reviews')->dailyAt('03:00');
     }
 
-    /**
-     * Register the commands for the application.
-     */
     protected function commands()
     {
         $this->load(__DIR__.'/Commands');
-
         require base_path('routes/console.php');
     }
 }

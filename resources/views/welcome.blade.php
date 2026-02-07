@@ -8,8 +8,8 @@
             <div class="carousel-inner">
                 @foreach (['home1.jpeg', 'home2.jpeg', 'home3.jpeg'] as $index => $img)
                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                        <img src="/images/carouselHome/{{ $img }}" class="d-block w-100 carousel-img" alt="Image {{ $index + 1 }}"
-                            style="object-fit: cover; height: 600px;">
+                        <img src="/images/carouselHome/{{ $img }}" class="d-block w-100 carousel-img"
+                            alt="Image {{ $index + 1 }}" style="object-fit: cover; height: 600px;">
                         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center"
                             style="background: rgba(0,0,0,0.4); top: 0; bottom: 0; left: 0; right: 0;">
                             <h1 class="display-3 fw-bold" style="color: #f5f5f5; text-shadow: 2px 2px 6px #000;">
@@ -40,7 +40,8 @@
 
             <div class="text-center mx-auto px-4 force-black" style="max-width: 900px;">
 
-                <h2 class="text-center display-5 mt-0" style="font-weight: 700;">Per la bellezza e la cura dei capelli degli uomini</h2> 
+                <h2 class="text-center display-5 mt-0" style="font-weight: 700;">Per la bellezza e la cura dei capelli
+                    degli uomini</h2>
 
                 <p class="lead mx-auto" style="max-width: 700px; color: #000;">
                     Gli esperti di <strong>Liso Barber Shop</strong> propongono nel salone di Andria numerosi tagli
@@ -84,39 +85,40 @@
 
 
         <!-- mosaic-section.blade.php (solo la sezione) -->
-      <section class="mosaic-section">
-    <div class="text-center text-white">
-        <h2 class="fw-bold text-uppercase display-5" style="color: #fff">Il Nostro Salone</h2>
-        <p class="lead">Uno spazio curato, moderno e accogliente.</p>
-    </div>
-    <div class="mosaic-grid">
-        <img src="/images/2.jpg" loading="lazy" decoding="async" alt="salone">
-        <img src="/images/mosaic/Mosaic2.jpeg" loading="lazy" decoding="async" alt="salone">
-        <img src="/images/mosaic/Mosaic11.png" loading="lazy" decoding="async" alt="salone">
-        <img src="/images/mosaic/Mosaic4.JPG" loading="lazy" decoding="async" alt="salone">
-        <img src="/images/mosaic/Mosaic9.jpeg" loading="lazy" decoding="async" alt="salone">
-        <img src="/images/mosaic/Mosaic6.JPG" loading="lazy" decoding="async" alt="salone">
-        <img src="/images/mosaic/Mosaic5.jpeg" loading="lazy" decoding="async" alt="salone">
-        <img src="/images/mosaic/Mosaic7.jpeg" loading="lazy" decoding="async" alt="salone">
-        <img src="/images/mosaic/Mosaic8.jpeg" loading="lazy" decoding="async" alt="salone">
-         <img src="/images/mosaic/Mosaic10.jpeg" loading="lazy" decoding="async" alt="salone">
-        <img src="/images/mosaic/Mosaic12.jpg" loading="lazy" decoding="async" alt="salone">
-    </div>
-    <div class="text-center mt-2">
-    <a href="{{ route('user.gallery') }}" class="mosaic-cta-btn">
-        VISITA LA NOSTRA GALLERY
-    </a>
-</div>
-</section>
+        <section class="mosaic-section">
+            <div class="text-center text-white">
+                <h2 class="fw-bold text-uppercase display-5" style="color: #fff">Il Nostro Salone</h2>
+                <p class="lead">Uno spazio curato, moderno e accogliente.</p>
+            </div>
+            <div class="mosaic-grid">
+                <img src="/images/2.jpg" loading="lazy" decoding="async" alt="salone">
+                <img src="/images/mosaic/Mosaic2.jpeg" loading="lazy" decoding="async" alt="salone">
+                <img src="/images/mosaic/Mosaic11.png" loading="lazy" decoding="async" alt="salone">
+                <img src="/images/mosaic/Mosaic4.JPG" loading="lazy" decoding="async" alt="salone">
+                <img src="/images/mosaic/Mosaic9.jpeg" loading="lazy" decoding="async" alt="salone">
+                <img src="/images/mosaic/Mosaic6.JPG" loading="lazy" decoding="async" alt="salone">
+                <img src="/images/mosaic/Mosaic5.jpeg" loading="lazy" decoding="async" alt="salone">
+                <img src="/images/mosaic/Mosaic7.jpeg" loading="lazy" decoding="async" alt="salone">
+                <img src="/images/mosaic/Mosaic8.jpeg" loading="lazy" decoding="async" alt="salone">
+                <img src="/images/mosaic/Mosaic10.jpeg" loading="lazy" decoding="async" alt="salone">
+                <img src="/images/mosaic/Mosaic12.jpg" loading="lazy" decoding="async" alt="salone">
+            </div>
+            <div class="text-center mt-2">
+                <a href="{{ route('user.gallery') }}" class="mosaic-cta-btn">
+                    VISITA LA NOSTRA GALLERY
+                </a>
+            </div>
+        </section>
 
-{{-- Servizi --}}
+        {{-- Servizi --}}
         <section class="container py-3">
             <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff ">I nostri servizi</h2>
             <div class="row g-4 text-center">
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow" style="background-color: #fff; color: #000;">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
-                            <img src="{{ asset('images/forbici1.png') }}" alt="Taglio Uomo" class="mb-3" style="width:64px; height:64px; object-fit:contain;">
+                            <img src="{{ asset('images/forbici1.png') }}" alt="Taglio Uomo" class="mb-3"
+                                style="width:64px; height:64px; object-fit:contain;">
                             <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Taglio Uomo</h5>
                             <p class="card-text" style="color: #000">Valorizziamo ogni tipo di volto e stile con tagli
                                 personalizzati.</p>
@@ -131,7 +133,8 @@
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow" style="background-color: #fff; color: #000;">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
-                            <img src="{{ asset('images/macchinetta1.png') }}" alt="Rasatura Tradizionale" class="mb-3" style="width:64px; height:64px; object-fit:contain;">
+                            <img src="{{ asset('images/macchinetta1.png') }}" alt="Rasatura Tradizionale"
+                                class="mb-3" style="width:64px; height:64px; object-fit:contain;">
                             <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Rasatura
                                 Tradizionale</h5>
                             <p class="card-text" style="color: #000">Rasatura con panno caldo e prodotti di alta
@@ -147,7 +150,8 @@
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow" style="background-color: #fff; color: #000;">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
-                            <img src="{{ asset('images/baffi1.png') }}" alt="Rasatura Tradizionale" class="mb-3" style="width:64px; height:64px; object-fit:contain;">
+                            <img src="{{ asset('images/baffi1.png') }}" alt="Rasatura Tradizionale" class="mb-3"
+                                style="width:64px; height:64px; object-fit:contain;">
                             <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Modellatura Barba
                             </h5>
                             <p class="card-text"style="color: #000">Definizione e trattamenti per una barba morbida e
@@ -171,94 +175,112 @@
 
         {{-- Counter section --}}
         <section class="container my-5 counter-section text-center px-0">
-    <div class="row gx-0 px-3 px-md-0"> <!-- qui -->
-        <div class="col-6 col-md-3">
-            <div class="counter-box">
-                <h3 class="counter" data-target="800">0</h3>
-                <p>Clienti Soddisfatti</p>
+            <div class="row gx-0 px-3 px-md-0"> <!-- qui -->
+                <div class="col-6 col-md-3">
+                    <div class="counter-box">
+                        <h3 class="counter" data-target="800">0</h3>
+                        <p>Clienti Soddisfatti</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="counter-box">
+                        <h3 class="counter" data-target="66351">0</h3>
+                        <p>Tagli Eseguiti</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="counter-box">
+                        <h3 class="counter" data-target="8">0</h3>
+                        <p>Anni di Esperienza</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="counter-box">
+                        <h3 class="counter" data-target="500">0</h3>
+                        <p>Recensioni Positive</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col-6 col-md-3">
-            <div class="counter-box">
-                <h3 class="counter" data-target="66351">0</h3>
-                <p>Tagli Eseguiti</p>
-            </div>
-        </div>
-        <div class="col-6 col-md-3">
-            <div class="counter-box">
-                <h3 class="counter" data-target="8">0</h3>
-                <p>Anni di Esperienza</p>
-            </div>
-        </div>
-        <div class="col-6 col-md-3">
-            <div class="counter-box">
-                <h3 class="counter" data-target="500">0</h3>
-                <p>Recensioni Positive</p>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
 
 
         {{-- Recensioni --}}
-     <section class="container text-center my-5">
-    <h2 class="display-5 mb-3" style="font-weight: 600; color:#111;">Dicono di Noi</h2>
+       <section class="container text-center my-5">
 
-    @if ($latestReviews->count())
-        {{-- Informazioni generali --}}
-        <p class="text-muted mb-4">
-            {{ $latestReviews->count() }} recensioni totali da Google 
-            &middot; Valutazione media: {{ number_format($latestReviews->avg('rating'), 1) }}/5
-        </p>
+    {{-- Statistiche Google --}}
+    @if($googleStats)
+        <div class="d-flex justify-content-center align-items-center gap-3 mb-4 flex-wrap">
+            <i class="fab fa-google" style="font-size:28px; color:#DB4437;"></i>
+            <div>
+                <span style="font-weight:700; font-size:1.2rem;">{{ number_format($googleStats->average_rating,1) }}/5</span>
+                <span style="color:#555;">· {{ $googleStats->total_reviews }} recensioni</span>
+            </div>
+        </div>
+    @endif
 
-        <div id="carouselRecensioni" class="carousel slide" data-bs-ride="carousel" style="max-width: 750px; margin: auto;">
-            <div class="carousel-inner">
-                @foreach ($latestReviews as $index => $review)
-                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                        <div class="p-4 bg-white border-0 rounded-0 d-flex flex-column align-items-center" style="box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+    {{-- Titolo --}}
+    <h2 class="mb-4" style="font-weight:700; font-size:2rem; letter-spacing:1px; color:#000;">
+        Dicono di Noi
+    </h2>
 
+    {{-- Carousel Recensioni --}}
+    @if($latestReviews->count())
+    <div id="carouselRecensioni" class="carousel slide" data-bs-ride="carousel" style="max-width:900px; margin:auto;">
+        <div class="carousel-inner">
+            @foreach ($latestReviews->chunk(3) as $chunkIndex => $reviewChunk)
+            <div class="carousel-item {{ $chunkIndex === 0 ? 'active' : '' }}">
+                <div class="row g-4 justify-content-center">
+                    @foreach ($reviewChunk as $review)
+                    <div class="col-12 col-md-4 d-flex align-items-stretch">
+                        <div class="review-card p-4 border rounded shadow-sm w-100 d-flex flex-column"
+                             style="background-color:#f8f8f8;">
                             {{-- Foto profilo --}}
-                            @if ($review->profile_photo)
-                                <img src="{{ $review->profile_photo }}" alt="{{ $review->author_name }}" class="rounded-circle mb-3" style="width: 50px; height: 50px; object-fit: cover;">
-                            @endif
+                            <img src="{{ $review->profile_photo ?? 'https://via.placeholder.com/80' }}" 
+                                 alt="{{ $review->author_name }}" 
+                                 class="rounded-circle mx-auto mb-3" style="width:80px; height:80px; object-fit:cover;">
 
-                            {{-- Nome autore e dicitura Google --}}
-                            <h5 class="fw-medium mb-1" style="color: #111;">{{ $review->author_name }}</h5>
-                            <small class="text-muted mb-2">⭐ Google</small>
+                            {{-- Nome autore --}}
+                            <h5 class="text-center mb-2" style="font-weight:700; color:#000;">
+                                {{ $review->author_name }}
+                            </h5>
 
                             {{-- Stelle --}}
-                            <div class="mb-2">
-                                @for ($i = 0; $i < $review->rating; $i++)
-                                    <i class="fas fa-star text-dark"></i>
-                                @endfor
-                                @for ($i = $review->rating; $i < 5; $i++)
-                                    <i class="far fa-star text-dark"></i>
+                            <div class="text-center mb-2">
+                                @for ($i=1; $i<=5; $i++)
+                                    <i class="fa-star {{ $i <= $review->rating ? 'fas text-warning' : 'far text-secondary' }}"></i>
                                 @endfor
                             </div>
 
                             {{-- Testo recensione --}}
-                            <p class="text-dark text-center mt-2" style="font-size: 0.95rem;">"{{ $review->text }}"</p>
+                            <p class="text-center mb-2" style="font-size:0.95rem; color:#333; flex-grow:1;">
+                                {{ $review->text }}
+                            </p>
 
-                            {{-- Data --}}
-                            <small class="text-muted mt-1">{{ $review->relative_time }}</small>
+                            {{-- Tempo --}}
+                            <small class="text-muted text-center">{{ $review->relative_time }}</small>
                         </div>
                     </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
-
-            {{-- Controlli carousel --}}
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselRecensioni" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" style="filter: invert(30%);"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselRecensioni" data-bs-slide="next">
-                <span class="carousel-control-next-icon" style="filter: invert(30%);"></span>
-            </button>
+            @endforeach
         </div>
+
+        {{-- Controlli --}}
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRecensioni" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" style="filter:invert(100%)"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselRecensioni" data-bs-slide="next">
+            <span class="carousel-control-next-icon" style="filter:invert(100%)"></span>
+        </button>
+    </div>
     @else
-        <p class="fst-italic text-muted">Nessuna recensione disponibile.</p>
+        <p class="fst-italic">Nessuna recensione disponibile.</p>
     @endif
 </section>
+
+
 
 
         {{-- Prodotti --}}
@@ -280,10 +302,10 @@
                                         @foreach ($productChunk as $product)
                                             <div class="col-md-4 d-flex">
                                                 <div class="card border-0 shadow-sm w-100 d-flex flex-column bg-light">
-                                                     <a href="{{ route('products.show', $product->id) }}">
-                                                    <img src="{{ Storage::url($product->image_path) }}"
-                                                        class="card-img-top" alt="{{ $product->name }}"
-                                                        style="height: 300px; object-fit: cover;">
+                                                    <a href="{{ route('products.show', $product->id) }}">
+                                                        <img src="{{ Storage::url($product->image_path) }}"
+                                                            class="card-img-top" alt="{{ $product->name }}"
+                                                            style="height: 300px; object-fit: cover;">
                                                     </a>
                                                     <div class="card-body d-flex flex-column" style="color:#000;">
                                                         <h5 class="card-title"

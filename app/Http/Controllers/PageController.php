@@ -8,23 +8,19 @@ use App\Models\Product;
 use App\Models\GalleryImage;
 use App\Models\GoogleReview;
 use Illuminate\Http\Request;
+use App\Models\GoogleReviewStat;
 
 class PageController extends Controller
 {
-    public function home()
-    {
-        $latestReviews = GoogleReview::orderBy('created_at', 'desc')
-            ->take(6)
-            ->get();
+public function home()
+{
+    $latestReviews = GoogleReview::latest()->take(5)->get();
+    $googleStats   = GoogleReviewStat::first();
 
-              // Calcola info generali per le recensioni
-        $totalReviews = GoogleReview::count();
-        $averageRating = GoogleReview::avg('rating'); // media stelle
+    $products = Product::latest()->take(9)->get();
 
-        $products = Product::latest()->take(9)->get();
-
-         return view('welcome', compact('latestReviews', 'totalReviews', 'averageRating', 'products'));
-    }
+    return view('welcome', compact('latestReviews', 'googleStats', 'products'));
+}
 
     public function priceList()
     {
