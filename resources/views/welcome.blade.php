@@ -204,75 +204,98 @@
         </section>
 
 
-
         {{-- Recensioni --}}
-        <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff ">DICONO DI NOI</h2>
+        <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff;">DICONO DI NOI</h2>
         <section class="container my-5 google-reviews-zara">
 
             <!-- HEADER GOOGLE -->
-            <div class="google-header">
-                <div class="google-left">
-                    <i class="fab fa-google google-icon"></i>
+            <div class="google-header d-flex justify-content-between align-items-center mb-4">
+                <div class="google-left d-flex align-items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 533.5 544.3"
+                        style="width:24px; height:24px; vertical-align:middle;">
+                        <path fill="#4285F4"
+                            d="M533.5 278.4c0-18.4-1.5-36-4.3-53.2H272v100.8h146.9c-6.3 34-25 62.8-53.2 82v68h85.9c50.2-46.2 79.9-114.7 79.9-197.6z" />
+                        <path fill="#34A853"
+                            d="M272 544.3c71.7 0 132-23.7 176-64.5l-85.9-68c-23.8 15.9-54.1 25.3-90.1 25.3-69 0-127.3-46.5-148.2-109.2h-88.6v68.7c44.3 87.6 135.3 148.7 236.8 148.7z" />
+                        <path fill="#FBBC05"
+                            d="M123.7 361.1c-10.3-30.9-10.3-64.4 0-95.3V197h-88.6C14.9 257.3 0 310.8 0 366.1s14.9 108.8 35.1 161.1l88.6-68.7z" />
+                        <path fill="#EA4335"
+                            d="M272 107.3c37.4-.6 71.1 12.7 97.6 36.8l73.1-73.1C403.7 31.5 341.7 0 272 0 170.5 0 79.5 61.1 35.1 148.7l88.6 68.7c20.9-62.7 79.2-109.2 148.3-109.2z" />
+                    </svg>
                     <span class="google-title">Recensioni</span>
                 </div>
 
-                <div class="google-rating">
-                    <span class="rating-value">{{ number_format($googleStats->average_rating, 1) }}</span>
-                    <div class="stars">
-                        @for ($i = 0; $i < 5; $i++)
-                            <i class="fas fa-star {{ $i < round($googleStats->average_rating) ? 'filled' : '' }}"></i>
-                        @endfor
+                <div class="google-right d-flex align-items-center gap-3">
+                    <div class="google-rating text-center">
+                        <span class="rating-value">{{ number_format($googleStats->average_rating, 1) }}</span>
+                        <div class="stars">
+                            @for ($i = 0; $i < 5; $i++)
+                                <i
+                                    class="fas fa-star {{ $i < round($googleStats->average_rating) ? 'filled' : '' }}"></i>
+                            @endfor
+                        </div>
+                        <span class="rating-count">({{ $googleStats->total_reviews }})</span>
                     </div>
-                    <span class="rating-count">({{ $googleStats->total_reviews }})</span>
-                </div>
 
-                <a href="https://search.google.com/local/writereview?placeid={{ env('GOOGLE_PLACE_ID') }}"
-                    target="_blank" class="google-btn">
-                    Lascia la tua recensione su Google
-                </a>
+                    <a href="https://search.google.com/local/writereview?placeid={{ env('GOOGLE_PLACE_ID') }}"
+                        target="_blank" class="google-btn btn btn-outline-light"style="border-radius: 0;">
+                        Lascia la tua recensione
+                    </a>
+                </div>
             </div>
 
             <!-- SLIDER -->
             <div class="reviews-slider">
                 <div class="row g-4 mt-4 reviews-track">
-
                     @foreach ($latestReviews as $review)
                         <div class="col-md-4 review-slide">
-                            <div class="review-card">
+                            <div class="review-card position-relative p-3">
 
-                                <div class="review-user">
+                                <!-- Logo Google in alto a destra -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 533.5 544.3"
+                                    style="width:24px; height:24px; position:absolute; top:1rem; right:1rem;">
+                                    <path fill="#4285F4"
+                                        d="M533.5 278.4c0-18.4-1.5-36-4.3-53.2H272v100.8h146.9c-6.3 34-25 62.8-53.2 82v68h85.9c50.2-46.2 79.9-114.7 79.9-197.6z" />
+                                    <path fill="#34A853"
+                                        d="M272 544.3c71.7 0 132-23.7 176-64.5l-85.9-68c-23.8 15.9-54.1 25.3-90.1 25.3-69 0-127.3-46.5-148.2-109.2h-88.6v68.7c44.3 87.6 135.3 148.7 236.8 148.7z" />
+                                    <path fill="#FBBC05"
+                                        d="M123.7 361.1c-10.3-30.9-10.3-64.4 0-95.3V197h-88.6C14.9 257.3 0 310.8 0 366.1s14.9 108.8 35.1 161.1l88.6-68.7z" />
+                                    <path fill="#EA4335"
+                                        d="M272 107.3c37.4-.6 71.1 12.7 97.6 36.8l73.1-73.1C403.7 31.5 341.7 0 272 0 170.5 0 79.5 61.1 35.1 148.7l88.6 68.7c20.9-62.7 79.2-109.2 148.3-109.2z" />
+                                </svg>
+
+                                <!-- User -->
+                                <div class="review-user d-flex align-items-center gap-2">
                                     <img src="{{ $review->profile_photo }}"
-                                        onerror="this.src='/images/avatar-placeholder.png'">
+                                        onerror="this.src='/images/avatar-placeholder.png'"
+                                        style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
                                     <div class="user-meta">
-                                        <strong>
-                                            {{ $review->author_name }}
-                                            <i class="fab fa-google google-icon-user"></i>
-                                            <!-- icona accanto al nome -->
-                                        </strong>
+                                        <strong>{{ $review->author_name }}</strong>
                                         <small>{{ $review->relative_time }}</small>
                                     </div>
                                 </div>
 
+                                <!-- Stars -->
                                 <div class="stars mb-2">
                                     @for ($i = 0; $i < 5; $i++)
                                         <i class="fas fa-star {{ $i < $review->rating ? 'filled' : '' }}"></i>
                                     @endfor
                                 </div>
 
+                                <!-- Review text -->
                                 <p class="review-text">
-                                    {{ Str::limit($review->text, 120) }}
+                                    {{ Str::of($review->text)->explode('.')->first() }}.
                                 </p>
 
                             </div>
                         </div>
                     @endforeach
-
                 </div>
             </div>
 
             <div class="text-center mt-3">
-                <a href="https://www.google.com/search?sca_esv=01e84e26bfa42c3c&hl=it-IT&sxsrf=ANbL-n60XhCx-BsqBUEBqTMkIXVIBCp5hA:1770472707659&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qORas8ytkq6_wqOh9SFVS7W7RAWT_ai5xuCJGmEQ1pLx_ncY2aU-kNpPzVyuPbgU9ezio5CxScPnaq3g7qpyJGDkabn4_bANqJxyu1LYTbqB5mpBU_g%3D%3D&q=Liso+Barber+shop+Recensioni&sa=X&ved=2ahUKEwiPgszmxMeSAxWi1AIHHavTIWcQ0bkNegQINBAF&cshid=1770472816556839&biw=1536&bih=738&dpr=1.25"
-                    class="btn btn-dark mt-auto btn-lg px-5" style="font-weight: 700; border-radius: 0; frs-italic;">
+                <a href="https://www.google.com/search?sca_esv=01e84e26bfa42c3c&hl=it-IT&q=Liso+Barber+shop+Recensioni"
+                    class="btn btn-dark mt-auto btn-lg px-5" style="font-weight: 700; border-radius: 0;">
                     Scopri tutte le recensioni
                 </a>
             </div>
