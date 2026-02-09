@@ -166,7 +166,7 @@
             </div>
 
             <div class="text-center mt-3">
-                <a href="{{ route('services') }}" class="btn-standard">
+                <a href="{{ route('services') }}" class="home-btn">
                     Scopri tutti i servizi
                 </a>
             </div>
@@ -294,7 +294,7 @@
 
             <div class="text-center mt-3">
                 <a href="https://www.google.com/search?sca_esv=01e84e26bfa42c3c&hl=it-IT&q=Liso+Barber+shop+Recensioni"
-                     class="btn-standard">
+                     class="home-btn">
                     Scopri tutte le recensioni
                 </a>
             </div>
