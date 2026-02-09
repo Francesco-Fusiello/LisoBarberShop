@@ -18,10 +18,10 @@
                    class="btn btn-outline-secondary {{ $section === 'galleria' ? 'active' : '' }}">
                     Gestione Galleria
                 </a>
-                <a href="{{ route('admin.dashboard', ['section' => 'recensioni']) }}"
+                {{-- <a href="{{ route('admin.dashboard', ['section' => 'recensioni']) }}"
                    class="btn btn-outline-warning {{ $section === 'recensioni' ? 'active' : '' }}">
                     Gestione Recensioni
-                </a>
+                </a> --}}
             </div>
         </div>
     </div>

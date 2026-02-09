@@ -172,35 +172,66 @@ document.addEventListener("DOMContentLoaded", function() {
   imgs.forEach(img => observer.observe(img));
 });
 
-//Recensioni 
 document.addEventListener('DOMContentLoaded', () => {
     const track = document.querySelector('.reviews-track');
-    const slides = Array.from(document.querySelectorAll('.review-slide'));
-    const visible = 3;
+    const originalSlides = Array.from(document.querySelectorAll('.review-slide'));
     let index = 0;
+    let slideWidth = 0;
+    let interval;
 
-    // DUPLICA le prime slide per un loop fluido
-    slides.slice(0, visible).forEach(slide => {
-        const clone = slide.cloneNode(true);
-        track.appendChild(clone);
-    });
+    function getVisible() {
+        const w = window.innerWidth;
+        if (w < 576) return 1;      // mobile
+        if (w < 992) return 2;      // tablet
+        return 3;                    // desktop
+    }
 
-    setInterval(() => {
-        index++;
-        track.style.transition = 'transform 1s linear';
-        track.style.transform = `translateX(-${index * (100 / visible)}%)`;
+    function setup() {
+        const visible = getVisible();
+        index = 0;
+        track.style.transition = 'none';
+        track.style.transform = 'translateX(0)';
 
-        // reset invisibile quando arriviamo alla duplicazione
-        if (index === slides.length) {
-            setTimeout(() => {
-                track.style.transition = 'none';
-                index = 0;
-                track.style.transform = 'translateX(0)';
-            }, 1000); // coincide con la durata della transizione
-        }
-    }, 4000);
+        // reset track e cloni per loop infinito
+        track.innerHTML = '';
+        const slides = originalSlides.map(slide => slide.cloneNode(true));
+        slides.forEach(slide => track.appendChild(slide));
+        slides.forEach(slide => track.appendChild(slide.cloneNode(true))); // duplico tutte le slide
+
+        // aggiorno flex
+        Array.from(track.children).forEach(slide => {
+            slide.style.flex = `0 0 ${100 / visible}%`;
+        });
+
+        // larghezza reale della slide
+        const firstSlide = track.querySelector('.review-slide');
+        slideWidth = firstSlide.getBoundingClientRect().width;
+
+        // scroll automatico
+        if (interval) clearInterval(interval);
+        startAutoScroll(visible);
+    }
+
+    function startAutoScroll(visible) {
+        const childrenCount = track.children.length;
+        interval = setInterval(() => {
+            index++;
+            track.style.transition = 'transform 1s linear';
+            track.style.transform = `translateX(-${index * slideWidth}px)`;
+
+            if (index >= childrenCount / 2) { // reset al primo duplicato
+                setTimeout(() => {
+                    track.style.transition = 'none';
+                    index = 0;
+                    track.style.transform = 'translateX(0)';
+                }, 1000);
+            }
+        }, 3000);
+    }
+
+    setup();
+    window.addEventListener('resize', setup);
 });
-
 
 
 

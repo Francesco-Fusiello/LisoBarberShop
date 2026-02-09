@@ -166,8 +166,7 @@
             </div>
 
             <div class="text-center mt-3">
-                <a href="{{ route('services') }}" class="btn btn-dark mt-auto btn-lg px-5"
-                    style="font-weight: 700; border-radius: 0; frs-italic;">
+                <a href="{{ route('services') }}" class="btn-standard">
                     Scopri tutti i servizi
                 </a>
             </div>
@@ -295,7 +294,7 @@
 
             <div class="text-center mt-3">
                 <a href="https://www.google.com/search?sca_esv=01e84e26bfa42c3c&hl=it-IT&q=Liso+Barber+shop+Recensioni"
-                    class="btn btn-dark mt-auto btn-lg px-5" style="font-weight: 700; border-radius: 0;">
+                     class="btn-standard">
                     Scopri tutte le recensioni
                 </a>
             </div>
