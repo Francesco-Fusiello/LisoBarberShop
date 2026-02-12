@@ -6,7 +6,7 @@
         <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false"
             data-bs-interval="3000" style="max-height: 600px; overflow: hidden;">
             <div class="carousel-inner">
-                @foreach (['home1.jpeg', 'home2.jpeg', 'home3.jpeg'] as $index => $img)
+                @foreach (['home2.jpeg', 'home1.jpeg', 'home3.jpeg'] as $index => $img)
                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                         <img src="/images/carouselHome/{{ $img }}" class="d-block w-100 carousel-img"
                             alt="Image {{ $index + 1 }}" style="object-fit: cover; height: 600px;">
@@ -90,7 +90,7 @@
                 <h2 class="fw-bold text-uppercase display-5" style="color: #fff">Il Nostro Salone</h2>
                 <p class="lead">Uno spazio curato, moderno e accogliente.</p>
             </div>
-            <div class="mosaic-grid">
+            <div class="mosaic-grid col-md-10">
                 <img src="/images/2.jpg" loading="lazy" decoding="async" alt="salone">
                 <img src="/images/mosaic/Mosaic2.jpeg" loading="lazy" decoding="async" alt="salone">
                 <img src="/images/mosaic/Mosaic11.png" loading="lazy" decoding="async" alt="salone">
@@ -119,11 +119,11 @@
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
                             <img src="{{ asset('images/forbici1.png') }}" alt="Taglio Uomo" class="mb-3"
                                 style="width:64px; height:64px; object-fit:contain;">
-                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Taglio Uomo</h5>
-                            <p class="card-text" style="color: #000">Valorizziamo ogni tipo di volto e stile con tagli
+                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;font-size: 1.10rem;">Taglio Uomo</h5>
+                            <p class="card-text" style="font-size: 1.10rem; color: #000">Valorizziamo ogni tipo di volto e stile con tagli
                                 personalizzati.</p>
                             <a href="{{ route('services') }}#taglio-uomo" class="btn btn-dark mt-auto"
-                                style="font-weight: 700; border-radius: 0;">
+                                style="font-weight: 700; border-radius: 0; font-size: 0.7rem;">
                                 Scopri di più
                             </a>
                         </div>
@@ -135,12 +135,12 @@
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
                             <img src="{{ asset('images/macchinetta1.png') }}" alt="Rasatura Tradizionale"
                                 class="mb-3" style="width:64px; height:64px; object-fit:contain;">
-                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Rasatura
+                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;font-size: 1.10rem;">Rasatura
                                 Tradizionale</h5>
-                            <p class="card-text" style="color: #000">Rasatura con panno caldo e prodotti di alta
+                            <p class="card-text" style="font-size: 1.10rem; color: #000">Rasatura con panno caldo e prodotti di alta
                                 qualità per un relax autentico.</p>
                             <a href="{{ route('services') }}#rasatura-tradizionale" class="btn btn-dark mt-auto"
-                                style="font-weight: 700; border-radius: 0;">
+                                style="font-weight: 700; border-radius: 0; font-size: 0.7rem;">
                                 Scopri di più
                             </a>
                         </div>
@@ -152,12 +152,12 @@
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
                             <img src="{{ asset('images/baffi1.png') }}" alt="Rasatura Tradizionale" class="mb-3"
                                 style="width:64px; height:64px; object-fit:contain;">
-                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Modellatura Barba
+                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;font-size: 1.10rem;">Modellatura Barba
                             </h5>
-                            <p class="card-text"style="color: #000">Definizione e trattamenti per una barba morbida e
+                            <p class="card-text"style="font-size: 1.10rem; color: #000">Definizione e trattamenti per una barba morbida e
                                 curata.</p>
                             <a href="{{ route('services') }}#modellatura-barba" class="btn btn-dark mt-auto"
-                                style="font-weight: 700; border-radius: 0;">
+                                style="font-weight: 700; border-radius: 0; font-size: 0.7rem;">
                                 Scopri di più
                             </a>
                         </div>
@@ -195,7 +195,7 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="counter-box">
-                        <h3 class="counter" data-target="500">0</h3>
+                        <h3 class="counter" data-target="{{ $googleStats->total_reviews }}">0</h3>
                         <p>Recensioni Positive</p>
                     </div>
                 </div>
@@ -313,7 +313,7 @@
             <div class="container text-center py-5">
                 <h2 class="text-center display-5" style="font-weight: 700; color:#fff ">Scelti per te</h2>
                 <a href="{{ route('products') }}"
-                    style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 1.1rem !important;">
+                    style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 1.20rem !important;">
                     ▸ La selezione completa
                 </a>
 

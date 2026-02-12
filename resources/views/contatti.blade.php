@@ -7,7 +7,7 @@
             
             <!-- Mappa -->
             <div class="row justify-content-center mt-4">
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="embed-responsive embed-responsive-16by9" style="height: 400px;">
                         <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.926922891084!2d16.292020!3d41.216378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133a2f3e3d6ff927%3A0x5640eb67d88b8a8d!2sViale%20Pietro%20Nenni%2C%20324%2C%2041200%20Andria%2C%20Italia!5e0!3m2!1sit!2sit!4v1627057125456!5m2!1sit!2sit" 
@@ -46,7 +46,7 @@
 
             <!-- Dettagli su come contattarci -->
    <div class="row justify-content-center mt-5">
-    <div class="col-md-6 d-flex justify-content-center">
+    <div class="col-md-10 d-flex justify-content-center">
         <div class="text-box p-4 w-100" style="background-color:#fff; display:flex; justify-content:center;">
             <div style="width:auto;" class="text-start">
 

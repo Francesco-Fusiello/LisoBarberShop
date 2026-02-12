@@ -9,7 +9,7 @@
 
        <div class="row justify-content-center text-center g-4">
     <!-- Card 1 -->
-    <div class="col-md-4">
+    <div class="col-md-6">
         <div class="card border-0 bg-transparent">
             <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
                 <img src="/images/WhoWeAre/Gianfranco.jpg" class="img-fluid" style="object-fit: cover;">
@@ -22,7 +22,7 @@
     </div>
 
     <!-- Card 2 -->
-    <div class="col-md-4">
+    <div class="col-md-6">
         <div class="card border-0 bg-transparent">
             <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
                 <img src="/images/WhoWeAre/Giuseppe.png" class="img-fluid" style="object-fit: cover;">
@@ -35,7 +35,7 @@
     </div>
 
     <!-- Card 3 -->
-    <div class="col-md-4">
+    <div class="col-md-6">
         <div class="card border-0 bg-transparent">
             <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
                 <img src="/images/WhoWeAre/Salvatore.jpeg" class="img-fluid" style="object-fit: cover;">
@@ -48,7 +48,7 @@
     </div>
 
     <!-- Card 4 – NUOVA -->
-    <div class="col-md-4">
+    <div class="col-md-6">
         <div class="card border-0 bg-transparent">
             <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
                 <img src="/images/WhoWeAre/Dario.png" class="img-fluid" style="object-fit: cover;">
