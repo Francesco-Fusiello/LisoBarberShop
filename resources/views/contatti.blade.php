@@ -19,7 +19,7 @@
             </div>
         </div>
         
-        <p class="text-center fst-italic fs-5 pt-5" style="color: #ffffff;  font-weight: 550;">
+        <p class="lead text-center fs-5 pt-5" style="color: #ffffff;  ">
             Scarica la nostra app per avere sempre Liso Barber Shop a portata di mano. Prenota facilmente il tuo appuntamento e scopri tutte le novità!
         </p>
             <!-- Badge App Store & Google Play -->
@@ -51,19 +51,19 @@
             <div style="width:auto;" class="text-start">
 
                 <h3 class="display-5" style="color:#000 font-weight: 700;">Dove trovarci</h3>
-                <h6 style="color:#000;">Liso Barber Shop, Viale Pietro Nenni 324, Andria, IT</h6>
+                <h6 style="color:#000; font-size: 1.10rem;">Liso Barber Shop, Viale Pietro Nenni 324, Andria, IT</h6>
 
                 <h3 class="display-5" style="color:#000 font-weight: 700;">Orari di apertura</h3>
-                <ul class="list-unstyled" style="color:#000;">
+                <ul class="list-unstyled" style="color:#000;font-size: 1.10rem;">
                     <li>Martedì - Giovedì: 08:00/13:00 - 15:00/20:00</li>
                     <li>Venerdì - Sabato: 08:00 - 20:00</li>
                     <li>Lunedì e Domenica: Chiuso</li>
                 </ul>
 
                 <h3 class="display-5" style="color:#000 font-weight: 700;">Contatti</h3>
-                <h6 style="color:#000;">Telefono: +39 329 978 0152</h6>
-                <h6 style="color:#000;">Email:
-                    <a href="mailto:info@lisobarbershop.it" style="color:#000; text-decoration:none;">
+                <h6 style="color:#000; font-size: 1.10rem;">Telefono: +39 329 978 0152</h6>
+                <h6 style="color:#000; font-size: 1.10rem;">Email:
+                    <a href="mailto:info@lisobarbershop.it" style="color:#000; text-decoration:none;font-size: 1.10rem;">
                         info@lisobarbershop.it
                     </a>
                 </h6>

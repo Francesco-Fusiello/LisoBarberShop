@@ -6,8 +6,8 @@
         </h1>
     </div>
 
-    <div class="social-section text-center mt-3">
-    <p class="fst-italic fs-5" style="color: #ffffff;  font-weight: 550;">
+    <div class="social-section text-center mt-3 p-1">
+    <p class="lead fs-5" style="color: #ffffff;">
         Seguici sui nostri canali social per rimanere sempre connesso!
     </p>
 
