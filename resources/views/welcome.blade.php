@@ -189,8 +189,8 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="counter-box">
-                        <h3 class="counter" data-target="8">0</h3>
-                        <p>Anni di Esperienza</p>
+                         <h3 class="counter" data-target="experience">0</h3>
+                         <p>Anni di Esperienza</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">

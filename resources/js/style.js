@@ -229,6 +229,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
 
+  // CONTATORE ANNO DINAMICO AUTO
+    // Imposta l'anno di partenza
+const startYear = 2016;
+
+// Data odierna
+const today = new Date();
+let experienceYears = today.getFullYear() - startYear;
+
+// Aggiorna a marzo ogni anno
+if (today.getMonth() < 2) { // Gennaio=0, Febbraio=1
+    experienceYears -= 1;
+}
+
+// Aggiorna l'attributo data-target del contatore
+const counterElement = document.querySelector('.counter[data-target="experience"]');
+if (counterElement) {
+    counterElement.setAttribute('data-target', experienceYears);
+}
+
+
     setup();
     window.addEventListener('resize', setup);
 });
