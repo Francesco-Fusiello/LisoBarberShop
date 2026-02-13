@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\Review;
 use App\Models\Product;
 use App\Models\GalleryImage;
 use App\Models\GoogleReview;
-use Illuminate\Http\Request;
 use App\Models\GoogleReviewStat;
+
+
 
 class PageController extends Controller
 {
