@@ -248,6 +248,14 @@ if (counterElement) {
     counterElement.setAttribute('data-target', experienceYears);
 }
 
+window.addEventListener('error', function(e) {
+    if (e.response && e.response.status === 419) {
+        alert('La sessione è scaduta. Aggiorna la pagina per continuare.');
+        window.location.reload();
+    }
+});
+
+
 
     setup();
     window.addEventListener('resize', setup);
