@@ -208,7 +208,7 @@
         <section class="container my-5 google-reviews-zara">
 
             <!-- HEADER GOOGLE -->
-            <div class="google-header d-flex justify-content-between align-items-center mb-4">
+            <div class="google-header d-flex justify-content-between align-items-center mb-4 m-2">
                 <div class="google-left d-flex align-items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 533.5 544.3"
                         style="width:24px; height:24px; vertical-align:middle;">

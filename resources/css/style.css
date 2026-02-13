@@ -948,30 +948,27 @@ section.container { background-color: #fff; }
     height: 100%;
     box-sizing: border-box;
 }
-
 /* ===== MOBILE REVISIONS ===== */
 @media (max-width: 575.98px) {
 
-    /* HEADER rettangolo sopra */
     .google-header {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* tutto centrato */
-        justify-content: center;
-        gap: 8px; /* ridotto margine interno */
-        width: calc(100% - 20px); /* margine laterale 16px per lato */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 12px;
+        width: calc(100% - 20px);
         padding: 16px;
         border: 1px solid #e5e5e5;
-        margin: 0 auto 16px auto; /* margine inferiore piccolo */
-        box-sizing: border-box;
+        margin: 0 auto 16px auto;
         background: #fff;
     }
 
-    /* SVG + Recensioni */
+    /* TITOLO */
     .google-left {
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         gap: 6px;
     }
 
@@ -981,13 +978,21 @@ section.container { background-color: #fff; }
         text-align: center;
     }
 
-    /* Stelle e numero recensioni */
+    /* BLOCCO DESTRO diventa colonna */
+    .google-right {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px;
+        width: 100%;
+    }
+
+    /* STELLE SOTTO IL TITOLO */
     .google-rating {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        gap: 6px;
+        gap: 4px;
     }
 
     .stars {
@@ -995,21 +1000,14 @@ section.container { background-color: #fff; }
         gap: 4px;
     }
 
-    .rating-count {
-        font-size: 14px;
-        color: #666;
-    }
-
-    /* Bottone sotto */
+    /* BOTTONE LUNGO */
     .google-btn {
-        display: block;
-        margin-top: 8px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
         text-align: center;
-        width: 80%;
+        margin-top: 6px;
     }
 }
+
 
 
 
