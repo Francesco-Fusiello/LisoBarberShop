@@ -3,7 +3,6 @@
         <div class="toast-elegant alert alert-success d-flex align-items-center justify-content-between px-3 py-2 mb-4">
             <span>✅</span>
             <div class="mx-2" style="flex-grow:1;">{{ session('message') }}</div>
-            <button type="button" class="btn-close" wire:click="$set('showSuccess', false)"></button>
         </div>
     @endif
 

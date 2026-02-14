@@ -9,33 +9,40 @@ class ServiceManager extends Component
 {
     public $services;
     public $editingServiceId = null;
-    public $name;
-    public $price;
+    public $name = '';
+    public $price = '';
 
     public function mount()
     {
         $this->services = Service::all();
     }
 
-    public function edit(Service $service)
+    public function edit($id)
     {
+        $service = Service::findOrFail($id);
         $this->editingServiceId = $service->id;
         $this->name = $service->name;
         $this->price = $service->price;
     }
 
-    public function save()
-    {
-        $service = Service::find($this->editingServiceId);
-        $service->update([
-            'name' => $this->name,
-            'price' => $this->price,
-        ]);
+   public function save()
+{
+    $this->validate([
+        'name' => 'required|string|max:255',
+        'price' => 'required|string|max:20',
+    ]);
 
-        $this->services = Service::all(); // aggiorna la lista
-        $this->resetForm();
-        session()->flash('message', 'Servizio aggiornato con successo!');
-    }
+    $service = Service::find($this->editingServiceId);
+    $service->update([
+        'name' => $this->name,
+        'price' => $this->price,
+    ]);
+
+    $this->services = Service::all(); // aggiorna la lista
+    $this->resetForm();
+    session()->flash('message', 'Servizio aggiornato con successo!');
+}
+
 
     public function resetForm()
     {

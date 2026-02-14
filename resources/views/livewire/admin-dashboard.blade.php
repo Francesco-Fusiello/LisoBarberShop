@@ -4,39 +4,39 @@
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div class="text-center w-100">
                 <h1 class="mb-3">Pannello di Amministrazione</h1>
-                
-            @php
-                $section = request('section', 'prodotti');
-            @endphp
 
-            <div class="btn-group" role="group">
-                <a href="{{ route('admin.dashboard', ['section' => 'prodotti']) }}"
-                   class="btn btn-outline-primary {{ $section === 'prodotti' ? 'active' : '' }}">
-                    Gestione Prodotti
-                </a>
-                <a href="{{ route('admin.dashboard', ['section' => 'galleria']) }}"
-                   class="btn btn-outline-secondary {{ $section === 'galleria' ? 'active' : '' }}">
-                    Gestione Galleria
-                </a>
-                {{-- <a href="{{ route('admin.dashboard', ['section' => 'recensioni']) }}"
-                   class="btn btn-outline-warning {{ $section === 'recensioni' ? 'active' : '' }}">
-                    Gestione Recensioni
-                </a> --}}
+                @php
+                    $section = request('section', 'prodotti');
+                @endphp
+
+                <div class="btn-group" role="group">
+                    <a href="{{ route('admin.dashboard', ['section' => 'prodotti']) }}"
+                        class="btn btn-outline-primary {{ $section === 'prodotti' ? 'active' : '' }}">
+                        Gestione Prodotti
+                    </a>
+                    <a href="{{ route('admin.dashboard', ['section' => 'galleria']) }}"
+                        class="btn btn-outline-secondary {{ $section === 'galleria' ? 'active' : '' }}">
+                        Gestione Galleria
+                    </a>
+                    <a href="{{ route('admin.dashboard', ['section' => 'servizi']) }}"
+                        class="btn btn-outline-warning {{ $section === 'servizi' ? 'active' : '' }}">
+                        Gestione Servizi
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <hr class="my-4">
-    
-    @if($section === 'galleria')
-        <h2 class="mb-3">Gestione Galleria Immagini</h2>
-        <livewire:gallery-manager />
-    @elseif($section === 'recensioni')
-    <h2 class="mb-3">Gestione Recensioni</h2>
-        <livewire:admin.review-manager />
+        <hr class="my-4">
+
+        @if ($section === 'galleria')
+            <h2 class="mb-3">Gestione Galleria Immagini</h2>
+            <livewire:gallery-manager />
+        @elseif($section === 'servizi')
+            <h2 class="mb-3">Gestione Servizi</h2>
+            <livewire:service-manager />
         @else
-        <h2 class="mb-3">Gestione Prodotti</h2>
-        <livewire:product-crud />
-    @endif
-</div>
+            <h2 class="mb-3">Gestione Prodotti</h2>
+            <livewire:product-crud />
+        @endif
+    </div>
 </div>

@@ -3,42 +3,45 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\Product;
 use App\Models\GalleryImage;
 use App\Models\GoogleReview;
 use App\Models\GoogleReviewStat;
+use App\Models\Product;
+use App\Models\Service;
 
 
 
 class PageController extends Controller
 {
-public function home()
-{
-    $latestReviews = GoogleReview::latest()->take(5)->get();
-    $googleStats   = GoogleReviewStat::first();
+    public function home()
+    {
+        $latestReviews = GoogleReview::latest()->take(5)->get();
+        $googleStats   = GoogleReviewStat::first();
 
-    $products = Product::latest()->take(9)->get();
+        $products = Product::latest()->take(9)->get();
 
-    return view('welcome', compact('latestReviews', 'googleStats', 'products'));
-}
+        return view('welcome', compact('latestReviews', 'googleStats', 'products'));
+    }
 
     public function priceList()
     {
-        return view('priceList');
+        $services = Service::all();
+        return view('priceList', compact('services'));
     }
+
 
     public function services()
     {
         return view('services');
     }
 
-  public function products()
-{
-    $products = Product::paginate(50);
-    $productsJson = $products->items(); 
+    public function products()
+    {
+        $products = Product::paginate(50);
+        $productsJson = $products->items();
 
-    return view('user.products.products', compact('products', 'productsJson'));
-}
+        return view('user.products.products', compact('products', 'productsJson'));
+    }
 
     public function showProduct(Product $product)
     {

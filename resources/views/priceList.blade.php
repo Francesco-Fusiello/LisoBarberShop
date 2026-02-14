@@ -15,31 +15,16 @@
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-8">
                     <div class="list-group shadow-sm">
-                        @foreach ([
-                            ['Taglio', '12€'],
-                            ['Taglio Baby (0-7 anni)', '10€'],
-                            ['Rasatura a 0', '7€'],
-                            ['Colore', '80€'],
-                            ['Taglio e Shampoo', '17€'],
-                            ['Taglio e Barba', '19€'],
-                            ['Barba', '7€'],
-                            ['Barba Relax (barba hipster con vapore e panno caldo)', '14€'],
-                            ['Pulizia Viso', '15€'],
-                            ['Taglio + Shampoo + Barba', '24€'],
-                            ['Completo', '26€'],
-                            ['Colore Barba', '13€'],
-                            ['Meches Capelli', '25€'],
-                            ['Taglio e Sopracciglia', '16€'],
-                        ] as $service)
+                        @foreach($services as $service)
                             <div class="list-group-item d-flex justify-content-between align-items-center price-item bg-white mb-2 shadow-sm" 
                                  style="border: 1px solid #fff; border-radius: 0; transition: all 0.3s ease; color:#000">
-                                <span>{{ $service[0] }}</span>
-                                <strong>{{ $service[1] }}</strong>
+                                <span>{{ $service->name }}</span>
+                                <strong>{{ $service->price }}</strong>
                             </div>
                         @endforeach
                     </div>
 
-                    <h4 class=" lead text-center fs-5 mt-3 fs-5" style="color: #ffffff;">
+                    <h4 class="lead text-center fs-5 mt-3" style="color: #ffffff;">
                         I nostri servizi sono pensati per offrire sempre il massimo della qualità e dello stile.
                     </h4>
                 </div>
