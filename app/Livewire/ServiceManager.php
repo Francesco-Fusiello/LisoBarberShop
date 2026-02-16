@@ -9,8 +9,11 @@ class ServiceManager extends Component
 {
     public $services;
     public $editingServiceId = null;
+    public $creating = false;
     public $name = '';
     public $price = '';
+    public $deleteServiceId = null;
+    public $showDeleteModal = false;
 
     public function mount()
     {
@@ -21,34 +24,63 @@ class ServiceManager extends Component
     {
         $service = Service::findOrFail($id);
         $this->editingServiceId = $service->id;
+        $this->creating = false;
         $this->name = $service->name;
         $this->price = $service->price;
     }
 
-   public function save()
-{
-    $this->validate([
-        'name' => 'required|string|max:255',
-        'price' => 'required|string|max:20',
-    ]);
+    public function create()
+    {
+        $this->resetForm();
+        $this->creating = true;
+    }
 
-    $service = Service::find($this->editingServiceId);
-    $service->update([
-        'name' => $this->name,
-        'price' => $this->price,
-    ]);
+    public function save()
+    {
+        $this->validate([
+            'name' => 'required|string|max:255',
+            'price' => 'required|string|max:20',
+        ]);
 
-    $this->services = Service::all(); // aggiorna la lista
-    $this->resetForm();
-    session()->flash('message', 'Servizio aggiornato con successo!');
-}
+        if ($this->creating) {
+            Service::create([
+                'name' => $this->name,
+                'price' => $this->price,
+            ]);
+            session()->flash('message', 'Servizio creato con successo!');
+        } else {
+            $service = Service::find($this->editingServiceId);
+            $service->update([
+                'name' => $this->name,
+                'price' => $this->price,
+            ]);
+            session()->flash('message', 'Servizio aggiornato con successo!');
+        }
 
+        $this->services = Service::all();
+        $this->resetForm();
+    }
 
     public function resetForm()
     {
         $this->editingServiceId = null;
+        $this->creating = false;
         $this->name = '';
         $this->price = '';
+    }
+
+    public function confirmDelete($id)
+    {
+        $this->deleteServiceId = $id;
+        $this->showDeleteModal = true;
+    }
+
+    public function deleteService()
+    {
+        Service::find($this->deleteServiceId)->delete();
+        $this->services = Service::all();
+        $this->showDeleteModal = false;
+        session()->flash('message', 'Servizio eliminato!');
     }
 
     public function render()

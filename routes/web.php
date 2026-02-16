@@ -37,8 +37,6 @@ Route::get('/admin-dashboard', AdminDashboard::class)->middleware('custom.auth')
 
 Route::post('/login', [AuthenticatedSessionController::class, 'store']);
 
-Route::get('/recensioni/nuova', ReviewForm::class)->name('recensioni.form');
-
 Route::get('/recensioni', ReviewList::class)->name('recensioni.index');
 
 Route::get('/search-products', function (\Illuminate\Http\Request $request) {
