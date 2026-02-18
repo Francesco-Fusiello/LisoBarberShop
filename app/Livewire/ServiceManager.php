@@ -80,7 +80,7 @@ class ServiceManager extends Component
         Service::find($this->deleteServiceId)->delete();
         $this->services = Service::all();
         $this->showDeleteModal = false;
-        session()->flash('message', 'Servizio eliminato!');
+        session()->flash('message', 'Servizio eliminato con successo!');
     }
 
     public function render()
