@@ -7,29 +7,33 @@
     </div>
 
     <div class="social-section text-center mt-3 p-1">
-    <p class="lead fs-5" style="color: #ffffff;">
-        Seguici sui nostri canali social per rimanere sempre connesso!
-    </p>
+        <p class="lead fs-5" style="color: #ffffff;">
+            Seguici sui nostri canali social per rimanere sempre connesso!
+        </p>
 
-    <!-- Icone sempre in fila -->
-    <div class="social-icons d-flex justify-content-center align-items-center gap-3">
-        <a href="https://www.instagram.com/lisobarbershop/" target="_blank" aria-label="Instagram" class="social-icon instagram">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
+        <!-- Icone sempre in fila -->
+        <div class="social-icons d-flex justify-content-center align-items-center gap-3">
+            <a href="https://www.instagram.com/lisobarbershop/" target="_blank" aria-label="Instagram"
+                class="social-icon instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
 
-        <a href="https://www.facebook.com/lisogianfranco?locale=it_IT" target="_blank" aria-label="Facebook" class="social-icon facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-        </a>
+            <a href="https://www.facebook.com/lisogianfranco?locale=it_IT" target="_blank" aria-label="Facebook"
+                class="social-icon facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
 
-        <a href="https://www.tiktok.com/@lisobarbershop?lang=it" target="_blank" aria-label="TikTok" class="social-icon tiktok">
-            <i class="fa-brands fa-tiktok"></i>
-        </a>
+            <a href="https://www.tiktok.com/@lisobarbershop?lang=it" target="_blank" aria-label="TikTok"
+                class="social-icon tiktok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
 
-        <a href="https://www.google.com/search?q=lisobarbershop" target="_blank" aria-label="Google" class="social-icon google">
-            <i class="fa-brands fa-google"></i>
-        </a>
+            <a href="https://www.google.com/search?q=lisobarbershop" target="_blank" aria-label="Google"
+                class="social-icon google">
+                <i class="fa-brands fa-google"></i>
+            </a>
+        </div>
     </div>
-</div>
 
 
 
@@ -39,8 +43,8 @@
             @foreach ($images as $image)
                 <div class="col-4 col-md-4 col-lg-3 mb-2">
                     <img src="{{ asset($image->image_path) }}"class="img-fluid gallery-img cursor-pointer"
-                        data-image="{{ asset($image->image_path) }}" data-bs-toggle="modal"
-                        data-bs-target="#imageModal">
+                        data-image="{{ asset($image->image_path) }}" data-bs-toggle="modal" data-bs-target="#imageModal"
+                        loading="lazy">
                 </div>
             @endforeach
         </div>

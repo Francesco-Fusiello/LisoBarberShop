@@ -20,7 +20,7 @@
         {{-- Anteprima dell'immagine selezionata --}}
         @if ($image)
             <div class="mb-2">
-                <img src="{{ $image->temporaryUrl() }}" alt="Anteprima" style="width: 100%; max-width: 250px; border: 1px solid #ccc; object-fit: cover;">
+                <img src="{{ $image->temporaryUrl() }}" alt="Anteprima" style="width: 100%; max-width: 250px; border: 1px solid #ccc; object-fit: cover;" loading="lazy" decoding="async">
             </div>
         @endif
 
@@ -39,7 +39,7 @@
         @foreach ($this->images as $img)
             <div class="col">
                 <div class="card h-100">
-                    <img src="{{ asset($img->image_path) }}" class="card-img-top" alt="Immagine" style="object-fit: cover; height: 200px; width: 100%;">
+                    <img src="{{ asset($img->image_path) }}" class="card-img-top" alt="Immagine" style="object-fit: cover; height: 200px; width: 100%;" loading="lazy" decoding="async">
                     <div class="card-body text-center">
                         <button wire:click="confirmDelete({{ $img->id }})" class="btn btn-danger btn-sm">
                             <i class="fas fa-trash"></i> Elimina 
