@@ -61,7 +61,7 @@
                                 <p class="card-text flex-grow-1 d-none d-md-block" style="color: #333;"
                                     x-text="truncate(product.description, 100)">
                                 </p>
-                                
+
                                 <div class="d-flex justify-content-between align-items-center mt-auto">
                                     <p class="card-text mb-0" style="color: #000; font-weight: 700;">
                                         €<span x-text="formatPrice(product.price)"></span>
