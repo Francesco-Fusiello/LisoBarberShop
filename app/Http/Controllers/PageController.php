@@ -45,7 +45,7 @@ class PageController extends Controller
 
     public function showProduct(Product $product)
     {
-        $otherProducts = Product::where('id', '!=', $product->id)->take(3)->get();
+        $otherProducts = Product::where('id', '!=', $product->id)->inRandomOrder()->take(3)->get();
         return view('user.products.show', compact('product', 'otherProducts'));
     }
 
