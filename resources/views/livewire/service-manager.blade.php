@@ -24,7 +24,7 @@
                     @if($creating)
                         <tr>
                             <td><input wire:model.defer="name" class="form-control" placeholder="Nome servizio"></td>
-                            <td><input wire:model.defer="price" class="form-control" placeholder="Prezzo"></td>
+                            <td><input wire:model.defer="price" type="number" class="form-control" placeholder="Prezzo">€</td>
                             <td class="d-flex gap-2 flex-wrap">
                                 <button type="submit" class="btn btn-success btn-sm flex-grow-1">Salva</button>
                                 <button type="button" wire:click="resetForm" class="btn btn-secondary btn-sm flex-grow-1">Annulla</button>
@@ -45,7 +45,7 @@
                                 @if($editingServiceId === $service->id)
                                     <input wire:model.defer="price" class="form-control">
                                 @else
-                                    {{ $service->price }}
+                                    {{ $service->price }}€
                                 @endif
                             </td>
                             <td class="d-flex gap-2 flex-wrap">
@@ -64,20 +64,22 @@
     </div>
 
     {{-- MODALE ELIMINAZIONE --}}
-    @if($showDeleteModal)
-        <div class="modal fade show d-block" tabindex="-1">
-            <div class="modal-dialog">
+    @if ($showDeleteModal)
+        <div class="modal fade show d-block" tabindex="-1" style="background: rgba(0,0,0,0.3);">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header bg-danger text-white">
                         <h5 class="modal-title">Conferma eliminazione</h5>
-                        <button type="button" class="btn-close" wire:click="$set('showDeleteModal', false)"></button>
+                        <button type="button" class="btn-close btn-close-white" wire:click="$set('showDeleteModal', false)"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body text-center">
                         Sei sicuro di voler eliminare questo servizio?
                     </div>
-                    <div class="modal-footer d-flex gap-2 flex-wrap">
-                        <button type="button" wire:click="$set('showDeleteModal', false)" class="btn btn-secondary flex-grow-1">Annulla</button>
-                        <button type="button" wire:click="deleteService" class="btn btn-danger flex-grow-1">Elimina</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" wire:click="$set('showDeleteModal', false)">Annulla</button>
+                        <button type="button" class="btn btn-danger" wire:click="deleteService">
+                            <i class="fas fa-trash"></i> Elimina
+                        </button>
                     </div>
                 </div>
             </div>
