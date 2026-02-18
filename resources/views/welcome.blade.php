@@ -334,12 +334,12 @@
                                                     </a>
                                                     <div class="card-body d-flex flex-column" style="color:#000;">
                                                         <h5 class="card-title"
-                                                            style="font-family: 'Playfair Display', serif; color:#000;">
+                                                            style="font-family: 'Playfair Display', serif; color:#000; font-size: 1.10rem">
                                                             {{ $product->name }}
                                                         </h5>
-                                                        <p class="card-text flex-grow-1" style="color:#000;">
+                                                        {{-- <p class="card-text flex-grow-1" style="color:#000;">
                                                             {{ Str::limit($product->description, 100) }}
-                                                        </p>
+                                                        </p> --}}
                                                         <div
                                                             class="d-flex justify-content-between align-items-center mt-auto">
                                                             <p class="card-text mb-0 fw-bold" style="color:#000;">
