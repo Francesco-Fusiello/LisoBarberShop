@@ -1,4 +1,8 @@
 <x-layout>
+
+    @section('title', 'Servizi Barbiere ad Andria | Liso Barber Shop')
+    @section('meta_description', 'Scopri tutti i servizi di Liso Barber Shop ad Andria: taglio uomo, rasatura tradizionale, modellatura barba, colorazione capelli e styling. Prenota subito!')
+
     <section class="py-5" style=" color: white; font-family: 'Lato', sans-serif;">
         <div class="container">
             <h2 id="taglio-uomo" class="text-center mb-5 display-4"
