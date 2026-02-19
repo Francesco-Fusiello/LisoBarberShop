@@ -1,4 +1,8 @@
 <x-layout>
+
+@section('title', 'Prodotti Barbiere ad Andria | Liso Barber Shop')
+@section('meta_description', 'Scopri tutti i prodotti e servizi di Liso Barber Shop ad Andria. Taglio uomo, modellatura barba, styling e tanto altro. Prenota subito!')
+
     <h2 class="text-center mb-5 display-4 py-5"
         style="font-family: 'Playfair Display', serif; color:#ffffff; font-weight: 700;">
         I Nostri Prodotti
