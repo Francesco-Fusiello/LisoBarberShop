@@ -9,7 +9,7 @@
                 @foreach (['home2.jpeg', 'home1.jpeg', 'home3.jpeg'] as $index => $img)
                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                         <img src="/images/carouselHome/{{ $img }}" class="d-block w-100 carousel-img"
-                            alt="Image {{ $index + 1 }}" style="object-fit: cover; height: 600px;">
+                            alt="Barbiere ad Andria – Liso Barber Shop" style="object-fit: cover; height: 600px;">
                         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center"
                             style="background: rgba(0,0,0,0.4); top: 0; bottom: 0; left: 0; right: 0;">
                             <h1 class="display-3 fw-bold" style="color: #f5f5f5; text-shadow: 2px 2px 6px #000;">
@@ -42,23 +42,19 @@
 
                 <h2 class="text-center display-5 mt-0" style="font-weight: 700;">Per la bellezza e la cura dei capelli
                     degli uomini</h2>
-
                 <p class="lead mx-auto" style="max-width: 700px; color: #000;">
-                    Gli esperti di <strong>Liso Barber Shop</strong> propongono nel salone di Andria numerosi tagli
-                    classici
-                    e moderni maschili, personalizzabili e di tendenza.
+                    Nel cuore di Andria, <strong>Liso Barber Shop</strong> è un punto di riferimento
+                    per l’uomo che desidera stile, precisione e cura dei dettagli.
                 </p>
 
                 <p class="lead mx-auto" style="max-width: 700px; color: #000;">
-                    Sono disponibili inoltre trattamenti studiati per rinvigorire e nutrire la chioma o per contrastare
-                    il
-                    fenomeno della perdita dei capelli.
+                    Il nostro salone ad Andria propone taglio uomo, rasatura tradizionale
+                    e modellatura barba, con un approccio moderno che unisce tradizione e innovazione.
                 </p>
 
                 <p class="lead mx-auto mb-5" style="max-width: 700px; color: #000;">
-                    Gli esperti di <strong>Liso Barber Shop</strong> sono a disposizione per individuare la soluzione
-                    ideale
-                    per ritrovare capelli forti e sani in breve tempo.
+                    Ogni servizio è personalizzato per valorizzare il volto e l’identità di chi ci sceglie,
+                    in un ambiente raffinato ed esclusivamente dedicato all’uomo.
                 </p>
 
                 <h3 class="mb-4" style="font-weight: 700;">
@@ -91,17 +87,28 @@
                 <p class="lead">Uno spazio curato, moderno e accogliente.</p>
             </div>
             <div class="mosaic-grid col-md-10">
-                <img src="/images/2.jpg" loading="lazy" decoding="async" alt="salone">
-                <img src="/images/mosaic/Mosaic2.jpeg" loading="lazy" decoding="async" alt="salone">
-                <img src="/images/mosaic/Mosaic11.png" loading="lazy" decoding="async" alt="salone">
-                <img src="/images/mosaic/Mosaic4.JPG" loading="lazy" decoding="async" alt="salone">
-                <img src="/images/mosaic/Mosaic9.jpeg" loading="lazy" decoding="async" alt="salone">
-                <img src="/images/mosaic/Mosaic6.JPG" loading="lazy" decoding="async" alt="salone">
-                <img src="/images/mosaic/Mosaic5.jpeg" loading="lazy" decoding="async" alt="salone">
-                <img src="/images/mosaic/Mosaic7.jpeg" loading="lazy" decoding="async" alt="salone">
-                <img src="/images/mosaic/Mosaic8.jpeg" loading="lazy" decoding="async" alt="salone">
-                <img src="/images/mosaic/Mosaic10.jpeg" loading="lazy" decoding="async" alt="salone">
-                <img src="/images/mosaic/Mosaic12.jpg" loading="lazy" decoding="async" alt="salone">
+                <img src="/images/2.jpg" loading="lazy" decoding="async" alt="Interno del salone Liso Barber Shop">
+                <img src="/images/mosaic/Mosaic2.jpeg" loading="lazy" decoding="async"
+                    alt="Area taglio uomini Liso Barber Shop">
+                <img src="/images/mosaic/Mosaic11.png" loading="lazy" decoding="async"
+                    alt="Postazione rasatura Liso Barber Shop">
+                <img src="/images/mosaic/Mosaic4.JPG" loading="lazy" decoding="async"
+                    alt="Barbiere al lavoro Liso Barber Shop">
+                <img src="/images/mosaic/Mosaic9.jpeg" loading="lazy" decoding="async"
+                    alt="Dettaglio sedia barbiere Liso Barber Shop">
+                <img src="/images/mosaic/Mosaic6.JPG" loading="lazy" decoding="async"
+                    alt="Strumenti da barbiere Liso Barber Shop">
+                <img src="/images/mosaic/Mosaic5.jpeg" loading="lazy" decoding="async"
+                    alt="Angolo accoglienza clienti Liso Barber Shop">
+                <img src="/images/mosaic/Mosaic7.jpeg" loading="lazy" decoding="async"
+                    alt="Dettagli arredamento Liso Barber Shop">
+                <img src="/images/mosaic/Mosaic8.jpeg" loading="lazy" decoding="async"
+                    alt="Specchi e postazioni Liso Barber Shop">
+                <img src="/images/mosaic/Mosaic10.jpeg" loading="lazy" decoding="async"
+                    alt="Trattamenti barba Liso Barber Shop">
+                <img src="/images/mosaic/Mosaic12.jpg" loading="lazy" decoding="async"
+                    alt="Vista generale del salone Liso Barber Shop">
+
             </div>
             <div class="text-center mt-2">
                 <a href="{{ route('user.gallery') }}" class="mosaic-cta-btn">
@@ -119,8 +126,10 @@
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
                             <img src="{{ asset('images/forbici1.png') }}" alt="Taglio Uomo" class="mb-3"
                                 style="width:64px; height:64px; object-fit:contain;">
-                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;font-size: 1.10rem;">Taglio Uomo</h5>
-                            <p class="card-text" style="font-size: 1.10rem; color: #000">Valorizziamo ogni tipo di volto e stile con tagli
+                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;font-size: 1.10rem;">
+                                Taglio Uomo</h5>
+                            <p class="card-text" style="font-size: 1.10rem; color: #000">Valorizziamo ogni tipo di
+                                volto e stile con tagli
                                 personalizzati.</p>
                             <a href="{{ route('services') }}#taglio-uomo" class="btn btn-dark mt-auto"
                                 style="font-weight: 700; border-radius: 0; font-size: 0.7rem;">
@@ -135,9 +144,11 @@
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
                             <img src="{{ asset('images/macchinetta1.png') }}" alt="Rasatura Tradizionale"
                                 class="mb-3" style="width:64px; height:64px; object-fit:contain;">
-                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;font-size: 1.10rem;">Rasatura
+                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;font-size: 1.10rem;">
+                                Rasatura
                                 Tradizionale</h5>
-                            <p class="card-text" style="font-size: 1.10rem; color: #000">Rasatura con panno caldo e prodotti di alta
+                            <p class="card-text" style="font-size: 1.10rem; color: #000">Rasatura con panno caldo e
+                                prodotti di alta
                                 qualità per un relax autentico.</p>
                             <a href="{{ route('services') }}#rasatura-tradizionale" class="btn btn-dark mt-auto"
                                 style="font-weight: 700; border-radius: 0; font-size: 0.7rem;">
@@ -152,9 +163,11 @@
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
                             <img src="{{ asset('images/baffi1.png') }}" alt="Rasatura Tradizionale" class="mb-3"
                                 style="width:64px; height:64px; object-fit:contain;">
-                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;font-size: 1.10rem;">Modellatura Barba
+                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;font-size: 1.10rem;">
+                                Modellatura Barba
                             </h5>
-                            <p class="card-text"style="font-size: 1.10rem; color: #000">Definizione e trattamenti per una barba morbida e
+                            <p class="card-text"style="font-size: 1.10rem; color: #000">Definizione e trattamenti per
+                                una barba morbida e
                                 curata.</p>
                             <a href="{{ route('services') }}#modellatura-barba" class="btn btn-dark mt-auto"
                                 style="font-weight: 700; border-radius: 0; font-size: 0.7rem;">
@@ -189,8 +202,8 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="counter-box">
-                         <h3 class="counter" data-target="experience">0</h3>
-                         <p>Anni di Esperienza</p>
+                        <h3 class="counter" data-target="experience">0</h3>
+                        <p>Anni di Esperienza</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
@@ -294,7 +307,7 @@
 
             <div class="text-center mt-3">
                 <a href="https://www.google.com/search?sca_esv=01e84e26bfa42c3c&hl=it-IT&q=Liso+Barber+shop+Recensioni"
-                     class="home-btn">
+                    class="home-btn">
                     Scopri tutte le recensioni
                 </a>
             </div>
