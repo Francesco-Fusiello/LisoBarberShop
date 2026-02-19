@@ -310,7 +310,7 @@
 
         {{-- Prodotti --}}
         <section>
-            <div class="container text-center py-5">
+            <div class="container text-center pb-5 pt-2">
                 <h2 class="text-center display-5" style="font-weight: 700; color:#fff ">Scelti per te</h2>
                 <a href="{{ route('products') }}"
                     style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 1.20rem !important;">
@@ -337,9 +337,6 @@
                                                             style="font-family: 'Playfair Display', serif; color:#000; font-size: 1.10rem">
                                                             {{ $product->name }}
                                                         </h5>
-                                                        {{-- <p class="card-text flex-grow-1" style="color:#000;">
-                                                            {{ Str::limit($product->description, 100) }}
-                                                        </p> --}}
                                                         <div
                                                             class="d-flex justify-content-between align-items-center mt-auto">
                                                             <p class="card-text mb-0 fw-bold" style="color:#000;">
