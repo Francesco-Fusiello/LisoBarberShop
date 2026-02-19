@@ -1,4 +1,9 @@
 <x-layout>
+
+    @section('title', 'Chi Siamo - Liso Barber Shop ad Andria | Team e Storia')
+    @section('meta_description', 'Scopri il team di Liso Barber Shop ad Andria: professionisti esperti, storia e passione per i tagli e la cura della barba. Prenota subito!')
+
+
 <section class="py-5"  style="background-color: #f2f2f2; font-family: 'Playfair Display', serif; color: #000;">
 
     <div class="container">
@@ -12,7 +17,7 @@
     <div class="col-md-6">
         <div class="card border-0 bg-transparent">
             <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
-                <img src="/images/WhoWeAre/Gianfranco.jpg" class="img-fluid" style="object-fit: cover;">
+                <img src="/images/WhoWeAre/Gianfranco.jpg" alt="Gianfranco Liso - Titolare Liso Barber Shop" class="img-fluid" style="object-fit: cover;"loading="lazy" decoding="async">
             </div>
             <div class="mt-3">
                 <h3 style="font-weight:300; letter-spacing:2px;">Gianfranco Liso</h3>
@@ -25,7 +30,7 @@
     <div class="col-md-6">
         <div class="card border-0 bg-transparent">
             <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
-                <img src="/images/WhoWeAre/Giuseppe.png" class="img-fluid" style="object-fit: cover;">
+                <img src="/images/WhoWeAre/Giuseppe.png" alt="Giuseppe - Collaboratore Liso Barber Shop" class="img-fluid" style="object-fit: cover;"loading="lazy" decoding="async">
             </div>
             <div class="mt-3">
                 <h3 style="font-weight:300; letter-spacing:2px;">Giuseppe Zingaro</h3>
@@ -38,7 +43,7 @@
     <div class="col-md-6">
         <div class="card border-0 bg-transparent">
             <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
-                <img src="/images/WhoWeAre/Salvatore.jpeg" class="img-fluid" style="object-fit: cover;">
+                <img src="/images/WhoWeAre/Salvatore.jpeg" alt="Salvatore - Collaboratore Liso Barber Shop" class="img-fluid" style="object-fit: cover;" loading="lazy" decoding="async">
             </div>
             <div class="mt-3">
                 <h3 style="font-weight:300; letter-spacing:2px;">Salvatore Lomuscio</h3>
@@ -51,7 +56,7 @@
     <div class="col-md-6">
         <div class="card border-0 bg-transparent">
             <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
-                <img src="/images/WhoWeAre/Dario.png" class="img-fluid" style="object-fit: cover;">
+                <img src="/images/WhoWeAre/Dario.png" alt="Dario - Collaboratore Liso Barber Shop" class="img-fluid" style="object-fit: cover;" loading="lazy" decoding="async">
             </div>
             <div class="mt-3">
                 <h3 style="font-weight:300; letter-spacing:2px;">Dario Leonetti</h3>
