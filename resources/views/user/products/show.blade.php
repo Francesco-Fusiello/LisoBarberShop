@@ -1,4 +1,9 @@
 <x-layout>
+
+    
+@section('title', $product->name . ' | Prodotti Liso Barber Shop ad Andria')
+@section('meta_description', 'Scopri ' . $product->name . ': ' . Str::limit($product->description, 150) . '. Prenota subito da Liso Barber Shop ad Andria!')
+
   <div class="container py-5 mt-5">
 
     <!-- Dettaglio prodotto -->
