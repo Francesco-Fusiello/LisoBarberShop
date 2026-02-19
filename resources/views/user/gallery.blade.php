@@ -1,5 +1,10 @@
 <x-layout>
 
+    @section('title', 'Gallery Liso Barber Shop ad Andria | Tagli, Barbe e Stile')
+    @section('meta_description', 'Sfoglia la gallery di Liso Barber Shop ad Andria: scopri tagli uomo, modellatura barba, colorazioni e styling. Prenota subito il tuo appuntamento!')
+
+
+
     <div class="py-3">
         <h1 class="text-center" style="font-size: 3.5rem; font-weight: 700; letter-spacing: 2px; color: #ffffff;">
             LA NOSTRA GALLERY
