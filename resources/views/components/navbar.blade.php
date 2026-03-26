@@ -66,51 +66,43 @@
 </nav>
 
 {{-- Modal login --}}
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+<div class="modal fade zara-modal" id="loginModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content zara-modal-content">
 
-            <div class="modal-header">
-                <h5 class="modal-title" id="loginModalLabel">Accedi</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            <div class="modal-header border-0">
+                <h5 class="modal-title zara-title">ACCEDI</h5>
+                <button type="button" class="btn-close zara-close" data-bs-dismiss="modal"></button>
             </div>
 
             <div class="modal-body">
-                @if (session()->has('message'))
-                    <div class="alert alert-success">{{ session('message') }}</div>
-                @endif
-
-                @if (session('errors') && session('errors')->has('email'))
-                    <div class="alert alert-danger">{{ session('errors')->first('email') }}</div>
-                @endif
 
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
 
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" name="email" value="{{ old('email') }}" required
-                            autofocus>
+                    <div class="zara-group">
+                        <input type="email" name="email" value="{{ old('email') }}" required>
+                        <label>Email</label>
+                        <span class="zara-line"></span>
                         @error('email')
-                            <small class="text-danger">{{ $message }}</small>
+                            <small class="zara-error">{{ $message }}</small>
                         @enderror
                     </div>
 
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" name="password" required>
+                    <div class="zara-group">
+                        <input type="password" name="password" required>
+                        <label>Password</label>
+                        <span class="zara-line"></span>
                         @error('password')
-                            <small class="text-danger">{{ $message }}</small>
+                            <small class="zara-error">{{ $message }}</small>
                         @enderror
                     </div>
 
-                    <button type="submit" class="btn btn-primary w-100">Accedi</button>
+                    <button type="submit" class="zara-btn">ACCEDI</button>
                 </form>
+
             </div>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-            </div>
         </div>
     </div>
 </div>
