@@ -8,62 +8,58 @@
 
     <div class="container">
 
-        <h1 class="text-center display-5 mb-5" style="font-weight: 700; color:#fff;">
+        <h1 class="text-center display-5" style="font-weight: 700; color:#fff;">
             I PROFESSIONISTI DI LISO BARBER SHOP
         </h1>
 
-       <div class="row justify-content-center text-center g-4">
-    <!-- Card 1 -->
-    <div class="col-md-6">
-        <div class="card border-0 bg-transparent">
-            <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
-                <img src="/images/WhoWeAre/Gianfranco.jpg" alt="Gianfranco Liso - Titolare Liso Barber Shop" class="img-fluid" style="object-fit: cover;"loading="lazy" decoding="async">
-            </div>
-            <div class="mt-3">
-                <h3 style="font-weight:300; letter-spacing:2px;">Gianfranco Liso</h3>
-                <p class="text-muted">Titolare</p>
-            </div>
+     <div class="team-wrapper">
+
+    <!-- HERO (TITOLARE) -->
+    <div class="team-hero">
+        <div class="team-image">
+            <img src="/images/WhoWeAre/Gianfranco.jpeg" alt="Gianfranco Liso" loading="lazy">
+        </div>
+        <div class="team-info">
+            <h3>Gianfranco Liso</h3>
+            <p>Titolare</p>
         </div>
     </div>
 
-    <!-- Card 2 -->
-    <div class="col-md-6">
-        <div class="card border-0 bg-transparent">
-            <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
-                <img src="/images/WhoWeAre/Giuseppe.png" alt="Giuseppe - Collaboratore Liso Barber Shop" class="img-fluid" style="object-fit: cover;"loading="lazy" decoding="async">
+    <!-- TEAM SOTTO -->
+    <div class="team-grid">
+
+        <div class="team-card">
+            <div class="team-image">
+                <img src="/images/WhoWeAre/Giuseppe.jpeg" alt="Giuseppe Zingaro" loading="lazy">
             </div>
-            <div class="mt-3">
-                <h3 style="font-weight:300; letter-spacing:2px;">Giuseppe Zingaro</h3>
-                <p class="text-muted">Collaboratore</p>
+            <div class="team-info">
+                <h3>Giuseppe Zingaro</h3>
+                <p>Collaboratore</p>
             </div>
         </div>
+
+        <div class="team-card">
+            <div class="team-image">
+                <img src="/images/WhoWeAre/Salvatore.jpeg" alt="Salvatore Lomuscio" loading="lazy">
+            </div>
+            <div class="team-info">
+                <h3>Salvatore Lomuscio</h3>
+                <p>Collaboratore</p>
+            </div>
+        </div>
+
+        <div class="team-card">
+            <div class="team-image">
+                <img src="/images/WhoWeAre/Dario.jpeg" alt="Dario Leonetti" loading="lazy">
+            </div>
+            <div class="team-info">
+                <h3>Dario Leonetti</h3>
+                <p>Collaboratore</p>
+            </div>
+        </div>
+
     </div>
 
-    <!-- Card 3 -->
-    <div class="col-md-6">
-        <div class="card border-0 bg-transparent">
-            <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
-                <img src="/images/WhoWeAre/Salvatore.jpeg" alt="Salvatore - Collaboratore Liso Barber Shop" class="img-fluid" style="object-fit: cover;" loading="lazy" decoding="async">
-            </div>
-            <div class="mt-3">
-                <h3 style="font-weight:300; letter-spacing:2px;">Salvatore Lomuscio</h3>
-                <p class="text-muted">Collaboratore</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Card 4 – NUOVA -->
-    <div class="col-md-6">
-        <div class="card border-0 bg-transparent">
-            <div class="overflow-hidden" style="aspect-ratio: 1 / 1;">
-                <img src="/images/WhoWeAre/Dario.png" alt="Dario - Collaboratore Liso Barber Shop" class="img-fluid" style="object-fit: cover;" loading="lazy" decoding="async">
-            </div>
-            <div class="mt-3">
-                <h3 style="font-weight:300; letter-spacing:2px;">Dario Leonetti</h3>
-                <p class="text-muted">Collaboratore</p>
-            </div>
-        </div>
-    </div>
 </div>
 
     
