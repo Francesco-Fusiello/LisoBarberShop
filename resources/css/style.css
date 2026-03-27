@@ -1248,3 +1248,101 @@ section.container { background-color: #fff; }
 }
 
 
+
+/* SECTION */
+.about-section {
+    background: #f2f2f2;
+    padding: 50px 20px;
+}
+
+/* CONTAINER */
+.about-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* TITLE */
+.about-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/* TESTO */
+.about-story {
+    max-width: 650px;
+    margin: 0 auto 70px auto;
+}
+
+.about-story p {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #fff;
+    margin-bottom: 18px;
+   
+}
+
+.about-highlight {
+    font-style: italic;
+}
+
+/* 🔥 ROW PERFETTA (con margine laterale elegante) */
+.team-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 0 40px; /* 🔥 QUESTO CREA IL RESPIRO LATERALE */
+}
+
+/* CARD */
+.team-card {
+    text-align: center;
+}
+
+/* IMAGE */
+.team-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    object-fit: cover;
+}
+
+/* NOME */
+.team-card h3 {
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #111;
+}
+
+/* RUOLO */
+.team-card p {
+    font-size: 11px;
+    color: #777;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .team-row {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-row {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .about-title {
+        font-size: 28px;
+    }
+}
