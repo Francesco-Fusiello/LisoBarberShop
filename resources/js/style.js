@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // CONTATORE ANNO DINAMICO AUTO
     // Imposta l'anno di partenza
-const startYear = 2016;
+const startYear = 2017;
 
 // Data odierna
 const today = new Date();
