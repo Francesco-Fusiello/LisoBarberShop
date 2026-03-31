@@ -1,11 +1,11 @@
 <x-layout-error>
 
     <h1 class="error-title">
-        Pagina non trovata
+        Errore del server
     </h1>
 
     <p class="error-text">
-        La pagina che stai cercando non esiste.
+        Si è verificato un problema interno. Riprova più tardi.
     </p>
 
     <a href="{{ url('/') }}" class="error-btn">
