@@ -1,21 +1,34 @@
 <x-layout>
 
+    <!-- Backdrop -->
+    <div class="zara-backdrop"></div>
 
-@section('content')
-<div class="d-flex flex-column justify-content-center align-items-center vh-100 text-center">
+    <!-- Modal -->
+    <div class="zara-modal-wrapper">
+        
+        <div class="zara-modal">
 
-    <h1 style="font-size: 80px;">419</h1>
+            <div class="zara-header">
+                <h2 class="zara-title">
+                    SESSIONE SCADUTA
+                </h2>
+            </div>
 
-    <p class="mb-3">Sessione scaduta</p>
+            <div class="zara-body">
+                <p class="zara-text">
+                    La sessione è scaduta per inattività.  
+                    Ricarica la pagina per continuare.
+                </p>
+            </div>
 
-    <p class="text-muted mb-4">
-        La pagina è rimasta inattiva troppo a lungo.
-    </p>
+            <div class="zara-footer">
+                <a href="{{ url()->current() }}" class="zara-btn">
+                    Ricarica pagina
+                </a>
+            </div>
 
-    <a href="{{ url()->current() }}" class="btn btn-dark">
-        Ricarica pagina
-    </a>
+        </div>
 
-</div>
-@endsection
+    </div>
+
 </x-layout>

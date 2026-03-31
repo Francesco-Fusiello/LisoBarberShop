@@ -1,27 +1,25 @@
 <x-layout>
 
-    <!-- Backdrop -->
-    <div class="zara-backdrop"></div>
+    <div class="zara-error-backdrop"></div>
 
-    <!-- Modal -->
-    <div class="zara-modal-wrapper">
-        
-        <div class="zara-modal">
+    <div class="zara-error-wrapper">
 
-            <div class="zara-header">
-                <h2 class="zara-title">
+        <div class="zara-error-modal">
+
+            <div class="zara-error-header">
+                <h2 class="zara-error-title">
                     ACCESSO RISERVATO
                 </h2>
             </div>
 
-            <div class="zara-body">
-                <p class="zara-text">
+            <div class="zara-error-body">
+                <p class="zara-error-text">
                     Questa sezione è accessibile solo agli amministratori.
                 </p>
             </div>
 
-            <div class="zara-footer">
-                <a href="{{ url('/') }}" class="zara-btn">
+            <div class="zara-error-footer">
+                <a href="{{ url('/') }}" class="zara-error-btn">
                     Torna alla home
                 </a>
             </div>

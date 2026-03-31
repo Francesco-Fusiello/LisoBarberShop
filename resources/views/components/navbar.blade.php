@@ -78,7 +78,7 @@
             <div class="modal-body">
 
                 <form method="POST" action="{{ route('login') }}">
-                    @csrf
+                 
 
                     <div class="zara-group">
                         <input type="email" name="email" value="{{ old('email') }}" required>
