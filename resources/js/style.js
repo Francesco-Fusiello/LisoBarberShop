@@ -274,9 +274,3 @@ window.addEventListener('error', function(e) {
 
 
 window.productSearch = productSearch;
-
-import Alpine from 'alpinejs';
-
-window.Alpine = Alpine;
-
-Alpine.start();
