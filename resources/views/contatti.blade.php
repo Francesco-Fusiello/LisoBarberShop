@@ -1,7 +1,8 @@
 <x-layout>
 
     @section('title', 'Contatti Barbiere ad Andria | Liso Barber Shop')
-    @section('meta_description', 'Contatta Liso Barber Shop ad Andria. Scopri indirizzo, orari, telefono, email e
+    @section('meta_description',
+        'Contatta Liso Barber Shop ad Andria. Scopri indirizzo, orari, telefono, email e
         prenota facilmente tramite la nostra app.')
 
         <section class="py-5" style="background-color: #0b2e1d; font-family: 'Playfair Display', serif; color: #fff;">
@@ -47,39 +48,45 @@
                     </div>
                 </div>
 
+             <div class="d-flex justify-content-center my-5">
+    <div class="custom-divider"></div>
+</div>
 
-                <!-- Dettagli su come contattarci -->
-                <div class="row justify-content-center mt-5">
-                    <div class="col-md-10 d-flex justify-content-center">
-                        <div class="text-box p-4 w-100"
-                            style="background-color:#fff; display:flex; justify-content:center;">
-                            <div style="width:auto;" class="text-start">
+<div class="row justify-content-center mt-5 text-center">
 
-                                <h3 class="display-5" style="color:#000 font-weight: 700;">Dove trovarci</h3>
-                                <h6 style="color:#000; font-size: 1.10rem;">Liso Barber Shop, Viale Pietro Nenni 324,
-                                    Andria, IT</h6>
+    <div class="col-md-4 mb-5">
+        <h5 class="contact-title">DOVE SIAMO</h5>
+        <p class="contact-text">
+            Liso Barber Shop<br>
+            Viale Pietro Nenni 324<br>
+            Andria, Italia
+        </p>
+    </div>
 
-                                <h3 class="display-5" style="color:#000 font-weight: 700;">Orari di apertura</h3>
-                                <ul class="list-unstyled" style="color:#000;font-size: 1.10rem;">
-                                    <li>Martedì - Giovedì: 08:00/13:00 - 15:00/20:00</li>
-                                    <li>Venerdì - Sabato: 08:00 - 20:00</li>
-                                    <li>Lunedì e Domenica: Chiuso</li>
-                                </ul>
+    <div class="col-md-4 mb-5">
+        <h5 class="contact-title">ORARI</h5>
+        <p class="contact-text">
+            Mar - Gio<br>
+            08:00 / 13:00<br>
+            15:00 / 20:00<br><br>
+            Ven - Sab<br>
+            08:00 - 20:00<br><br>
+            Lun - Dom<br>
+            Chiuso
+        </p>
+    </div>
 
-                                <h3 class="display-5" style="color:#000 font-weight: 700;">Contatti</h3>
-                                <h6 style="color:#000; font-size: 1.10rem;">Telefono: +39 329 978 0152</h6>
-                                <h6 style="color:#000; font-size: 1.10rem;">Email:
-                                    <a href="mailto:info@lisobarbershop.it"
-                                        style="color:#000; text-decoration:none;font-size: 1.10rem;">
-                                        info@lisobarbershop.it
-                                    </a>
-                                </h6>
+    <div class="col-md-4 mb-5">
+        <h5 class="contact-title">CONTATTI</h5>
+        <p class="contact-text">
+            +39 329 978 0152<br>
+            <a href="mailto:info@lisobarbershop.it">
+                info@lisobarbershop.it
+            </a>
+        </p>
+    </div>
 
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+</div>
 
 
 
