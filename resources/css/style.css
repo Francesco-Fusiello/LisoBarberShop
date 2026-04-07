@@ -1187,11 +1187,11 @@ section.container { background-color: #fff; }
 }
 
 /* HOVER SOLO CARD (NO IMMAGINE) */
-.team-card:hover,
+/* .team-card:hover,
 .team-hero:hover {
     transform: translateY(-2px);
     border-color: rgba(0,0,0,0.15);
-}
+} */
 
 /* IMMAGINI STATICHE */
 .team-image {

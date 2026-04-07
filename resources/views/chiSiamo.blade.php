@@ -16,17 +16,21 @@
         <!-- TESTO -->
         <div class="about-story">
             <p>
-                Liso Barber Shop è un barber shop ad Andria fondato nel 2016 da <strong>Gianfranco Liso</strong>,
-                con l’obiettivo di offrire servizi professionali di taglio uomo e cura della barba.
+                Liso Barber Shop nasce nel 2016 dalla passione e dall’energia di
+                    <strong>Gianfranco Liso</strong>, con un’idea semplice ma potente: creare
+                    un luogo dove il taglio di capelli o la cura della barba fossero momenti
+                    di stile, benessere e autenticità.
             </p>
 
             <p>
-                Il nostro team di barbieri esperti è specializzato in tagli moderni, sfumature precise
-                e trattamenti barba, garantendo qualità e attenzione ai dettagli.
+                Da allora, accogliamo ogni cliente con professionalità, attenzione e un
+                    tocco di simpatia che ci rende unici.
             </p>
 
             <p class="about-highlight">
-                Una poltrona è sempre pronta per te.
+                Liso Barber Shop è lo specchio di chi ama distinguersi, valorizzarsi e
+                    sentirsi sempre al meglio.
+                    <em>Una poltrona è sempre pronta per te.</em>
             </p>
         </div>
 
