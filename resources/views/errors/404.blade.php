@@ -1,15 +1,31 @@
 <x-layout-error>
 
-    <h1 class="error-title">
-        Pagina non trovata
-    </h1>
+    <div class="zara-error-backdrop"></div>
 
-    <p class="error-text">
-        La pagina che stai cercando non esiste.
-    </p>
+    <div class="zara-error-wrapper">
 
-    <a href="{{ url('/') }}" class="error-btn">
-        Torna alla home
-    </a>
+        <div class="zara-error-modal">
+
+            <div class="zara-error-header">
+                <h2 class="zara-error-title">
+                    PAGINA NON TROVATA
+                </h2>
+            </div>
+
+            <div class="zara-error-body">
+                <p class="zara-error-text">
+                    La pagina che stai cercando non esiste.
+                </p>
+            </div>
+
+            <div class="zara-error-footer">
+                <a href="{{ url('/') }}" class="zara-error-btn">
+                    Torna alla home
+                </a>
+            </div>
+
+        </div>
+
+    </div>
 
 </x-layout-error>
