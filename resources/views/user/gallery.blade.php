@@ -58,7 +58,7 @@
     <!-- Modal -->
     <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-dark text-white">
+            <div class="modal-content custom-modal">
                 <div class="modal-body text-center position-relative">
                     <button type="button" class="btn btn-light position-absolute top-50 start-0 translate-middle-y"
                         id="prevImage">
