@@ -6,18 +6,18 @@
 
 
     <div class="py-3">
-        <h1 class="text-center" style="font-size: 3.5rem; font-weight: 700; letter-spacing: 2px; color: #ffffff;">
+        <h1 class="text-center" style="font-size: 3.5rem; font-weight: 700; letter-spacing: 2px; color: #ffffff;" data-aos="fade-up">
             LA NOSTRA GALLERY
         </h1>
     </div>
 
     <div class="social-section text-center mt-3 p-1">
-        <p class="lead fs-5" style="color: #ffffff;">
+        <p class="lead fs-5" style="color: #ffffff;"data-aos="fade-up">
             Seguici sui nostri canali social per rimanere sempre connesso!
         </p>
 
         <!-- Icone sempre in fila -->
-        <div class="social-icons d-flex justify-content-center align-items-center gap-3">
+        <div class="social-icons d-flex justify-content-center align-items-center gap-3" data-aos="fade-up">
             <a href="https://www.instagram.com/lisobarbershop/" target="_blank" aria-label="Instagram"
                 class="social-icon instagram">
                 <i class="fa-brands fa-instagram"></i>
@@ -43,7 +43,7 @@
 
 
 
-    <div class="container pb-5">
+    <div class="container pb-5"data-aos="fade-up">
         <div class="row gallery">
             @foreach ($images as $image)
                 <div class="col-4 col-md-4 col-lg-3 mb-2">
