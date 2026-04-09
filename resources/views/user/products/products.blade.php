@@ -3,12 +3,12 @@
 @section('title', 'Prodotti Barbiere ad Andria | Liso Barber Shop')
 @section('meta_description', 'Scopri tutti i prodotti e servizi di Liso Barber Shop ad Andria. Taglio uomo, modellatura barba, styling e tanto altro. Prenota subito!')
 
-    <h2 class="text-center mb-5 display-4 py-5"
+    <h2 class="text-center  display-4 py-5"data-aos="fade-up" 
         style="font-family: 'Playfair Display', serif; color:#ffffff; font-weight: 700;">
         I Nostri Prodotti
     </h2>
 
-    <div class="p-6 max-w-6xl mx-auto" x-data="productSearch({{ Illuminate\Support\Js::from($productsJson) }})">
+    <div class="p-6 max-w-6xl mx-auto" data-aos="fade-up" x-data="productSearch({{ Illuminate\Support\Js::from($productsJson) }})">
 
         <div class="container mb-3">
             <input type="text" class="form-control" placeholder="Cerca per nome o descrizione..." x-model="query"

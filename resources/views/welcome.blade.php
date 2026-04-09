@@ -81,7 +81,7 @@
 
 
         <!-- mosaic-section.blade.php (solo la sezione) -->
-        <section class="mosaic-section">
+        <section class="mosaic-section" data-aos="fade-up">
             <div class="text-center text-white">
                 <h2 class="fw-bold text-uppercase display-5" style="color: #fff">Il Nostro Salone</h2>
                 <p class="lead">Uno spazio curato, moderno e accogliente.</p>
@@ -118,7 +118,7 @@
         </section>
 
         {{-- Servizi --}}
-        <section class="container py-3">
+        <section class="container py-3" data-aos="fade-up">
             <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff ">I nostri servizi</h2>
             <div class="row g-4 text-center">
                 <div class="col-md-4">
@@ -186,7 +186,7 @@
         </section>
 
         {{-- Counter section --}}
-        <section class="container my-5 counter-section text-center px-0">
+        <section class="container my-5 counter-section text-center px-0" data-aos="fade-up">
             <div class="row gx-0 px-3 px-md-0"> <!-- qui -->
                 <div class="col-6 col-md-3">
                     <div class="counter-box">
@@ -217,8 +217,8 @@
 
 
         {{-- Recensioni --}}
-        <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff;">DICONO DI NOI</h2>
-        <section class="container my-5 google-reviews-zara">
+        <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff;" data-aos="fade-up">DICONO DI NOI</h2>
+        <section class="container my-5 google-reviews-zara"data-aos="fade-up">
 
             <!-- HEADER GOOGLE -->
             <div class="google-header d-flex justify-content-between align-items-center mb-4 m-2">
@@ -314,16 +314,9 @@
 
         </section>
 
-
-
-
-
-
-
-
         {{-- Prodotti --}}
-        <section>
-            <div class="container text-center pb-5 pt-2">
+        <section data-aos="fade-up">
+            <div class="container text-center pb-5">
                 <h2 class="text-center display-5" style="font-weight: 700; color:#fff ">Scelti per te</h2>
                 <a href="{{ route('products') }}"
                     style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 1.20rem !important;">

@@ -4,7 +4,7 @@
     @section('title', 'Chi Siamo - Liso Barber Shop ad Andria | Team e Storia')
     @section('meta_description', 'Scopri il team di Liso Barber Shop ad Andria: professionisti esperti, storia e passione per i tagli e la cura della barba. Prenota subito!')
     
-<section class="about-section">
+<section class="about-section"data-aos="fade-up">
 
     <div class="about-container">
 

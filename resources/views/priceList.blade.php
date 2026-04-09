@@ -1,5 +1,5 @@
 <x-layout>
-    <section class="py-5" style="background-color: #ffffff; font-family: 'Playfair Display', serif; color: #333;">
+    <section class="py-5" style="background-color: #ffffff; font-family: 'Playfair Display', serif; color: #333;"data-aos="fade-up">
         <div class="container">
             <div class="text-center mb-5">
                 <h1 class="text-center display-4" style="color: #fff; font-family: 'Playfair Display', serif;font-weight: 700;">
