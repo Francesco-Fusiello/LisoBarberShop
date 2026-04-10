@@ -5,7 +5,7 @@
 
 
 
-    <div class="py-3">
+    <div>
         <h1 class="text-center" style="font-size: 3.5rem; font-weight: 700; letter-spacing: 2px; color: #ffffff;" data-aos="fade-up">
             LA NOSTRA GALLERY
         </h1>
@@ -46,7 +46,7 @@
     <div class="container pb-5"data-aos="fade-up">
         <div class="row gallery">
             @foreach ($images as $image)
-                <div class="col-4 col-md-4 col-lg-3 mb-2">
+               <div class="col-6 col-md-4 col-lg-3 mb-3">
                     <img src="{{ asset($image->image_path) }}"class="img-fluid gallery-img cursor-pointer"
                         data-image="{{ asset($image->image_path) }}" data-bs-toggle="modal" data-bs-target="#imageModal"
                         loading="lazy" decoding="async">

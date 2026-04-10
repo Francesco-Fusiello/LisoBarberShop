@@ -178,7 +178,7 @@
                 </div>
             </div>
 
-            <div class="text-center mt-3">
+            <div class="text-center mt-3"data-aos="fade-up" data-aos-delay="300">
                 <a href="{{ route('services') }}" class="home-btn">
                     Scopri tutti i servizi
                 </a>
