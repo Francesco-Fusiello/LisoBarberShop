@@ -122,7 +122,7 @@
             <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff ">I nostri servizi</h2>
             <div class="row g-4 text-center">
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow" style="background-color: #fff; color: #000;">
+                    <div class="card h-100 border-0 shadow" style="background-color: #fff; color: #000;"data-aos="fade-up" data-aos-delay="100">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
                             <img src="{{ asset('images/forbici1.png') }}" alt="Taglio Uomo" class="mb-3"
                                 style="width:64px; height:64px; object-fit:contain;">
@@ -140,7 +140,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow" style="background-color: #fff; color: #000;">
+                    <div class="card h-100 border-0 shadow" style="background-color: #fff; color: #000;"data-aos="fade-up" data-aos-delay="200">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
                             <img src="{{ asset('images/macchinetta1.png') }}" alt="Rasatura Tradizionale"
                                 class="mb-3" style="width:64px; height:64px; object-fit:contain;">
@@ -159,7 +159,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow" style="background-color: #fff; color: #000;">
+                    <div class="card h-100 border-0 shadow" style="background-color: #fff; color: #000;"data-aos="fade-up" data-aos-delay="300">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
                             <img src="{{ asset('images/baffi1.png') }}" alt="Rasatura Tradizionale" class="mb-3"
                                 style="width:64px; height:64px; object-fit:contain;">
