@@ -4,7 +4,7 @@
 @section('title', $product->name . ' | Prodotti Liso Barber Shop ad Andria')
 @section('meta_description', 'Scopri ' . $product->name . ': ' . Str::limit($product->description, 150) . '. Prenota subito da Liso Barber Shop ad Andria!')
 
-  <div class="container py-5 mt-5">
+  <div class="container py-5 mt-5"data-aos="fade-up">
 
     <!-- Dettaglio prodotto -->
     <div class="row mb-5">
@@ -41,40 +41,42 @@
 
   <!-- Altri prodotti -->
 
-  <h3 class="mb-4 fw-semibold px-5" style="color: #fff;">
+  <h3 class="mb-4 fw-semibold px-5" style="color: #fff;"data-aos="fade-up">
       Scopri anche
   </h3>
 
-  <div class="px-5">
+  <div class="px-3"data-aos="fade-up">
       <div class="row">
           @foreach($otherProducts as $other)
-          <div class="col-md-4 mb-4">
-              <div class="card h-100 shadow-sm border-0 d-flex flex-column">
+        <div class="col-6 col-md-3 mb-4 d-flex">
+    <div class="card h-100 shadow-sm border-0 d-flex flex-column w-100">
 
-                  <img src="{{ Storage::url($other->image_path) }}"
-                       class="card-img-top"
-                       alt="{{ $other->name }}"
-                       style="height: 300px; object-fit: cover;">
+        <img src="{{ Storage::url($other->image_path) }}"
+             class="card-img-top"
+             alt="{{ $other->name }}"
+             style="height: 300px; object-fit: cover; width: 100%;">
 
-                  <div class="card-body d-flex flex-column">
-                      <h5 class="card-title" style="font-size: 1.10rem;">
-                          {{ $other->name }}
-                      </h5>
+        <div class="card-body d-flex flex-column">
 
-                      <div class="d-flex justify-content-between align-items-center mt-auto">
-                          <span class="fw-bold">
-                              €{{ number_format($other->price, 2) }}
-                          </span>
+            <h5 class="card-title" style="font-size: 1.10rem;">
+                {{ $other->name }}
+            </h5>
 
-                          <a href="{{ route('products.show', $other->id) }}"
-                             class="btn btn-sm btn-outline-dark"
-                             style="border-radius: 0;">
-                              Dettagli
-                          </a>
-                      </div>
-                  </div>
-              </div>
-          </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="fw-bold">
+                    €{{ number_format($other->price, 2) }}
+                </span>
+
+                <a href="{{ route('products.show', $other->id) }}"
+                   class="btn btn-sm btn-outline-dark"
+                   style="border-radius: 0;">
+                    Dettagli
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
           @endforeach
       </div>
   </div>
