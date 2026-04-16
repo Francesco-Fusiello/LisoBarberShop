@@ -141,15 +141,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2500);
   });
 });
-  //testo recensioni
+//testo recensioni
 document.addEventListener("DOMContentLoaded", function () {
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-        new bootstrap.Tooltip(tooltipTriggerEl)
-    })
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+    new bootstrap.Tooltip(tooltipTriggerEl)
+  })
 });
 // mosaic.js - reveal sequenziale lento con IntersectionObserver
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const imgs = Array.from(document.querySelectorAll(".m-img"));
 
   // assegna order/index per ritardo progressivo (righe/colonne non influenzano)
@@ -173,97 +173,210 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.reviews-track');
-    const originalSlides = Array.from(document.querySelectorAll('.review-slide'));
-    let index = 0;
-    let slideWidth = 0;
-    let interval;
+  const track = document.querySelector('.reviews-track');
+  const originalSlides = Array.from(document.querySelectorAll('.review-slide'));
+  let index = 0;
+  let slideWidth = 0;
+  let interval;
 
-    function getVisible() {
-        const w = window.innerWidth;
-        if (w < 576) return 1;      // mobile
-        if (w < 992) return 2;      // tablet
-        return 3;                    // desktop
-    }
+  function getVisible() {
+    const w = window.innerWidth;
+    if (w < 576) return 1;      // mobile
+    if (w < 992) return 2;      // tablet
+    return 3;                    // desktop
+  }
 
-    function setup() {
-        const visible = getVisible();
-        index = 0;
-        track.style.transition = 'none';
-        track.style.transform = 'translateX(0)';
+  function setup() {
+    const visible = getVisible();
+    index = 0;
+    track.style.transition = 'none';
+    track.style.transform = 'translateX(0)';
 
-        // reset track e cloni per loop infinito
-        track.innerHTML = '';
-        const slides = originalSlides.map(slide => slide.cloneNode(true));
-        slides.forEach(slide => track.appendChild(slide));
-        slides.forEach(slide => track.appendChild(slide.cloneNode(true))); // duplico tutte le slide
+    // reset track e cloni per loop infinito
+    track.innerHTML = '';
+    const slides = originalSlides.map(slide => slide.cloneNode(true));
+    slides.forEach(slide => track.appendChild(slide));
+    slides.forEach(slide => track.appendChild(slide.cloneNode(true))); // duplico tutte le slide
 
-        // aggiorno flex
-        Array.from(track.children).forEach(slide => {
-            slide.style.flex = `0 0 ${100 / visible}%`;
-        });
+    // aggiorno flex
+    Array.from(track.children).forEach(slide => {
+      slide.style.flex = `0 0 ${100 / visible}%`;
+    });
 
-        // larghezza reale della slide
-        const firstSlide = track.querySelector('.review-slide');
-        slideWidth = firstSlide.getBoundingClientRect().width;
+    // larghezza reale della slide
+    const firstSlide = track.querySelector('.review-slide');
+    slideWidth = firstSlide.getBoundingClientRect().width;
 
-        // scroll automatico
-        if (interval) clearInterval(interval);
-        startAutoScroll(visible);
-    }
+    // scroll automatico
+    if (interval) clearInterval(interval);
+    startAutoScroll(visible);
+  }
 
-    function startAutoScroll(visible) {
-        const childrenCount = track.children.length;
-        interval = setInterval(() => {
-            index++;
-            track.style.transition = 'transform 1s linear';
-            track.style.transform = `translateX(-${index * slideWidth}px)`;
+  function startAutoScroll(visible) {
+    const childrenCount = track.children.length;
+    interval = setInterval(() => {
+      index++;
+      track.style.transition = 'transform 1s linear';
+      track.style.transform = `translateX(-${index * slideWidth}px)`;
 
-            if (index >= childrenCount / 2) { // reset al primo duplicato
-                setTimeout(() => {
-                    track.style.transition = 'none';
-                    index = 0;
-                    track.style.transform = 'translateX(0)';
-                }, 1000);
-            }
-        }, 3000);
-    }
+      if (index >= childrenCount / 2) { // reset al primo duplicato
+        setTimeout(() => {
+          track.style.transition = 'none';
+          index = 0;
+          track.style.transform = 'translateX(0)';
+        }, 1000);
+      }
+    }, 3000);
+  }
 
   // CONTATORE ANNO DINAMICO AUTO
-    // Imposta l'anno di partenza
-const startYear = 2017;
+  // Imposta l'anno di partenza
+  const startYear = 2017;
 
-// Data odierna
-const today = new Date();
-let experienceYears = today.getFullYear() - startYear;
+  // Data odierna
+  const today = new Date();
+  let experienceYears = today.getFullYear() - startYear;
 
-// Aggiorna a marzo ogni anno
-if (today.getMonth() < 2) { // Gennaio=0, Febbraio=1
+  // Aggiorna a marzo ogni anno
+  if (today.getMonth() < 2) { // Gennaio=0, Febbraio=1
     experienceYears -= 1;
-}
+  }
 
-// Aggiorna l'attributo data-target del contatore
-const counterElement = document.querySelector('.counter[data-target="experience"]');
-if (counterElement) {
+  // Aggiorna l'attributo data-target del contatore
+  const counterElement = document.querySelector('.counter[data-target="experience"]');
+  if (counterElement) {
     counterElement.setAttribute('data-target', experienceYears);
-}
+  }
 
-window.addEventListener('error', function(e) {
+  window.addEventListener('error', function (e) {
     if (e.response && e.response.status === 419) {
-        alert('La sessione è scaduta. Aggiorna la pagina per continuare.');
-        window.location.reload();
+      alert('La sessione è scaduta. Aggiorna la pagina per continuare.');
+      window.location.reload();
     }
+  });
+
+
+
+  setup();
+  window.addEventListener('resize', setup);
 });
 
+// ===============================
+// GALLERY UPLOAD (COMPRESS + LIVEWIRE + UX PREMIUM FIXED)
+// ===============================
 
+document.addEventListener('DOMContentLoaded', () => {
 
-    setup();
-    window.addEventListener('resize', setup);
+  const form = document.getElementById('galleryUploader');
+  if (!form) return;
+
+  const input = document.getElementById('imageInput');
+  const bar = document.getElementById('uploadBar');
+  const percent = document.getElementById('uploadPercent');
+  const box = document.getElementById('uploadBox');
+  const btn = document.getElementById('uploadBtn');
+
+  if (!input) return;
+
+  // 🔥 FIX IMPORTANTE: prendi il componente GIUSTO
+  const component = window.Livewire.find(
+    form.closest('[wire\\:id]').getAttribute('wire:id')
+  );
+
+  if (!component) {
+    console.error('Livewire component non trovato');
+    return;
+  }
+
+  input.addEventListener('change', function (e) {
+
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    const img = new Image();
+
+    reader.onload = (event) => {
+      img.src = event.target.result;
+    };
+
+    reader.readAsDataURL(file);
+
+    img.onload = () => {
+
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+
+      const maxWidth = 1200;
+
+      let width = img.width;
+      let height = img.height;
+
+      if (width > maxWidth) {
+        height = height * (maxWidth / width);
+        width = maxWidth;
+      }
+
+      canvas.width = width;
+      canvas.height = height;
+
+      ctx.drawImage(img, 0, 0, width, height);
+
+      canvas.toBlob((blob) => {
+
+        const compressedFile = new File([blob], file.name, {
+          type: 'image/jpeg',
+          lastModified: Date.now()
+        });
+
+        // ===============================
+        // UI ON (INSTAGRAM STYLE)
+        // ===============================
+        box.style.display = 'block';
+        btn.disabled = true;
+
+        bar.style.width = '0%';
+        percent.innerText = '0%';
+
+        // ===============================
+        // LIVEWIRE UPLOAD SAFE
+        // ===============================
+        component.upload(
+          'image',
+          compressedFile,
+
+          // SUCCESS
+          () => {
+            btn.disabled = false;
+            percent.innerText = "100%";
+            bar.style.width = "100%";
+
+            setTimeout(() => {
+              box.style.display = 'none';
+              bar.style.width = '0%';
+              percent.innerText = '0%';
+            }, 1200);
+          },
+
+          // ERROR
+          () => {
+            btn.disabled = false;
+            percent.innerText = "Errore";
+          },
+
+          // PROGRESS
+          (event) => {
+            const progress = event.detail.progress;
+            bar.style.width = progress + '%';
+            percent.innerText = progress + '%';
+          }
+
+        );
+
+      }, 'image/jpeg', 0.75);
+    };
+  });
 });
-
-
-
-
 
 
 

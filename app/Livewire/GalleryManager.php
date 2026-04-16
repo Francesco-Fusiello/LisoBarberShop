@@ -18,7 +18,7 @@ class GalleryManager extends Component
     public function create()
     {
         $this->validate([
-            'image' => 'required|image|max:2048',
+            'image' => 'required|image|max:20048',
         ]);
 
         $path = $this->image->store('gallery', 'public');
@@ -28,7 +28,7 @@ class GalleryManager extends Component
         ]);
 
         return redirect()->to(request()->header('Referer'))
-                         ->with('message', 'Immagine caricata con successo!');
+            ->with('message', 'Immagine caricata con successo!');
     }
 
     public function confirmDelete($id)
@@ -49,7 +49,7 @@ class GalleryManager extends Component
         $this->deleteId = null;
 
         return redirect()->to(request()->header('Referer'))
-                         ->with('message', 'Immagine eliminata con successo!');
+            ->with('message', 'Immagine eliminata con successo!');
     }
 
     public function getImagesProperty()
