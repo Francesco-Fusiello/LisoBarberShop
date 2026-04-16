@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ===============================
-// GALLERY UPLOAD (COMPRESS + LIVEWIRE + UX PREMIUM FIXED)
+// GALLERY UPLOAD
 // ===============================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // ===============================
-        // UI ON (INSTAGRAM STYLE)
+        // UI ON
         // ===============================
         box.style.display = 'block';
         btn.disabled = true;
