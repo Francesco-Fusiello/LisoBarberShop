@@ -378,6 +378,36 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+
+  const btn = document.getElementById("booking-btn");
+
+  // 🔒 sicurezza: evita errori se il bottone non esiste
+  if (!btn) return;
+
+  const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+  const isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+  const isAndroid = /Android/.test(ua);
+
+  // 🍏 iOS (iPhone / iPad)
+  if (isIOS) {
+    btn.href = "https://apps.apple.com/it/app/liso-barber-shop/id6502577739";
+  }
+
+  // 🤖 Android
+  else if (isAndroid) {
+    btn.href = "https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it";
+  }
+
+  // 💻 Desktop / fallback
+  else {
+    btn.href = "https://wa.me/393276531477?text=Ciao%20Liso%20Barber%20Shop,%0AVorrei%20prenotare%20un%20appuntamento.%0APotete%20indicarmi%20le%20prime%20disponibilit%C3%A0%3F%0AGrazie!";
+    btn.target = "_self";
+  }
+
+});
+
 
 
 

@@ -77,7 +77,7 @@
                     </div>
 
                     <div class="modal-body text-center">
-                        Sei sicuro?
+                        Sei sicuro di voler eliminare questa immagine?
                     </div>
 
                     <div class="modal-footer">
@@ -86,7 +86,7 @@
                         </button>
 
                         <button class="btn btn-danger" wire:click="deleteConfirmed">
-                            Elimina
+                             <i class="fas fa-trash"></i> Elimina
                         </button>
                     </div>
                 </div>

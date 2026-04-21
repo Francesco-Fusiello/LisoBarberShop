@@ -103,11 +103,11 @@
                         <button class="btn-close" wire:click="$set('showDeleteModal', false)"></button>
                     </div>
                     <div class="modal-body">
-                        Sei sicuro?
+                        Sei sicuro di voler eliminare questo prodotto?
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" wire:click="$set('showDeleteModal', false)">Annulla</button>
-                        <button class="btn btn-danger" wire:click="deleteProduct">Elimina</button>
+                        <button class="btn btn-danger" wire:click="deleteProduct"><i class="fas fa-trash"></i> Elimina</button>
                     </div>
                 </div>
             </div>

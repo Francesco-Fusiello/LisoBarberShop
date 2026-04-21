@@ -2,38 +2,42 @@
     <section
         style="background-color: #ffffff; font-family: 'Playfair Display', serif; color: #000000; min-height: 100vh;">
 
-        {{-- Carousel immagini Header --}}
-        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false"
-            data-bs-interval="3000" style="max-height: 600px; overflow: hidden;">
-            <div class="carousel-inner">
-                @foreach (['home2.jpeg', 'home1.jpeg', 'home3.jpeg'] as $index => $img)
-                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                        <img src="/images/carouselHome/{{ $img }}" class="d-block w-100 carousel-img"
-                            alt="Barbiere ad Andria – Liso Barber Shop" style="object-fit: cover; height: 600px;">
-                        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center"
-                            style="background: rgba(0,0,0,0.4); top: 0; bottom: 0; left: 0; right: 0;">
-                            <h1 class="display-3 fw-bold" style="color: #f5f5f5; text-shadow: 2px 2px 6px #000;">
-                                DEDICATO ALL’UOMO</h1>
-                            <h4 class="fst-italic" style="color: #f5f5f5;">Innovazione, Interpretazione e Ricerca</h4>
-                        </div>
-                    </div>
-                @endforeach
+        {{-- HERO ZARA STYLE --}}
+        <section class="hero-zara">
+
+            <div class="hero-image">
+                <img src="/images/carouselHome/home2.jpeg" alt="Liso Barber Shop - Barbiere ad Andria">
+                <div class="hero-overlay"></div>
             </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
-                data-bs-slide="prev" style="width: 5%;">
-                <span class="carousel-control-prev-icon" aria-hidden="true"
-                    style="filter: invert(100%); background-color: transparent;"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
+            <div class="hero-content text-center">
 
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
-                data-bs-slide="next" style="width: 5%;">
-                <span class="carousel-control-next-icon" aria-hidden="true"
-                    style="filter: invert(100%); background-color: transparent;"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+                <h1 class="hero-title">
+                    LISO BARBER SHOP
+                </h1>
+
+                <p class="hero-subtitle">
+                    Taglio • Barba • Stile Essenziale
+                </p>
+
+                <p class="hero-text">
+                    Nel cuore di Andria, un’esperienza dedicata all’uomo che cerca precisione, identità e cura dei
+                    dettagli.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="{{ route('services') }}" class="hero-btn primary">
+                        Scopri i servizi
+                    </a>
+
+                    <a href="#" id="booking-btn" class="hero-btn primary">
+                        Prenota ora
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
 
         {{-- Descrizione sotto carousel Header --}}
         <div class="w-100 py-5" style="background-color: #ffffff; font-family: 'Lato', sans-serif;">
@@ -122,7 +126,8 @@
             <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff ">I nostri servizi</h2>
             <div class="row g-4 text-center">
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow" style="background-color: #fff; color: #000;"data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow"
+                        style="background-color: #fff; color: #000;"data-aos="fade-up" data-aos-delay="100">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
                             <img src="{{ asset('images/forbici1.png') }}" alt="Taglio Uomo" class="mb-3"
                                 style="width:64px; height:64px; object-fit:contain;">
@@ -140,7 +145,8 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow" style="background-color: #fff; color: #000;"data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow"
+                        style="background-color: #fff; color: #000;"data-aos="fade-up" data-aos-delay="200">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
                             <img src="{{ asset('images/macchinetta1.png') }}" alt="Rasatura Tradizionale"
                                 class="mb-3" style="width:64px; height:64px; object-fit:contain;">
@@ -159,7 +165,8 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow" style="background-color: #fff; color: #000;"data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow"
+                        style="background-color: #fff; color: #000;"data-aos="fade-up" data-aos-delay="300">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
                             <img src="{{ asset('images/baffi1.png') }}" alt="Rasatura Tradizionale" class="mb-3"
                                 style="width:64px; height:64px; object-fit:contain;">
@@ -217,7 +224,8 @@
 
 
         {{-- Recensioni --}}
-        <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff;" data-aos="fade-up">DICONO DI NOI</h2>
+        <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff;" data-aos="fade-up">DICONO DI NOI
+        </h2>
         <section class="container my-5 google-reviews-zara"data-aos="fade-up">
 
             <!-- HEADER GOOGLE -->
