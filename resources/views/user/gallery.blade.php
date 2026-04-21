@@ -8,13 +8,13 @@
 
 
         <div>
-            <h1 class="text-center" style="font-size: 3.5rem; font-weight: 700; letter-spacing: 2px; color: #ffffff;"
+            <h1 class="text-center pt-3" style="font-size: 3.5rem; font-weight: 700; letter-spacing: 2px; color: #ffffff;"
                 data-aos="fade-up">
                 LA NOSTRA GALLERY
             </h1>
         </div>
 
-        <div class="social-section text-center mt-3 p-1">
+        <div class="social-section text-center mt-1 p-1">
             <p class="lead fs-5" style="color: #ffffff;"data-aos="fade-up">
                 Seguici sui nostri canali social per rimanere sempre connesso!
             </p>
