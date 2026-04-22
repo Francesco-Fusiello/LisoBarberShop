@@ -30,7 +30,7 @@
                         Scopri i servizi
                     </a>
 
-                    <a href="#" id="booking-btn" class="hero-btn primary">
+                    <a href="#" id="booking-btn" class="hero-btn secondary">
                         Prenota ora
                     </a>
                 </div>
