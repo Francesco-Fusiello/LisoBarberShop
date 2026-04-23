@@ -1662,7 +1662,7 @@ section.container { background-color: #fff; }
 }
 
 .modal-body {
-    background: #000;
+    background: #fff;
 }
 
 .modal-img {
@@ -1979,3 +1979,7 @@ section.container { background-color: #fff; }
         max-height: 75vh;
     }
 }
+html, body {
+    background-color:#888580 !important;
+    background: #888580 !important;
+} 

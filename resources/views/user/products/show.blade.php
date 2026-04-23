@@ -41,11 +41,11 @@
 
   <!-- Altri prodotti -->
 
-  <h3 class="mb-4 fw-semibold px-5" style="color: #fff;"data-aos="fade-up">
+  <h3 class="mb-4 fw-semibold px-3" style="color: #fff;">
       Scopri anche
   </h3>
 
-  <div class="px-3"data-aos="fade-up">
+  <div class="px-3">
       <div class="row">
           @foreach($otherProducts as $other)
         <div class="col-6 col-md-3 mb-4 d-flex">
@@ -68,9 +68,9 @@
                 </span>
 
                 <a href="{{ route('products.show', $other->id) }}"
-                   class="btn btn-sm btn-outline-dark"
+                   class="btn btn-sm btn-dark"
                    style="border-radius: 0;">
-                    Dettagli
+                    Visualizza
                 </a>
             </div>
 
