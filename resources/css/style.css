@@ -186,49 +186,6 @@ header img {
   background-color: var(--antracite);
   color: var(--bianco-puro);
 }
-
-/* ======= SEZIONE CHI SIAMO ======= */
-.containerCard {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.containerCard .box {
-  width: 15rem;
-  height: 15rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid var(--nero);
-  overflow: hidden;
-  border-radius: 0;
-  position: relative;
-  background-color: var(--bianco-puro);
-}
-
-.imgBoxCard img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.containerCard .box:hover .imgBoxCard img { transform: scale(1.05); }
-
-.contentCard {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(255,255,255,0.9);
-  text-align: center;
-  padding: 1rem;
-}
-
-.contentCard h2 { font-size: 1.1rem; color: var(--nero); }
-.contentCard span { color: var(--grigio); font-size: 0.9rem; }
-
 /* ======= REVIEW DRAWER ======= */
 .review-drawer {
   position: fixed;
@@ -649,30 +606,6 @@ section.container { background-color: #fff; }
         object-fit: cover;
     }
 }
-
-.social-text {
-    font-size: 1.2rem; /* leggermente più grande */
-}
-
-.social-icons {
-    gap: 1.5rem; /* spazio tra le icone */
-    margin-bottom: 1rem; /* spazio sotto le icone */
-}
-
-.social-icon {
-    font-size: 28px; /* dimensione icone */
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.social-icon:hover {
-    transform: scale(1.2);
-}
-
-/* Colori originali */
-.instagram { color: #E1306C; }
-.facebook { color: #1877F2; }
-.tiktok { color: #000; }
-.google { color: #4285F4; }
 
 /* Mobile: testo più piccolo, icone sempre in fila */
 @media (max-width: 576px) {
@@ -1247,87 +1180,6 @@ section.container { background-color: #fff; }
     }
 }
 
-
-
-/* SECTION */
-.about-section {
-    background: #f2f2f2;
-    padding: 50px 20px;
-}
-
-/* CONTAINER */
-.about-container {
-    max-width: 1600px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* TITLE */
-.about-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 50px;
-    letter-spacing: 3px;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 30px;
-}
-
-/* TESTO */
-.about-story {
-    max-width: 650px;
-    margin: 0 auto 70px auto;
-}
-
-.about-story p {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    line-height: 1.8;
-    color: #fff;
-    margin-bottom: 18px;
-   
-}
-
-.about-highlight {
-    font-style: italic;
-}
-
-/* 🔥 ROW PERFETTA (con margine laterale elegante) */
-.team-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    padding: 0 40px; /* 🔥 QUESTO CREA IL RESPIRO LATERALE */
-}
-
-/* CARD */
-.team-card {
-    text-align: center;
-}
-
-/* IMAGE */
-.team-card img {
-    width: 100%;
-    aspect-ratio: 1 / 1.1;
-    object-fit: cover;
-}
-
-/* NOME */
-.team-card h3 {
-    margin-top: 12px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #111;
-}
-
-/* RUOLO */
-.team-card p {
-    font-size: 11px;
-    color: #777;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-top: 4px;
-}
-
 /* RESPONSIVE */
 @media (max-width: 992px) {
     .team-row {
@@ -1503,36 +1355,6 @@ section.container { background-color: #fff; }
     opacity: 0.7;
     transition: 0.3s;
 }
-
-/* MODAL GALLERY */
-.custom-modal {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-}
-
-.custom-modal .modal-body {
-    background: transparent;
-    padding: 0;
-}
-
-.modal-backdrop.show {
-    opacity: 0.9;
-}
-
-.modal .btn-light {
-    background: rgba(255,255,255,0.2);
-    border: none;
-    color: #fff;
-    backdrop-filter: blur(5px);
-    font-size: 2rem;
-    padding: 10px 15px;
-}
-
-.modal .btn-light:hover {
-    background: rgba(255,255,255,0.4);
-}
-
 
 /* ===== HERO BASE ===== */
 
@@ -1735,7 +1557,7 @@ section.container { background-color: #fff; }
 }
 
 
-/* ===== PAGE BASE (ZARA PREMIUM DARK EDITORIAL) ===== */
+/* ===== PAGE BASE ===== */
 
 .gallery-page {
     font-family: 'Playfair Display', serif;
@@ -1802,7 +1624,7 @@ section.container { background-color: #fff; }
     transform: translateY(-2px);
 }
 
-/* ===== GALLERY GRID (PINTEREST STYLE PREMIUM) ===== */
+/* ===== GALLERY GRID  ===== */
 
 .gallery-masonry {
     column-count: 4;
@@ -1893,4 +1715,267 @@ section.container { background-color: #fff; }
 
 @media (max-width: 480px) {
     .gallery-masonry { column-count: 1; }
+}
+
+/* ===== PAGE ===== */
+.about-page {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    padding: 80px 20px;
+}
+
+/* ===== WRAPPER ===== */
+.about-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+.about-header {
+    margin-bottom: 60px;
+}
+
+.about-title {
+    font-size: 3.5rem;
+    letter-spacing: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.about-subtitle {
+    font-size: 1rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    
+}
+
+/* ===== EDITORIAL TEXT ===== */
+.about-editorial {
+    max-width: 650px;
+    margin: 0 auto 80px auto;
+    text-align: center;
+}
+
+.about-editorial p {
+    font-size: 1.20rem;
+    line-height: 1.9;
+    margin-bottom: 18px;
+    opacity: 0.9;
+}
+
+.about-highlight {
+    font-style: italic;
+    opacity: 1;
+}
+
+/* ===== TEAM GRID ===== */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* ===== CARD ===== */
+.team-card {
+    text-align: center;
+}
+
+/* ===== IMAGE ===== */
+.team-image {
+    overflow: hidden;
+}
+
+.team-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+/* effetto luxury */
+.team-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.85);
+}
+
+/* ===== TEXT ===== */
+.team-info {
+    margin-top: 12px;
+}
+
+.team-info h3 {
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.team-info p {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .about-title {
+        font-size: 2.2rem;
+        letter-spacing: 4px;
+    }
+
+    .about-subtitle {
+        white-space: nowrap;
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+.about-quote {
+    margin-top: 20px;
+}
+
+.about-quote em {
+    display: block;
+    font-style: italic;
+    font-size: 1.30rem;
+    letter-spacing: 1px; 
+}
+
+
+/* =========================
+   MODAL GALLERY FINAL (CLEAN + PREMIUM)
+========================= */
+
+/* BACKDROP SCURO PERFETTO */
+.modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.92) !important;
+    opacity: 1 !important;
+}
+
+/* MODAL CLEAN */
+.custom-modal {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* CONTENT CLEAN */
+.custom-modal .modal-content {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* BODY CENTRATO STABILE */
+.custom-modal .modal-body {
+    position: relative;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 🔥 FIX FONDAMENTALE PER ELIMINARE “CORNICI NERE” */
+    background: transparent;
+}
+
+/* =========================
+   IMMAGINE (VERSIONE CORRETTA)
+========================= */
+
+.modal-img {
+    max-width: 90vw;
+    max-height: 85vh;
+
+    width: auto;
+    height: auto;
+
+    /* 🔥 NON TAGLIA + NON CREA CORNICI */
+    object-fit: contain;
+
+    /* elimina “effetto box” percepito */
+    background: transparent;
+    display: block;
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* =========================
+   FRECCE STABILI
+========================= */
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #fff;
+
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* aggancio stabile al container */
+.custom-modal .modal-body .nav-btn.left {
+    left: 15px;
+}
+
+.custom-modal .modal-body .nav-btn.right {
+    right: 15px;
+}
+
+/* hover */
+.nav-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .nav-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 1.4rem;
+    }
+
+    .custom-modal .modal-body .nav-btn.left {
+        left: 8px;
+    }
+
+    .custom-modal .modal-body .nav-btn.right {
+        right: 8px;
+    }
+
+    .modal-img {
+        max-width: 95vw;
+        max-height: 75vh;
+    }
 }
