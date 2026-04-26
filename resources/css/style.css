@@ -6,6 +6,16 @@
   --bianco: #f5f5f5;
   --bianco-puro: #fff;
 }
+@media (max-width: 991px) {
+  body {
+    background:   #a6b0bc !important;
+  }
+
+  .min-vh-100 {
+    background:   #a6b0bc !important;
+    background-image: none !important;
+  }
+}
 
 /* ======= BASE ======= */
 html, body {
@@ -41,7 +51,7 @@ html, body {
 }
 
 body {
-  background: url('/images/sfondo1.jpeg') no-repeat center center fixed;
+  background: url('/images/sfondo3.jpeg') no-repeat center center fixed;
   background-size: cover;
 }
 
