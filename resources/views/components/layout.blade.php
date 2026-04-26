@@ -8,7 +8,7 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    {{-- <link rel="preload" as="image" href="/images/sfondo3.jpg"> --}}
+    <link rel="preload" as="image" href="/images/sfondo3.jpg">
 
     <title>@yield('title', 'Liso Barber Shop | Barbiere ad Andria')</title>
     <meta name="description" content="@yield('meta_description', 'Liso Barber Shop è il barbiere di riferimento ad Andria. Taglio uomo, barba e stile moderno. Prenota ora il tuo appuntamento.')">
@@ -29,8 +29,8 @@
 
     <x-navbar />
 
-    <div>
-        {{-- class="min-vh-100"style="background-image: url('/images/sfondo1.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;"> --}}
+    <div
+        class="min-vh-100"style="background-image: url('/images/sfondo3.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
         {{ $slot }}
     </div>
 

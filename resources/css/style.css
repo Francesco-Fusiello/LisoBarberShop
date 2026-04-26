@@ -1979,7 +1979,8 @@ section.container { background-color: #fff; }
         max-height: 75vh;
     }
 }
-html, body {
+
+/* html, body {
     background-color:#888580 !important;
     background: #888580 !important;
-} 
+}  */
