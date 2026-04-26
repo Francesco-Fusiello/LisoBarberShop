@@ -31,24 +31,25 @@
                 <!-- Badge App Store & Google Play -->
                 <div class="row justify-content-center mt-4">
                     <div class="col-md-8">
-                        <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap mt-4">
-                            <!-- App Store Badge -->
-                            <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank">
-                                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=250x83"
-                                    alt="Scarica su App Store" style="height: 60px; max-width: 100%; object-fit: contain;">
-                            </a>
+                        <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4">
 
-                            <!-- Google Play Badge -->
-                            <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank">
-                                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png"
-                                    alt="Disponibile su Google Play"
-                                    style="height: 78px; max-width: 100%; object-fit: contain;">
-                            </a>
-                        </div>
+                    <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank"
+                        class="store-badge">
+                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=150x50"
+                            alt="App Store">
+                    </a>
+
+                    <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank"
+                        class="store-badge">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png"
+                            alt="Google Play">
+                    </a>
+
+                </div>
                     </div>
                 </div>
 
-                <div class="d-flex justify-content-center my-5">
+                <div class="d-flex justify-content-center">
                     <div class="custom-divider"></div>
                 </div>
 

@@ -2048,7 +2048,7 @@ section.container { background-color: #fff; }
 
 /* piccolo bilanciamento ottico */
 .store-badge:last-child img {
-    transform: scale(0.94);
+    transform: scale(0.95);
 }
 
 /* HOVER ZOOM ELEGANTE */
