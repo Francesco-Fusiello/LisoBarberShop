@@ -40,7 +40,7 @@
                 <!-- Lista prodotti filtrati / iniziali -->
                 <template x-for="product in results" :key="product.id">
                     <div class="col-6 col-md-4 mb-4 d-flex">
-                        <div class="card shadow-sm border-0 w-100 d-flex flex-column"
+                        <div class="zara-card w-100 d-flex flex-column"
                             style="
                                 height: 100%;
                                 background-color: #ffffff;
