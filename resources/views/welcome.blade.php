@@ -65,15 +65,20 @@
                     Scarica la nostra app per prenotare subito il tuo appuntamento
                 </h3>
 
-                <div class="d-flex justify-content-center align-items-center flex-wrap gap-4">
-                    <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank">
+                <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4">
+
+                    <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank"
+                        class="store-badge">
                         <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=150x50"
-                            alt="App Store" style="height: 50px;">
+                            alt="App Store">
                     </a>
-                    <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank">
+
+                    <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank"
+                        class="store-badge">
                         <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png"
-                            alt="Google Play" style="height: 66px;">
+                            alt="Google Play">
                     </a>
+
                 </div>
 
             </div>
