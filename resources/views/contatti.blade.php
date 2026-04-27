@@ -5,10 +5,9 @@
         'Contatta Liso Barber Shop ad Andria. Scopri indirizzo, orari, telefono, email e
         prenota facilmente tramite la nostra app.')
 
-        <section class="py-5" style="background-color: #0b2e1d; font-family: 'Playfair Display', serif; color: #fff;" data-aos="fade-up">
+        <section class="py-5"data-aos="fade-up">
             <div class="container">
-                <h1 class="text-center mb-4"
-                    style="font-size: 3.5rem; font-weight: 700; letter-spacing: 2px; color: #ffffff;">
+                <h1 class="text-center mb-4 gallery-title">
                     CONTATTI
                 </h1>
 

@@ -3,8 +3,7 @@
         style="background-color: #ffffff; font-family: 'Playfair Display', serif; color: #333;"data-aos="fade-up">
         <div class="container">
             <div class="text-center mb-5">
-                <h1 class="text-center display-4"
-                    style="color: #fff; font-family: 'Playfair Display', serif;font-weight: 700;">
+                <h1 class="text-center gallery-title">
                     LISTINO PREZZI
                 </h1>
                 <h4 class="fst-italic" style="color: #ffffff;">Scopri i nostri Servizi</h4>
@@ -36,7 +35,7 @@
 
             <div class="row justify-content-center text-center">
                 <div class="col-lg-10">
-                    <h2 class="pt-3 fst-italic" style="color: #ffffff;">Che Aspetti!!!</h2>
+                    <h2 class="pt-3 fst-italic" style="color: #ffffff;">Che Aspetti!</h2>
                     <h2 class="fst-italic" style="color: #ffffff;">Scarica la nostra app per prenotare subito il tuo
                         appuntamento...</h2>
                 </div>
