@@ -6,22 +6,22 @@
   --bianco: #f5f5f5;
   --bianco-puro: #fff;
 }
-/* Sfondo stile muro Barber Shop - Applicato a tutto il sito */
+
 body, .min-vh-100 {
   /* Colore di fallback se il gradiente non carica */
   background-color: #8C8C8C !important;
   
-  /* Gradiente radiale: luce al centro e ombra ai lati come nella tua foto */
+  /* Gradiente radiale: luce al centro e ombra ai lati */
   background-image: radial-gradient(circle at center, #A3A3A3 0%, #8C8C8C 50%, #6E6E6E 100%) !important;
   
-  /* Blocca lo sfondo così non scorre insieme al testo (effetto premium) */
+  /* Blocca lo sfondo così non scorre insieme al testo*/
   background-attachment: fixed !important;
   
   /* Copre l'intera area visibile senza ripetizioni o tagli */
   background-size: cover !important;
   background-repeat: no-repeat !important;
   
-  /* Opzionale: assicura che lo sfondo occupi sempre tutta l'altezza */
+  /*assicura che lo sfondo occupi sempre tutta l'altezza */
   min-height: 100vh;
 }
 
