@@ -1,178 +1,201 @@
 <x-layout>
-
     @section('title', 'Servizi Barbiere ad Andria | Liso Barber Shop')
-    @section('meta_description', 'Scopri tutti i servizi di Liso Barber Shop ad Andria: taglio uomo, rasatura
-        tradizionale, modellatura barba, colorazione capelli e styling. Prenota subito!')
+    @section('meta_description', 'Esperienza di lusso da Liso Barber Shop: i migliori servizi di barberia ad Andria in un ambiente ricercato.')
 
-        <section class="py-5" style=" color: white; font-family: 'Lato', sans-serif;">
-            <div class="container">
-                <h2 id="taglio-uomo" class="text-center mb-5 display-4"
-                    style="color: #fff; font-family: 'Playfair Display', serif;font-weight: 700;">
-                    I Nostri Servizi
-                </h2>
+    <section class="py-5" id="taglio-uomo" style="color: white; font-family: 'Lato', sans-serif;">
+        <div class="container">
+            <!-- TITOLO ELITE -->
+            <h2 id="titolo-servizi" class="text-center mb-5 display-4 gallery-title" data-aos="fade-up">
+                I Nostri Servizi
+            </h2>
 
-                <!-- Servizio: Taglio Uomo -->
-                <div class="row align-items-center mb-5" data-aos="fade-up">
-                    <div class="col-md-6 mt-3 mt-md-0">
-                        <img src="/images/services/taglioUomo.jpeg" class="img-fluid" alt="Taglio Uomo" loading="lazy"
-                            decoding="async">
-                    </div>
-                    <div class="col-md-6 d-flex">
-                        <div class="text-box p-4 w-100" style="background-color: #fff;">
-                            <h3 class="mb-3 pt-1" style="color: #000; font-family:  'Playfair Display', serif;">Taglio Uomo
-                            </h3>
-                            <p style="color: #000;">
-                                Il nostro servizio di taglio uomo è pensato per valorizzare ogni tipo di volto e stile
-                                personale. Attraverso una consulenza personalizzata, i nostri barbieri esperti realizzano
-                                tagli
-                                classici o moderni, utilizzando tecniche avanzate per garantire precisione e durata nel
-                                tempo.
-                            </p>
+            <!-- 1. TAGLIO UOMO -->
+            <div id="taglio-uomo" class="row align-items-center mb-0 g-0" data-aos="fade-up" style="margin-bottom: 2px !important;">
+                <div class="col-md-6 overflow-hidden">
+                    <img src="/images/services/taglioUomo.jpeg" class="img-fluid w-100" alt="Taglio Uomo" 
+                         style="height: 450px; object-fit: cover; filter: grayscale(20%) contrast(1.1) brightness(0.9); transition: 0.7s ease;">
+                </div>
+                <div class="col-md-6 d-flex">
+                    <div class="text-box p-5 w-100" 
+                         style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.03); min-height: 450px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 10;">
+                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #999; text-transform: uppercase; margin-bottom: 15px;">Servizio 01</span>
+                        <h3 class="mb-4" style="color: #000; font-family: 'Playfair Display', serif; font-weight: 400; text-transform: uppercase; letter-spacing: 5px; font-size: 1.8rem; border-left: 2px solid #000; padding-left: 20px;">
+                            Taglio Uomo
+                        </h3>
+                        <p style="color: #555; line-height: 2; font-weight: 300; font-size: 1.1rem; padding-left: 22px;">
+                            Valorizziamo ogni volto con precisione millimetrica. Una consulenza sartoriale per un look che definisce la tua personalità.
+                        </p>
+                        <div style="margin-top: 30px; padding-left: 22px;">
+                             <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; color: #000; cursor: pointer;">Dettagli</span>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Servizio: Trattamenti Capelli -->
-                <div class="row align-items-center mb-5 flex-md-row-reverse" data-aos="fade-up">
-                    <div class="col-md-6 mt-3 mt-md-0">
-                        <img src="/images/services/trattamentiCapelli.jpeg" class="img-fluid" alt="Trattamenti Capelli"
-                            loading="lazy" decoding="async">
-                    </div>
-                    <div class="col-md-6 d-flex">
-                        <div class="text-box p-4 w-100" style="background-color: #fff;">
-                            <h3 class="mb-3 pt-1" style="color: #000; font-family: 'Playfair Display', serif;">
-                                Trattamenti Capelli
-                            </h3>
-                            <p style="color: #000;" id="modellatura-barba">
-                                Prenditi cura della salute dei tuoi capelli con i nostri trattamenti specifici. Dalla
-                                ricostruzione
-                                alla detossinazione del cuoio capelluto, utilizziamo prodotti professionali per rinforzare e
-                                rivitalizzare i tuoi capelli, restituendo loro lucentezza e vitalità.
-                            </p>
+            <!-- 2. TRATTAMENTI CAPELLI (INVERTITO) -->
+            <div class="row align-items-center mb-0 g-0 flex-md-row-reverse" data-aos="fade-up" style="margin-bottom: 2px !important;">
+                <div class="col-md-6 overflow-hidden">
+                    <img src="/images/services/trattamentiCapelli.jpeg" class="img-fluid w-100" alt="Trattamenti Capelli" 
+                         style="height: 450px; object-fit: cover; filter: grayscale(20%) contrast(1.1) brightness(0.9);">
+                </div>
+                <div class="col-md-6 d-flex">
+                    <div class="text-box p-5 w-100" 
+                         style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.03); min-height: 450px; display: flex; flex-direction: column; justify-content: center;">
+                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #999; text-transform: uppercase; margin-bottom: 15px;">Servizio 02</span>
+                        <h3 id="modellatura-barba" class="mb-4" style="color: #000; font-family: 'Playfair Display', serif; font-weight: 400; text-transform: uppercase; letter-spacing: 5px; font-size: 1.8rem; border-left: 2px solid #000; padding-left: 20px;">
+                            Trattamenti Capelli
+                        </h3>
+                        <p style="color: #555; line-height: 2; font-weight: 300; font-size: 1.1rem; padding-left: 22px;">
+                            Rituali di rigenerazione cutanea e capillare. Utilizziamo essenze e prodotti d’eccellenza per una vitalità assoluta.
+                        </p>
+                        <div style="margin-top: 30px; padding-left: 22px;">
+                             <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; color: #000; cursor: pointer;">Dettagli</span>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Servizio: Modellatura Barba -->
-                <div class="row align-items-center mb-5" data-aos="fade-up">
-                    <div class="col-md-6 mt-3 mt-md-0">
-                        <img src="/images/services/modellaturaBarba.JPG" class="img-fluid" alt="Modellatura Barba"
-                            loading="lazy" decoding="async">
-                    </div>
-                    <div class="col-md-6 d-flex">
-                        <div class="text-box p-4 w-100" style="background-color: #fff;">
-                            <h3 class="mb-3 pt-1" style="color: #000; font-family: 'Playfair Display', serif;">
-                                Modellatura Barba
-                            </h3>
-                            <p style="color: #000;">
-                                La barba è un elemento distintivo del tuo look. Offriamo un servizio di modellatura barba su
-                                misura, che include la definizione delle linee, la regolazione della lunghezza e trattamenti
-                                specifici per mantenere la barba morbida e curata.
-                            </p>
+            <!-- 3. MODELLATURA BARBA -->
+            <div class="row align-items-center mb-0 g-0" data-aos="fade-up" style="margin-bottom: 2px !important;">
+                <div class="col-md-6 overflow-hidden">
+                    <img src="/images/services/modellaturaBarba.JPG" class="img-fluid w-100" alt="Modellatura Barba" 
+                         style="height: 450px; object-fit: cover; filter: grayscale(20%) contrast(1.1) brightness(0.9);">
+                </div>
+                <div class="col-md-6 d-flex">
+                    <div class="text-box p-5 w-100" 
+                         style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.03); min-height: 450px; display: flex; flex-direction: column; justify-content: center;">
+                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #999; text-transform: uppercase; margin-bottom: 15px;">Servizio 03</span>
+                        <h3 class="mb-4" style="color: #000; font-family: 'Playfair Display', serif; font-weight: 400; text-transform: uppercase; letter-spacing: 5px; font-size: 1.8rem; border-left: 2px solid #000; padding-left: 20px;">
+                            Modellatura Barba
+                        </h3>
+                        <p style="color: #555; line-height: 2; font-weight: 300; font-size: 1.1rem; padding-left: 22px;">
+                            L’arte della definizione. Sagomatura a lama libera e trattamenti con oli caldi per una barba impeccabile.
+                        </p>
+                        <div style="margin-top: 30px; padding-left: 22px;">
+                             <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; color: #000; cursor: pointer;">Dettagli</span>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Servizio: Taglio Bambino -->
-                <div class="row align-items-center mb-5 flex-md-row-reverse" data-aos="fade-up">
-                    <div class="col-md-6 mt-3 mt-md-0">
-                        <img src="/images/services/taglioBambino.jpeg" class="img-fluid" alt="Taglio Bambino" loading="lazy"
-                            decoding="async">
-                    </div>
-                    <div class="col-md-6 d-flex">
-                        <div class="text-box p-4 w-100" style="background-color: #fff;">
-                            <h3 class="mb-3 pt-1" style="color: #000; font-family: 'Playfair Display', serif;">
-                                Taglio Bambino
-                            </h3>
-                            <p style="color: #000;">
-                                Anche i più piccoli meritano un taglio alla moda! Il nostro servizio di taglio bambino è
-                                pensato per offrire un'esperienza piacevole e divertente, con tagli moderni e adatti
-                                all'età.
-                            </p>
+            <!-- 4. TAGLIO BAMBINO (INVERTITO) -->
+            <div class="row align-items-center mb-0 g-0 flex-md-row-reverse" data-aos="fade-up" style="margin-bottom: 2px !important;">
+                <div class="col-md-6 overflow-hidden">
+                    <img src="/images/services/taglioBambino.jpeg" class="img-fluid w-100" alt="Taglio Bambino" 
+                         style="height: 450px; object-fit: cover; filter: grayscale(20%) contrast(1.1) brightness(0.9);">
+                </div>
+                <div class="col-md-6 d-flex">
+                    <div class="text-box p-5 w-100" 
+                         style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.03); min-height: 450px; display: flex; flex-direction: column; justify-content: center;">
+                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #999; text-transform: uppercase; margin-bottom: 15px;">Servizio 04</span>
+                        <h3 class="mb-4" style="color: #000; font-family: 'Playfair Display', serif; font-weight: 400; text-transform: uppercase; letter-spacing: 5px; font-size: 1.8rem; border-left: 2px solid #000; padding-left: 20px;">
+                            Taglio Bambino
+                        </h3>
+                        <p style="color: #555; line-height: 2; font-weight: 300; font-size: 1.1rem; padding-left: 22px;">
+                            Anche i più piccoli meritano l’eccellenza. Uno stile moderno in un’atmosfera accogliente e professionale.
+                        </p>
+                        <div style="margin-top: 30px; padding-left: 22px;">
+                             <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; color: #000; cursor: pointer;">Dettagli</span>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Servizio: Colorazione Capelli -->
-                <div class="row align-items-center mb-5" data-aos="fade-up">
-                    <div class="col-md-6 mt-3 mt-md-0">
-                        <img src="/images/services/ColorazioneCapelli1.jpeg" class="img-fluid" alt="Colorazione Capelli"
-                            loading="lazy" decoding="async">
-                    </div>
-                    <div class="col-md-6 d-flex">
-                        <div class="text-box p-4 w-100" style="background-color: #fff;">
-                            <h3 class="mb-3 pt-1" style="color: #000; font-family: 'Playfair Display', serif;">
-                                Colorazione Capelli
-                            </h3>
-                            <p style="color: #000;" id="rasatura-tradizionale">
-                                Desideri un cambio di look o coprire i capelli bianchi? La nostra colorazione capelli offre
-                                una vasta gamma di tonalità, garantendo un risultato naturale e duraturo. Utilizziamo
-                                prodotti
-                                senza ammoniaca per rispettare la salute del capello.
-                            </p>
+            <!-- 5. COLORAZIONE CAPELLI -->
+            <div class="row align-items-center mb-0 g-0" data-aos="fade-up" style="margin-bottom: 2px !important;">
+                <div class="col-md-6 overflow-hidden">
+                    <img src="/images/services/ColorazioneCapelli1.jpeg" class="img-fluid w-100" alt="Colorazione Capelli" 
+                         style="height: 450px; object-fit: cover; filter: grayscale(20%) contrast(1.1) brightness(0.9);">
+                </div>
+                <div class="col-md-6 d-flex">
+                    <div class="text-box p-5 w-100" 
+                         style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.03); min-height: 450px; display: flex; flex-direction: column; justify-content: center;">
+                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #999; text-transform: uppercase; margin-bottom: 15px;">Servizio 05</span>
+                        <h3 id="rasatura-tradizionale" class="mb-4" style="color: #000; font-family: 'Playfair Display', serif; font-weight: 400; text-transform: uppercase; letter-spacing: 5px; font-size: 1.8rem; border-left: 2px solid #000; padding-left: 20px;">
+                            Colorazione Capelli
+                        </h3>
+                        <p style="color: #555; line-height: 2; font-weight: 300; font-size: 1.1rem; padding-left: 22px;">
+                            Sfumature naturali e copertura perfetta con pigmenti organici privi di ammoniaca, per il massimo rispetto del capello.
+                        </p>
+                        <div style="margin-top: 30px; padding-left: 22px;">
+                             <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; color: #000; cursor: pointer;">Dettagli</span>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Servizio: Rasatura Tradizionale -->
-                <div class="row align-items-center mb-5 flex-md-row-reverse" data-aos="fade-up">
-                    <div class="col-md-6 mt-3 mt-md-0">
-                        <img src="/images/services/rasaturaTradizionale.jpeg" class="img-fluid" alt="Rasatura Tradizionale"
-                            loading="lazy" decoding="async">
-                    </div>
-                    <div class="col-md-6 d-flex">
-                        <div class="text-box p-4 w-100" style="background-color: #fff;">
-                            <h3 class="mb-3 pt-1" style="color: #000; font-family: 'Playfair Display', serif;">
-                                Rasatura Tradizionale
-                            </h3>
-                            <p style="color: #000;">
-                                Riscopri il piacere della rasatura tradizionale con panno caldo. Un rituale che combina
-                                relax e cura della pelle, utilizzando prodotti di alta qualità per una rasatura profonda
-                                e confortevole. Ideale per chi desidera un momento di benessere autentico.
-                            </p>
+            <!-- 6. RASATURA TRADIZIONALE (INVERTITO) -->
+            <div class="row align-items-center mb-0 g-0 flex-md-row-reverse" data-aos="fade-up" style="margin-bottom: 2px !important;">
+                <div class="col-md-6 overflow-hidden">
+                    <img src="/images/services/rasaturaTradizionale.jpeg" class="img-fluid w-100" alt="Rasatura Tradizionale" 
+                         style="height: 450px; object-fit: cover; filter: grayscale(20%) contrast(1.1) brightness(0.9);">
+                </div>
+                <div class="col-md-6 d-flex">
+                    <div class="text-box p-5 w-100" 
+                         style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.03); min-height: 450px; display: flex; flex-direction: column; justify-content: center;">
+                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #999; text-transform: uppercase; margin-bottom: 15px;">Servizio 06</span>
+                        <h3 class="mb-4" style="color: #000; font-family: 'Playfair Display', serif; font-weight: 400; text-transform: uppercase; letter-spacing: 5px; font-size: 1.8rem; border-left: 2px solid #000; padding-left: 20px;">
+                            Rasatura Tradizionale
+                        </h3>
+                        <p style="color: #555; line-height: 2; font-weight: 300; font-size: 1.1rem; padding-left: 22px;">
+                            Il rito senza tempo del panno caldo e del rasoio a mano libera. Un momento di puro benessere e relax.
+                        </p>
+                        <div style="margin-top: 30px; padding-left: 22px;">
+                             <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; color: #000; cursor: pointer;">Dettagli</span>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Servizio: Styling e Piega Uomo -->
-                <div class="row align-items-center mb-5" data-aos="fade-up">
-                    <div class="col-md-6 mt-3 mt-md-0">
-                        <img src="/images/services/stylingPiega.jpeg" class="img-fluid" alt="Styling e Piega Uomo"
-                            loading="lazy" decoding="async">
-                    </div>
-                    <div class="col-md-6 d-flex">
-                        <div class="text-box p-4 w-100" style="background-color: #fff;">
-                            <h3 class="mb-3 pt-1" style="color: #000; font-family: 'Playfair Display', serif;">
-                                Styling e Piega Uomo
-                            </h3>
-                            <p style="color: #000;">
-                                Completa il tuo look con il nostro servizio di styling e piega. Utilizziamo prodotti di alta
-                                qualità per modellare i tuoi capelli secondo le ultime tendenze.
-                            </p>
+            <!-- 7. STYLING E PIEGA -->
+            <div class="row align-items-center mb-0 g-0" data-aos="fade-up" style="margin-bottom: 2px !important;">
+                <div class="col-md-6 overflow-hidden">
+                    <img src="/images/services/stylingPiega.jpeg" class="img-fluid w-100" alt="Styling e Piega" 
+                         style="height: 450px; object-fit: cover; filter: grayscale(20%) contrast(1.1) brightness(0.9);">
+                </div>
+                <div class="col-md-6 d-flex">
+                    <div class="text-box p-5 w-100" 
+                         style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.03); min-height: 450px; display: flex; flex-direction: column; justify-content: center;">
+                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #999; text-transform: uppercase; margin-bottom: 15px;">Servizio 07</span>
+                        <h3 class="mb-4" style="color: #000; font-family: 'Playfair Display', serif; font-weight: 400; text-transform: uppercase; letter-spacing: 5px; font-size: 1.8rem; border-left: 2px solid #000; padding-left: 20px;">
+                            Styling e Piega
+                        </h3>
+                        <p style="color: #555; line-height: 2; font-weight: 300; font-size: 1.1rem; padding-left: 22px;">
+                            Il tocco finale. Modellazione con prodotti high-end per un’estetica duratura e sempre di tendenza.
+                        </p>
+                        <div style="margin-top: 30px; padding-left: 22px;">
+                             <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; color: #000; cursor: pointer;">Dettagli</span>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Servizio: Trattamenti Barba -->
-                <div class="row align-items-center mb-5 flex-md-row-reverse" data-aos="fade-up">
-                    <div class="col-md-6 mt-3 mt-md-0">
-                        <img src="/images/services/trattamentiBarba.PNG" class="img-fluid" alt="Trattamenti Barba"
-                            loading="lazy" decoding="async">
-                    </div>
-                    <div class="col-md-6 d-flex">
-                        <div class="text-box p-4 w-100" style="background-color: #fff;">
-                            <h3 class="mb-3 pt-1 mb-4" style="color: #000; font-family: 'Playfair Display', serif;">
-                                Trattamenti Barba
-                            </h3>
-                            <p style="color: #000;">
-                                Offriamo trattamenti mirati per nutrire, idratare e mantenere la tua barba in perfette
-                                condizioni, prevenendo irritazioni e secchezza della pelle.
-                            </p>
+            <!-- 8. TRATTAMENTI BARBA (INVERTITO) -->
+            <div class="row align-items-center mb-0 g-0 flex-md-row-reverse" data-aos="fade-up" style="margin-bottom: 2px !important;">
+                <div class="col-md-6 overflow-hidden">
+                    <img src="/images/services/trattamentiBarba.PNG" class="img-fluid w-100" alt="Trattamenti Barba" 
+                         style="height: 450px; object-fit: cover; filter: grayscale(20%) contrast(1.1) brightness(0.9);">
+                </div>
+                <div class="col-md-6 d-flex">
+                    <div class="text-box p-5 w-100" 
+                         style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.03); min-height: 450px; display: flex; flex-direction: column; justify-content: center;">
+                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #999; text-transform: uppercase; margin-bottom: 15px;">Servizio 08</span>
+                        <h3 class="mb-4" style="color: #000; font-family: 'Playfair Display', serif; font-weight: 400; text-transform: uppercase; letter-spacing: 5px; font-size: 1.8rem; border-left: 2px solid #000; padding-left: 20px;">
+                            Trattamenti Barba
+                        </h3>
+                        <p style="color: #555; line-height: 2; font-weight: 300; font-size: 1.1rem; padding-left: 22px;">
+                            Idratazione profonda e cura della pelle. Un trattamento sensoriale per prevenire irritazioni e nutrire il bulbo.
+                        </p>
+                        <div style="margin-top: 30px; padding-left: 22px;">
+                             <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; color: #000; cursor: pointer;">Dettagli</span>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <h3 class="text-center mt-4 pt-5 mb-4"
+            <!-- APP SECTION -->
+           
+<h3 class="text-center mt-4 pt-5 mb-4"
                     style="font-family: 'Playfair Display', serif; color: #fff; font-weight: 700;">
                     La tua esperienza inizia dall’app: prenotazioni rapide, conferme immediate e attenzione al dettaglio.
                     Scaricala ora.
@@ -193,6 +216,6 @@
                     </a>
 
                 </div>
-            </div>
-        </section>
-    </x-layout>
+        </div>
+    </section>
+</x-layout>
