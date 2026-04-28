@@ -39,15 +39,27 @@
             </div>
 
             @if (!$editingProductId)
-                <!-- IMMAGINE -->
-                <div class="col-12 mb-3">
-                    <label class="form-label">Immagine</label>
-                    <input wire:model="image" type="file" class="form-control">
-                    @error('image')
-                        <small class="text-danger">{{ $message }}</small>
-                    @enderror
-                </div>
-            @endif
+    <div class="col-12 mb-3" id="productUploader">
+        <label class="form-label">Immagine Prodotto</label>
+        
+        <input id="productImageInput" type="file" class="form-control" accept="image/*">
+        
+        @error('image')
+            <small class="text-danger">{{ $message }}</small>
+        @enderror
+
+        <div id="productUploadBox" class="mt-3" style="display: none;">
+            <div class="progress" style="height: 10px; background-color: #f0f0f0; border-radius: 5px; overflow: hidden;">
+                <div id="productUploadBar" class="progress-bar" 
+                     role="progressbar" style="width: 0%; background-color: #000; transition: width 0.3s ease;"></div>
+            </div>
+            <div class="d-flex justify-content-between mt-1">
+                <small class="text-muted" style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;"> ⏳ Upload in corso...</small>
+                <small class="text-muted" id="productUploadPercent" style="font-size: 0.7rem;">0%</small>
+            </div>
+        </div>
+    </div>
+@endif
 
             <div class="col-12 mb-3">
                 <button class="btn btn-primary">

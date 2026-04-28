@@ -94,7 +94,7 @@ class ProductCrud extends Component
 
     public function resetForm()
     {
-        $this->reset(['name','description','price','image','editingProductId']);
+        $this->reset(['name', 'description', 'price', 'image', 'editingProductId']);
     }
 
     public function confirmDelete($id)
@@ -106,22 +106,20 @@ class ProductCrud extends Component
     public function deleteProduct()
     {
         $p = Product::find($this->selectedProductId);
-        if (!$p) {
-            session()->flash('error','Prodotto non trovato.');
-            return;
+
+        if ($p) {
+            if ($p->image_path) {
+                Storage::disk('public')->delete($p->image_path);
+            }
+            $p->delete();
         }
 
-        Storage::disk('public')->delete($p->image_path);
-        $p->delete();
-
-        // RESET del form e validazioni quando elimini in modifica
-        $this->resetForm();
-        $this->resetValidation();
-
-        $this->showDeleteModal   = false;
+        // RESET TOTALE DELLO STATO
+        $this->showDeleteModal = false;
         $this->selectedProductId = null;
+        $this->resetPage(); // Importante se cancelli l'ultimo elemento di una pagina
 
-        session()->flash('message','Prodotto eliminato con successo!');
+        session()->flash('message', 'Prodotto eliminato con successo!');
     }
 
     public function applyFilter($ids)
@@ -134,7 +132,7 @@ class ProductCrud extends Component
     {
         $q = Product::query();
         if ($this->filteredProductIds) {
-            $q->whereIn('id',$this->filteredProductIds);
+            $q->whereIn('id', $this->filteredProductIds);
         }
 
         return view('livewire.product-crud', [

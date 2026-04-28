@@ -378,6 +378,90 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// ===============================
+// PRODUCT UPLOAD
+// ===============================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('productUploader');
+    if (!container) return;
+
+    const input = document.getElementById('productImageInput');
+    const bar = document.getElementById('productUploadBar');
+    const percent = document.getElementById('productUploadPercent');
+    const box = document.getElementById('productUploadBox');
+    const btn = container.closest('form').querySelector('button[type="submit"]');
+
+    // Trova il componente Livewire dei prodotti
+    const component = window.Livewire.find(
+        container.closest('[wire\\:id]').getAttribute('wire:id')
+    );
+
+    input.addEventListener('change', function (e) {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        const img = new Image();
+
+        reader.onload = (event) => { img.src = event.target.result; };
+        reader.readAsDataURL(file);
+
+        img.onload = () => {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const maxWidth = 1200; // Qualità top per prodotti
+
+            let width = img.width;
+            let height = img.height;
+
+            if (width > maxWidth) {
+                height = height * (maxWidth / width);
+                width = maxWidth;
+            }
+
+            canvas.width = width;
+            canvas.height = height;
+            ctx.drawImage(img, 0, 0, width, height);
+
+            canvas.toBlob((blob) => {
+                const compressedFile = new File([blob], file.name, {
+                    type: 'image/jpeg',
+                    lastModified: Date.now()
+                });
+
+                // UI Reset & Show
+                box.style.display = 'block';
+                if(btn) btn.disabled = true;
+                bar.style.width = '0%';
+                percent.innerText = '0%';
+
+                // Caricamento su Livewire (proprietà $image)
+                component.upload(
+                    'image',
+                    compressedFile,
+                    () => { // SUCCESS
+                        if(btn) btn.disabled = false;
+                        percent.innerText = "Caricato con successo";
+                        bar.style.width = "100%";
+                        setTimeout(() => { box.style.display = 'none'; }, 2000);
+                    },
+                    () => { // ERROR
+                        if(btn) btn.disabled = false;
+                        percent.innerText = "Errore nel caricamento";
+                        bar.style.backgroundColor = "#dc3545";
+                    },
+                    (event) => { // PROGRESS
+                        const progress = event.detail.progress;
+                        bar.style.width = progress + '%';
+                        percent.innerText = progress + '%';
+                    }
+                );
+            }, 'image/jpeg', 0.80); 
+        };
+    });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
 
   const btn = document.getElementById("booking-btn");
