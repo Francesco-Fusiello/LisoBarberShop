@@ -18,7 +18,7 @@
                 <div class="col-md-6 d-flex">
                     <div class="text-box p-5 w-100" 
                          style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.03); min-height: 450px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 10;">
-                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #999; text-transform: uppercase; margin-bottom: 15px;">Servizio 01</span>
+                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #000; text-transform: uppercase; margin-bottom: 15px;">EXPERIENCE I</span>
                         <h3 class="mb-4" style="color: #000; font-family: 'Playfair Display', serif; font-weight: 400; text-transform: uppercase; letter-spacing: 5px; font-size: 1.8rem; border-left: 2px solid #000; padding-left: 20px;">
                             Taglio Uomo
                         </h3>
@@ -26,7 +26,7 @@
                             Valorizziamo ogni volto con precisione millimetrica. Una consulenza sartoriale per un look che definisce la tua personalità.
                         </p>
                         <div style="margin-top: 30px; padding-left: 22px;">
-                             <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; color: #000; cursor: pointer;">Dettagli</span>
+                            
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                 <div class="col-md-6 d-flex">
                     <div class="text-box p-5 w-100" 
                          style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.03); min-height: 450px; display: flex; flex-direction: column; justify-content: center;">
-                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #999; text-transform: uppercase; margin-bottom: 15px;">Servizio 02</span>
+                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #000; text-transform: uppercase; margin-bottom: 15px;">EXPERIENCE II</span>
                         <h3 id="modellatura-barba" class="mb-4" style="color: #000; font-family: 'Playfair Display', serif; font-weight: 400; text-transform: uppercase; letter-spacing: 5px; font-size: 1.8rem; border-left: 2px solid #000; padding-left: 20px;">
                             Trattamenti Capelli
                         </h3>
@@ -49,7 +49,7 @@
                             Rituali di rigenerazione cutanea e capillare. Utilizziamo essenze e prodotti d’eccellenza per una vitalità assoluta.
                         </p>
                         <div style="margin-top: 30px; padding-left: 22px;">
-                             <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; color: #000; cursor: pointer;">Dettagli</span>
+                            
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                 <div class="col-md-6 d-flex">
                     <div class="text-box p-5 w-100" 
                          style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.03); min-height: 450px; display: flex; flex-direction: column; justify-content: center;">
-                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #999; text-transform: uppercase; margin-bottom: 15px;">Servizio 03</span>
+                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #000; text-transform: uppercase; margin-bottom: 15px;">EXPERIENCE III</span>
                         <h3 class="mb-4" style="color: #000; font-family: 'Playfair Display', serif; font-weight: 400; text-transform: uppercase; letter-spacing: 5px; font-size: 1.8rem; border-left: 2px solid #000; padding-left: 20px;">
                             Modellatura Barba
                         </h3>
@@ -72,7 +72,7 @@
                             L’arte della definizione. Sagomatura a lama libera e trattamenti con oli caldi per una barba impeccabile.
                         </p>
                         <div style="margin-top: 30px; padding-left: 22px;">
-                             <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; color: #000; cursor: pointer;">Dettagli</span>
+                             
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                 <div class="col-md-6 d-flex">
                     <div class="text-box p-5 w-100" 
                          style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.03); min-height: 450px; display: flex; flex-direction: column; justify-content: center;">
-                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #999; text-transform: uppercase; margin-bottom: 15px;">Servizio 04</span>
+                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #000; text-transform: uppercase; margin-bottom: 15px;">EXPERIENCE IV</span>
                         <h3 class="mb-4" style="color: #000; font-family: 'Playfair Display', serif; font-weight: 400; text-transform: uppercase; letter-spacing: 5px; font-size: 1.8rem; border-left: 2px solid #000; padding-left: 20px;">
                             Taglio Bambino
                         </h3>
@@ -95,7 +95,7 @@
                             Anche i più piccoli meritano l’eccellenza. Uno stile moderno in un’atmosfera accogliente e professionale.
                         </p>
                         <div style="margin-top: 30px; padding-left: 22px;">
-                             <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; color: #000; cursor: pointer;">Dettagli</span>
+                            
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                 <div class="col-md-6 d-flex">
                     <div class="text-box p-5 w-100" 
                          style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.03); min-height: 450px; display: flex; flex-direction: column; justify-content: center;">
-                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #999; text-transform: uppercase; margin-bottom: 15px;">Servizio 05</span>
+                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #000; text-transform: uppercase; margin-bottom: 15px;">EXPERIENCE V</span>
                         <h3 id="rasatura-tradizionale" class="mb-4" style="color: #000; font-family: 'Playfair Display', serif; font-weight: 400; text-transform: uppercase; letter-spacing: 5px; font-size: 1.8rem; border-left: 2px solid #000; padding-left: 20px;">
                             Colorazione Capelli
                         </h3>
@@ -118,7 +118,7 @@
                             Sfumature naturali e copertura perfetta con pigmenti organici privi di ammoniaca, per il massimo rispetto del capello.
                         </p>
                         <div style="margin-top: 30px; padding-left: 22px;">
-                             <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; color: #000; cursor: pointer;">Dettagli</span>
+                             
                         </div>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                 <div class="col-md-6 d-flex">
                     <div class="text-box p-5 w-100" 
                          style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.03); min-height: 450px; display: flex; flex-direction: column; justify-content: center;">
-                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #999; text-transform: uppercase; margin-bottom: 15px;">Servizio 06</span>
+                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #000; text-transform: uppercase; margin-bottom: 15px;">EXPERIENCE VI</span>
                         <h3 class="mb-4" style="color: #000; font-family: 'Playfair Display', serif; font-weight: 400; text-transform: uppercase; letter-spacing: 5px; font-size: 1.8rem; border-left: 2px solid #000; padding-left: 20px;">
                             Rasatura Tradizionale
                         </h3>
@@ -141,7 +141,7 @@
                             Il rito senza tempo del panno caldo e del rasoio a mano libera. Un momento di puro benessere e relax.
                         </p>
                         <div style="margin-top: 30px; padding-left: 22px;">
-                             <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; color: #000; cursor: pointer;">Dettagli</span>
+                             
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
                 <div class="col-md-6 d-flex">
                     <div class="text-box p-5 w-100" 
                          style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.03); min-height: 450px; display: flex; flex-direction: column; justify-content: center;">
-                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #999; text-transform: uppercase; margin-bottom: 15px;">Servizio 07</span>
+                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #000; text-transform: uppercase; margin-bottom: 15px;">EXPERIENCE VII</span>
                         <h3 class="mb-4" style="color: #000; font-family: 'Playfair Display', serif; font-weight: 400; text-transform: uppercase; letter-spacing: 5px; font-size: 1.8rem; border-left: 2px solid #000; padding-left: 20px;">
                             Styling e Piega
                         </h3>
@@ -164,7 +164,7 @@
                             Il tocco finale. Modellazione con prodotti high-end per un’estetica duratura e sempre di tendenza.
                         </p>
                         <div style="margin-top: 30px; padding-left: 22px;">
-                             <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; color: #000; cursor: pointer;">Dettagli</span>
+                             
                         </div>
                     </div>
                 </div>
@@ -179,7 +179,7 @@
                 <div class="col-md-6 d-flex">
                     <div class="text-box p-5 w-100" 
                          style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.03); min-height: 450px; display: flex; flex-direction: column; justify-content: center;">
-                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #999; text-transform: uppercase; margin-bottom: 15px;">Servizio 08</span>
+                        <span style="font-size: 0.7rem; letter-spacing: 5px; color: #000; text-transform: uppercase; margin-bottom: 15px;">EXPERIENCE VIII</span>
                         <h3 class="mb-4" style="color: #000; font-family: 'Playfair Display', serif; font-weight: 400; text-transform: uppercase; letter-spacing: 5px; font-size: 1.8rem; border-left: 2px solid #000; padding-left: 20px;">
                             Trattamenti Barba
                         </h3>
@@ -187,7 +187,7 @@
                             Idratazione profonda e cura della pelle. Un trattamento sensoriale per prevenire irritazioni e nutrire il bulbo.
                         </p>
                         <div style="margin-top: 30px; padding-left: 22px;">
-                             <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; color: #000; cursor: pointer;">Dettagli</span>
+                             
                         </div>
                     </div>
                 </div>
