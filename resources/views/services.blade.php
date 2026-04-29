@@ -4,22 +4,19 @@
         'Esperienza di lusso da Liso Barber Shop: i migliori servizi di barberia ad Andria in
         un ambiente ricercato.')
 
-        <section class=" container py-5" id="taglio-uomo" style="color: white; font-family: 'Lato', sans-serif;">
-            <div class="text-center mb-5" data-aos="fade-up">
+        <section class="gallery-page container" data-aos="fade-up" id="taglio-uomo">
+           <div class="gallery-header text-center" data-aos="fade-up">
+    <h2 class="gallery-title">
+        I Nostri Servizi
+    </h2>
+    <p class="gallery-subtitle">
+        Stile • Precisione • Identità
+    </p>
+</div>
 
-                <h2 id="titolo-servizi" class="display-4 gallery-title mb-1"
-                    style="color: white; font-family: serif; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">
-                    I Nostri Servizi
-                </h2>
 
-                <div class="pt-0 mt-0">
-                    <p
-                        style="font-family: 'Playfair Display', serif; font-size: 1rem; text-transform: uppercase; letter-spacing: 5px; color: #fff; margin: 15px 0 0 0; padding: 0; display: inline-block; width: 100%;">
-                        Stile • Precisione • Identità
-                    </p>
-                </div>
 
-            </div>
+            
 
             <!-- 1. TAGLIO UOMO -->
             <div id="taglio-uomo" class="row align-items-center mb-0 g-0" data-aos="fade-up"
