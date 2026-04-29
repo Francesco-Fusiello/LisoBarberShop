@@ -9,9 +9,9 @@
     <link rel="stylesheet">
 </head>
 
-<body class="error-body min-vh-100"style="background-image: url('/images/sfondo3.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+<body>
 
-    <div class="error-page">
+    <div class="min-vh-100">
         {{ $slot }}
     </div>
 </body>

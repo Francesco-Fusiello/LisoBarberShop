@@ -319,7 +319,7 @@
             </div>
 
             <div class="text-center mt-3">
-                <a href="https://www.google.com/search?sca_esv=01e84e26bfa42c3c&hl=it-IT&q=Liso+Barber+shop+Recensioni"
+                <a href="https://www.google.com/search?sca_esv=01e84e26bfa42c3c&hl=it-IT&sxsrf=ANbL-n6RzBy1zh1LrHHM0XiNO9Bo802Leg:1777487815776&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qORas8ytkq6_wqOh9SFVS7W7RAWT_ai5xuCJGmEQ1pLx_ncY2aU-kNpPzVyuPbgU9ezio5CxScPnaq3g7qpyJGDkabn4_bANqJxyu1LYTbqB5mpBU_g%3D%3D&q=Liso+Barber+shop+Recensioni&sa=X&ved=2ahUKEwiSjuiO2pOUAxVm2gIHHd-5NKoQ0bkNegQIPRAF&biw=1540&bih=736&dpr=1.25"
                     class="home-btn">
                     Scopri tutte le recensioni
                 </a>
