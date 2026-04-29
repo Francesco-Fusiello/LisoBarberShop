@@ -12,12 +12,19 @@ class ProductCrud extends Component
 {
     use WithFileUploads, WithPagination;
 
-    public $name, $description, $price, $image;
-    public $editingProductId = null;
-    public $selectedProductId;
-    public $showDeleteModal = false;
-    public $filteredProductIds = null;
+    public string $name = '';
+    public string $description = '';
+    /** @var mixed */
+    public $price;
+    /** @var \Livewire\Features\SupportFileUploads\TemporaryUploadedFile|null */
+    public $image;
+    
+    public ?int $editingProductId = null; // Il ? significa che può essere int oppure null
+    public ?int $selectedProductId = null;
+    public bool $showDeleteModal = false;
+    public ?array $filteredProductIds = null;
 
+    /** @var array */
     protected $listeners = [
         'filteredProducts' => 'applyFilter',
     ];
@@ -60,7 +67,7 @@ class ProductCrud extends Component
         return redirect()->to(request()->header('Referer'));
     }
 
-    public function editProduct($id)
+    public function editProduct(int $id)
     {
         $p = Product::findOrFail($id);
 
@@ -97,7 +104,7 @@ class ProductCrud extends Component
         $this->reset(['name', 'description', 'price', 'image', 'editingProductId']);
     }
 
-    public function confirmDelete($id)
+    public function confirmDelete(int $id)
     {
         $this->selectedProductId = $id;
         $this->showDeleteModal   = true;
@@ -122,7 +129,7 @@ class ProductCrud extends Component
         session()->flash('message', 'Prodotto eliminato con successo!');
     }
 
-    public function applyFilter($ids)
+    public function applyFilter(array $ids)
     {
         $this->filteredProductIds = is_array($ids) && count($ids) ? $ids : null;
         $this->resetPage();

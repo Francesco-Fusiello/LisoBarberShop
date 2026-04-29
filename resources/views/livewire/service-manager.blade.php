@@ -33,7 +33,7 @@
                     @endif
 
                     @foreach($services as $service)
-                        <tr>
+                        <tr wire:key="service-{{ $service->id }}">
                             <td>
                                 @if($editingServiceId === $service->id)
                                     <input wire:model.defer="name" class="form-control">

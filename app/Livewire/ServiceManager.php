@@ -5,37 +5,40 @@ namespace App\Livewire;
 use Livewire\Component;
 use App\Models\Service;
 
+
 class ServiceManager extends Component
 {
+    /** @var \Illuminate\Database\Eloquent\Collection */
     public $services;
-    public $editingServiceId = null;
-    public $creating = false;
-    public $name = '';
-    public $price = '';
-    public $deleteServiceId = null;
-    public $showDeleteModal = false;
 
-    public function mount()
+    public ?int $editingServiceId = null;
+    public bool $creating = false;
+    public string $name = '';
+    public string $price = '';
+    public ?int $deleteServiceId = null;
+    public bool $showDeleteModal = false;
+
+    public function mount(): void
     {
         $this->services = Service::all();
     }
 
-    public function edit($id)
+    public function edit(int $id): void
     {
         $service = Service::findOrFail($id);
         $this->editingServiceId = $service->id;
         $this->creating = false;
         $this->name = $service->name;
-        $this->price = $service->price;
+        $this->price = (string)$service->price;
     }
 
-    public function create()
+    public function create(): void
     {
         $this->resetForm();
         $this->creating = true;
     }
 
-    public function save()
+    public function save(): void
     {
         $this->validate([
             'name' => 'required|string|max:255',
@@ -50,18 +53,20 @@ class ServiceManager extends Component
             session()->flash('message', 'Servizio creato con successo!');
         } else {
             $service = Service::find($this->editingServiceId);
-            $service->update([
-                'name' => $this->name,
-                'price' => $this->price,
-            ]);
-            session()->flash('message', 'Servizio aggiornato con successo!');
+            if ($service) {
+                $service->update([
+                    'name' => $this->name,
+                    'price' => $this->price,
+                ]);
+                session()->flash('message', 'Servizio aggiornato con successo!');
+            }
         }
 
         $this->services = Service::all();
         $this->resetForm();
     }
 
-    public function resetForm()
+    public function resetForm(): void
     {
         $this->editingServiceId = null;
         $this->creating = false;
@@ -69,17 +74,22 @@ class ServiceManager extends Component
         $this->price = '';
     }
 
-    public function confirmDelete($id)
+    public function confirmDelete(int $id): void
     {
         $this->deleteServiceId = $id;
         $this->showDeleteModal = true;
     }
 
-    public function deleteService()
+    public function deleteService(): void
     {
-        Service::find($this->deleteServiceId)->delete();
+        $service = Service::find($this->deleteServiceId);
+        if ($service) {
+            $service->delete();
+        }
+        
         $this->services = Service::all();
         $this->showDeleteModal = false;
+        $this->deleteServiceId = null; // Reset per sicurezza
         session()->flash('message', 'Servizio eliminato con successo!');
     }
 

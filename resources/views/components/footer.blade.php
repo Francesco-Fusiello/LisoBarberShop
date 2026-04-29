@@ -68,7 +68,7 @@
         </a>
 
         <!-- Google -->
-        <a href="https://www.google.com/search?..." target="_blank" aria-label="Google" style="display:inline-block; width:36px; height:36px;">
+        <a href="https://www.google.com/search?q=lisobarbershop" target="_blank" aria-label="Google" style="display:inline-block; width:36px; height:36px;">
           <svg xmlns="http://www.w3.org/2000/svg" fill="#4285F4" viewBox="0 0 24 24" style="width:100%; height:100%;">
             <path d="M21.805 10.023h-9.427v3.975h5.918c-.255 1.47-1.648 4.309-5.918 4.309-3.566 0-6.47-2.958-6.47-6.59s2.903-6.59 6.47-6.59c2.034 0 3.395.873 4.182 1.63l2.847-2.73C17.838 5.06 15.77 4.125 13.06 4.125 7.34 4.125 3 8.722 3 14.334s4.34 10.208 10.06 10.208c5.8 0 9.67-4.067 9.67-9.8 0-.665-.075-1.1-.924-4.718z"/>
           </svg>

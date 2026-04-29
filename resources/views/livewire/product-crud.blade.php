@@ -75,7 +75,7 @@
     <h2 class="mt-5">Lista Prodotti</h2>
     <div class="row">
         @foreach ($products as $p)
-            <div class="col-md-4 mb-4">
+           <div class="col-md-4 mb-4" wire:key="product-{{ $p->id }}">
                 <div class="card h-100 shadow-sm">
                     @if ($p->image_path)
                         <img src="{{ Storage::url($p->image_path) }}" style="object-fit: cover; height:250px"
