@@ -230,8 +230,12 @@
 
 
         {{-- Recensioni --}}
-        <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff;" data-aos="fade-up">DICONO DI NOI
-        </h2>
+       <div class="text-center mb-5" data-aos="fade-up">
+    <h2 class="display-5 mb-0" style="font-weight: 700; color:#fff; text-transform: uppercase; letter-spacing: 5px;">
+        Dicono di noi
+    </h2>
+    <div class="luxury-hr-line bg-white mt-3 mx-auto"></div>
+</div>
         <section class="container my-5 google-reviews-zara"data-aos="fade-up">
 
             <!-- HEADER GOOGLE -->
@@ -332,9 +336,10 @@
         <section data-aos="fade-up">
             <div class="container text-center pb-5">
                 <h2 class="text-center display-5" style="font-weight: 700; color:#fff ">Scelti per te</h2>
+                 <div class="luxury-hr-line bg-white"></div>
                 <a href="{{ route('products') }}"
                     style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 1.20rem !important;">
-                    ▸ La selezione completa
+                    - La selezione completa
                 </a>
 
                 <div id="carouselProdotti" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500"

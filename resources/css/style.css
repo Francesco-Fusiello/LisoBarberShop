@@ -2145,21 +2145,3 @@ section.container { background-color: #fff; }
 }
 
 /* Assicurati che home-btn sia definito così per il bottone nero finale */
-.home-btn {
-    display: inline-block;
-    padding: 15px 40px;
-    background-color: #000;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: 0.3s;
-    border: 1px solid #000;
-}
-
-.home-btn:hover {
-    background-color: transparent;
-    color: #fff; /* Se lo sfondo generale è scuro */
-    border-color: #fff;
-}
