@@ -17,7 +17,7 @@
                 </h1>
 
                 <p class="hero-subtitle">
-                    Taglio • Barba • Stile Essenziale
+                    Stile • Precisione • Identità
                 </p>
 
                 <p class="hero-text">
@@ -41,47 +41,51 @@
 
         {{-- Descrizione sotto carousel Header --}}
         <div class="w-100 py-5" style="background-color: #ffffff; font-family: 'Lato', sans-serif;">
-    <div class="text-center mx-auto px-4 force-black" style="max-width: 900px;">
+            <div class="text-center mx-auto px-4 force-black" style="max-width: 900px;">
 
-        <h2 class="text-center display-5 mt-0" style="font-weight: 700;">
-            Per la bellezza e la cura dei capelli degli uomini
-        </h2>
+                <h2 class="text-center display-5 mt-0" style="font-weight: 700;">
+                    Per la bellezza e la cura dei capelli degli uomini
+                </h2>
 
-        <div class="luxury-hr-line"></div>
+                <div class="luxury-hr-line"></div>
 
-        <p class="lead mx-auto" style="max-width: 700px; color: #000;">
-            Nel cuore di Andria, <strong>Liso Barber Shop</strong> è un punto di riferimento
-            per l’uomo che desidera stile, precisione e cura dei dettagli.
-        </p>
+                <p class="lead mx-auto" style="max-width: 700px; color: #000;">
+                    Nel cuore di Andria, <strong>Liso Barber Shop</strong> è un punto di riferimento
+                    per l’uomo che desidera stile, precisione e cura dei dettagli.
+                </p>
 
-        <p class="lead mx-auto" style="max-width: 700px; color: #000;">
-            Il nostro salone ad Andria propone taglio uomo, rasatura tradizionale
-            e modellatura barba, con un approccio moderno che unisce tradizione e innovazione.
-        </p>
+                <p class="lead mx-auto" style="max-width: 700px; color: #000;">
+                    Il nostro salone ad Andria propone taglio uomo, rasatura tradizionale
+                    e modellatura barba, con un approccio moderno che unisce tradizione e innovazione.
+                </p>
 
-        <p class="lead mx-auto mb-5" style="max-width: 700px; color: #000;">
-            Ogni servizio è personalizzato per valorizzare il volto e l’identità di chi ci sceglie,
-            in un ambiente raffinato ed esclusivamente dedicato all’uomo.
-        </p>
+                <p class="lead mx-auto mb-5" style="max-width: 700px; color: #000;">
+                    Ogni servizio è personalizzato per valorizzare il volto e l’identità di chi ci sceglie,
+                    in un ambiente raffinato ed esclusivamente dedicato all’uomo.
+                </p>
 
-        <h3 class="mb-4" style="font-weight: 700;">
-            Scarica la nostra app per prenotare subito il tuo appuntamento
-        </h3>
+                <h3 class="mb-4" style="font-weight: 700;">
+                    Scarica la nostra app per prenotare subito il tuo appuntamento
+                </h3>
 
-        <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4">
-            
-            <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank" class="store-badge">
-                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=150x50" alt="App Store">
-            </a>
+                <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4">
 
-            <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank" class="store-badge">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png" alt="Google Play">
-            </a>
+                    <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank"
+                        class="store-badge">
+                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=150x50"
+                            alt="App Store">
+                    </a>
 
+                    <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank"
+                        class="store-badge">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png"
+                            alt="Google Play">
+                    </a>
+
+                </div>
+
+            </div>
         </div>
-
-    </div>
-</div>
 
 
 
@@ -91,6 +95,7 @@
         <section class="mosaic-section" data-aos="fade-up">
             <div class="text-center text-white">
                 <h2 class="fw-bold text-uppercase display-5" style="color: #fff">Il Nostro Salone</h2>
+                <div class="luxury-hr-line bg-white"></div>
                 <p class="lead">Uno spazio curato, moderno e accogliente.</p>
             </div>
             <div class="mosaic-grid col-md-10">
@@ -125,22 +130,26 @@
         </section>
 
         {{-- Servizi --}}
-        <section class="container py-3" data-aos="fade-up">
-            <h2 class="text-center display-5 mb-4" style="font-weight: 700; color:#fff ">I nostri servizi</h2>
-            <div class="row g-4 text-center">
+        <section class="container py-5 luxury-services-section" data-aos="fade-up">
+
+            <h2 class="text-center display-5 mt-0 luxury-title-highfashion text-white">
+                I nostri servizi
+            </h2>
+
+            <div class="luxury-hr-line bg-white"></div>
+
+            <div class="row g-4 text-center mt-3">
+
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow"
-                        style="background-color: #fff; color: #000;"data-aos="fade-up" data-aos-delay="100">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
-                            <img src="{{ asset('images/forbici1.png') }}" alt="Taglio Uomo" class="mb-3"
-                                style="width:64px; height:64px; object-fit:contain;">
-                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;font-size: 1.10rem;">
-                                Taglio Uomo</h5>
-                            <p class="card-text" style="font-size: 1.10rem; color: #000">Valorizziamo ogni tipo di
-                                volto e stile con tagli
-                                personalizzati.</p>
-                            <a href="{{ route('services') }}#taglio-uomo" class="btn btn-dark mt-auto"
-                                style="font-weight: 700; border-radius: 0; font-size: 0.7rem;">
+                    <div class="card h-100 luxury-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center px-4 py-5">
+                            <img src="{{ asset('images/forbici1.png') }}" alt="Taglio Uomo" class="mb-4"
+                                style="width:60px; height:60px; object-fit:contain;">
+                            <h5 class="luxury-card-title">Taglio Uomo</h5>
+                            <p class="luxury-card-text">
+                                Valorizziamo ogni tipo di volto e stile con tagli personalizzati.
+                            </p>
+                            <a href="{{ route('services') }}#taglio-uomo" class="luxury-btn-dark mt-auto">
                                 Scopri di più
                             </a>
                         </div>
@@ -148,19 +157,15 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow"
-                        style="background-color: #fff; color: #000;"data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
+                    <div class="card h-100 luxury-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center px-4 py-5">
                             <img src="{{ asset('images/macchinetta1.png') }}" alt="Rasatura Tradizionale"
-                                class="mb-3" style="width:64px; height:64px; object-fit:contain;">
-                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;font-size: 1.10rem;">
-                                Rasatura
-                                Tradizionale</h5>
-                            <p class="card-text" style="font-size: 1.10rem; color: #000">Rasatura con panno caldo e
-                                prodotti di alta
-                                qualità per un relax autentico.</p>
-                            <a href="{{ route('services') }}#rasatura-tradizionale" class="btn btn-dark mt-auto"
-                                style="font-weight: 700; border-radius: 0; font-size: 0.7rem;">
+                                class="mb-4" style="width:60px; height:60px; object-fit:contain;">
+                            <h5 class="luxury-card-title">Rasatura Tradizionale</h5>
+                            <p class="luxury-card-text">
+                                Rasatura con panno caldo e prodotti di alta qualità per un relax autentico.
+                            </p>
+                            <a href="{{ route('services') }}#rasatura-tradizionale" class="luxury-btn-dark mt-auto">
                                 Scopri di più
                             </a>
                         </div>
@@ -168,27 +173,25 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow"
-                        style="background-color: #fff; color: #000;"data-aos="fade-up" data-aos-delay="300">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
-                            <img src="{{ asset('images/baffi1.png') }}" alt="Rasatura Tradizionale" class="mb-3"
-                                style="width:64px; height:64px; object-fit:contain;">
-                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;font-size: 1.10rem;">
-                                Modellatura Barba
-                            </h5>
-                            <p class="card-text"style="font-size: 1.10rem; color: #000">Definizione e trattamenti per
-                                una barba morbida e
-                                curata.</p>
-                            <a href="{{ route('services') }}#modellatura-barba" class="btn btn-dark mt-auto"
-                                style="font-weight: 700; border-radius: 0; font-size: 0.7rem;">
+                    <div class="card h-100 luxury-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center px-4 py-5">
+                            <img src="{{ asset('images/baffi1.png') }}" alt="Modellatura Barba" class="mb-4"
+                                style="width:60px; height:60px; object-fit:contain;">
+                            <h5 class="luxury-card-title">Modellatura Barba</h5>
+                            <p class="luxury-card-text">
+                                Definizione e trattamenti per una barba morbida e curata.
+                            </p>
+                            <a href="{{ route('services') }}#modellatura-barba" class="luxury-btn-dark mt-auto">
                                 Scopri di più
                             </a>
                         </div>
                     </div>
                 </div>
+
             </div>
 
-            <div class="text-center mt-3"data-aos="fade-up" data-aos-delay="300">
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="400"
+                data-aos-anchor-placement="top-bottom">
                 <a href="{{ route('services') }}" class="home-btn">
                     Scopri tutti i servizi
                 </a>

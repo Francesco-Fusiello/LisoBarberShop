@@ -2090,3 +2090,76 @@ section.container { background-color: #fff; }
     background-color: #000000;
     margin: 25px auto 35px auto; 
 }
+
+/* --- LUXURY SERVICES CSS UPDATED --- */
+
+/* Forza la linea a essere bianca se ha la classe bg-white */
+.luxury-hr-line.bg-white {
+    background-color: #ffffff !important;
+}
+
+/* Card Luxury Minimal */
+.luxury-card {
+    background-color: #ffffff;
+    border: none !important; 
+    border-radius: 0 !important; /* Spigoli vivi */
+    transition: transform 0.3s ease;
+}
+
+.luxury-card:hover {
+    transform: translateY(-8px);
+}
+
+.luxury-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.luxury-card-text {
+    font-weight: 300;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Bottone Scopri di più (Nero dentro le card) */
+.luxury-btn-dark {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.luxury-btn-dark:hover {
+    background-color: transparent;
+    color: #000;
+}
+
+/* Assicurati che home-btn sia definito così per il bottone nero finale */
+.home-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+    border: 1px solid #000;
+}
+
+.home-btn:hover {
+    background-color: transparent;
+    color: #fff; /* Se lo sfondo generale è scuro */
+    border-color: #fff;
+}
