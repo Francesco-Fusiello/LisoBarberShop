@@ -2082,3 +2082,11 @@ section.container { background-color: #fff; }
     transform: scale(1.38);
     opacity: 0.9;
 }
+
+/* --- LINEA DI ACCENTO LUXURY --- */
+.luxury-hr-line {
+    width: 45px;          
+    height: 2px;         
+    background-color: #000000;
+    margin: 25px auto 35px auto; 
+}

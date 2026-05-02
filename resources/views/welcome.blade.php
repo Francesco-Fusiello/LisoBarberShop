@@ -41,49 +41,47 @@
 
         {{-- Descrizione sotto carousel Header --}}
         <div class="w-100 py-5" style="background-color: #ffffff; font-family: 'Lato', sans-serif;">
+    <div class="text-center mx-auto px-4 force-black" style="max-width: 900px;">
 
-            <div class="text-center mx-auto px-4 force-black" style="max-width: 900px;">
+        <h2 class="text-center display-5 mt-0" style="font-weight: 700;">
+            Per la bellezza e la cura dei capelli degli uomini
+        </h2>
 
-                <h2 class="text-center display-5 mt-0" style="font-weight: 700;">Per la bellezza e la cura dei capelli
-                    degli uomini</h2>
-                <p class="lead mx-auto" style="max-width: 700px; color: #000;">
-                    Nel cuore di Andria, <strong>Liso Barber Shop</strong> è un punto di riferimento
-                    per l’uomo che desidera stile, precisione e cura dei dettagli.
-                </p>
+        <div class="luxury-hr-line"></div>
 
-                <p class="lead mx-auto" style="max-width: 700px; color: #000;">
-                    Il nostro salone ad Andria propone taglio uomo, rasatura tradizionale
-                    e modellatura barba, con un approccio moderno che unisce tradizione e innovazione.
-                </p>
+        <p class="lead mx-auto" style="max-width: 700px; color: #000;">
+            Nel cuore di Andria, <strong>Liso Barber Shop</strong> è un punto di riferimento
+            per l’uomo che desidera stile, precisione e cura dei dettagli.
+        </p>
 
-                <p class="lead mx-auto mb-5" style="max-width: 700px; color: #000;">
-                    Ogni servizio è personalizzato per valorizzare il volto e l’identità di chi ci sceglie,
-                    in un ambiente raffinato ed esclusivamente dedicato all’uomo.
-                </p>
+        <p class="lead mx-auto" style="max-width: 700px; color: #000;">
+            Il nostro salone ad Andria propone taglio uomo, rasatura tradizionale
+            e modellatura barba, con un approccio moderno che unisce tradizione e innovazione.
+        </p>
 
-                <h3 class="mb-4" style="font-weight: 700;">
-                    Scarica la nostra app per prenotare subito il tuo appuntamento
-                </h3>
+        <p class="lead mx-auto mb-5" style="max-width: 700px; color: #000;">
+            Ogni servizio è personalizzato per valorizzare il volto e l’identità di chi ci sceglie,
+            in un ambiente raffinato ed esclusivamente dedicato all’uomo.
+        </p>
 
-                <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4">
+        <h3 class="mb-4" style="font-weight: 700;">
+            Scarica la nostra app per prenotare subito il tuo appuntamento
+        </h3>
 
-                    <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank"
-                        class="store-badge">
-                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=150x50"
-                            alt="App Store">
-                    </a>
+        <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4">
+            
+            <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank" class="store-badge">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=150x50" alt="App Store">
+            </a>
 
-                    <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank"
-                        class="store-badge">
-                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png"
-                            alt="Google Play">
-                    </a>
+            <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank" class="store-badge">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png" alt="Google Play">
+            </a>
 
-                </div>
-
-            </div>
         </div>
 
+    </div>
+</div>
 
 
 
