@@ -2053,33 +2053,32 @@ section.container { background-color: #fff; }
 
 /* BADGE PER I LINK ALLE APP */
 .store-badge {
-    height: 54px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 .store-badge img {
-    max-height: 100%;
+    height: 100%;
     width: auto;
     display: block;
     transition: transform 0.25s ease, opacity 0.25s ease;
     will-change: transform;
 }
 
-/* piccolo bilanciamento ottico */
 .store-badge:last-child img {
-    transform: scale(0.95);
+    transform: scale(1.29);
 }
 
-/* HOVER ZOOM ELEGANTE */
-.store-badge:hover img {
-    transform: scale(1.05);
+.store-badge:first-child:hover img {
+    transform: scale(1.08);
     opacity: 0.9;
 }
 
-/* mantiene il bilanciamento anche in hover */
-.store-badge:last-child:hover img {
-    transform: scale(1.01);
-}
 
+.store-badge:last-child:hover img {
+    transform: scale(1.38);
+    opacity: 0.9;
+}
