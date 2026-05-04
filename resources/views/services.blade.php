@@ -5,18 +5,18 @@
         un ambiente ricercato.')
 
         <section class="gallery-page container" data-aos="fade-up" id="taglio-uomo">
-           <div class="gallery-header text-center" data-aos="fade-up">
-    <h2 class="gallery-title">
-        I Nostri Servizi
-    </h2>
-    <p class="gallery-subtitle">
-        Stile • Precisione • Identità
-    </p>
-</div>
+            <div class="gallery-header text-center" data-aos="fade-up">
+                <h2 class="gallery-title">
+                    I Nostri Servizi
+                </h2>
+                <p class="gallery-subtitle">
+                    Stile • Precisione • Identità
+                </p>
+            </div>
 
 
 
-            
+
 
             <!-- 1. TAGLIO UOMO -->
             <div id="taglio-uomo" class="row align-items-center mb-0 g-0" data-aos="fade-up"
