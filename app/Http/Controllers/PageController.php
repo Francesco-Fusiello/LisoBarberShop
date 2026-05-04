@@ -37,7 +37,7 @@ class PageController extends Controller
 
     public function products()
     {
-        $products = Product::paginate(50);
+        $products = Product::latest()->paginate(50);
         $productsJson = $products->items();
 
         return view('user.products.products', compact('products', 'productsJson'));
@@ -51,7 +51,7 @@ class PageController extends Controller
 
     public function showGallery()
     {
-        $images = GalleryImage::all();
+        $images = GalleryImage::latest()->get();
         return view('user.gallery', compact('images'));
     }
 
