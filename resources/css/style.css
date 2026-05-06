@@ -1705,6 +1705,70 @@ section.container { background-color: #fff; }
     width: 100%;
     min-height: 80vh;
 }
+/* ===== CLASSE QUADRATO BIANCO LOGIN ZARA ===== */
+.modal-body-login-zara {
+    background: #ffffff !important;
+    padding: 40px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Distribuisce header e form in verticale */
+    box-sizing: border-box;
+    
+    /* Geometria del Quadrato Perfetto */
+    width: 450px;
+    max-width: 90vw;
+    aspect-ratio: 1 / 1; 
+    
+    /* Stile Luxury */
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Contenitore interno dell'header (Titolo + X) */
+.zara-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: auto; /* Spinge il form verso il centro/basso */
+}
+
+/* Titolo "ACCEDI" */
+.zara-title {
+    font-family: sans-serif; 
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    letter-spacing: 3px !important;
+    color: #000000 !important; /* Forza colore nero */
+    margin: 0 !important;
+    text-transform: uppercase;
+}
+
+/* La "X" di chiusura */
+.zara-close {
+    background-color: transparent !important;
+    border: none !important;
+    filter: brightness(0) !important; /* Forza la X nativa di Bootstrap a diventare nera */
+    opacity: 0.7 !important;
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.zara-close:hover {
+    opacity: 1 !important;
+}
+
+/* Form all'interno del quadrato */
+.modal-body-login-zara form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: auto; /* Mantiene il form bilanciato all'interno del quadrato */
+}
 
 .modal-img {
     max-width: 80vw;

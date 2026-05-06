@@ -66,16 +66,16 @@
 </nav>
 
 {{-- Modal login --}}
-<div class="modal fade zara-modal" id="loginModal" tabindex="-1">
+<div class="modal fade" id="loginModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content zara-modal-content">
+        <div class="modal-content" style="background: transparent !important; border: none !important; box-shadow: none !important;">
 
-            <div class="modal-header border-0">
-                <h5 class="modal-title zara-title">ACCEDI</h5>
-                <button type="button" class="btn-close zara-close" data-bs-dismiss="modal"></button>
-            </div>
+            <div class="modal-body-login-zara">
 
-            <div class="modal-body">
+                <div class="zara-header-container">
+                    <h5 class="modal-title zara-title">ACCEDI</h5>
+                    <button type="button" class="btn-close zara-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
 
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
@@ -102,7 +102,6 @@
                 </form>
 
             </div>
-
-        </div>
+            </div>
     </div>
 </div>
