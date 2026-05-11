@@ -105,24 +105,33 @@
         </div>
     </div>
 
-    @if ($showDeleteModal)
-        <div class="modal-backdrop fade show"></div>
-        <div class="modal fade show d-block">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header bg-danger text-white">
-                        <h5 class="modal-title">Conferma eliminazione</h5>
-                        <button class="btn-close" wire:click="$set('showDeleteModal', false)"></button>
-                    </div>
-                    <div class="modal-body">
-                        Sei sicuro di voler eliminare questo prodotto?
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" wire:click="$set('showDeleteModal', false)">Annulla</button>
-                        <button class="btn btn-danger" wire:click="deleteProduct"><i class="fas fa-trash"></i> Elimina</button>
-                    </div>
-                </div>
+   @if ($showDeleteModal)
+    <div class="modal-admin-wrapper">
+        <!-- Cliccando sullo sfondo chiude il modale -->
+        <div class="modal-admin-backdrop" wire:click="$set('showDeleteModal', false)"></div>
+
+        <div class="modal-admin-content">
+            <div class="modal-admin-header">
+                <h5 class="m-0 fw-bold">
+                    <i class="fas fa-exclamation-triangle me-2"></i> Conferma eliminazione
+                </h5>
+                <button type="button" class="btn-close btn-close-white" wire:click="$set('showDeleteModal', false)" style="box-shadow: none;"></button>
+            </div>
+
+            <div class="modal-admin-body">
+                <p class="fs-5 fw-bold mb-1">Sei sicuro?</p>
+                <p class="text-muted mb-0">Vuoi davvero eliminare questo prodotto? L'azione è irreversibile.</p>
+            </div>
+
+            <div class="modal-admin-footer">
+                <button type="button" class="btn btn-light border" wire:click="$set('showDeleteModal', false)">
+                    Annulla
+                </button>
+                <button type="button" class="btn btn-danger px-4" wire:click="deleteService">
+                    <i class="fas fa-trash-alt me-2"></i> Elimina
+                </button>
             </div>
         </div>
-    @endif
+    </div>
+@endif
 </div>

@@ -67,31 +67,33 @@
     </div>
 
     {{-- MODALE --}}
-    @if ($confirmingDelete)
-        <div class="modal fade show d-block" style="background:rgba(0,0,0,.3)">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header bg-danger text-white">
-                        <h5>Conferma eliminazione</h5>
-                        <button class="btn-close btn-close-white" wire:click="$set('confirmingDelete', false)"></button>
-                    </div>
+   @if ($confirmingDelete)
+    <div class="modal-admin-wrapper">
+        <!-- Backdrop: clicchi fuori e si chiude -->
+        <div class="modal-admin-backdrop" wire:click="$set('confirmingDelete', false)"></div>
 
-                    <div class="modal-body text-center">
-                        Sei sicuro di voler eliminare questa immagine?
-                    </div>
+        <div class="modal-admin-content">
+            <div class="modal-admin-header border-0">
+                <h5 class="m-0 fw-bold" style="font-size: 1.1rem;">
+                    <i class="fas fa-image me-2"></i> Elimina Immagine
+                </h5>
+                <button type="button" class="btn-close btn-close-white" wire:click="$set('confirmingDelete', false)" style="box-shadow: none;"></button>
+            </div>
 
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" wire:click="$set('confirmingDelete', false)">
-                            Annulla
-                        </button>
+            <div class="modal-admin-body">
+                <p class="fs-5 fw-bold mb-1">Confermi l'operazione?</p>
+                <p class="text-muted mb-0">Sei sicuro di voler eliminare questa immagine? Non potrai più recuperarla.</p>
+            </div>
 
-                        <button class="btn btn-danger" wire:click="deleteConfirmed">
-                             <i class="fas fa-trash"></i> Elimina
-                        </button>
-                    </div>
-                </div>
+            <div class="modal-admin-footer border-0">
+                <button type="button" class="btn btn-light border" wire:click="$set('confirmingDelete', false)">
+                    Annulla
+                </button>
+                <button type="button" class="btn btn-danger px-4" wire:click="deleteConfirmed">
+                    <i class="fas fa-trash-alt me-2"></i> Elimina
+                </button>
             </div>
         </div>
-    @endif
-
+    </div>
+@endif
 </div>

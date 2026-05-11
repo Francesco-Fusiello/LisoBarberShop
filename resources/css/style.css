@@ -2277,4 +2277,69 @@ section.container { background-color: #fff; }
     color: #000;
 }
 
-/* Assicurati che home-btn sia definito così per il bottone nero finale */
+/* Container principale che copre tutto lo schermo */
+.modal-admin-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Molto alto per stare sopra a tutto */
+}
+
+/* Sfondo scuro (Backdrop) */
+.modal-admin-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px); /* Effetto sfocato opzionale */
+}
+
+/* La scatola del modale */
+.modal-admin-content {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+    animation: modalSlideUp 0.3s ease-out;
+}
+
+/* Header, Body e Footer */
+.modal-admin-header {
+    padding: 1.2rem;
+    background-color: #dc3545;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-admin-body {
+    padding: 2rem;
+    text-align: center;
+    color: #333;
+}
+
+.modal-admin-footer {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* Animazione di entrata */
+@keyframes modalSlideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
