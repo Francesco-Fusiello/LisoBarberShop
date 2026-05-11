@@ -203,20 +203,28 @@
             <div class="row gx-0 px-3 px-md-0"> <!-- qui -->
                 <div class="col-6 col-md-3">
                     <div class="counter-box">
-                        <h3 class="counter" data-target="800">0</h3>
+                        <h3><span class="counter fw-bold" data-target="99">0</span>%</h3>
                         <p>Clienti Soddisfatti</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="counter-box">
-                        <h3 class="counter" data-target="66351">0</h3>
-                        <p>Tagli Eseguiti</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="counter-box">
                         <h3 class="counter" data-target="experience">0</h3>
                         <p>Anni di Esperienza</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="counter-box">
+                        <h3>
+                            <!-- Aggiungiamo data-decimals="1" qui -->
+                            <span class="counter fw-bold" data-target="{{ $googleStats->average_rating }}"
+                                data-decimals="1">
+                                {{ number_format($googleStats->average_rating, 1, '.', '') }}
+                            </span>
+                            <span
+                                style="color: #ffc107; font-size: 1.1em; display: inline-block; transform: translateY(1px); margin-left: 2px;">★</span>
+                        </h3>
+                        <p>Media Stelle Google</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
@@ -230,12 +238,13 @@
 
 
         {{-- Recensioni --}}
-       <div class="text-center mb-5" data-aos="fade-up">
-    <h2 class="display-5 mb-0" style="font-weight: 700; color:#fff; text-transform: uppercase; letter-spacing: 5px;">
-        Dicono di noi
-    </h2>
-    <div class="luxury-hr-line bg-white mt-3 mx-auto"></div>
-</div>
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 mb-0"
+                style="font-weight: 700; color:#fff; text-transform: uppercase; letter-spacing: 5px;">
+                Dicono di noi
+            </h2>
+            <div class="luxury-hr-line bg-white mt-3 mx-auto"></div>
+        </div>
         <section class="container my-5 google-reviews-zara"data-aos="fade-up">
 
             <!-- HEADER GOOGLE -->
@@ -336,7 +345,7 @@
         <section data-aos="fade-up">
             <div class="container text-center pb-5">
                 <h2 class="text-center display-5" style="font-weight: 700; color:#fff ">Scelti per te</h2>
-                 <div class="luxury-hr-line bg-white"></div>
+                <div class="luxury-hr-line bg-white"></div>
                 <a href="{{ route('products') }}"
                     style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 1.20rem !important;">
                     -- La selezione completa
