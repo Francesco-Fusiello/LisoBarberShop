@@ -198,43 +198,56 @@
             </div>
         </section>
 
-        {{-- Counter section --}}
-        <section class="container my-5 counter-section text-center px-0" data-aos="fade-up">
-            <div class="row gx-0 px-3 px-md-0"> <!-- qui -->
-                <div class="col-6 col-md-3">
-                    <div class="counter-box">
-                        <h3><span class="counter fw-bold" data-target="99">0</span>%</h3>
-                        <p>Clienti Soddisfatti</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="counter-box">
-                        <h3 class="counter" data-target="experience">0</h3>
-                        <p>Anni di Esperienza</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="counter-box">
-                        <h3>
-                            <!-- Aggiungiamo data-decimals="1" qui -->
-                            <span class="counter fw-bold" data-target="{{ $googleStats->average_rating }}"
-                                data-decimals="1">
-                                {{ number_format($googleStats->average_rating, 1, '.', '') }}
-                            </span>
-                            <span
-                                style="color: #ffc107; font-size: 1.1em; display: inline-block; transform: translateY(1px); margin-left: 2px;">★</span>
-                        </h3>
-                        <p>Media Stelle Google</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="counter-box">
-                        <h3 class="counter" data-target="{{ $googleStats->total_reviews }}">0</h3>
-                        <p>Recensioni Positive</p>
-                    </div>
-                </div>
+     {{-- Counter section --}}
+<section class="container my-5 counter-section text-center px-0" data-aos="fade-up">
+    <!-- g-0 toglie ogni spazio tra le colonne, sia orizzontale che verticale -->
+    <div class="row g-0 px-3 px-md-0"> 
+        
+        <!-- 1. Soddisfazione -->
+        <div class="col-6 col-md-3">
+            <div class="counter-box" style="padding: 10px 5px; margin: 0;">
+                <h3 class="d-flex align-items-baseline justify-content-center fw-bold mb-0">
+                    <span class="counter" data-target="99">0</span><span>%</span>
+                </h3>
+                <p class="mb-0" style="font-size: 0.85rem; line-height: 1.1;">Clienti Soddisfatti</p>
             </div>
-        </section>
+        </div>
+
+        <!-- 2. Esperienza -->
+        <div class="col-6 col-md-3">
+            <div class="counter-box" style="padding: 10px 5px; margin: 0;">
+                <h3 class="d-flex align-items-baseline justify-content-center fw-bold mb-0">
+                    <span class="counter" data-target="experience">0</span><span>+</span>
+                </h3>
+                <p class="mb-0" style="font-size: 0.85rem; line-height: 1.1;">Anni di Esperienza</p>
+            </div>
+        </div>
+
+        <!-- 3. Stelle Google -->
+        <div class="col-6 col-md-3">
+            <div class="counter-box" style="padding: 10px 5px; margin: 0;">
+                <h3 class="d-flex align-items-baseline justify-content-center fw-bold mb-0">
+                    <span class="counter" data-target="{{ $googleStats->average_rating }}" data-decimals="1">
+                        {{ number_format($googleStats->average_rating, 1, '.', '') }}
+                    </span>
+                    <span style="color: #ffc107; font-size: 0.9em; margin-left: 1px;">★</span>
+                </h3>
+                <p class="mb-0" style="font-size: 0.85rem; line-height: 1.1;">Media Stelle Google</p>
+            </div>
+        </div>
+
+        <!-- 4. Recensioni -->
+        <div class="col-6 col-md-3">
+            <div class="counter-box" style="padding: 10px 5px; margin: 0;">
+                <h3 class="fw-bold mb-0">
+                    <span class="counter" data-target="{{ $googleStats->total_reviews }}">0</span>
+                </h3>
+                <p class="mb-0" style="font-size: 0.85rem; line-height: 1.1;">Recensioni Positive</p>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 
         {{-- Recensioni --}}
