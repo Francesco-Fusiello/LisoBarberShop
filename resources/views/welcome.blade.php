@@ -361,7 +361,7 @@
                 <div class="luxury-hr-line bg-white"></div>
                 <a href="{{ route('products') }}"
                     style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 1.20rem !important;">
-                    -- La selezione completa
+                    - La selezione completa
                 </a>
 
                 <div id="carouselProdotti" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500"
