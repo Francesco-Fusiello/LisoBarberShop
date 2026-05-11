@@ -18,7 +18,7 @@ class PageController extends Controller
         $latestReviews = GoogleReview::latest()->take(5)->get();
         $googleStats   = GoogleReviewStat::first();
 
-        $products = Product::latest()->take(9)->get();
+       $products = Product::inRandomOrder()->take(9)->get();
 
         return view('welcome', compact('latestReviews', 'googleStats', 'products'));
     }
