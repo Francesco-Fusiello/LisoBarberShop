@@ -239,7 +239,7 @@
                 <!-- 4. Recensioni -->
                 <div class="col-6 col-md-3">
                     <div class="counter-box" style="padding: 10px 5px; margin: 0;">
-                        <h3 class="fw-bold mb-0">
+                        <h3 class="fw-bold mb-2">
                             <span class="counter" data-target="{{ $googleStats->total_reviews }}">0</span>
                         </h3>
                         <p class="mb-0" style="font-size: 0.85rem; line-height: 1.1;">Recensioni Positive</p>
