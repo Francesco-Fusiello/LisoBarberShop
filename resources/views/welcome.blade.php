@@ -198,56 +198,56 @@
             </div>
         </section>
 
-     {{-- Counter section --}}
-<section class="container my-5 counter-section text-center px-0" data-aos="fade-up">
-    <!-- g-0 toglie ogni spazio tra le colonne, sia orizzontale che verticale -->
-    <div class="row g-0 px-3 px-md-0"> 
-        
-        <!-- 1. Soddisfazione -->
-        <div class="col-6 col-md-3">
-            <div class="counter-box" style="padding: 10px 5px; margin: 0;">
-                <h3 class="d-flex align-items-baseline justify-content-center fw-bold mb-0">
-                    <span class="counter" data-target="99">0</span><span>%</span>
-                </h3>
-                <p class="mb-0" style="font-size: 0.85rem; line-height: 1.1;">Clienti Soddisfatti</p>
-            </div>
-        </div>
+        {{-- Counter section --}}
+        <section class="container my-5 counter-section text-center px-0" data-aos="fade-up">
+            <!-- g-0 toglie ogni spazio tra le colonne, sia orizzontale che verticale -->
+            <div class="row g-0 px-3 px-md-0">
 
-        <!-- 2. Esperienza -->
-        <div class="col-6 col-md-3">
-            <div class="counter-box" style="padding: 10px 5px; margin: 0;">
-                <h3 class="d-flex align-items-baseline justify-content-center fw-bold mb-0">
-                    <span class="counter" data-target="experience">0</span><span>+</span>
-                </h3>
-                <p class="mb-0" style="font-size: 0.85rem; line-height: 1.1;">Anni di Esperienza</p>
-            </div>
-        </div>
+                <!-- 1. Soddisfazione -->
+                <div class="col-6 col-md-3">
+                    <div class="counter-box" style="padding: 10px 5px; margin: 0;">
+                        <h3 class="d-flex align-items-baseline justify-content-center fw-bold mb-0">
+                            <span class="counter" data-target="99">0</span><span>%</span>
+                        </h3>
+                        <p class="mb-0" style="font-size: 0.85rem; line-height: 1.1;">Clienti Soddisfatti</p>
+                    </div>
+                </div>
 
-        <!-- 3. Stelle Google -->
-        <div class="col-6 col-md-3">
-            <div class="counter-box" style="padding: 10px 5px; margin: 0;">
-                <h3 class="d-flex align-items-baseline justify-content-center fw-bold mb-0">
-                    <span class="counter" data-target="{{ $googleStats->average_rating }}" data-decimals="1">
-                        {{ number_format($googleStats->average_rating, 1, '.', '') }}
-                    </span>
-                    <span style="color: #ffc107; font-size: 0.9em; margin-left: 1px;">★</span>
-                </h3>
-                <p class="mb-0" style="font-size: 0.85rem; line-height: 1.1;">Media Stelle Google</p>
-            </div>
-        </div>
+                <!-- 2. Esperienza -->
+                <div class="col-6 col-md-3">
+                    <div class="counter-box" style="padding: 10px 5px; margin: 0;">
+                        <h3 class="d-flex align-items-baseline justify-content-center fw-bold mb-0">
+                            <span class="counter" data-target="experience">0</span><span>+</span>
+                        </h3>
+                        <p class="mb-0" style="font-size: 0.85rem; line-height: 1.1;">Anni di Esperienza</p>
+                    </div>
+                </div>
 
-        <!-- 4. Recensioni -->
-        <div class="col-6 col-md-3">
-            <div class="counter-box" style="padding: 10px 5px; margin: 0;">
-                <h3 class="fw-bold mb-0">
-                    <span class="counter" data-target="{{ $googleStats->total_reviews }}">0</span>
-                </h3>
-                <p class="mb-0" style="font-size: 0.85rem; line-height: 1.1;">Recensioni Positive</p>
-            </div>
-        </div>
+                <!-- 3. Stelle Google -->
+                <div class="col-6 col-md-3">
+                    <div class="counter-box" style="padding: 10px 5px; margin: 0;">
+                        <h3 class="d-flex align-items-baseline justify-content-center fw-bold mb-0">
+                            <span class="counter" data-target="{{ $googleStats->average_rating }}" data-decimals="1">
+                                {{ number_format($googleStats->average_rating, 1, '.', '') }}
+                            </span>
+                            <span style="color: #ffc107; font-size: 0.9em; margin-left: 1px;">★</span>
+                        </h3>
+                        <p class="mb-0" style="font-size: 0.85rem; line-height: 1.1;">Media Stelle Google</p>
+                    </div>
+                </div>
 
-    </div>
-</section>
+                <!-- 4. Recensioni -->
+                <div class="col-6 col-md-3">
+                    <div class="counter-box" style="padding: 10px 5px; margin: 0;">
+                        <h3 class="fw-bold mb-0">
+                            <span class="counter" data-target="{{ $googleStats->total_reviews }}">0</span>
+                        </h3>
+                        <p class="mb-0" style="font-size: 0.85rem; line-height: 1.1;">Recensioni Positive</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
 
         {{-- Recensioni --}}
@@ -356,104 +356,126 @@
 
         {{-- Prodotti --}}
         <section data-aos="fade-up">
-    <div class="container text-center pb-5">
-        <h2 class="text-center display-5" style="font-weight: 700; color:#fff ">Scelti per te</h2>
-        <div class="luxury-hr-line bg-white"></div>
-        <a href="{{ route('products') }}"
-            style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 1.20rem !important;">
-            - La selezione completa
-        </a>
+            <div class="container text-center pb-5">
+                <h2 class="text-center display-5" style="font-weight: 700; color:#fff ">Scelti per te</h2>
+                <div class="luxury-hr-line bg-white"></div>
+                <a href="{{ route('products') }}"
+                    style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 1.20rem !important;">
+                    - La selezione completa
+                </a>
 
-        <div id="carouselProdotti" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500"
-            style="max-width: 1140px; margin: auto; margin-top: 2rem;">
-            <div class="carousel-inner">
-                @foreach ($products as $index => $product)
-                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                        <div class="container">
-                            <div class="row g-4 justify-content-center align-items-stretch">
-                                
-                                <!-- 1° PRODOTTO (Sempre visibile) -->
-                                <div class="col-12 col-sm-6 col-lg-4 d-flex align-items-stretch">
-                                    <div class="card border-0 shadow-sm w-100 h-100 d-flex flex-column bg-light">
-                                        <a href="{{ route('products.show', $product->id) }}">
-                                            <img src="{{ Storage::url($product->image_path) }}"
-                                                class="card-img-top" alt="{{ $product->name }}"
-                                                style="height: 300px; object-fit: cover; width: 100%;">
-                                        </a>
-                                        <div class="card-body d-flex flex-column flex-grow-1" style="color:#000;">
-                                            <!-- TITOLO CENTRATO -->
-                                            <h5 class="card-title text-center" style="font-family: 'Playfair Display', serif; color:#000; font-size: 1.10rem; min-height: 3rem; display: flex; align-items: center; justify-content: center;">
-                                                {{ $product->name }}
-                                            </h5>
-                                            <!-- FOOTER INVARIATO (Prezzo e Bottone ai lati) -->
-                                            <div class="d-flex justify-content-between align-items-center mt-auto">
-                                                <p class="card-text mb-0 fw-bold" style="color:#000;">
-                                                    €{{ number_format($product->price, 2) }}
-                                                </p>
-                                                <a href="{{ route('products.show', $product->id) }}"
-                                                    class="btn btn-dark btn-sm" style="border-radius: 0;">
-                                                    Visualizza
+                <div id="carouselProdotti" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500"
+                    style="max-width: 1140px; margin: auto; margin-top: 2rem;">
+                    <div class="carousel-inner">
+                        @foreach ($products as $index => $product)
+                            <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                                <div class="container">
+                                    <div class="row g-4 justify-content-center align-items-stretch">
+
+                                        <!-- 1° PRODOTTO (Sempre visibile) -->
+                                        <div class="col-12 col-sm-6 col-lg-4 d-flex align-items-stretch">
+                                            <div
+                                                class="card border-0 shadow-sm w-100 h-100 d-flex flex-column bg-light">
+                                                <a href="{{ route('products.show', $product->id) }}">
+                                                    <img src="{{ Storage::url($product->image_path) }}"
+                                                        class="card-img-top" alt="{{ $product->name }}"
+                                                        style="height: 300px; object-fit: cover; width: 100%;">
                                                 </a>
+                                                <div class="card-body d-flex flex-column flex-grow-1"
+                                                    style="color:#000;">
+                                                    <!-- TITOLO CENTRATO -->
+                                                    <h5 class="card-title text-center"
+                                                        style="font-family: 'Playfair Display', serif; color:#000; font-size: 1.10rem; min-height: 3rem; display: flex; align-items: center; justify-content: center;">
+                                                        {{ $product->name }}
+                                                    </h5>
+                                                    <!-- FOOTER INVARIATO (Prezzo e Bottone ai lati) -->
+                                                    <div
+                                                        class="d-flex justify-content-between align-items-center mt-auto">
+                                                        <p class="card-text mb-0 fw-bold" style="color:#000;">
+                                                            €{{ number_format($product->price, 2) }}
+                                                        </p>
+                                                        <a href="{{ route('products.show', $product->id) }}"
+                                                            class="btn btn-dark btn-sm" style="border-radius: 0;">
+                                                            Visualizza
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                                <!-- 2° PRODOTTO (Tablet e Desktop) -->
-                                @php $p2 = $products[($index + 1) % $products->count()]; @endphp
-                                <div class="col-sm-6 col-lg-4 d-none d-sm-flex align-items-stretch">
-                                    <div class="card border-0 shadow-sm w-100 h-100 d-flex flex-column bg-light">
-                                        <a href="{{ route('products.show', $p2->id) }}">
-                                            <img src="{{ Storage::url($p2->image_path) }}" class="card-img-top" style="height: 300px; object-fit: cover; width: 100%;">
-                                        </a>
-                                        <div class="card-body d-flex flex-column flex-grow-1" style="color:#000;">
-                                            <h5 class="card-title text-center" style="font-family: 'Playfair Display', serif; font-size: 1.10rem; min-height: 3rem; display: flex; align-items: center; justify-content: center;">
-                                                {{ $p2->name }}
-                                            </h5>
-                                            <div class="d-flex justify-content-between align-items-center mt-auto">
-                                                <p class="card-text mb-0 fw-bold">€{{ number_format($p2->price, 2) }}</p>
-                                                <a href="{{ route('products.show', $p2->id) }}" class="btn btn-dark btn-sm" style="border-radius: 0;">Visualizza</a>
+                                        <!-- 2° PRODOTTO (Tablet e Desktop) -->
+                                        @php $p2 = $products[($index + 1) % $products->count()]; @endphp
+                                        <div class="col-sm-6 col-lg-4 d-none d-sm-flex align-items-stretch">
+                                            <div
+                                                class="card border-0 shadow-sm w-100 h-100 d-flex flex-column bg-light">
+                                                <a href="{{ route('products.show', $p2->id) }}">
+                                                    <img src="{{ Storage::url($p2->image_path) }}"
+                                                        class="card-img-top"
+                                                        style="height: 300px; object-fit: cover; width: 100%;">
+                                                </a>
+                                                <div class="card-body d-flex flex-column flex-grow-1"
+                                                    style="color:#000;">
+                                                    <h5 class="card-title text-center"
+                                                        style="font-family: 'Playfair Display', serif; font-size: 1.10rem; min-height: 3rem; display: flex; align-items: center; justify-content: center;">
+                                                        {{ $p2->name }}
+                                                    </h5>
+                                                    <div
+                                                        class="d-flex justify-content-between align-items-center mt-auto">
+                                                        <p class="card-text mb-0 fw-bold">
+                                                            €{{ number_format($p2->price, 2) }}</p>
+                                                        <a href="{{ route('products.show', $p2->id) }}"
+                                                            class="btn btn-dark btn-sm"
+                                                            style="border-radius: 0;">Visualizza</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                                <!-- 3° PRODOTTO (Solo Desktop) -->
-                                @php $p3 = $products[($index + 2) % $products->count()]; @endphp
-                                <div class="col-lg-4 d-none d-lg-flex align-items-stretch">
-                                    <div class="card border-0 shadow-sm w-100 h-100 d-flex flex-column bg-light">
-                                        <a href="{{ route('products.show', $p3->id) }}">
-                                            <img src="{{ Storage::url($p3->image_path) }}" class="card-img-top" style="height: 300px; object-fit: cover; width: 100%;">
-                                        </a>
-                                        <div class="card-body d-flex flex-column flex-grow-1" style="color:#000;">
-                                            <h5 class="card-title text-center" style="font-family: 'Playfair Display', serif; font-size: 1.10rem; min-height: 3rem; display: flex; align-items: center; justify-content: center;">
-                                                {{ $p3->name }}
-                                            </h5>
-                                            <div class="d-flex justify-content-between align-items-center mt-auto">
-                                                <p class="card-text mb-0 fw-bold">€{{ number_format($p3->price, 2) }}</p>
-                                                <a href="{{ route('products.show', $p3->id) }}" class="btn btn-dark btn-sm" style="border-radius: 0;">Visualizza</a>
+                                        <!-- 3° PRODOTTO (Solo Desktop) -->
+                                        @php $p3 = $products[($index + 2) % $products->count()]; @endphp
+                                        <div class="col-lg-4 d-none d-lg-flex align-items-stretch">
+                                            <div
+                                                class="card border-0 shadow-sm w-100 h-100 d-flex flex-column bg-light">
+                                                <a href="{{ route('products.show', $p3->id) }}">
+                                                    <img src="{{ Storage::url($p3->image_path) }}"
+                                                        class="card-img-top"
+                                                        style="height: 300px; object-fit: cover; width: 100%;">
+                                                </a>
+                                                <div class="card-body d-flex flex-column flex-grow-1"
+                                                    style="color:#000;">
+                                                    <h5 class="card-title text-center"
+                                                        style="font-family: 'Playfair Display', serif; font-size: 1.10rem; min-height: 3rem; display: flex; align-items: center; justify-content: center;">
+                                                        {{ $p3->name }}
+                                                    </h5>
+                                                    <div
+                                                        class="d-flex justify-content-between align-items-center mt-auto">
+                                                        <p class="card-text mb-0 fw-bold">
+                                                            €{{ number_format($p3->price, 2) }}</p>
+                                                        <a href="{{ route('products.show', $p3->id) }}"
+                                                            class="btn btn-dark btn-sm"
+                                                            style="border-radius: 0;">Visualizza</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
-
                             </div>
-                        </div>
+                        @endforeach
                     </div>
-                @endforeach
-            </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProdotti"
-                data-bs-slide="prev" style="width: 5%;">
-                <span class="carousel-control-prev-icon" style="filter: invert(0%);"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselProdotti"
-                data-bs-slide="next" style="width: 5%;">
-                <span class="carousel-control-next-icon" style="filter: invert(0%);"></span>
-            </button>
-        </div>
-    </div>
-</section>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProdotti"
+                        data-bs-slide="prev" style="width: 5%;">
+                        <span class="carousel-control-prev-icon" style="filter: invert(0%);"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProdotti"
+                        data-bs-slide="next" style="width: 5%;">
+                        <span class="carousel-control-next-icon" style="filter: invert(0%);"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
 
 
 
