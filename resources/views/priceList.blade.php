@@ -35,13 +35,14 @@
 
             <div class="row justify-content-center text-center">
                 <div class="col-lg-10">
-                    <h2 class="pt-3 fst-italic" style="color: #ffffff;">Che Aspetti!</h2>
+
                     <h2 class="fst-italic" style="color: #ffffff;">Scarica la nostra app per prenotare subito il tuo
                         appuntamento...</h2>
                 </div>
             </div>
 
-            <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4">
+            <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4"
+                style="margin-left: -20px;">
 
                 <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank"
                     class="store-badge">
@@ -56,7 +57,6 @@
                 </a>
 
             </div>
-        </div>
     </section>
 
     <style>

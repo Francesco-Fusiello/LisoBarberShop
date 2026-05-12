@@ -23,14 +23,14 @@
                     </div>
                 </div>
 
-                <p class="lead text-center fs-5 pt-5" style="color: #ffffff;  ">
+                <p class="lead text-center fs-5 pt-5" style="color: #ffffff;">
                     Scarica la nostra app per avere sempre Liso Barber Shop a portata di mano. Prenota facilmente il tuo
                     appuntamento e scopri tutte le novità!
                 </p>
                 <!-- Badge App Store & Google Play -->
                 <div class="row justify-content-center mt-4">
                     <div class="col-md-8">
-                        <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4">
+                        <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4"style="margin-left: -20px;">
 
                     <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank"
                         class="store-badge">

@@ -248,7 +248,7 @@
                 Scaricala ora.
             </h3>
 
-            <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4">
+            <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4" style="margin-left: -20px;">
 
                 <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank"
                     class="store-badge">
