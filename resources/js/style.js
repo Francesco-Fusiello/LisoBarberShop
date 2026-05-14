@@ -57,19 +57,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  document.getElementById('prevImage').addEventListener('click', () => {
+  document.getElementById('prevImage')?.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     modalImage.src = images[currentIndex].dataset.image;
   });
 
-  document.getElementById('nextImage').addEventListener('click', () => {
+  document.getElementById('nextImage')?.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % images.length;
     modalImage.src = images[currentIndex].dataset.image;
   });
 });
 // Modifica prodotto 
 document.addEventListener('DOMContentLoaded', function () {
-  window.Livewire.on('scrollToForm', () => {
+  window.Livewire?.on('scrollToForm', () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -126,21 +126,21 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.classList.remove('active');
   }
 
-  openBtn.addEventListener('click', e => {
+  openBtn?.addEventListener('click', e => {
     e.preventDefault();
     openDrawer();
   });
 
-  closeBtn.addEventListener('click', () => {
+  closeBtn?.addEventListener('click', () => {
     closeDrawer();
   });
 
-  overlay.addEventListener('click', () => {
+  overlay?.addEventListener('click', () => {
     closeDrawer();
   });
 
 
-  Livewire.on('closeModal', () => {
+  Livewire?.on('closeModal', () => {
     setTimeout(() => {
       closeDrawer();
     }, 2500);
@@ -496,6 +496,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
 
 
 
