@@ -2343,3 +2343,11 @@ section.container { background-color: #fff; }
     from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+
+/* Frecce carousel invisibili da mobile */
+@media (max-width: 768px) {
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+          opacity: 0; 
+    }
+}
