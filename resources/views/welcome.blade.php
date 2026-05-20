@@ -198,6 +198,87 @@
             </div>
         </section>
 
+        <section class="tour-preview">
+
+    <div class="container">
+
+        <div class="tour-wrapper">
+
+            <div class="row align-items-center gy-5">
+
+                <div class="col-lg-5">
+
+                    <div class="tour-content">
+
+                        <p class="tour-label">
+                            WORLDWIDE EXPERIENCE
+                        </p>
+
+                        <h2 class="tour-title">
+                            LISO <br> ON TOUR
+                        </h2>
+
+                        <p class="tour-text">
+                            A journey through style, culture and precision.
+                            Cutting hair worldwide with the identity of Liso Barber Shop.
+                        </p>
+
+                        <a href="" class="tour-btn">
+                            VIEW THE TOUR
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-7">
+
+                    <div class="tour-images">
+
+                        <div class="tour-img-large">
+
+                            <img src="{{ asset('images/mosaic/Mosaic4.JPG') }}" alt="">
+
+                            <div class="tour-meta">
+                                <p class="tour-location">
+                                    TOKYO — JAPAN
+                                </p>
+
+                                <span class="tour-year">
+                                    2025
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="tour-img-small">
+
+                            <img src="{{ asset('images/mosaic/Mosaic2.jpeg') }}" alt="">
+
+                            <div class="tour-meta">
+                                <p class="tour-location">
+                                    DUBAI — UAE
+                                </p>
+
+                                <span class="tour-year">
+                                    2025
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
         {{-- Counter section --}}
         <section class="container my-5 counter-section text-center px-0" data-aos="fade-up">
             <!-- g-0 toglie ogni spazio tra le colonne, sia orizzontale che verticale -->
