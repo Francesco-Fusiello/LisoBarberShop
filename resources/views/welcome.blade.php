@@ -68,7 +68,8 @@
                     Scarica la nostra app per prenotare subito il tuo appuntamento
                 </h3>
 
-                <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4"style="margin-left: -20px;">
+                <div
+                    class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4"style="margin-left: -20px;">
 
                     <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank"
                         class="store-badge">
@@ -198,86 +199,66 @@
             </div>
         </section>
 
-        <section class="tour-preview">
+        {{-- Tour section --}}
+        <section class="tour-preview" data-aos="fade-up">
 
-    <div class="container">
-
-        <div class="tour-wrapper">
-
-            <div class="row align-items-center gy-5">
-
-                <div class="col-lg-5">
-
-                    <div class="tour-content">
-
-                        <p class="tour-label">
-                            WORLDWIDE EXPERIENCE
-                        </p>
-
-                        <h2 class="tour-title">
-                            LISO <br> ON TOUR
-                        </h2>
-
-                        <p class="tour-text">
-                            A journey through style, culture and precision.
-                            Cutting hair worldwide with the identity of Liso Barber Shop.
-                        </p>
-
-                        <a href="" class="tour-btn">
-                            VIEW THE TOUR
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-7">
-
-                    <div class="tour-images">
-
-                        <div class="tour-img-large">
-
-                            <img src="{{ asset('images/mosaic/Mosaic4.JPG') }}" alt="">
-
-                            <div class="tour-meta">
-                                <p class="tour-location">
-                                    TOKYO — JAPAN
+            <div class="container">
+                <div class="tour-wrapper">
+                    <div class="row align-items-center gy-5">
+                        <div class="col-lg-5">
+                            <div class="tour-content">
+                                <p class="tour-label">
+                                    WORLDWIDE EXPERIENCE
                                 </p>
 
-                                <span class="tour-year">
-                                    2025
-                                </span>
-                            </div>
+                                <h2 class="tour-title">
+                                    LISO <br> ON TOUR
+                                </h2>
 
-                        </div>
-
-                        <div class="tour-img-small">
-
-                            <img src="{{ asset('images/mosaic/Mosaic2.jpeg') }}" alt="">
-
-                            <div class="tour-meta">
-                                <p class="tour-location">
-                                    DUBAI — UAE
+                                <p class="tour-text">
+                                    A journey through style, culture and precision.
+                                    Cutting hair worldwide with the identity of Liso Barber Shop.
                                 </p>
 
-                                <span class="tour-year">
-                                    2025
-                                </span>
+                                <a href="" class="tour-btn">
+                                    VIEW THE TOUR
+                                </a>
                             </div>
-
                         </div>
 
+                        <div class="col-lg-7">
+                            <div class="tour-images">
+                                <div class="tour-img-large">
+                                    <img src="{{ asset('images/mosaic/Mosaic4.JPG') }}" alt="">
+
+                                    <div class="tour-meta">
+                                        <p class="tour-location">
+                                            TOKYO — JAPAN
+                                        </p>
+
+                                        <span class="tour-year">
+                                            2025
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="tour-img-small">
+                                    <img src="{{ asset('images/mosaic/Mosaic2.jpeg') }}" alt="">
+                                    <div class="tour-meta">
+                                        <p class="tour-location">
+                                            DUBAI — UAE
+                                        </p>
+                                        <span class="tour-year">
+                                            2025
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
-
             </div>
-
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
         {{-- Counter section --}}
         <section class="container my-5 counter-section text-center px-0" data-aos="fade-up">
@@ -308,7 +289,8 @@
                 <div class="col-6 col-md-3">
                     <div class="counter-box" style="padding: 10px 5px; margin: 0;">
                         <h3 class="d-flex align-items-baseline justify-content-center fw-bold mb-0">
-                            <span class="counter" data-target="{{ $googleStats->average_rating }}" data-decimals="1">
+                            <span class="counter" data-target="{{ $googleStats->average_rating }}"
+                                data-decimals="1">
                                 {{ number_format($googleStats->average_rating, 1, '.', '') }}
                             </span>
                             <span style="color: #ffc107; font-size: 0.9em; margin-left: 1px;">★</span>
