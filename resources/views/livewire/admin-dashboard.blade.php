@@ -22,20 +22,38 @@
                         class="btn btn-outline-warning {{ $section === 'servizi' ? 'active' : '' }}">
                         Gestione Servizi
                     </a>
+                     </a>
+
+                    <a href="{{ route('admin.dashboard', ['section' => 'tour']) }}"
+                        class="btn btn-outline-dark {{ $section === 'tour' ? 'active' : '' }}">
+                        Liso On Tour
+                    </a>
                 </div>
             </div>
         </div>
 
         <hr class="my-4">
 
+        
         @if ($section === 'galleria')
-            <h2 class="mb-3">Gestione Galleria Immagini</h2>
+            <h2 class="mb-4">
+                Gestione Galleria Immagini
+            </h2>
             <livewire:gallery-manager />
         @elseif($section === 'servizi')
-            <h2 class="mb-3">Gestione Servizi</h2>
+            <h2 class="mb-4">
+                Gestione Servizi
+            </h2>
             <livewire:service-manager />
+        @elseif($section === 'tour')
+            <h2 class="mb-4">
+                Gestione Liso On Tour
+            </h2>
+            <livewire:tour-manager />
         @else
-            <h2 class="mb-3">Gestione Prodotti</h2>
+            <h2 class="mb-4">
+                Gestione Prodotti
+            </h2>
             <livewire:product-crud />
         @endif
     </div>

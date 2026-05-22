@@ -2492,3 +2492,91 @@ section.container { background-color: #fff; }
     }
 
 }
+
+.tour-page{
+    background:#b8b6b6;
+    padding:160px 0;
+    min-height:100vh;
+}
+
+.tour-hero{
+    margin-bottom:120px;
+}
+
+.tour-hero-label{
+    color:rgba(255,255,255,.75);
+    text-transform:uppercase;
+    letter-spacing:6px;
+    font-size:11px;
+    margin-bottom:30px;
+}
+
+.tour-hero-title{
+    font-size:clamp(70px,10vw,180px);
+    color:#fff;
+    line-height:.9;
+    margin-bottom:35px;
+    letter-spacing:-5px;
+}
+
+.tour-hero-text{
+    color:#efefef;
+    max-width:600px;
+    margin:auto;
+    line-height:2;
+    font-size:15px;
+}
+
+.tour-card{
+    margin-bottom:80px;
+}
+
+.tour-card img{
+    width:100%;
+    height:850px;
+    object-fit:cover;
+    transition:transform .8s ease;
+    filter:grayscale(8%) contrast(105%);
+}
+
+.tour-card img:hover{
+    transform:scale(1.02);
+}
+
+.tour-card-info{
+    margin-top:22px;
+}
+
+.tour-location{
+    color:#fff;
+    font-size:13px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:6px;
+}
+
+.tour-year{
+    color:rgba(255,255,255,.75);
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+@media(max-width:991px){
+
+    .tour-page{
+        padding:100px 0;
+    }
+
+    .tour-hero{
+        margin-bottom:80px;
+    }
+
+    .tour-hero-title{
+        font-size:72px;
+    }
+
+    .tour-card img{
+        height:500px;
+    }
+
+}

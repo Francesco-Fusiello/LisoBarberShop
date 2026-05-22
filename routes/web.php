@@ -29,6 +29,8 @@ Route::get('/gallery-manager', GalleryManager::class)->middleware('custom.auth')
 
 Route::get('/user/gallery', [PageController::class, 'showGallery'])->name('user.gallery');
 
+Route::get('/tour', [PageController::class, 'tour'])->name('tour');
+
 Route::get('/chi/siamo', [PageController::class, 'chiSiamo'])->name('chiSiamo');
 
 Route::get('/contatti',[PageController::class, 'contatti'])->name('contatti');

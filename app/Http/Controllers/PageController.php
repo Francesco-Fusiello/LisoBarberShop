@@ -8,6 +8,7 @@ use App\Models\GoogleReview;
 use App\Models\GoogleReviewStat;
 use App\Models\Product;
 use App\Models\Service;
+use App\Models\TourItem;
 
 
 
@@ -18,7 +19,7 @@ class PageController extends Controller
         $latestReviews = GoogleReview::latest()->take(5)->get();
         $googleStats   = GoogleReviewStat::first();
 
-       $products = Product::inRandomOrder()->take(9)->get();
+        $products = Product::inRandomOrder()->take(9)->get();
 
         return view('welcome', compact('latestReviews', 'googleStats', 'products'));
     }
@@ -53,6 +54,12 @@ class PageController extends Controller
     {
         $images = GalleryImage::latest()->get();
         return view('user.gallery', compact('images'));
+    }
+
+    public function tour()
+    {
+        $tourItems = TourItem::latest()->get();
+        return view('tour', compact('tourItems'));
     }
 
     public function chiSiamo()
