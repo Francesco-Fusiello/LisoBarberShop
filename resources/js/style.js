@@ -497,6 +497,96 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  // --- INIZIO SCRIPT TOUR ---
+  const tourContainer = document.getElementById('tourUploader');
+  if (tourContainer) {
+      const tourInput = document.getElementById('tourImageInput');
+      const tourBar = document.getElementById('tourUploadBar');
+      const tourPercent = document.getElementById('tourUploadPercent');
+      const tourBox = document.getElementById('tourUploadBox');
+      const tourBtn = tourContainer.closest('form').querySelector('button[type="submit"]');
+
+      // Trova il componente Livewire del Tour
+      const tourComponent = window.Livewire.find(
+        tourContainer.closest('[wire\\:id]').getAttribute('wire:id')
+      );
+
+      tourInput.addEventListener('change', function (e) {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        const img = new Image();
+
+        reader.onload = (event) => { img.src = event.target.result; };
+        reader.readAsDataURL(file);
+
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          
+          // Compressione per il Tour (800px sono ideali per le card)
+          const maxWidth = 800; 
+
+          let width = img.width;
+          let height = img.height;
+
+          if (width > maxWidth) {
+            height = height * (maxWidth / width);
+            width = maxWidth;
+          }
+
+          canvas.width = width;
+          canvas.height = height;
+          ctx.drawImage(img, 0, 0, width, height);
+
+          canvas.toBlob((blob) => {
+            const compressedFile = new File([blob], file.name, {
+              type: 'image/jpeg',
+              lastModified: Date.now()
+            });
+
+            // Mostra la UI di caricamento
+            tourBox.style.display = 'block';
+            if (tourBtn) tourBtn.disabled = true;
+            tourBar.style.width = '0%';
+            tourPercent.innerText = '0%';
+            tourBar.style.backgroundColor = "#0d6efd"; // reset colore
+
+            // Caricamento su Livewire (nella proprietà $image)
+            tourComponent.upload(
+              'image',
+              compressedFile,
+              () => { // SUCCESS
+                if (tourBtn) tourBtn.disabled = false;
+                tourPercent.innerText = "Immagine pronta!";
+                tourBar.style.width = "100%";
+                setTimeout(() => { tourBox.style.display = 'none'; }, 2000);
+              },
+              () => { // ERROR
+                if (tourBtn) tourBtn.disabled = false;
+                tourPercent.innerText = "Errore di caricamento";
+                tourBar.style.backgroundColor = "#dc3545";
+              },
+              (event) => { // PROGRESS
+                const progress = event.detail.progress;
+                tourBar.style.width = progress + '%';
+                tourPercent.innerText = progress + '%';
+              }
+            );
+          }, 'image/jpeg', 0.80); // Qualità 80% JPEG
+        };
+      });
+
+      // Ascolta il segnale di salvataggio avvenuto per svuotare l'input visivo
+      Livewire.on('tour-saved', () => {
+          if (tourInput) tourInput.value = '';
+      });
+  }
+  // --- FINE SCRIPT TOUR ---
+});
+
 
 
 
