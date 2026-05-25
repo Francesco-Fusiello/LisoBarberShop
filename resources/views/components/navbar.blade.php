@@ -35,6 +35,10 @@
                         href="{{ route('user.gallery') }}">Gallery</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('tour') ? 'active' : '' }}"
+                        href="{{ route('tour') }}">Liso on Tour</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('chiSiamo') ? 'active' : '' }}"
                         href="{{ route('chiSiamo') }}">Chi Siamo</a>
                 </li>

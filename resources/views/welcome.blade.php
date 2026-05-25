@@ -220,7 +220,7 @@
                                     Cutting hair worldwide with the identity of Liso Barber Shop.
                                 </p>
 
-                                <a href="" class="tour-btn">
+                                <a href="{{ route('tour')}}" class="tour-btn">
                                     VIEW THE TOUR
                                 </a>
                             </div>
