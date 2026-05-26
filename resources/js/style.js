@@ -497,24 +497,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  // --- INIZIO SCRIPT TOUR ---
-  const tourContainer = document.getElementById('tourUploader');
-  if (tourContainer) {
-      const tourInput = document.getElementById('tourImageInput');
-      const tourBar = document.getElementById('tourUploadBar');
-      const tourPercent = document.getElementById('tourUploadPercent');
-      const tourBox = document.getElementById('tourUploadBox');
-      const tourBtn = tourContainer.closest('form').querySelector('button[type="submit"]');
+document.addEventListener('livewire:initialized', () => {
 
-      // Trova il componente Livewire del Tour
-      const tourComponent = window.Livewire.find(
-        tourContainer.closest('[wire\\:id]').getAttribute('wire:id')
-      );
+    document.addEventListener('change', (e) => {
+        if (e.target && e.target.id === 'tourImageInput') {
+            handleTourUpload(e.target);
+        }
+    });
 
-      tourInput.addEventListener('change', function (e) {
-        const file = e.target.files[0];
+    function handleTourUpload(input) {
+        const file = input.files[0];
         if (!file) return;
+
+        const form = input.closest('form');
+        const tourBar = document.getElementById('tourUploadBar');
+        const tourPercent = document.getElementById('tourUploadPercent');
+        const tourBox = document.getElementById('tourUploadBox');
+        const tourBtn = form.querySelector('button[type="submit"]');
+
+        const component = Livewire.find(form.closest('[wire\\:id]').getAttribute('wire:id'));
 
         const reader = new FileReader();
         const img = new Image();
@@ -523,70 +524,58 @@ document.addEventListener('DOMContentLoaded', () => {
         reader.readAsDataURL(file);
 
         img.onload = () => {
-          const canvas = document.createElement('canvas');
-          const ctx = canvas.getContext('2d');
-          
-          // Compressione per il Tour (800px sono ideali per le card)
-          const maxWidth = 800; 
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const maxWidth = 800;
+            let width = img.width;
+            let height = img.height;
 
-          let width = img.width;
-          let height = img.height;
+            if (width > maxWidth) {
+                height = height * (maxWidth / width);
+                width = maxWidth;
+            }
 
-          if (width > maxWidth) {
-            height = height * (maxWidth / width);
-            width = maxWidth;
-          }
+            canvas.width = width;
+            canvas.height = height;
+            ctx.drawImage(img, 0, 0, width, height);
 
-          canvas.width = width;
-          canvas.height = height;
-          ctx.drawImage(img, 0, 0, width, height);
+            canvas.toBlob((blob) => {
+                const compressedFile = new File([blob], file.name, {
+                    type: 'image/jpeg',
+                    lastModified: Date.now()
+                });
 
-          canvas.toBlob((blob) => {
-            const compressedFile = new File([blob], file.name, {
-              type: 'image/jpeg',
-              lastModified: Date.now()
-            });
+                if (tourBox) tourBox.style.display = 'block';
+                if (tourBtn) tourBtn.disabled = true;
 
-            // Mostra la UI di caricamento
-            tourBox.style.display = 'block';
-            if (tourBtn) tourBtn.disabled = true;
-            tourBar.style.width = '0%';
-            tourPercent.innerText = '0%';
-            tourBar.style.backgroundColor = "#0d6efd"; // reset colore
-
-            // Caricamento su Livewire (nella proprietà $image)
-            tourComponent.upload(
-              'image',
-              compressedFile,
-              () => { // SUCCESS
-                if (tourBtn) tourBtn.disabled = false;
-                tourPercent.innerText = "Immagine pronta!";
-                tourBar.style.width = "100%";
-                setTimeout(() => { tourBox.style.display = 'none'; }, 2000);
-              },
-              () => { // ERROR
-                if (tourBtn) tourBtn.disabled = false;
-                tourPercent.innerText = "Errore di caricamento";
-                tourBar.style.backgroundColor = "#dc3545";
-              },
-              (event) => { // PROGRESS
-                const progress = event.detail.progress;
-                tourBar.style.width = progress + '%';
-                tourPercent.innerText = progress + '%';
-              }
-            );
-          }, 'image/jpeg', 0.85); // Qualità 85% JPEG
+                component.upload('image', compressedFile,
+                    () => { 
+                        if (tourBtn) tourBtn.disabled = false;
+                        if (tourPercent) tourPercent.innerText = "Caricato!";
+                        setTimeout(() => { if (tourBox) tourBox.style.display = 'none'; }, 2000);
+                    },
+                    () => { 
+                        if (tourBtn) tourBtn.disabled = false;
+                        if (tourPercent) tourPercent.innerText = "Errore";
+                    },
+                    (event) => { 
+                        const progress = event.detail.progress;
+                        if (tourBar) tourBar.style.width = progress + '%';
+                        if (tourPercent) tourPercent.innerText = progress + '%';
+                    }
+                );
+            }, 'image/jpeg', 0.80);
         };
-      });
+    }
 
-      // Ascolta il segnale di salvataggio avvenuto per svuotare l'input visivo
-      Livewire.on('tour-saved', () => {
-          if (tourInput) tourInput.value = '';
-      });
-  }
-  // --- FINE SCRIPT TOUR ---
+    Livewire.on('tour-saved', () => {
+        const form = document.getElementById('tourUploader');
+        if (form) form.reset();
+        
+        const input = document.getElementById('tourImageInput');
+        if (input) input.value = '';
+    });
 });
-
 
 
 

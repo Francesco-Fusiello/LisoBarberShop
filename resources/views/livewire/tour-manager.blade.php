@@ -1,6 +1,5 @@
 <div class="container mt-4">
 
-    {{-- Messaggio di successo Elegante (Asincrono) --}}
     @if (session()->has('message'))
         <div class="toast-elegant alert alert-success d-flex align-items-center justify-content-between px-3 py-2 mb-4">
             <span>✅</span>
@@ -8,16 +7,12 @@
         </div>
     @endif
 
-    {{-- Form di caricamento con ID per il JavaScript --}}
     <form wire:submit.prevent="save" class="mb-5" id="tourUploader">
 
         <div class="mb-3">
             <label class="form-label fw-bold small">Immagine Tappa Tour</label>
-            
-            {{-- IMPORTANTE: Senza wire:model. Il JS intercetta il file, lo comprime e lo passa a Livewire --}}
             <input type="file" id="tourImageInput" class="form-control mb-2" accept="image/*">
-
-            {{-- PROGRESS UI (Gestita dal file JS esterno) --}}
+            
             <div id="tourUploadBox" class="mb-3" style="display:none;">
                 <div class="d-flex justify-content-between mb-1">
                     <small class="text-muted">Compressione e caricamento...</small>
@@ -31,7 +26,6 @@
             @error('image') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
         </div>
 
-        {{-- Anteprima temporanea dell'immagine dopo la compressione e l'upload --}}
         @if ($image)
             <div class="mb-3">
                 <p class="small text-muted mb-1">Anteprima immagine ottimizzata:</p>
@@ -40,7 +34,6 @@
             </div>
         @endif
 
-        {{-- Campi del Tour --}}
         <div class="mb-3">
             <label class="form-label fw-bold small">Città</label>
             <input type="text" wire:model="city" class="form-control" placeholder="es. Milan">
@@ -67,12 +60,11 @@
 
     <hr class="my-5">
 
-    {{-- Griglia degli elementi Tour presenti (Immagini mostrate piccole e ordinate) --}}
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
         @foreach($tourItems as $item)
-            <div class="col">
+            {{-- AGGIUNTA NECESSARIA: wire:key --}}
+            <div class="col" wire:key="tour-item-{{ $item->id }}">
                 <div class="card h-100 shadow-sm border">
-                    {{-- Immagine renderizzata leggera dal CSS --}}
                     <img src="{{ asset('storage/' . $item->image) }}" class="card-img-top"
                          style="object-fit: cover; height: 200px; width: 100%;">
 
@@ -84,7 +76,6 @@
                         </div>
                         
                         <div class="mt-3">
-                            {{-- Tasto Elimina che innesca la modale --}}
                             <button wire:click="confirmDelete({{ $item->id }})" class="btn btn-danger btn-sm w-100">
                                 Elimina
                             </button>
@@ -95,12 +86,9 @@
         @endforeach
     </div>
 
-    {{-- MODALE DI CONFERMA ELIMINAZIONE (Stile Gallery) --}}
     @if ($confirmingDelete)
         <div class="modal-admin-wrapper">
-            {{-- Backdrop per chiudere al click esterno --}}
             <div class="modal-admin-backdrop" wire:click="$set('confirmingDelete', false)"></div>
-
             <div class="modal-admin-content">
                 <div class="modal-admin-header border-0">
                     <h5 class="m-0 fw-bold" style="font-size: 1.1rem;">
@@ -125,5 +113,4 @@
             </div>
         </div>
     @endif
-
 </div>

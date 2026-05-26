@@ -11,30 +11,25 @@ class TourManager extends Component
 {
     use WithFileUploads;
 
-    public $image;
+    public $image; 
     public string $city = '';
     public string $country = '';
     public string $year = '';
 
-    // Stato per la modale di conferma eliminazione
     public bool $confirmingDelete = false;
     public ?int $deleteId = null;
 
     public function save()
     {
-        // 1. Validazione dei dati
         $this->validate([
-            'image' => 'required|image|max:20048', // Max 20MB
+            'image' => 'required|image|max:20048',
             'city' => 'required',
             'country' => 'required',
             'year' => 'required',
         ]);
 
-        // 2. Salvataggio DIRETTO e sicuro (esattamente come fai nella Gallery)
-        // Niente manipolazioni pesanti che fanno crashare il server
         $imagePath = $this->image->store('tour', 'public');
 
-        // 3. Creazione nel database
         TourItem::create([
             'image' => $imagePath,
             'city' => $this->city,
@@ -42,15 +37,11 @@ class TourManager extends Component
             'year' => $this->year,
         ]);
 
-        // 4. Svuota i campi
-        $this->reset([
-            'image',
-            'city',
-            'country',
-            'year'
-        ]);
+        $this->image = null; 
+        $this->reset(['city', 'country', 'year']);
+        $this->resetErrorBag();
+        $this->resetValidation();
 
-        // 5. Invia i messaggi e il segnale JS per sbloccare l'interfaccia
         session()->flash('message', 'Tappa del tour inserita con successo!');
         $this->dispatch('tour-saved');
     }
@@ -63,11 +54,13 @@ class TourManager extends Component
 
     public function deleteConfirmed()
     {
-        $tour = TourItem::find($this->deleteId);
+        if ($this->deleteId) {
+            $tour = TourItem::find($this->deleteId);
 
-        if ($tour) {
-            Storage::disk('public')->delete($tour->image);
-            $tour->delete();
+            if ($tour) {
+                Storage::disk('public')->delete($tour->image);
+                $tour->delete();
+            }
         }
 
         $this->confirmingDelete = false;

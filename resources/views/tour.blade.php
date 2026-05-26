@@ -12,7 +12,7 @@
             <h1 class="tour-hero-title display-2 fw-black tracking-tighter text-uppercase mb-3 text-white">
                 LISO ON TOUR
             </h1>
-            <p class="tour-hero-text lead mx-auto text-white fw-medium" style="max-width: 500px;">
+            <p class="tour-hero-text lead mx-auto text-white fw-medium mt-5" style="max-width: 500px;">
                 Cutting hair worldwide with the identity of Liso Barber Shop.
             </p>
         </div>
