@@ -59,8 +59,8 @@
             @error('year') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
         </div>
 
-        <button type="submit" class="btn btn-dark w-100">
-            Add Tour Item
+        <button type="submit" class="btn btn-primary w-100">
+            Aggiungi Tappa Tour
         </button>
 
     </form>
@@ -86,7 +86,7 @@
                         <div class="mt-3">
                             {{-- Tasto Elimina che innesca la modale --}}
                             <button wire:click="confirmDelete({{ $item->id }})" class="btn btn-danger btn-sm w-100">
-                                Delete
+                                Elimina
                             </button>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
 
                 <div class="modal-admin-body text-start">
                     <p class="fs-5 fw-bold mb-1">Confermi l'operazione?</p>
-                    <p class="text-muted mb-0">Sei sicuro di voler eliminare questa tappa? Questa azione rimuoverà permanentemente i dettagli e l'immagine dal server.</p>
+                    <p class="text-muted mb-0">Vuoi davvero eliminare questo tappa? L'azione è irreversibile.</p>
                 </div>
 
                 <div class="modal-admin-footer border-0">
