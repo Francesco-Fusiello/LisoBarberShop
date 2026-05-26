@@ -575,7 +575,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 tourPercent.innerText = progress + '%';
               }
             );
-          }, 'image/jpeg', 0.80); // Qualità 80% JPEG
+          }, 'image/jpeg', 0.85); // Qualità 85% JPEG
         };
       });
 
