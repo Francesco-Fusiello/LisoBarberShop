@@ -577,6 +577,24 @@ document.addEventListener('livewire:initialized', () => {
     });
 });
 
+// AOS Polaroid anchoring
+document.addEventListener('DOMContentLoaded', function() {
+    // Se la larghezza dello schermo è da tablet in su (>= 768px)
+    if (window.innerWidth >= 768) {
+        let secondPolaroid = document.getElementById('second-polaroid');
+        
+        if (secondPolaroid) {
+            // Aggiungiamo l'ancora alla seconda foto
+            secondPolaroid.setAttribute('data-aos-anchor', '#first-polaroid');
+            
+            // LA MAGIA: Diciamo ad AOS di ricalcolare gli elementi perché abbiamo cambiato il DOM
+            if (typeof AOS !== 'undefined') {
+                AOS.refreshHard();
+            }
+        }
+    }
+});
+
 
 
 
