@@ -2953,3 +2953,55 @@ body{
     }
 }
 
+
+/* COUNTER */
+
+.product-counter{
+    font-size:12px;
+    letter-spacing:1px;
+    color:#6b6b6b;
+    text-transform:uppercase;
+}
+
+/* SEARCH INPUT (FLAT ADMIN STYLE) */
+
+.product-search-input{
+    border-radius:0 !important;
+
+    border:1px solid #dcdcdc;
+    background:#fff;
+
+    padding:10px 12px;
+
+    font-size:14px;
+
+    box-shadow:none !important;
+}
+
+.product-search-input:focus{
+    border-color:#111;
+    outline:none;
+    box-shadow:none;
+}
+
+/* PLACEHOLDER */
+
+.product-search-input::placeholder{
+    color:#9a9a9a;
+    font-size:13px;
+}
+
+/* REMOVE BOOTSTRAP "SOFT LOOK" */
+
+.form-control{
+    border-radius:0 !important;
+}
+
+.empty-state{
+    padding:40px 0;
+    font-size:13px;
+    color:#777;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+

@@ -23,6 +23,7 @@ class ProductCrud extends Component
     public ?int $selectedProductId = null;
     public bool $showDeleteModal = false;
     public ?array $filteredProductIds = null;
+    public string $search = '';
 
     /** @var array */
     protected $listeners = [
@@ -135,15 +136,25 @@ class ProductCrud extends Component
         $this->resetPage();
     }
 
-    public function render()
-    {
-        $q = Product::query();
-        if ($this->filteredProductIds) {
-            $q->whereIn('id', $this->filteredProductIds);
-        }
+   public function render()
+{
+    $q = Product::query();
 
-        return view('livewire.product-crud', [
-            'products' => $q->latest()->paginate(50),
-        ]);
+    if ($this->filteredProductIds) {
+        $q->whereIn('id', $this->filteredProductIds);
     }
+
+    if ($this->search) {
+        $q->where('name', 'like', '%' . $this->search . '%');
+    }
+
+    return view('livewire.product-crud', [
+        'products' => $q->latest()->paginate(50),
+    ]);
+}
+
+public function updatedSearch()
+{
+    $this->resetPage();
+}
 }

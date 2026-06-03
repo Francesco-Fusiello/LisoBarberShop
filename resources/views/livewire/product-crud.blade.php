@@ -7,6 +7,8 @@
     @endif
 
 
+
+
     <form wire:key="{{ $editingProductId ? 'edit-' . $editingProductId : 'create' }}"
         wire:submit.prevent="{{ $editingProductId ? 'update' : 'store' }}" enctype="multipart/form-data">
         <div class="row">
@@ -39,27 +41,30 @@
             </div>
 
             @if (!$editingProductId)
-    <div class="col-12 mb-3" id="productUploader">
-        <label class="form-label">Immagine Prodotto</label>
-        
-        <input id="productImageInput" type="file" class="form-control" accept="image/*">
-        
-        @error('image')
-            <small class="text-danger">{{ $message }}</small>
-        @enderror
+                <div class="col-12 mb-3" id="productUploader">
+                    <label class="form-label">Immagine Prodotto</label>
 
-        <div id="productUploadBox" class="mt-3" style="display: none;">
-            <div class="progress" style="height: 10px; background-color: #f0f0f0; border-radius: 5px; overflow: hidden;">
-                <div id="productUploadBar" class="progress-bar" 
-                     role="progressbar" style="width: 0%; background-color: #000; transition: width 0.3s ease;"></div>
-            </div>
-            <div class="d-flex justify-content-between mt-1">
-                <small class="text-muted" style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;"> ⏳ Upload in corso...</small>
-                <small class="text-muted" id="productUploadPercent" style="font-size: 0.7rem;">0%</small>
-            </div>
-        </div>
-    </div>
-@endif
+                    <input id="productImageInput" type="file" class="form-control" accept="image/*">
+
+                    @error('image')
+                        <small class="text-danger">{{ $message }}</small>
+                    @enderror
+
+                    <div id="productUploadBox" class="mt-3" style="display: none;">
+                        <div class="progress"
+                            style="height: 10px; background-color: #f0f0f0; border-radius: 5px; overflow: hidden;">
+                            <div id="productUploadBar" class="progress-bar" role="progressbar"
+                                style="width: 0%; background-color: #000; transition: width 0.3s ease;"></div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <small class="text-muted"
+                                style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;"> ⏳ Upload in
+                                corso...</small>
+                            <small class="text-muted" id="productUploadPercent" style="font-size: 0.7rem;">0%</small>
+                        </div>
+                    </div>
+                </div>
+            @endif
 
             <div class="col-12 mb-3">
                 <button class="btn btn-primary">
@@ -72,10 +77,32 @@
         </div>
     </form>
 
-    <h2 class="mt-5">Lista Prodotti</h2>
+    <h2 class="mt-5 mb-3">Lista Prodotti</h2>
+
+    <div class="product-search-bar mb-5">
+
+        <div class="d-flex justify-content-between align-items-center mb-2">
+
+            <div class="product-counter">
+                {{ $products->total() }}
+                {{ $products->total() === 1 ? 'prodotto' : 'prodotti' }}
+            </div>
+
+        </div>
+
+        <input type="text" class="form-control product-search-input" placeholder="Cerca prodotto..."
+            wire:model.live.debounce.300ms="search">
+
+    </div>
+    @if ($products->count() === 0)
+        <div class="empty-state">
+            Nessun prodotto trovato
+        </div>
+    @endif
+
     <div class="row">
         @foreach ($products as $p)
-           <div class="col-md-4 mb-4" wire:key="product-{{ $p->id }}">
+            <div class="col-md-4 mb-4" wire:key="product-{{ $p->id }}">
                 <div class="card h-100 shadow-sm">
                     @if ($p->image_path)
                         <img src="{{ Storage::url($p->image_path) }}" style="object-fit: cover; height:250px"
@@ -105,33 +132,34 @@
         </div>
     </div>
 
-   @if ($showDeleteModal)
-    <div class="modal-admin-wrapper">
-        <!-- Cliccando sullo sfondo chiude il modale -->
-        <div class="modal-admin-backdrop" wire:click="$set('showDeleteModal', false)"></div>
+    @if ($showDeleteModal)
+        <div class="modal-admin-wrapper">
+            <!-- Cliccando sullo sfondo chiude il modale -->
+            <div class="modal-admin-backdrop" wire:click="$set('showDeleteModal', false)"></div>
 
-        <div class="modal-admin-content">
-            <div class="modal-admin-header">
-                <h5 class="m-0 fw-bold">
-                    <i class="fas fa-exclamation-triangle me-2"></i> Conferma eliminazione
-                </h5>
-                <button type="button" class="btn-close btn-close-white" wire:click="$set('showDeleteModal', false)" style="box-shadow: none;"></button>
-            </div>
+            <div class="modal-admin-content">
+                <div class="modal-admin-header">
+                    <h5 class="m-0 fw-bold">
+                        <i class="fas fa-exclamation-triangle me-2"></i> Conferma eliminazione
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" wire:click="$set('showDeleteModal', false)"
+                        style="box-shadow: none;"></button>
+                </div>
 
-            <div class="modal-admin-body">
-                <p class="fs-5 fw-bold mb-1">Sei sicuro?</p>
-                <p class="text-muted mb-0">Vuoi davvero eliminare questo prodotto? L'azione è irreversibile.</p>
-            </div>
+                <div class="modal-admin-body">
+                    <p class="fs-5 fw-bold mb-1">Sei sicuro?</p>
+                    <p class="text-muted mb-0">Vuoi davvero eliminare questo prodotto? L'azione è irreversibile.</p>
+                </div>
 
-            <div class="modal-admin-footer">
-                <button type="button" class="btn btn-light border" wire:click="$set('showDeleteModal', false)">
-                    Annulla
-                </button>
-                <button type="button" class="btn btn-danger px-4" wire:click="deleteService">
-                    <i class="fas fa-trash-alt me-2"></i> Elimina
-                </button>
+                <div class="modal-admin-footer">
+                    <button type="button" class="btn btn-light border" wire:click="$set('showDeleteModal', false)">
+                        Annulla
+                    </button>
+                    <button type="button" class="btn btn-danger px-4" wire:click="deleteService">
+                        <i class="fas fa-trash-alt me-2"></i> Elimina
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-@endif
+    @endif
 </div>
