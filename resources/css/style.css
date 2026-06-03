@@ -2660,18 +2660,13 @@ section.container { background-color: #fff; }
     z-index:10; /* HERO sopra tutto */
 }
 
-.row{
-    position:relative;
-    z-index:1;
-}
-
 /* aumenta distanza HERO -> GALLERY */
 .tour-hero{
     margin-bottom:120px;
 }
 
 /* extra spacing tra primo blocco e hero */
-.col-md-6:first-child{
+.tour-page .col-md-6:first-child{
     margin-top:40px;
 }
 
@@ -2679,7 +2674,7 @@ section.container { background-color: #fff; }
    LAYOUT SPACING (ANTI-BOOTSTRAP FEEL)
 ========================= */
 
-.col-md-6{
+.tour-page .col-md-6{
     margin-bottom:40px;
 }
 
