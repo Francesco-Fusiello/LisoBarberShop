@@ -245,12 +245,12 @@
                                 <div class="tour-img-small">
                                     <img src="{{ asset('images/mosaic/Mosaic2.jpeg') }}" alt="">
                                     <div class="tour-meta">
-                                        <p class="tour-location">
+                                        {{-- <p class="tour-location">
                                             DUBAI — UAE
                                         </p>
                                         <span class="tour-year">
                                             2025
-                                        </span>
+                                        </span> --}}
                                     </div>
                                 </div>
                             </div>
