@@ -199,66 +199,67 @@
             </div>
         </section>
 
-        {{-- Tour section --}}
-        <section class="tour-preview" data-aos="fade-up">
+  {{-- Tour section --}}
+<section class="tour-preview" data-aos="fade-up">
 
-            <div class="container">
-                <div class="tour-wrapper">
-                    <div class="row align-items-center gy-5">
-                        <div class="col-lg-5">
-                            <div class="tour-content">
-                                <p class="tour-label">
-                                    WORLDWIDE EXPERIENCE
-                                </p>
+    <div class="container">
+        <div class="tour-wrapper">
+            <div class="row align-items-center gy-5">
 
-                                <h2 class="tour-title">
-                                    LISO <br> ON TOUR
-                                </h2>
+                <div class="col-lg-5">
+                    <div class="tour-content">
 
-                                <p class="tour-text">
-                                    A journey through style, culture and precision.
-                                    Cutting hair worldwide with the identity of Liso Barber Shop.
-                                </p>
+                        <p class="tour-label">
+                            WORLDWIDE EXPERIENCE
+                        </p>
 
-                                <a href="{{ route('tour')}}" class="tour-btn">
-                                    VIEW THE TOUR
-                                </a>
-                            </div>
+                        <h2 class="tour-title">
+                            LISO <br> ON TOUR
+                        </h2>
+
+                        <p class="tour-text">
+                            A journey through style, culture and precision.
+                            Cutting hair worldwide with the identity of Liso Barber Shop.
+                        </p>
+
+                        {{-- Desktop & Tablet --}}
+                        <div class="d-none d-lg-block">
+                            <a href="{{ route('tour') }}" class="tour-btn">
+                                VIEW THE TOUR
+                            </a>
                         </div>
 
-                        <div class="col-lg-7">
-                            <div class="tour-images">
-                                <div class="tour-img-large">
-                                    <img src="{{ asset('images/mosaic/Mosaic4.JPG') }}" alt="">
-
-                                    <div class="tour-meta">
-                                        <p class="tour-location">
-                                            TOKYO — JAPAN
-                                        </p>
-
-                                        <span class="tour-year">
-                                            2025
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="tour-img-small">
-                                    <img src="{{ asset('images/mosaic/Mosaic2.jpeg') }}" alt="">
-                                    <div class="tour-meta">
-                                        {{-- <p class="tour-location">
-                                            DUBAI — UAE
-                                        </p>
-                                        <span class="tour-year">
-                                            2025
-                                        </span> --}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
+
+                <div class="col-lg-7">
+
+                    <div class="tour-images">
+
+                        <div class="tour-img-large">
+                            <img src="{{ asset('images/mosaic/Mosaic4.JPG') }}" alt="">
+                        </div>
+
+                        <div class="tour-img-small">
+                            <img src="{{ asset('images/mosaic/Mosaic2.jpeg') }}" alt="">
+                        </div>
+
+                    </div>
+
+                    {{-- Mobile Only --}}
+                    <div class="d-lg-none text-center mt-5">
+                        <a href="{{ route('tour') }}" class="tour-btn">
+                            VIEW THE TOUR
+                        </a>
+                    </div>
+
+                </div>
+
             </div>
-        </section>
+        </div>
+    </div>
+
+</section>
 
         {{-- Counter section --}}
         <section class="container my-5 counter-section text-center px-0" data-aos="fade-up">

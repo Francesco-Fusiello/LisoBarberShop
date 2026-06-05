@@ -590,7 +590,7 @@ section.container { background-color: #fff; }
     }
 }
 /* Tutte le immagini dei servizi uguali */
-.tour-page .row.align-items-center .col-md-6 img {
+.tour-page.row.align-items-center .col-md-6 img {
     width: 100%;        /* occupa tutta la colonna */
     height: 300px;      /* altezza fissa desktop */
     object-fit: cover;  /* riempie senza deformarsi */
@@ -599,7 +599,7 @@ section.container { background-color: #fff; }
 
 /* Mobile */
 @media (max-width: 768px) {
-    .tour-page .row.align-items-center .col-md-6 img {
+    .tour-page.row.align-items-center .col-md-6 img {
         height: 220px;  /* altezza più compatta su mobile */
     }
 }
