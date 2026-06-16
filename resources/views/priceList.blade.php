@@ -22,7 +22,7 @@
                             <div class="list-group-item d-flex justify-content-between align-items-center price-item bg-white mb-2 shadow-sm"
                                 style="border: 1px solid #fff; border-radius: 0; transition: all 0.3s ease; color:#000">
                                 <span>{{ $service->name }}</span>
-                                <strong>{{ $service->price }}€</strong>
+                                <strong>da {{ $service->price }}€</strong>
                             </div>
                         @endforeach
                     </div>
