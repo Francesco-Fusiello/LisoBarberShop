@@ -1783,42 +1783,50 @@ section.container { background-color: #fff; }
 
 #prevImage,
 #nextImage {
-    position: fixed; 
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    z-index: 1050;
-    
-    /* RIPRISTINO STILE LUXURY ORIGINALE */
+    z-index: 10;
+
+    width: 52px;
+    height: 52px;
+
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.15);
     color: #fff;
+
     font-size: 2rem;
-    width: 52px;  
-    height: 52px; 
-    border-radius: 0; 
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease;
+
     cursor: pointer;
+
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
-/* Posizionate ai bordi estremi dello schermo */
+/* bordi veri del modal */
 #prevImage {
-    left: 20px;
+    left: 0;
+    transform: translate(-50%, -50%);
 }
 
 #nextImage {
-    right: 20px;
+    right: 0;
+    transform: translate(50%, -50%);
 }
 
-/* Effetto Hover Luxury */
-#prevImage:hover,
+/* hover premium stabile */
+#prevImage:hover {
+    background: #fff;
+    color: #000;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
 #nextImage:hover {
     background: #fff;
     color: #000;
-    transform: translateY(-50%); 
+    transform: translate(50%, -50%) scale(1.05);
 }
 
 /* Adattamento Mobile */
