@@ -18,7 +18,7 @@ class ProductCrud extends Component
     public $price;
     /** @var \Livewire\Features\SupportFileUploads\TemporaryUploadedFile|null */
     public $image;
-    
+
     public ?int $editingProductId = null; // Il ? significa che può essere int oppure null
     public ?int $selectedProductId = null;
     public bool $showDeleteModal = false;
@@ -111,9 +111,10 @@ class ProductCrud extends Component
         $this->showDeleteModal   = true;
     }
 
-    public function deleteProduct()
+    public function deleteProduct($id)
     {
-        $p = Product::find($this->selectedProductId);
+
+        $p = Product::find($id);
 
         if ($p) {
             if ($p->image_path) {
@@ -122,12 +123,15 @@ class ProductCrud extends Component
             $p->delete();
         }
 
-        // RESET TOTALE DELLO STATO
+
         $this->showDeleteModal = false;
         $this->selectedProductId = null;
-        $this->resetPage(); // Importante se cancelli l'ultimo elemento di una pagina
+        $this->search = '';
 
         session()->flash('message', 'Prodotto eliminato con successo!');
+
+
+        return redirect()->to(request()->header('Referer'));
     }
 
     public function applyFilter(array $ids)
@@ -136,25 +140,25 @@ class ProductCrud extends Component
         $this->resetPage();
     }
 
-   public function render()
-{
-    $q = Product::query();
+    public function render()
+    {
+        $q = Product::query();
 
-    if ($this->filteredProductIds) {
-        $q->whereIn('id', $this->filteredProductIds);
+        if ($this->filteredProductIds) {
+            $q->whereIn('id', $this->filteredProductIds);
+        }
+
+        if ($this->search) {
+            $q->where('name', 'like', '%' . $this->search . '%');
+        }
+
+        return view('livewire.product-crud', [
+            'products' => $q->latest()->paginate(50),
+        ]);
     }
 
-    if ($this->search) {
-        $q->where('name', 'like', '%' . $this->search . '%');
+    public function updatedSearch()
+    {
+        $this->resetPage();
     }
-
-    return view('livewire.product-crud', [
-        'products' => $q->latest()->paginate(50),
-    ]);
-}
-
-public function updatedSearch()
-{
-    $this->resetPage();
-}
 }

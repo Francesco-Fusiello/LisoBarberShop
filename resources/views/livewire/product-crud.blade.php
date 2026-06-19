@@ -155,7 +155,9 @@
                     <button type="button" class="btn btn-light border" wire:click="$set('showDeleteModal', false)">
                         Annulla
                     </button>
-                    <button type="button" class="btn btn-danger px-4" wire:click="deleteService">
+
+                    <button type="button" class="btn btn-danger px-4"
+                        wire:click="deleteProduct({{ $selectedProductId }})">
                         <i class="fas fa-trash-alt me-2"></i> Elimina
                     </button>
                 </div>
