@@ -11,7 +11,7 @@ class TourManager extends Component
 {
     use WithFileUploads;
 
-    public $image; 
+    public $image;
     public string $city = '';
     public string $country = '';
     public string $year = '';
@@ -37,7 +37,7 @@ class TourManager extends Component
             'year' => $this->year,
         ]);
 
-        $this->image = null; 
+        $this->image = null;
         $this->reset(['city', 'country', 'year']);
         $this->resetErrorBag();
         $this->resetValidation();
@@ -71,8 +71,11 @@ class TourManager extends Component
 
     public function render()
     {
+
         return view('livewire.tour-manager', [
-            'tourItems' => TourItem::latest()->get()
+            'tourItems' => TourItem::orderBy('year', 'desc')
+                ->orderBy('id', 'desc')
+                ->get()
         ]);
     }
 }

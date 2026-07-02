@@ -56,11 +56,15 @@ class PageController extends Controller
         return view('user.gallery', compact('images'));
     }
 
-    public function tour()
-    {
-        $tourItems = TourItem::latest()->get();
-        return view('tour', compact('tourItems'));
-    }
+  public function tour()
+{
+    // Usiamo orderBy per forzare l'ordine che abbiamo deciso (anno e poi ID)
+    $tourItems = TourItem::orderBy('year', 'desc')
+                         ->orderBy('id', 'desc')
+                         ->get();
+
+    return view('tour', compact('tourItems'));
+}
 
     public function chiSiamo()
     {
