@@ -19,38 +19,29 @@
 
             <div class="row justify-content-center">
                 <div class="col-xl-10">
-                    
+
 
                     <div class="row g-5 align-items-start">
-
                         @foreach ($tourItems as $item)
                             @php
-
-                                $delay = $loop->iteration > 2 && $loop->even ? '250' : '0';
+                                // 0 per la sinistra (dispari), 250 per la destra (pari)
+                                $delay = $loop->even ? '250' : '0';
                             @endphp
 
+                            <div class="col-12 col-md-6 {{ $loop->even ? 'magazine-shift' : '' }} {{ $loop->iteration <= 2 ? 'anchor-trigger' : '' }}"
+                                data-aos="fade-up" data-aos-delay="{{ $delay }}" data-aos-duration="800"
+                                data-aos-offset="50">
 
-                            <div class="col-12 col-md-6 {{ $loop->even ? 'magazine-shift' : '' }}" data-aos="fade-up"
-                                data-aos-delay="{{ $delay }}" {!! $loop->iteration == 1 ? 'id="first-polaroid" data-aos-anchor="#hero-section"' : '' !!} {!! $loop->iteration == 2 ? 'id="second-polaroid"' : '' !!}>
-
-                                <div class="polaroid-card shadow-lg">
-
-                                    <div class="polaroid-img-frame overflow-hidden">
+                                <div class="polaroid-card">
+                                    <div class="polaroid-img-frame">
                                         <img src="{{ asset('storage/' . $item->image) }}"
                                             class="img-fluid w-100 polaroid-img" alt="{{ $item->city }}">
                                     </div>
-
-                                    <div class="polaroid-footer d-flex justify-content-between align-items-center">
-                                        <p class="polaroid-location text-uppercase tracking-luxury mb-0">
-                                            {{ $item->city }} — {{ $item->country }}
-                                        </p>
-                                        <span class="polaroid-year-luxury">
-                                            {{ $item->year }}
-                                        </span>
+                                    <div class="polaroid-footer">
+                                        <p class="polaroid-location">{{ $item->city }} — {{ $item->country }}</p>
+                                        <span class="polaroid-year-luxury">{{ $item->year }}</span>
                                     </div>
-
                                 </div>
-
                             </div>
                         @endforeach
 

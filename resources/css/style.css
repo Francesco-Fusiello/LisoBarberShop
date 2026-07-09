@@ -2561,22 +2561,16 @@ section.container { background-color: #fff; }
    POLAROID LUXURY BASE
 ========================= */
 
-.polaroid-card{
-    background:#f6f6f4;
-    border:1px solid rgba(0,0,0,.06);
-    padding:14px 14px 18px;
-
-    border-radius:0;
-
-    box-shadow:
-        0 10px 25px rgba(0,0,0,.08);
-
-    position:relative;
-
-    transition:
-        transform .7s cubic-bezier(.25,1,.3,1),
-        box-shadow .7s ease;
+.polaroid-card {
+    background: transparent !important; /* Rimuove totalmente l'effetto carta bianca */
+    border: none !important;            /* Uccide il "filo" intorno che non ti piaceva */
+    padding: 0 !important;              
+    border-radius: 0;
+    box-shadow: none !important;        /* Togliamo l'ombra alla card intera... */
+    position: relative;
+    transition: transform .7s cubic-bezier(.25,1,.3,1);
 }
+
 
 /* =========================
    ROTAZIONE EDITORIALE (SOFT, LUXURY)
@@ -2602,63 +2596,84 @@ section.container { background-color: #fff; }
 }
 
 /* =========================
-   IMAGE = PRINT LUXURY
+   IMAGE = PRINT LUXURY (FULL BLEED)
 ========================= */
-
-.polaroid-img-frame{
-    position:relative;
-    overflow:hidden;
-    background:#0b0b0b;
-    border:1px solid rgba(0,0,0,.05);
+.polaroid-img-frame {
+    position: relative;
+    overflow: hidden;
+    background: transparent !important; /* Rimuove il fondo scuro che poteva creare un filo visivo ai bordi */
+    border: none !important; 
+    outline: none !important; /* Uccide qualsiasi contorno di sistema */
+    /* L'ombra elegante alla foto */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25); 
 }
 
-.polaroid-img{
-    width:100%;
-    aspect-ratio:1/1;
-    object-fit:cover;
-
-    filter:contrast(1.08) saturate(.9) brightness(.97);
+.polaroid-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block; 
+    border: none !important; /* Sicurezza extra sulla foto */
+    outline: none !important;
+    filter: contrast(1.08) saturate(.9) brightness(.97);
 }
 
 /* overlay leggerissimo da stampa */
-.polaroid-img-frame::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
+.polaroid-img-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
         to bottom,
         rgba(0,0,0,.02),
         rgba(0,0,0,.07)
     );
-    pointer-events:none;
+    pointer-events: none;
+}
+
+/* overlay leggerissimo da stampa */
+.polaroid-img-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,.02),
+        rgba(0,0,0,.07)
+    );
+    pointer-events: none;
 }
 
 /* =========================
    FOOTER TYPOGRAPHY (LUXURY ARCHIVE)
 ========================= */
 
-.polaroid-footer{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-top:14px;
+.polaroid-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Spazio sopra, niente ai lati (a filo con la foto), e spazio sotto prima della linea */
+    padding: 16px 0 12px 0; 
+    margin-top: 0;
+    /* ECCO IL BORDO SOTTO: Una linea sottile ed elegante che chiude la card */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.995); 
 }
 
-.polaroid-location{
-    font-size:11px;
-    letter-spacing:3.5px;
-    text-transform:uppercase;
-    font-weight:500;
-    color:#111 !important;
+.polaroid-location {
+    font-size: 11px;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #ffffff !important;
+    margin: 0;
 }
 
-.polaroid-year-luxury{
-    font-size:10px;
-    letter-spacing:4px;
-    opacity:.5;
-    color:#111 !important;
+.polaroid-year-luxury {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #ffffff !important;
+    margin: 0;
 }
-
 /* =========================
    FIX PROBLEMA HERO OVERLAP
 ========================= */
@@ -3046,5 +3061,6 @@ body{
         object-fit:cover;
     }
 }
+
 
 

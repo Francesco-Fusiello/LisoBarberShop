@@ -577,22 +577,32 @@ document.addEventListener('livewire:initialized', () => {
     });
 });
 
-// AOS Polaroid anchoring
 document.addEventListener('DOMContentLoaded', function() {
-    // Se la larghezza dello schermo è da tablet in su (>= 768px)
-    if (window.innerWidth >= 768) {
-        let secondPolaroid = document.getElementById('second-polaroid');
-        
-        if (secondPolaroid) {
-            // Aggiungiamo l'ancora alla seconda foto
-            secondPolaroid.setAttribute('data-aos-anchor', '#first-polaroid');
-            
-            // LA MAGIA: Diciamo ad AOS di ricalcolare gli elementi perché abbiamo cambiato il DOM
-            if (typeof AOS !== 'undefined') {
-                AOS.refreshHard();
+    function setupAOSAnchors() {
+        const triggers = document.querySelectorAll('.anchor-trigger');
+        const isDesktop = window.innerWidth >= 768;
+
+        triggers.forEach(el => {
+            if (isDesktop) {
+                // Su Desktop: Ancoriamo all'Hero per farle partire insieme
+                el.setAttribute('data-aos-anchor', '#hero-section');
+            } else {
+                // Su Mobile: Rimuoviamo l'ancora, AOS farà apparire ogni card allo scroll
+                el.removeAttribute('data-aos-anchor');
             }
+        });
+
+        // Forza AOS a ricalcolare le posizioni
+        if (typeof AOS !== 'undefined') {
+            AOS.refreshHard();
         }
     }
+
+    // Esegui subito al caricamento
+    setupAOSAnchors();
+
+    // Esegui anche se ridimensionano la finestra (es. ruotano il telefono)
+    window.addEventListener('resize', setupAOSAnchors);
 });
 
 
