@@ -605,6 +605,23 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', setupAOSAnchors);
 });
 
+// Gestione Selettore Paesi TomSelect
+document.addEventListener('livewire:initialized', () => {
+    const countrySelect = document.getElementById('country-search');
+    
+    if (countrySelect) {
+        const ts = new TomSelect("#country-search", {
+            create: false,
+            sortField: { field: "text", direction: "asc" }
+        });
+
+        // Ascolta l'evento inviato dal componente Livewire
+        Livewire.on('tour-saved', () => {
+            ts.clear(); // Pulisce la tendina
+        });
+    }
+});
+
 
 
 

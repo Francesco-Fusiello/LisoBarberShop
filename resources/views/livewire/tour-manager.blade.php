@@ -44,13 +44,18 @@
             @enderror
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3" wire:ignore>
             <label class="form-label fw-bold small">Paese</label>
-            <input type="text" wire:model="country" class="form-control" placeholder="es. Italy">
-            @error('country')
-                <div class="text-danger small mt-1">{{ $message }}</div>
-            @enderror
+            <select id="country-search" class="form-control" wire:model.live="country">
+                <option value="">Seleziona un paese...</option>
+                @foreach ($countries as $code => $name)
+                    <option value="{{ strtolower($code) }}">{{ $name }}</option>
+                @endforeach
+            </select>
         </div>
+        @error('country')
+            <div class="text-danger small mt-1">{{ $message }}</div>
+        @enderror
 
         <div class="mb-3">
             <label class="form-label fw-bold small">Anno</label>
@@ -129,3 +134,18 @@
         </div>
     @endif
 </div>
+
+<script>
+    document.addEventListener('livewire:initialized', () => {
+        // Inizializza TomSelect
+        const ts = new TomSelect("#country-search", {
+            create: false,
+            sortField: { field: "text", direction: "asc" }
+        });
+
+        // Ascolta l'evento che hai già nel metodo save()
+        Livewire.on('tour-saved', () => {
+            ts.clear(); // Pulisce la selezione grafica
+        });
+    });
+</script>

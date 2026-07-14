@@ -38,7 +38,21 @@
                                             class="img-fluid w-100 polaroid-img" alt="{{ $item->city }}">
                                     </div>
                                     <div class="polaroid-footer">
-                                        <p class="polaroid-location">{{ $item->city }} — {{ $item->country }}</p>
+                                        <div class="d-flex align-items-center gap-2">
+                                            {{-- Prima il testo --}}
+                                            <p class="polaroid-location mb-0">
+                                                {{ $item->city }} — {{ $item->country_name }}
+                                            </p>
+
+                                            {{-- Poi la bandiera --}}
+                                            @if (strlen($item->country) === 2)
+                                                @svg('flag-country-' . strtolower($item->country), 'shadow-sm', [
+                                                    'style' => 'width: 24px; height: 18px; object-fit: cover; border-radius: 2px; border: 1px solid #efefef;',
+                                                ])
+                                            @else
+                                                <span style="font-size: 1.1rem;">🏳️</span>
+                                            @endif
+                                        </div>
                                         <span class="polaroid-year-luxury">{{ $item->year }}</span>
                                     </div>
                                 </div>

@@ -8,7 +8,9 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.bootstrap5.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+
 
     <title>@yield('title', 'Liso Barber Shop | Barbiere ad Andria')</title>
     <meta name="description" content="@yield('meta_description', 'Liso Barber Shop è il barbiere di riferimento ad Andria. Taglio uomo, barba e stile moderno. Prenota ora il tuo appuntamento.')">

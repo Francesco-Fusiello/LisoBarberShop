@@ -33,7 +33,7 @@ class TourManager extends Component
         TourItem::create([
             'image' => $imagePath,
             'city' => $this->city,
-            'country' => $this->country,
+            'country' => strtolower($this->country),
             'year' => $this->year,
         ]);
 
@@ -69,13 +69,40 @@ class TourManager extends Component
         session()->flash('message', 'Tappa del tour eliminata con successo!');
     }
 
+
+    private function getCountriesList(): array
+    {
+        $paths = [
+            base_path('vendor/umpirsky/country-list/data/it/country.php'),
+            base_path('vendor/umpirsky/country-list/data/it_IT/country.php'),
+        ];
+
+        foreach ($paths as $path) {
+            if (file_exists($path)) {
+                $list = include $path;
+                asort($list);
+                return $list;
+            }
+        }
+
+
+        return [
+            'it' => 'Italia',
+            'es' => 'Spagna',
+            'fr' => 'Francia',
+            'de' => 'Germania',
+            'gb' => 'Regno Unito',
+            'us' => 'Stati Uniti',
+        ];
+    }
+
     public function render()
     {
-
         return view('livewire.tour-manager', [
             'tourItems' => TourItem::orderBy('year', 'desc')
                 ->orderBy('id', 'desc')
-                ->get()
+                ->get(),
+            'countries' => $this->getCountriesList()
         ]);
     }
 }
