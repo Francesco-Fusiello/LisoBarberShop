@@ -82,7 +82,7 @@
                             <h5 class="contact-title">CONTATTI</h5>
                             <p class="contact-text">
                                 +39 329 978 0152<br>
-                                <a href="mailto:info@lisobarbershop.it">info@lisobarbershop.it</a>
+                                <a href="mailto:lisogianfranco@yahoo.it">lisogianfranco@yahoo.it</a>
                             </p>
                         </div>
 

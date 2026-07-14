@@ -35,7 +35,7 @@
             <p style="font-size:1rem; line-height:1.6; color:#C9B48F;">
                 Viale Pietro Nenni 324, Andria (BT)<br>
                 Tel: +39 329 978 01527<br>
-                Email: info@lisobarbershop.it
+                Email: lisogianfranco@yahoo.it
             </p>
         </div>
 
