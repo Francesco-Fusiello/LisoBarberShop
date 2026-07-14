@@ -21,7 +21,11 @@ class PageController extends Controller
 
         $products = Product::inRandomOrder()->take(9)->get();
 
-        return view('welcome', compact('latestReviews', 'googleStats', 'products'));
+        $randomTourImages = TourItem::inRandomOrder()
+        ->take(2)
+        ->get();
+
+        return view('welcome', compact('latestReviews', 'googleStats', 'products', 'randomTourImages'));
     }
 
     public function priceList()
@@ -58,7 +62,7 @@ class PageController extends Controller
 
   public function tour()
 {
-    // Usiamo orderBy per forzare l'ordine che abbiamo deciso (anno e poi ID)
+    
     $tourItems = TourItem::orderBy('year', 'desc')
                          ->orderBy('id', 'desc')
                          ->get();

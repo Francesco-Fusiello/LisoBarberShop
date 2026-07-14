@@ -135,17 +135,4 @@
     @endif
 </div>
 
-<script>
-    document.addEventListener('livewire:initialized', () => {
-        // Inizializza TomSelect
-        const ts = new TomSelect("#country-search", {
-            create: false,
-            sortField: { field: "text", direction: "asc" }
-        });
 
-        // Ascolta l'evento che hai già nel metodo save()
-        Livewire.on('tour-saved', () => {
-            ts.clear(); // Pulisce la selezione grafica
-        });
-    });
-</script>

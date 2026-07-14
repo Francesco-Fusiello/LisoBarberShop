@@ -234,17 +234,23 @@
 
                 <div class="col-lg-7">
 
-                    <div class="tour-images">
+                  <div class="tour-images">
 
-                        <div class="tour-img-large">
-                            <img src="{{ asset('images/mosaic/Mosaic4.JPG') }}" alt="">
-                        </div>
+    <div class="tour-img-large">
+        @if(isset($randomTourImages[0]))
+            <img src="{{ asset('storage/' . $randomTourImages[0]->image) }}"
+                 alt="{{ $randomTourImages[0]->city }}">
+        @endif
+    </div>
 
-                        <div class="tour-img-small">
-                            <img src="{{ asset('images/mosaic/Mosaic2.jpeg') }}" alt="">
-                        </div>
+    <div class="tour-img-small">
+        @if(isset($randomTourImages[1]))
+            <img src="{{ asset('storage/' . $randomTourImages[1]->image) }}"
+                 alt="{{ $randomTourImages[1]->city }}">
+        @endif
+    </div>
 
-                    </div>
+</div>
 
                     {{-- Mobile Only --}}
                     <div class="d-lg-none text-center mt-5">
