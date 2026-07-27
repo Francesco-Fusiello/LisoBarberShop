@@ -44,25 +44,32 @@
             <div class="text-center mx-auto px-4 force-black" style="max-width: 900px;">
 
                 <h2 class="text-center display-5 mt-0" style="font-weight: 700;">
-                    Per la bellezza e la cura dei capelli degli uomini
+                    Più di un taglio. Un’identità.
                 </h2>
 
                 <div class="luxury-hr-line"></div>
 
                 <p class="lead mx-auto" style="max-width: 700px; color: #000;">
-                    Nel cuore di Andria, <strong>Liso Barber Shop</strong> è un punto di riferimento
-                    per l’uomo che desidera stile, precisione e cura dei dettagli.
+                    Nel cuore di Andria, <strong>Liso Barber Shop</strong> è il luogo dove lo stile incontra
+                    la personalità. ✂️ Qui ogni taglio, ogni barba e ogni dettaglio raccontano chi sei,
+                    valorizzando la tua unicità.
                 </p>
 
                 <p class="lead mx-auto" style="max-width: 700px; color: #000;">
-                    Il nostro salone ad Andria propone taglio uomo, rasatura tradizionale
-                    e modellatura barba, con un approccio moderno che unisce tradizione e innovazione.
+                    Crediamo che prendersi cura della propria immagine significhi prendersi cura di sé.
+                    Per questo uniamo esperienza, passione 🔥 e continua innovazione 🚀 per offrirti
+                    un’esperienza che va oltre il semplice servizio.
                 </p>
 
                 <p class="lead mx-auto mb-5" style="max-width: 700px; color: #000;">
-                    Ogni servizio è personalizzato per valorizzare il volto e l’identità di chi ci sceglie,
-                    in un ambiente raffinato ed esclusivamente dedicato all’uomo.
+                    Ogni cliente che si accomoda sulla nostra poltrona porta con sé una storia.
+                    Il nostro compito è valorizzarla, con precisione, ascolto 🤝 e attenzione ai dettagli.
                 </p>
+
+                <p class="lead mx-auto mb-5" style="max-width: 700px; color: #000;">
+                    Perché il vero stile non segue le mode. <strong>Le crea.</strong> 🔥
+                </p>
+
 
                 <h3 class="mb-4" style="font-weight: 700;">
                     Scarica la nostra app per prenotare subito il tuo appuntamento
@@ -199,73 +206,73 @@
             </div>
         </section>
 
-  {{-- Tour section --}}
-<section class="tour-preview" data-aos="fade-up">
+        {{-- Tour section --}}
+        <section class="tour-preview" data-aos="fade-up">
 
-    <div class="container">
-        <div class="tour-wrapper">
-            <div class="row align-items-center gy-5">
+            <div class="container">
+                <div class="tour-wrapper">
+                    <div class="row align-items-center gy-5">
 
-                <div class="col-lg-5">
-                    <div class="tour-content">
+                        <div class="col-lg-5">
+                            <div class="tour-content">
 
-                        <p class="tour-label">
-                            WORLDWIDE EXPERIENCE
-                        </p>
+                                <p class="tour-label">
+                                    WORLDWIDE EXPERIENCE
+                                </p>
 
-                        <h2 class="tour-title">
-                            LISO <br> ON TOUR
-                        </h2>
+                                <h2 class="tour-title">
+                                    LISO <br> ON TOUR
+                                </h2>
 
-                        <p class="tour-text">
-                            A journey through style, culture and precision.
-                            Cutting hair worldwide with the identity of Liso Barber Shop.
-                        </p>
+                                <p class="tour-text">
+                                    A journey through style, culture and precision.
+                                    Cutting hair worldwide with the identity of Liso Barber Shop.
+                                </p>
 
-                        {{-- Desktop & Tablet --}}
-                        <div class="d-none d-lg-block">
-                            <a href="{{ route('tour') }}" class="tour-btn">
-                                VIEW THE TOUR
-                            </a>
+                                {{-- Desktop & Tablet --}}
+                                <div class="d-none d-lg-block">
+                                    <a href="{{ route('tour') }}" class="tour-btn">
+                                        VIEW THE TOUR
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7">
+
+                            <div class="tour-images">
+
+                                <div class="tour-img-large">
+                                    @if (isset($randomTourImages[0]))
+                                        <img src="{{ asset('storage/' . $randomTourImages[0]->image) }}"
+                                            alt="{{ $randomTourImages[0]->city }}">
+                                    @endif
+                                </div>
+
+                                <div class="tour-img-small">
+                                    @if (isset($randomTourImages[1]))
+                                        <img src="{{ asset('storage/' . $randomTourImages[1]->image) }}"
+                                            alt="{{ $randomTourImages[1]->city }}">
+                                    @endif
+                                </div>
+
+                            </div>
+
+                            {{-- Mobile Only --}}
+                            <div class="d-lg-none text-center mt-5">
+                                <a href="{{ route('tour') }}" class="tour-btn">
+                                    VIEW THE TOUR
+                                </a>
+                            </div>
+
                         </div>
 
                     </div>
                 </div>
-
-                <div class="col-lg-7">
-
-                  <div class="tour-images">
-
-    <div class="tour-img-large">
-        @if(isset($randomTourImages[0]))
-            <img src="{{ asset('storage/' . $randomTourImages[0]->image) }}"
-                 alt="{{ $randomTourImages[0]->city }}">
-        @endif
-    </div>
-
-    <div class="tour-img-small">
-        @if(isset($randomTourImages[1]))
-            <img src="{{ asset('storage/' . $randomTourImages[1]->image) }}"
-                 alt="{{ $randomTourImages[1]->city }}">
-        @endif
-    </div>
-
-</div>
-
-                    {{-- Mobile Only --}}
-                    <div class="d-lg-none text-center mt-5">
-                        <a href="{{ route('tour') }}" class="tour-btn">
-                            VIEW THE TOUR
-                        </a>
-                    </div>
-
-                </div>
-
             </div>
-        </div>
-    </div>
 
-</section>
+        </section>
 
         {{-- Counter section --}}
         <section class="container my-5 counter-section text-center px-0" data-aos="fade-up">
