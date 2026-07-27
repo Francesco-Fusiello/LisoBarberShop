@@ -23,29 +23,42 @@
                 <div class="about-editorial">
 
                     <p>
-                        Liso Barber Shop nasce nel 2016 dalla passione e dall’energia di
-                        <strong>Gianfranco Liso</strong>, con un’idea semplice ma potente: creare
-                        un luogo dove il taglio di capelli o la cura della barba fossero momenti
-                        di stile, benessere e autenticità.
-
+                        Sono <strong>Gianfranco Liso</strong> e nel <strong>2017</strong> ho trasformato una passione
+                        in un progetto:
+                        <br>
+                        <strong>Liso Barber Shop</strong>. 💈
                     </p>
 
                     <p>
-                        Da allora, accogliamo ogni cliente con professionalità, attenzione e un
-                        tocco di simpatia che ci rende unici.
+                        Fin dall’inizio ho avuto un obiettivo preciso: creare un luogo dove ogni cliente
+                        potesse sentirsi a casa, ascoltato e valorizzato. 🤝 Per me fare il barbiere
+                        significa molto più che realizzare un taglio ✂️: significa aiutare ogni persona
+                        a esprimere la versione migliore di sé. 🔥
                     </p>
 
-
+                    <p>
+                        Ogni giorno investo nella formazione, nella ricerca e soprattutto nei viaggi. 🌍
+                        È proprio viaggiando che trovo nuove idee 💡, scopro tecniche, incontro culture
+                        diverse e porto tutto questo nel mio lavoro. ✨
+                    </p>
 
                     <p>
+                        Ogni esperienza diventa ispirazione per crescere e offrire qualcosa di unico
+                        a chi sceglie di sedersi sulla mia poltrona. 💈
+                    </p>
 
-                        Liso Barber Shop è lo specchio di chi ama distinguersi, valorizzarsi e
-                        sentirsi sempre al meglio.
-
+                    <p>
+                        <strong>Liso Barber Shop</strong> è il riflesso del mio percorso: passione,
+                        sacrificio e voglia di migliorarmi ogni giorno. 🚀
                     </p>
 
                     <p class="about-quote">
-                        <em>Una poltrona è sempre pronta per te.</em>
+                        <em>
+                            Perché lo stile non nasce per caso, ma dalla continua ricerca di ciò che può fare davvero la
+                            differenza.
+                            <br><br>
+                            <strong>U' MASSM!</strong> 🔥
+                        </em>
                     </p>
                 </div>
 
