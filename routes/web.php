@@ -52,6 +52,11 @@ Route::get('/search-products', function (\Illuminate\Http\Request $request) {
     return response()->json($products);
 });
 
+Route::view('/privacy-policy', 'privacy-policy')->name('privacy-policy');
+
+Route::view('/cookie-policy', 'cookie-policy')->name('cookie-policy');
+
+
 
 
 

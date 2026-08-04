@@ -3160,6 +3160,87 @@ body{
 .cookie-leave-end {
     transform: translateY(100%);
 }
+/* ================================
+   LEGAL PAGES - PRIVACY / COOKIE
+================================ */
+
+.legal-page {
+    background: #fff;
+    color: #111;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 50px 40px;
+    line-height: 1.8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.legal-page h1 {
+    color: #000;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    line-height: 1.3;
+}
+
+.legal-page h2 {
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.legal-page p {
+    color: #222;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.legal-page ul {
+    color: #222;
+    font-size: 16px;
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.legal-page li {
+    margin-bottom: 8px;
+}
+
+.legal-page strong {
+    color: #000;
+    font-weight: 700;
+}
+
+.legal-page .legal-update {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .legal-page {
+        margin: 20px auto;
+        padding: 30px 20px;
+    }
+
+    .legal-page h1 {
+        font-size: 28px;
+    }
+
+    .legal-page h2 {
+        font-size: 20px;
+    }
+
+    .legal-page p,
+    .legal-page li {
+        font-size: 15px;
+    }
+
+}
 
 
 

@@ -91,8 +91,24 @@
     </div>
 
     <div style="text-align:center; margin-top:3rem; font-size:0.85rem; color:#C9B48F; opacity:0.9;">
-        © {{ date('Y') }} Liso Barber Shop. Tutti i diritti riservati.<br>
+
+    © {{ date('Y') }} Liso Barber Shop. Tutti i diritti riservati.
+
+    <div style="margin-top:1rem;">
+        <a href="{{ route('privacy-policy') }}"
+            style="color:#C9B48F; text-decoration:none; margin-right:15px;">
+            Privacy Policy
+        </a>
+
+        <span style="color:#C9B48F;">|</span>
+
+        <a href="{{ route('cookie-policy') }}"
+            style="color:#C9B48F; text-decoration:none; margin-left:15px;">
+            Cookie Policy
+        </a>
     </div>
+
+</div>
 
     <style>
         footer a {
