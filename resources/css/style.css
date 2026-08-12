@@ -2649,6 +2649,7 @@ section.container { background-color: #fff; }
     margin-top: 0;
     /* ECCO IL BORDO SOTTO: Una linea sottile ed elegante che chiude la card */
     border-bottom: 1px solid rgba(255, 255, 255, 0.995); 
+     gap: 12px;
 }
 
 .polaroid-location {
@@ -2658,6 +2659,10 @@ section.container { background-color: #fff; }
     font-weight: 500;
     color: #ffffff !important;
     margin: 0;
+    min-width: 0;
+    max-width: 100%;
+    flex: 1;
+    overflow-wrap: anywhere;
 }
 
 .polaroid-year-luxury {
@@ -2665,6 +2670,35 @@ section.container { background-color: #fff; }
     letter-spacing: 4px;
     color: #ffffff !important;
     margin: 0;
+}
+@media (max-width: 767px) {
+
+    .polaroid-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .polaroid-location-wrapper {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .polaroid-location {
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .polaroid-meta {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
 }
 /* =========================
    FIX PROBLEMA HERO OVERLAP

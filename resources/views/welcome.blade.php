@@ -187,7 +187,8 @@
                                 style="width:60px; height:60px; object-fit:contain;">
                             <h5 class="luxury-card-title">Modellatura Barba</h5>
                             <p class="luxury-card-text">
-                               Definizione e trattamenti personalizzati per una barba morbida, curata e valorizzata in ogni dettaglio.
+                                Definizione e trattamenti personalizzati per una barba morbida, curata e valorizzata in
+                                ogni dettaglio.
                             </p>
                             {{-- <a href="{{ route('services') }}#modellatura-barba" class="luxury-btn-dark mt-auto">
                                 Scopri di più
@@ -412,7 +413,8 @@
                                 </div>
 
                                 <!-- Review text -->
-                                <p class="review-text">
+                                <p class="review-text"
+                                    style="color: #000 !important; font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; line-height: 1.7; font-style: normal;">
                                     {{ Str::of($review->text)->explode('.')->first() }}.
                                 </p>
 
