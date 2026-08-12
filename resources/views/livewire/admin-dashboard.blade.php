@@ -26,7 +26,7 @@
 
                     <a href="{{ route('admin.dashboard', ['section' => 'tour']) }}"
                         class="btn btn-outline-info {{ $section === 'tour' ? 'active' : '' }}">
-                        Liso On Tour
+                        On Tour
                     </a>
                 </div>
             </div>

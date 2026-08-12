@@ -157,9 +157,9 @@
                             <p class="luxury-card-text">
                                 Valorizziamo ogni tipo di volto e stile con tagli personalizzati.
                             </p>
-                            <a href="{{ route('services') }}#taglio-uomo" class="luxury-btn-dark mt-auto">
+                            {{-- <a href="{{ route('services') }}#taglio-uomo" class="luxury-btn-dark mt-auto">
                                 Scopri di più
-                            </a>
+                            </a> --}}
                         </div>
                     </div>
                 </div>
@@ -173,9 +173,9 @@
                             <p class="luxury-card-text">
                                 Rasatura con panno caldo e prodotti di alta qualità per un relax autentico.
                             </p>
-                            <a href="{{ route('services') }}#rasatura-tradizionale" class="luxury-btn-dark mt-auto">
+                            {{-- <a href="{{ route('services') }}#rasatura-tradizionale" class="luxury-btn-dark mt-auto">
                                 Scopri di più
-                            </a>
+                            </a> --}}
                         </div>
                     </div>
                 </div>
@@ -187,11 +187,11 @@
                                 style="width:60px; height:60px; object-fit:contain;">
                             <h5 class="luxury-card-title">Modellatura Barba</h5>
                             <p class="luxury-card-text">
-                                Definizione e trattamenti per una barba morbida e curata.
+                               Definizione e trattamenti personalizzati per una barba morbida, curata e valorizzata in ogni dettaglio.
                             </p>
-                            <a href="{{ route('services') }}#modellatura-barba" class="luxury-btn-dark mt-auto">
+                            {{-- <a href="{{ route('services') }}#modellatura-barba" class="luxury-btn-dark mt-auto">
                                 Scopri di più
-                            </a>
+                            </a> --}}
                         </div>
                     </div>
                 </div>
