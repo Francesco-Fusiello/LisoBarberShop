@@ -21,11 +21,11 @@ class PageController extends Controller
 
         $products = Product::inRandomOrder()->take(9)->get();
 
-        $randomTourImages = TourItem::inRandomOrder()
-        ->take(2)
-        ->get();
+        $randomTourImages = TourItem::inRandomOrder()->take(2)->get();
 
-        return view('welcome', compact('latestReviews', 'googleStats', 'products', 'randomTourImages'));
+        $homeImages = GalleryImage::where('is_featured', true)->latest()->get();
+
+        return view('welcome', compact('latestReviews', 'googleStats', 'products', 'randomTourImages', 'homeImages'));
     }
 
     public function priceList()
@@ -60,15 +60,15 @@ class PageController extends Controller
         return view('user.gallery', compact('images'));
     }
 
-  public function tour()
-{
-    
-    $tourItems = TourItem::orderBy('year', 'desc')
-                         ->orderBy('id', 'desc')
-                         ->get();
+    public function tour()
+    {
 
-    return view('tour', compact('tourItems'));
-}
+        $tourItems = TourItem::orderBy('year', 'desc')
+            ->orderBy('id', 'desc')
+            ->get();
+
+        return view('tour', compact('tourItems'));
+    }
 
     public function chiSiamo()
     {

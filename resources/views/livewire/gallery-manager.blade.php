@@ -56,11 +56,29 @@
                     <img src="{{ asset($img->image_path) }}" class="card-img-top"
                         style="object-fit: cover; height: 200px;">
 
-                    <div class="card-body text-center">
-                        <button wire:click="confirmDelete({{ $img->id }})" class="btn btn-danger btn-sm">
-                            Elimina
-                        </button>
-                    </div>
+                   <div class="card-body text-center">
+
+    {{-- Selezione immagine per la Home --}}
+    <button
+        wire:click="toggleFeatured({{ $img->id }})"
+        type="button"
+        class="btn btn-sm {{ $img->is_featured ? 'btn-warning' : 'btn-outline-secondary' }}"
+        title="{{ $img->is_featured ? 'Rimuovi dalla Home' : 'Mostra nella Home' }}">
+
+        <i class="fas fa-star"></i>
+
+        {{ $img->is_featured ? 'In Home' : 'Mostra in Home' }}
+    </button>
+
+    {{-- Elimina --}}
+    <button
+        wire:click="confirmDelete({{ $img->id }})"
+        type="button"
+        class="btn btn-danger btn-sm">
+        Elimina
+    </button>
+
+</div>
                 </div>
             </div>
         @endforeach

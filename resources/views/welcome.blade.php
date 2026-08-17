@@ -100,42 +100,41 @@
 
 
         <!-- mosaic-section.blade.php (solo la sezione) -->
-        <section class="mosaic-section" data-aos="fade-up">
-            <div class="text-center text-white">
-                <h2 class="fw-bold text-uppercase display-5" style="color: #fff">Il Nostro Salone</h2>
-                <div class="luxury-hr-line bg-white"></div>
-                <p class="lead">Uno spazio curato, moderno e accogliente.</p>
-            </div>
-            <div class="mosaic-grid col-md-10">
-                <img src="/images/2.jpg" loading="lazy" decoding="async" alt="Interno del salone Liso Barber Shop">
-                <img src="/images/mosaic/Mosaic2.jpeg" loading="lazy" decoding="async"
-                    alt="Area taglio uomini Liso Barber Shop">
-                <img src="/images/mosaic/Mosaic11.png" loading="lazy" decoding="async"
-                    alt="Postazione rasatura Liso Barber Shop">
-                <img src="/images/mosaic/Mosaic4.JPG" loading="lazy" decoding="async"
-                    alt="Barbiere al lavoro Liso Barber Shop">
-                <img src="/images/mosaic/Mosaic9.jpeg" loading="lazy" decoding="async"
-                    alt="Dettaglio sedia barbiere Liso Barber Shop">
-                <img src="/images/mosaic/Mosaic6.JPG" loading="lazy" decoding="async"
-                    alt="Strumenti da barbiere Liso Barber Shop">
-                <img src="/images/mosaic/Mosaic5.jpeg" loading="lazy" decoding="async"
-                    alt="Angolo accoglienza clienti Liso Barber Shop">
-                <img src="/images/mosaic/Mosaic7.jpeg" loading="lazy" decoding="async"
-                    alt="Dettagli arredamento Liso Barber Shop">
-                <img src="/images/mosaic/Mosaic8.jpeg" loading="lazy" decoding="async"
-                    alt="Specchi e postazioni Liso Barber Shop">
-                <img src="/images/mosaic/Mosaic10.jpeg" loading="lazy" decoding="async"
-                    alt="Trattamenti barba Liso Barber Shop">
-                <img src="/images/mosaic/Mosaic12.jpg" loading="lazy" decoding="async"
-                    alt="Vista generale del salone Liso Barber Shop">
+       <section class="mosaic-section" data-aos="fade-up">
 
-            </div>
-            <div class="text-center mt-2">
-                <a href="{{ route('user.gallery') }}" class="mosaic-cta-btn">
-                    VISITA LA NOSTRA GALLERY
-                </a>
-            </div>
-        </section>
+    <div class="text-center text-white">
+        <h2 class="fw-bold text-uppercase display-5" style="color: #fff">
+            Il Nostro Salone
+        </h2>
+
+        <div class="luxury-hr-line bg-white"></div>
+
+        <p class="lead">
+            Uno spazio curato, moderno e accogliente.
+        </p>
+    </div>
+
+    <div class="mosaic-grid col-md-10">
+
+        @foreach ($homeImages->take(11) as $image)
+
+            <img
+                src="{{ asset($image->image_path) }}"
+                loading="lazy"
+                decoding="async"
+                alt="Liso Barber Shop">
+
+        @endforeach
+
+    </div>
+
+    <div class="text-center mt-2">
+        <a href="{{ route('user.gallery') }}" class="mosaic-cta-btn">
+            VISITA LA NOSTRA GALLERY
+        </a>
+    </div>
+
+</section>
 
         {{-- Servizi --}}
         <section class="container py-5 luxury-services-section" data-aos="fade-up">

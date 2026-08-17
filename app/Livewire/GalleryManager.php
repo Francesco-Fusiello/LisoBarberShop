@@ -15,6 +15,15 @@ class GalleryManager extends Component
     public $confirmingDelete = false;
     public $deleteId = null;
 
+    public function toggleFeatured($id)
+    {
+        $img = GalleryImage::findOrFail($id);
+
+        $img->update([
+            'is_featured' => !$img->is_featured,
+        ]);
+    }
+
     public function create()
     {
         $this->validate([
