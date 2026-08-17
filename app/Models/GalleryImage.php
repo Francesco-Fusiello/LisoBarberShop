@@ -9,5 +9,12 @@ class GalleryImage extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['image_path', 'is_featured'];
+    protected $fillable = [
+        'image_path',
+        'is_featured',
+    ];
+
+    protected $casts = [
+        'is_featured' => 'boolean',
+    ];
 }

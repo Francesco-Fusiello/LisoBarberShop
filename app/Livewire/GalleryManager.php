@@ -15,13 +15,48 @@ class GalleryManager extends Component
     public $confirmingDelete = false;
     public $deleteId = null;
 
+    public $showFeaturedOnly = false;
+
     public function toggleFeatured($id)
     {
         $img = GalleryImage::findOrFail($id);
 
-        $img->update([
-            'is_featured' => !$img->is_featured,
-        ]);
+        // DESSELEZIONE
+        // Può sempre essere fatta.
+        if ($img->is_featured) {
+            $img->is_featured = false;
+            $img->save();
+
+            return;
+        }
+
+        // SELEZIONE
+        // Controlliamo il numero attuale.
+        $featuredCount = GalleryImage::where('is_featured', true)->count();
+
+        // Massimo 11
+        if ($featuredCount >= 11) {
+            session()->flash(
+                'message',
+                'Puoi selezionare al massimo 11 immagini per la Home.'
+            );
+
+            return;
+        }
+
+        // Seleziona
+        $img->is_featured = true;
+        $img->save();
+    }
+
+    public function showAll()
+    {
+        $this->showFeaturedOnly = false;
+    }
+
+    public function showFeatured()
+    {
+        $this->showFeaturedOnly = true;
     }
 
     public function create()
@@ -34,6 +69,7 @@ class GalleryManager extends Component
 
         GalleryImage::create([
             'image_path' => 'storage/' . $path,
+            'is_featured' => false,
         ]);
 
         return redirect()->to(request()->header('Referer'))
@@ -49,8 +85,12 @@ class GalleryManager extends Component
     public function deleteConfirmed()
     {
         $img = GalleryImage::find($this->deleteId);
+
         if ($img) {
-            Storage::disk('public')->delete(str_replace('storage/', '', $img->image_path));
+            Storage::disk('public')->delete(
+                str_replace('storage/', '', $img->image_path)
+            );
+
             $img->delete();
         }
 
@@ -63,7 +103,18 @@ class GalleryManager extends Component
 
     public function getImagesProperty()
     {
-        return GalleryImage::latest()->get();
+        $query = GalleryImage::latest();
+
+        if ($this->showFeaturedOnly) {
+            $query->where('is_featured', true);
+        }
+
+        return $query->get();
+    }
+
+    public function getFeaturedCountProperty()
+    {
+        return GalleryImage::where('is_featured', true)->count();
     }
 
     public function render()

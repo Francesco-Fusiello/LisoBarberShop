@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        {{-- LIVEWIRE LOADING (fallback) --}}
+        {{-- LIVEWIRE LOADING --}}
         <div wire:loading wire:target="image" class="text-muted mb-2">
             ⏳ Upload in corso...
         </div>
@@ -48,70 +48,211 @@
         </button>
     </form>
 
-    {{-- Galleria --}}
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
-        @foreach ($this->images as $img)
-            <div class="col">
-                <div class="card h-100">
-                    <img src="{{ asset($img->image_path) }}" class="card-img-top"
-                        style="object-fit: cover; height: 200px;">
 
-                   <div class="card-body text-center">
+    {{-- FILTRI GALLERIA --}}
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
 
-    {{-- Selezione immagine per la Home --}}
-    <button
-        wire:click="toggleFeatured({{ $img->id }})"
-        type="button"
-        class="btn btn-sm {{ $img->is_featured ? 'btn-warning' : 'btn-outline-secondary' }}"
-        title="{{ $img->is_featured ? 'Rimuovi dalla Home' : 'Mostra nella Home' }}">
+        <div>
+            <h5 class="mb-1 fw-bold">
+                Galleria
+            </h5>
 
-        <i class="fas fa-star"></i>
-
-        {{ $img->is_featured ? 'In Home' : 'Mostra in Home' }}
-    </button>
-
-    {{-- Elimina --}}
-    <button
-        wire:click="confirmDelete({{ $img->id }})"
-        type="button"
-        class="btn btn-danger btn-sm">
-        Elimina
-    </button>
-
-</div>
-                </div>
-            </div>
-        @endforeach
-    </div>
-
-    {{-- MODALE --}}
-   @if ($confirmingDelete)
-    <div class="modal-admin-wrapper">
-        <!-- Backdrop: clicchi fuori e si chiude -->
-        <div class="modal-admin-backdrop" wire:click="$set('confirmingDelete', false)"></div>
-
-        <div class="modal-admin-content">
-            <div class="modal-admin-header border-0">
-                <h5 class="m-0 fw-bold" style="font-size: 1.1rem;">
-                    <i class="fas fa-image me-2"></i> Elimina Immagine
-                </h5>
-                <button type="button" class="btn-close btn-close-white" wire:click="$set('confirmingDelete', false)" style="box-shadow: none;"></button>
-            </div>
-
-            <div class="modal-admin-body">
-                <p class="fs-5 fw-bold mb-1">Confermi l'operazione?</p>
-                <p class="text-muted mb-0">Sei sicuro di voler eliminare questa immagine? Non potrai più recuperarla.</p>
-            </div>
-
-            <div class="modal-admin-footer border-0">
-                <button type="button" class="btn btn-light border" wire:click="$set('confirmingDelete', false)">
-                    Annulla
-                </button>
-                <button type="button" class="btn btn-danger px-4" wire:click="deleteConfirmed">
-                    <i class="fas fa-trash-alt me-2"></i> Elimina
-                </button>
-            </div>
+            <small class="text-muted">
+                {{ $this->featuredCount }} / 11 immagini selezionate per la Home
+            </small>
         </div>
+
+        <div class="d-flex flex-wrap gap-2">
+
+            {{-- TUTTE --}}
+            <button type="button" wire:click="showAll"
+                class="btn btn-sm {{ !$showFeaturedOnly ? 'btn-dark' : 'btn-outline-dark' }}">
+                Tutte le immagini
+            </button>
+
+            {{-- IN HOME --}}
+            <button type="button" wire:click="showFeatured"
+                class="btn btn-sm {{ $showFeaturedOnly ? 'btn-warning' : 'btn-outline-warning' }}">
+
+                <i class="fas fa-star me-1"></i>
+
+                In Home ({{ $this->featuredCount }}/11)
+
+            </button>
+
+        </div>
+
     </div>
-@endif
+
+
+    {{-- GALLERIA --}}
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+
+        @forelse ($this->images as $img)
+            {{-- KEY UNIVOCA PER LIVEWIRE --}}
+            <div class="col" wire:key="gallery-image-{{ $img->id }}">
+
+                <div class="card h-100">
+
+                    <div style="position:relative;">
+
+                        <img src="{{ asset($img->image_path) }}" class="card-img-top"
+                            style="object-fit:cover;height:200px;">
+
+                        {{-- Badge IN HOME --}}
+                        @if ($img->is_featured)
+                            <div
+                                style="
+                                    position:absolute;
+                                    top:10px;
+                                    right:10px;
+                                    background:#ffc107;
+                                    color:#000;
+                                    padding:5px 9px;
+                                    border-radius:20px;
+                                    font-size:12px;
+                                    font-weight:600;
+                                ">
+
+                                <i class="fas fa-star"></i>
+                                IN HOME
+
+                            </div>
+                        @endif
+
+                    </div>
+
+
+                    <div class="card-body text-center">
+
+                        {{-- =====================================
+                             GESTIONE HOME
+                        ====================================== --}}
+
+                        <button wire:click="toggleFeatured({{ $img->id }})" type="button"
+                            class="btn btn-sm w-100 mb-2
+                                {{ $img->is_featured ? 'btn-warning' : 'btn-outline-secondary' }}">
+
+                            <i class="fas fa-star me-1"></i>
+
+                            @if ($img->is_featured)
+                                Rimuovi dalla Home
+                            @else
+                                Mostra in Home
+                            @endif
+
+                        </button>
+
+
+                        {{-- =====================================
+                             ELIMINA
+                             SOLO NELLA VISTA "TUTTE"
+                        ====================================== --}}
+
+                        @if (!$showFeaturedOnly)
+                            <button wire:click="confirmDelete({{ $img->id }})" type="button"
+                                class="btn btn-danger btn-sm w-100">
+
+                                <i class="fas fa-trash-alt me-1"></i>
+
+                                Elimina
+
+                            </button>
+                        @endif
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        @empty
+
+            <div class="col-12">
+
+                <div class="text-center py-5 text-muted">
+
+                    @if ($showFeaturedOnly)
+                        <i class="fas fa-star mb-3" style="font-size:2rem;">
+                        </i>
+
+                        <p class="mb-0">
+                            Nessuna immagine selezionata per la Home.
+                        </p>
+                    @else
+                        <p class="mb-0">
+                            Nessuna immagine presente nella galleria.
+                        </p>
+                    @endif
+
+                </div>
+
+            </div>
+        @endforelse
+
+    </div>
+
+
+    {{-- MODALE ELIMINAZIONE --}}
+    @if ($confirmingDelete)
+        <div class="modal-admin-wrapper">
+
+            <div class="modal-admin-backdrop" wire:click="$set('confirmingDelete', false)">
+            </div>
+
+
+            <div class="modal-admin-content">
+
+                <div class="modal-admin-header border-0">
+
+                    <h5 class="m-0 fw-bold" style="font-size:1.1rem;">
+
+                        <i class="fas fa-image me-2"></i>
+
+                        Elimina Immagine
+
+                    </h5>
+
+                    <button type="button" class="btn-close btn-close-white"
+                        wire:click="$set('confirmingDelete', false)" style="box-shadow:none;">
+                    </button>
+
+                </div>
+
+
+                <div class="modal-admin-body">
+
+                    <p class="fs-5 fw-bold mb-1">
+                        Confermi l'operazione?
+                    </p>
+
+                    <p class="text-muted mb-0">
+                        Sei sicuro di voler eliminare questa immagine?
+                        Non potrai più recuperarla.
+                    </p>
+
+                </div>
+
+
+                <div class="modal-admin-footer border-0">
+
+                    <button type="button" class="btn btn-light border" wire:click="$set('confirmingDelete', false)">
+                        Annulla
+                    </button>
+
+                    <button type="button" class="btn btn-danger px-4" wire:click="deleteConfirmed">
+
+                        <i class="fas fa-trash-alt me-2"></i>
+
+                        Elimina
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    @endif
+
 </div>
