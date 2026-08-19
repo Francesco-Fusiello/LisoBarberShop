@@ -14,37 +14,27 @@ class GalleryManager extends Component
     public $image;
     public $confirmingDelete = false;
     public $deleteId = null;
-
     public $showFeaturedOnly = false;
 
     public function toggleFeatured($id)
     {
         $img = GalleryImage::findOrFail($id);
 
-        // DESSELEZIONE
-        // Può sempre essere fatta.
         if ($img->is_featured) {
             $img->is_featured = false;
             $img->save();
 
+            $this->dispatch('home-incomplete');
+
             return;
         }
 
-        // SELEZIONE
-        // Controlliamo il numero attuale.
         $featuredCount = GalleryImage::where('is_featured', true)->count();
 
-        // Massimo 11
         if ($featuredCount >= 11) {
-            session()->flash(
-                'message',
-                'Puoi selezionare al massimo 11 immagini per la Home.'
-            );
-
             return;
         }
 
-        // Seleziona
         $img->is_featured = true;
         $img->save();
     }

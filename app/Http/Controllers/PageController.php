@@ -14,19 +14,32 @@ use App\Models\TourItem;
 
 class PageController extends Controller
 {
-    public function home()
-    {
-        $latestReviews = GoogleReview::latest()->take(5)->get();
-        $googleStats   = GoogleReviewStat::first();
+   public function home()
+{
+    $latestReviews = GoogleReview::latest()->take(5)->get();
 
-        $products = Product::inRandomOrder()->take(9)->get();
+    $googleStats = GoogleReviewStat::first();
 
-        $randomTourImages = TourItem::inRandomOrder()->take(2)->get();
+    $products = Product::inRandomOrder()->take(9)->get();
 
-        $homeImages = GalleryImage::where('is_featured', true)->latest()->get();
+    $randomTourImages = TourItem::inRandomOrder()->take(2)->get();
 
-        return view('welcome', compact('latestReviews', 'googleStats', 'products', 'randomTourImages', 'homeImages'));
+    $homeImages = GalleryImage::where('is_featured', true)->latest()->get();
+    
+
+    if ($homeImages->count() < 11) {
+        $missing = 11 - $homeImages->count();
+
+        $fallbackImages = GalleryImage::where('is_featured', false)
+            ->latest('updated_at')
+            ->take($missing)
+            ->get();
+
+        $homeImages = $homeImages->concat($fallbackImages)->take(11);
     }
+
+    return view('welcome', compact('latestReviews', 'googleStats', 'products', 'randomTourImages', 'homeImages'));
+}
 
     public function priceList()
     {
