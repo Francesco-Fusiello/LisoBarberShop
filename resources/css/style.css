@@ -831,11 +831,14 @@ section.container { background-color: #fff; }
     flex-wrap: nowrap;
     transition: transform 1s linear; /* transizione fluida */
     gap: 24px;
+    align-items: stretch;
 }
 
 /* CARD SIZE */
 .review-slide {
     flex: 0 0 33.3333%; /* Desktop 3 card */
+    display: flex;
+    flex-direction: column;
 }
 
 /* TABLET */
