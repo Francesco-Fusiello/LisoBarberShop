@@ -2147,6 +2147,23 @@ section.container { background-color: #fff; }
         max-height: 75vh;
     }
 }
+/* =========================
+   FIX CHIUSURA AL CLICK ESTERNO (MOBILE & DESKTOP)
+========================= */
+
+/* Rende trasparente ai click il modale e il suo corpo */
+.custom-modal,
+.custom-modal .modal-content,
+.custom-modal .modal-body {
+    pointer-events: none;
+}
+
+/* Riattiva i click esclusivamente sull'immagine e sui pulsanti */
+.modal-img,
+.nav-btn {
+    pointer-events: auto;
+}
+
 /* GRID */
 .zara-card {
     background: #fff;
