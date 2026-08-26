@@ -242,27 +242,39 @@
 
             <!-- APP SECTION -->
 
-            <h3 class="text-center mt-4 pt-5 mb-4"
-                style="font-family: 'Playfair Display', serif; color: #fff; font-weight: 700;">
-                La tua esperienza inizia dall’app: prenotazioni rapide, conferme immediate e attenzione al dettaglio.
-                Scaricala ora.
-            </h3>
+            <div class="container">
 
-            <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4" style="margin-left: -20px;">
+                <div class="text-center mt-4 pt-5 mb-4">
+                    <h3
+                        style="font-family: 'Playfair Display', serif; color: #fff; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 3px;">
+                        Liso Barber Shop
+                    </h3>
 
-                <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank"
-                    class="store-badge">
-                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=150x50"
-                        alt="App Store">
-                </a>
+                    <div class="luxury-hr-line bg-white"></div>
 
-                <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank"
-                    class="store-badge">
-                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png"
-                        alt="Google Play">
-                </a>
+                    <p
+                        style="font-family: 'Lato', sans-serif; color: #fff; font-size: 1rem;
+            font-weight: 300; letter-spacing: 1px; margin-top: 20px;">
+                        Prenota il tuo appuntamento direttamente dalla nostra app.
+                    </p>
+                </div>
+
+                <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4">
+
+                    <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank"
+                        class="store-badge">
+                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=150x50"
+                            alt="Scarica Liso Barber Shop su App Store">
+                    </a>
+
+                    <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank"
+                        class="store-badge">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png"
+                            alt="Scarica Liso Barber Shop su Google Play">
+                    </a>
+
+                </div>
 
             </div>
-            </div>
-        </section>
     </x-layout>

@@ -1,69 +1,120 @@
 <x-layout>
-    <section class="py-5"
-        style="background-color: #ffffff; font-family: 'Playfair Display', serif; color: #333;"data-aos="fade-up">
+
+    <section class="py-5" style="background-color: #ffffff; font-family: 'Playfair Display', serif; color: #333;"
+        data-aos="fade-up">
+
         <div class="container">
+
+            <!-- HEADER -->
             <div class="text-center mb-5">
+
                 <h1 class="text-center gallery-title">
-                    LISTINO PREZZI
+                    IL NOSTRO LISTINO PREZZI
                 </h1>
-                <h4 class="fst-italic" style="color: #ffffff;">Scopri i nostri Servizi</h4>
-                <p class="lead fs-5" style="color: #ffffff;">
-                    Benvenuti da Liso Barber Shop, dove la bellezza incontra l’eccellenza! Il nostro team di
-                    professionisti
-                    è qui per offrirti servizi di alta qualità, personalizzati per soddisfare le tue esigenze. Scopri il
-                    nostro listino prezzi e regalati un’esperienza indimenticabile.
+
+                <p class="gallery-subtitle">
+                    Stile • Precisione • Identità
                 </p>
+
             </div>
 
+
+            <!-- LISTINO -->
             <div class="row justify-content-center">
+
                 <div class="col-md-12 col-lg-8">
+
                     <div class="list-group shadow-sm">
+
                         @foreach ($services as $service)
                             <div class="list-group-item d-flex justify-content-between align-items-center price-item bg-white mb-2 shadow-sm"
                                 style="border: 1px solid #fff; border-radius: 0; transition: all 0.3s ease; color:#000">
-                                <span>{{ $service->name }}</span>
-                                <strong>da {{ $service->price }}€</strong>
+
+                                <span>
+                                    {{ $service->name }}
+                                </span>
+
+                                <strong>
+                                    da {{ $service->price }}€
+                                </strong>
+
                             </div>
                         @endforeach
+
                     </div>
 
-                    <h4 class="lead text-center fs-5 mt-3" style="color: #ffffff;">
-                        I nostri servizi sono pensati per offrire sempre il massimo della qualità e dello stile.
-                    </h4>
+
+                    <!-- APP SECTION -->
+
+                    <div class="text-center mt-5 pt-4 mb-4">
+
+                        <h2
+                            style="font-family: 'Playfair Display', serif;
+                                   color: #fff;
+                                   font-weight: 700;
+                                   text-transform: uppercase;
+                                   letter-spacing: 3px;">
+
+                            Liso Barber Shop
+
+                        </h2>
+
+                        <div class="luxury-hr-line bg-white"></div>
+
+                        <p
+                            style="font-family: 'Lato', sans-serif;
+                                   color: #fff;
+                                   font-size: 1rem;
+                                   font-weight: 300;
+                                   letter-spacing: 1px;
+                                   margin-top: 20px;">
+
+                            Prenota il tuo appuntamento direttamente dalla nostra app.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- APP BADGES -->
+
+                    <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4">
+
+                        <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank"
+                            class="store-badge">
+
+                            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=150x50"
+                                alt="Scarica Liso Barber Shop su App Store">
+
+                        </a>
+
+
+                        <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank"
+                            class="store-badge">
+
+                            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png"
+                                alt="Scarica Liso Barber Shop su Google Play">
+
+                        </a>
+
+                    </div>
+
                 </div>
-            </div>
-
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-10">
-
-                    <h2 class="fst-italic" style="color: #ffffff;">Scarica la nostra app per prenotare subito il tuo
-                        appuntamento...</h2>
-                </div>
-            </div>
-
-            <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4"
-                style="margin-left: -20px;">
-
-                <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank"
-                    class="store-badge">
-                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=150x50"
-                        alt="App Store">
-                </a>
-
-                <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank"
-                    class="store-badge">
-                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png"
-                        alt="Google Play">
-                </a>
 
             </div>
+
+        </div>
+
     </section>
 
+
     <style>
-        /* Hover minimal sui box dei prezzi */
+        /* ========================================
+           HOVER PREZZI
+        ======================================== */
+
         .price-item:hover {
             background-color: #e0e0e0;
-            /* grigio leggermente più scuro */
             transform: translateY(-3px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             cursor: pointer;
@@ -79,4 +130,5 @@
             color: #000;
         }
     </style>
+
 </x-layout>
