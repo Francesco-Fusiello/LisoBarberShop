@@ -41,7 +41,7 @@
 
         {{-- Descrizione sotto carousel Header --}}
         <div class="w-100 py-5" style="background-color: #ffffff; font-family: 'Lato', sans-serif;">
-            <div class="text-center mx-auto px-4 force-black" style="max-width: 900px;">
+            <div class="text-center mx-auto px-4 force-black" style="max-width: 900px;" data-aos="fade-up">
 
                 <h2 class="text-center display-5 mt-0" style="font-weight: 700;">
                     Più di un taglio. Un’identità.
@@ -442,7 +442,7 @@
                     ➤ La selezione completa
                 </a>
 
-                <div id="carouselProdotti" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500"
+                <div id="carouselProdotti" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"
                     style="max-width: 1140px; margin: auto; margin-top: 2rem;">
                     <div class="carousel-inner">
                         @foreach ($products as $index => $product)

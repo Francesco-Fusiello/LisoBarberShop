@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
           track.style.transform = 'translateX(0)';
         }, 1000);
       }
-    }, 3000);
+    }, 5000);
   }
 
   // CONTATORE ANNO DINAMICO AUTO

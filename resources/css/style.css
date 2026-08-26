@@ -355,45 +355,146 @@ h2, h3, h5 { letter-spacing: 1px; text-transform: uppercase; }
 /* Sfondo sezione chiara */
 section.container { background-color: #fff; }
 
-/* ======= CONTATORI ======= */
+/* ======= CONTATORI — EDITORIAL ======= */
+
 .counter-section {
-  background-color: #f5f5f5;
-  padding: 60px 0;
+    background-color: #f5f5f5;
+    padding: 75px 0;
+}
+
+.counter-section .counter-box {
+    position: relative;
+    padding: 10px 20px !important;
+    margin: 0 !important;
+}
+
+/* NUMERI */
+.counter-section .counter-box h3 {
+    margin: 0 !important;
+    line-height: 1;
 }
 
 .counter-section .counter {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  color: #222;
-  margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: #111;
+    letter-spacing: -1px;
 }
 
+/* %, + E ★ */
+.counter-section .counter-box h3 > span:not(.counter) {
+    font-family: 'Lato', sans-serif;
+    color: #111;
+    font-weight: 400;
+}
+
+/* STELLA GOOGLE */
+.counter-section .counter-box h3 > span[style*="ffc107"] {
+    color: #ffc107 !important;
+}
+
+/* DESCRIZIONI */
 .counter-section p {
-  font-family: 'Lato', sans-serif;
-  font-size: 0.95rem;
-  color: #555;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.72rem !important;
+    font-weight: 500;
+    color: #555;
+    margin-top: 12px !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.4 !important;
 }
 
-.counter-section .col-6 {
-  transition: transform 0.3s ease;
+/* DIVISORI DESKTOP */
+@media (min-width: 768px) {
+
+    .counter-section .col-md-3:not(:last-child) .counter-box::after {
+        content: "";
+        position: absolute;
+        top: 15%;
+        right: 0;
+        height: 70%;
+        width: 1px;
+        background-color: #d8d8d8;
+    }
+
+    .counter-section .col-md-3 {
+        transition: transform 0.35s ease;
+    }
+
+    .counter-section .col-md-3:hover {
+        transform: translateY(-4px);
+    }
 }
 
-.counter-section .col-6:hover {
-  transform: translateY(-5px);
+/* TABLET */
+@media (max-width: 991px) and (min-width: 768px) {
+
+    .counter-section {
+        padding: 65px 0;
+    }
+
+    .counter-section .counter {
+        font-size: 2.7rem;
+    }
+
+    .counter-section p {
+        font-size: 0.68rem !important;
+        letter-spacing: 1.5px;
+    }
 }
+
+/* MOBILE */
 @media (max-width: 767px) {
-  .counter-section .col-6 {
-    padding-left: 0;
-    padding-right: 0;
-  }
 
-  .counter-box {
-    width: 100%;
-    margin: 0;
-  }
+    .counter-section {
+        padding: 55px 0;
+    }
+
+    .counter-section .col-6 {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 0;
+    }
+
+    .counter-section .counter-box {
+        width: 100%;
+        padding: 12px 5px !important;
+    }
+
+    .counter-section .counter {
+        font-size: 2.35rem;
+        letter-spacing: -0.5px;
+    }
+
+    .counter-section p {
+        font-size: 0.62rem !important;
+        letter-spacing: 1.3px;
+        margin-top: 9px !important;
+    }
+
+    /* DIVISORI MOBILE */
+    .counter-section .col-6:nth-child(odd) .counter-box::after {
+        content: "";
+        position: absolute;
+        top: 10%;
+        right: 0;
+        height: 80%;
+        width: 1px;
+        background-color: #d8d8d8;
+    }
+
+    /* LINEA ORIZZONTALE TRA LE DUE RIGHE */
+    .counter-section .col-6:nth-child(-n+2) .counter-box::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 8%;
+        width: 84%;
+        height: 1px;
+        background-color: #d8d8d8;
+    }
 }
 
 
@@ -706,20 +807,32 @@ section.container { background-color: #fff; }
     box-shadow: none;
   }
 } 
-/* ===== GOOGLE REVIEWS ===== */
+/* =========================================================
+   GOOGLE REVIEWS — ZARA STYLE
+========================================================= */
+
 .google-reviews-zara {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background: #fff;
+    border: none !important;
 }
 
-/* HEADER */
+/* =========================================================
+   HEADER
+========================================================= */
+
 .google-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #e5e5e5;
-    padding: 24px;
+
+    padding: 28px 10px;
+    margin: 0 !important;
+
     background: #fff;
+    border: none !important;
+    border-top: none !important;
+    border-bottom: 1px solid #e8e8e8 !important;
 }
 
 .google-left {
@@ -729,253 +842,319 @@ section.container { background-color: #fff; }
 }
 
 .google-title {
-    font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #111;
 }
+
+/* =========================================================
+   RATING
+========================================================= */
 
 .google-rating {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .rating-value {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
+    color: #111;
 }
 
 .rating-count {
-    font-size: 14px;
-    color: #666;
+    font-size: 12px;
+    color: #777;
 }
 
-/* STELLE */
+/* =========================================================
+   STELLE — GIALLE
+========================================================= */
+
+.stars {
+    display: flex;
+    gap: 3px;
+}
+
 .stars i {
-    color: #ddd;
-    font-size: 14px;
+    color: #fbbc04 !important;
+    font-size: 12px;
 }
 
 .stars i.filled {
-    color: #fbbc04;
+    color: #fbbc04 !important;
 }
 
-/* BUTTON */
+/* =========================================================
+   BUTTON
+========================================================= */
+
 .google-btn {
-    border: 1px solid #000;
-    padding: 10px 18px;
-    text-decoration: none;
-    color: #000;
-    font-size: 13px;
-    letter-spacing: 1px;
+    border: 1px solid #111 !important;
+    border-radius: 0 !important;
+
+    padding: 11px 20px;
+
+    background: transparent;
+    color: #111 !important;
+
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
+
+    transition: all 0.3s ease;
 }
 
 .google-btn:hover {
-    background: #000;
-    color: #fff;
+    background: #111 !important;
+    color: #fff !important;
 }
 
-/* CARD RECENSIONI */
-.review-card {
-    border: 1px solid #e5e5e5;
-    padding: 24px;
-    height: 100%;
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.reviews-slider {
+    overflow: hidden;
+    width: 100%;
+    padding-top: 28px;
+}
+
+.reviews-track {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 0;
+
+    transition: transform 1s linear;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.review-slide {
+    flex: 0 0 33.3333%;
+    padding: 0 8px;
+
     display: flex;
     flex-direction: column;
-    text-align: left;
-    background: #fff;
 }
 
-/* USER */
+.review-card {
+    position: relative;
+
+    height: 100%;
+    padding: 28px 26px;
+
+    background: #fff;
+
+    border: 1px solid #e5e5e5 !important;
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    text-align: left;
+
+    transition: border-color 0.3s ease;
+}
+
+.review-card:hover {
+    border-color: #bdbdbd !important;
+}
+
+/* =========================================================
+   USER
+========================================================= */
+
 .review-user {
     display: flex;
-    gap: 6px;
     align-items: center;
+    gap: 10px;
+
     margin-bottom: 14px;
-    position: relative;
 }
 
 .review-user img {
-    width: 42px;
-    height: 42px;
+    width: 44px !important;
+    height: 44px !important;
+
     border-radius: 50%;
     object-fit: cover;
 }
 
 .user-meta strong {
     display: block;
-    font-size: 14px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    color: #111;
 }
 
 .user-meta small {
-    font-size: 12px;
-    color: #777;
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 11px;
+    color: #888;
 }
 
-/* TESTO */
+/* =========================================================
+   TESTO RECENSIONE
+========================================================= */
+
 .review-text {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #111;
-    margin-top: auto;
+    margin-top: 8px !important;
+
+    color: #222 !important;
+
+    font-family: 'Playfair Display', serif !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.8 !important;
+
+    font-style: normal;
 }
 
-/* SLIDER */
-.reviews-slider {
-    overflow: hidden;
-    width: 100%;
+/* =========================================================
+   GOOGLE LOGO NELLA CARD
+========================================================= */
+
+.review-card > svg {
+    width: 20px !important;
+    height: 20px !important;
+
+    top: 20px !important;
+    right: 20px !important;
 }
 
-.reviews-track {
-    display: flex;
-    flex-wrap: nowrap;
-    transition: transform 1s linear; /* transizione fluida */
-    gap: 24px;
-    align-items: stretch;
-}
+/* =========================================================
+   TABLET
+========================================================= */
 
-/* CARD SIZE */
-.review-slide {
-    flex: 0 0 33.3333%; /* Desktop 3 card */
-    display: flex;
-    flex-direction: column;
-}
-
-/* TABLET */
 @media (max-width: 991.98px) {
+
     .review-slide {
-        flex: 0 0 50%; /* 2 card */
+        flex: 0 0 50%;
     }
+
 }
 
-/* MOBILE */
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 575.98px) {
-    .review-slide {
-        flex: 0 0 100%; /* 1 card */
-    }
 
-    .reviews-track {
-        flex-wrap: nowrap;
-        gap: 16px;
-    }
-
-    .reviews-slider {
-        overflow-x: auto;
-        scroll-snap-type: x mandatory; /* scorrimento a "scatti" */
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .review-slide {
-        scroll-snap-align: start;
-    }
-
-    /* HEADER mobile: stelle e numero sotto SVG + bottone a destra */
     .google-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    .google-right {
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
 
-    .google-rating {
-        flex-direction: row;
-        gap: 8px;
-        order: 1;
-    }
-
-    .google-btn {
-        order: 2;
-    }
-}
- .reviews-slider .row {
-    margin: 0;
-    gap: 0; /* tolgo gutter */
-}
-
-.review-slide {
-    padding: 0; /* spaziatura interna la facciamo dentro la card */
-}
-
-.review-card {
-    padding: 24px;
-    border: 1px solid #e5e5e5;
-    background: #fff; /* sempre bianco */
-}
- .review-slide {
-    padding: 0 8px; /* 8px di spazio a destra e sinistra */
-}
-
-.review-card {
-    padding: 24px;
-    border: 1px solid #e5e5e5;
-    background: #fff;
-    height: 100%;
-    box-sizing: border-box;
-}
-/* ===== MOBILE REVISIONS ===== */
-@media (max-width: 575.98px) {
-
-    .google-header {
-        display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 12px;
-        width: calc(100% - 20px);
-        padding: 16px;
-        border: 1px solid #e5e5e5;
-        margin: 0 auto 16px auto;
-        background: #fff;
+
+        gap: 16px;
+
+        padding: 24px 10px;
+
+        margin: 0 !important;
     }
 
-    /* TITOLO */
     .google-left {
-        display: flex;
         justify-content: center;
-        align-items: center;
-        gap: 6px;
     }
 
     .google-title {
-        font-size: 16px;
-        font-weight: 600;
-        text-align: center;
+        font-size: 14px;
+        letter-spacing: 2px;
     }
 
-    /* BLOCCO DESTRO diventa colonna */
     .google-right {
+        width: 100%;
+
         display: flex !important;
         flex-direction: column !important;
+
         align-items: center !important;
-        gap: 10px;
-        width: 100%;
+        justify-content: center !important;
+
+        gap: 14px;
     }
 
-    /* STELLE SOTTO IL TITOLO */
     .google-rating {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 4px;
+        gap: 5px;
     }
 
     .stars {
-        display: flex;
         gap: 4px;
     }
 
-    /* BOTTONE LUNGO */
+    .stars i {
+        font-size: 13px;
+        color: #fbbc04 !important;
+    }
+
+    .rating-value {
+        font-size: 21px;
+    }
+
+    .rating-count {
+        font-size: 11px;
+    }
+
     .google-btn {
         width: 100%;
+        max-width: 320px;
+
+        padding: 12px 16px;
+
         text-align: center;
-        margin-top: 6px;
     }
+
+    /* SLIDER MOBILE */
+    .reviews-slider {
+        overflow-x: auto;
+
+        padding-top: 22px;
+
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: none;
+    }
+
+    .reviews-slider::-webkit-scrollbar {
+        display: none;
+    }
+
+    .reviews-track {
+        gap: 0;
+    }
+
+    .review-slide {
+        flex: 0 0 100%;
+
+        padding: 0 6px;
+
+        scroll-snap-align: start;
+    }
+
+    .review-card {
+        padding: 26px 22px;
+    }
+
+    .review-text {
+        font-size: 14px !important;
+        line-height: 1.75 !important;
+    }
+
 }
 
 .product-description {
@@ -2249,66 +2428,249 @@ section.container { background-color: #fff; }
     transform: scale(1.38);
     opacity: 0.9;
 }
+/* =========================================================
+   LISO BARBER SHOP — SERVICES
+   ZARA / HIGH-FASHION EDITORIAL
+   ========================================================= */
 
-/* --- LINEA DI ACCENTO LUXURY --- */
+/* SEZIONE */
+.luxury-services-section {
+    padding-top: 70px !important;
+    padding-bottom: 75px !important;
+}
+
+/* TITOLO */
+.luxury-title-highfashion {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    line-height: 1.15;
+    margin-bottom: 0;
+}
+
+/* LINEA DI ACCENTO */
 .luxury-hr-line {
-    width: 45px;          
-    height: 2px;         
-    background-color: #000000;
-    margin: 25px auto 35px auto; 
+    width: 45px;
+    height: 1px;
+    background-color: #fff;
+    margin: 24px auto 38px auto;
 }
 
-/* --- LUXURY SERVICES CSS UPDATED --- */
+/* =========================================================
+   CARD
+   ========================================================= */
 
-/* Forza la linea a essere bianca se ha la classe bg-white */
-.luxury-hr-line.bg-white {
-    background-color: #ffffff !important;
-}
-
-/* Card Luxury Minimal */
 .luxury-card {
-    background-color: #ffffff;
-    border: none !important; 
-    border-radius: 0 !important; /* Spigoli vivi */
-    transition: transform 0.3s ease;
+    background-color: #fff;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transition:
+        transform 0.45s cubic-bezier(.2,.6,.2,1),
+        background-color 0.3s ease;
+    overflow: hidden;
 }
 
+/* Hover desktop */
 .luxury-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
 }
+
+/* CONTENUTO */
+.luxury-card .card-body {
+    min-height: 330px;
+    padding: 55px 35px !important;
+}
+
+/* =========================================================
+   ICONE
+   ========================================================= */
+
+.luxury-card img {
+    width: 55px !important;
+    height: 55px !important;
+    object-fit: contain;
+    margin-bottom: 30px !important;
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+
+.luxury-card:hover img {
+    transform: translateY(-4px);
+}
+
+/* =========================================================
+   TITOLO CARD
+   ========================================================= */
 
 .luxury-card-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.15rem;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
     text-transform: uppercase;
-    color: #000;
+    color: #111;
+    margin-bottom: 16px;
+    line-height: 1.3;
 }
+
+/* =========================================================
+   TESTO
+   ========================================================= */
 
 .luxury-card-text {
+    max-width: 330px;
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.88rem;
     font-weight: 300;
-    line-height: 1.6;
-    color: #333;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+    color: #444;
 }
 
-/* Bottone Scopri di più (Nero dentro le card) */
+/* =========================================================
+   EVENTUALE BOTTONE INTERNO
+   ========================================================= */
+
 .luxury-btn-dark {
+    display: inline-block;
     background-color: #000;
     color: #fff;
-    padding: 10px 25px;
+    padding: 11px 26px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 0.7rem;
-    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
     text-decoration: none;
     border: 1px solid #000;
-    transition: 0.3s;
+    border-radius: 0;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 .luxury-btn-dark:hover {
     background-color: transparent;
     color: #000;
+}
+
+/* =========================================================
+   BOTTONE "SCOPRI TUTTI I SERVIZI"
+   ========================================================= */
+
+.luxury-services-section .home-btn {
+    display: inline-block;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.luxury-services-section .home-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .luxury-services-section {
+        padding-top: 60px !important;
+        padding-bottom: 65px !important;
+    }
+
+    .luxury-card .card-body {
+        min-height: 310px;
+        padding: 45px 25px !important;
+    }
+
+    .luxury-card-title {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .luxury-card-text {
+        font-size: 0.84rem;
+        line-height: 1.7;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .luxury-services-section {
+        padding-top: 50px !important;
+        padding-bottom: 55px !important;
+    }
+
+    .luxury-title-highfashion {
+        font-size: 1.8rem;
+        letter-spacing: 3px;
+    }
+
+    .luxury-hr-line {
+        width: 38px;
+        margin: 20px auto 30px auto;
+    }
+
+    .luxury-card .card-body {
+        min-height: 285px;
+        padding: 42px 28px !important;
+    }
+
+    .luxury-card img {
+        width: 52px !important;
+        height: 52px !important;
+        margin-bottom: 25px !important;
+    }
+
+    .luxury-card-title {
+        font-size: 0.95rem;
+        letter-spacing: 2px;
+        margin-bottom: 14px;
+    }
+
+    .luxury-card-text {
+        max-width: 300px;
+        font-size: 0.82rem;
+        line-height: 1.75;
+    }
+
+    /* Su mobile niente movimento al tocco */
+    .luxury-card:hover {
+        transform: none;
+    }
+}
+
+/* =========================================================
+   MOBILE PICCOLO
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .luxury-title-highfashion {
+        font-size: 1.6rem;
+        letter-spacing: 2.5px;
+    }
+
+    .luxury-card .card-body {
+        min-height: 270px;
+        padding: 38px 22px !important;
+    }
+
+    .luxury-card-text {
+        font-size: 0.8rem;
+    }
 }
 
 /* Container principale che copre tutto lo schermo */
