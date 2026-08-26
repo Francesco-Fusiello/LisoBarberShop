@@ -45,11 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // per gallery
 
+// per gallery
+
 document.addEventListener("DOMContentLoaded", function () {
   const images = Array.from(document.querySelectorAll('[data-image]'));
   let currentIndex = 0;
   const modalImage = document.getElementById('modalImage');
 
+  if (!modalImage || images.length === 0) return;
+
+  // Apertura immagine
   images.forEach((img, index) => {
     img.addEventListener('click', () => {
       currentIndex = index;
@@ -57,16 +62,62 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Freccia precedente
   document.getElementById('prevImage')?.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     modalImage.src = images[currentIndex].dataset.image;
   });
 
+  // Freccia successiva
   document.getElementById('nextImage')?.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % images.length;
     modalImage.src = images[currentIndex].dataset.image;
   });
+
+  // ===============================
+  // SWIPE MOBILE / TABLET
+  // ===============================
+
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchEndX = 0;
+  let touchEndY = 0;
+
+  modalImage.addEventListener('touchstart', (e) => {
+    if (e.touches.length !== 1) return;
+
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  modalImage.addEventListener('touchend', (e) => {
+    if (e.changedTouches.length !== 1) return;
+
+    touchEndX = e.changedTouches[0].clientX;
+    touchEndY = e.changedTouches[0].clientY;
+
+    const deltaX = touchEndX - touchStartX;
+    const deltaY = touchEndY - touchStartY;
+
+    // Deve essere uno swipe principalmente orizzontale
+    if (Math.abs(deltaX) < 50) return;
+    if (Math.abs(deltaX) < Math.abs(deltaY)) return;
+
+    // Swipe verso sinistra → immagine successiva
+    if (deltaX < 0) {
+      currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    // Swipe verso destra → immagine precedente
+    else {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+    }
+
+    modalImage.src = images[currentIndex].dataset.image;
+  }, { passive: true });
+
 });
+
 // Modifica prodotto 
 document.addEventListener('DOMContentLoaded', function () {
   window.Livewire?.on('scrollToForm', () => {
