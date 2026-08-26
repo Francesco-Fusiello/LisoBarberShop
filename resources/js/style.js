@@ -41,10 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-
-// per gallery
-
 // per gallery
 
 document.addEventListener("DOMContentLoaded", function () {
