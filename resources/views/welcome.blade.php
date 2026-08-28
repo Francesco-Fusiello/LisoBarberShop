@@ -100,41 +100,35 @@
 
 
         <!-- mosaic-section.blade.php (solo la sezione) -->
-       <section class="mosaic-section" data-aos="fade-up">
+        <section class="mosaic-section" data-aos="fade-up">
 
-    <div class="text-center text-white">
-        <h2 class="fw-bold text-uppercase display-5" style="color: #fff">
-            Il Nostro Salone
-        </h2>
+            <div class="text-center text-white">
+                <h2 class="fw-bold text-uppercase display-5" style="color: #fff">
+                    Il Nostro Salone
+                </h2>
 
-        <div class="luxury-hr-line bg-white"></div>
+                <div class="luxury-hr-line bg-white"></div>
 
-        <p class="lead">
-            Uno spazio curato, moderno e accogliente.
-        </p>
-    </div>
+                <p class="lead">
+                    Uno spazio curato, moderno e accogliente.
+                </p>
+            </div>
 
-    <div class="mosaic-grid col-md-10">
+            <div class="mosaic-grid col-md-10">
 
-        @foreach ($homeImages->take(11) as $image)
+                @foreach ($homeImages->take(11) as $image)
+                    <img src="{{ asset($image->image_path) }}" loading="lazy" decoding="async" alt="Liso Barber Shop">
+                @endforeach
 
-            <img
-                src="{{ asset($image->image_path) }}"
-                loading="lazy"
-                decoding="async"
-                alt="Liso Barber Shop">
+            </div>
 
-        @endforeach
+            <div class="text-center mt-2">
+                <a href="{{ route('user.gallery') }}" class="mosaic-cta-btn">
+                    VISITA LA NOSTRA GALLERY
+                </a>
+            </div>
 
-    </div>
-
-    <div class="text-center mt-2">
-        <a href="{{ route('user.gallery') }}" class="mosaic-cta-btn">
-            VISITA LA NOSTRA GALLERY
-        </a>
-    </div>
-
-</section>
+        </section>
 
         {{-- Servizi --}}
         <section class="container py-5 luxury-services-section" data-aos="fade-up">
@@ -166,8 +160,8 @@
                 <div class="col-md-4">
                     <div class="card h-100 luxury-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center px-4 py-5">
-                            <img src="{{ asset('images/macchinetta1.png') }}" alt="Rasatura Tradizionale"
-                                class="mb-4" style="width:60px; height:60px; object-fit:contain;">
+                            <img src="{{ asset('images/macchinetta1.png') }}" alt="Rasatura Tradizionale" class="mb-4"
+                                style="width:60px; height:60px; object-fit:contain;">
                             <h5 class="luxury-card-title">Rasatura Tradizionale</h5>
                             <p class="luxury-card-text">
                                 Rasatura con panno caldo e prodotti di alta qualità per un relax autentico.
@@ -208,14 +202,12 @@
 
         {{-- Tour section --}}
         <section class="tour-preview" data-aos="fade-up">
-
             <div class="container">
                 <div class="tour-wrapper">
                     <div class="row align-items-center gy-5">
 
-                        <div class="col-lg-5">
+                        <div class="col-sm-5">
                             <div class="tour-content">
-
                                 <p class="tour-label">
                                     WORLDWIDE EXPERIENCE
                                 </p>
@@ -229,20 +221,16 @@
                                     Cutting hair worldwide with the identity of Liso Barber Shop.
                                 </p>
 
-                                {{-- Desktop & Tablet --}}
-                                <div class="d-none d-lg-block">
+                                <div class="d-none d-sm-block">
                                     <a href="{{ route('tour') }}" class="tour-btn">
                                         VIEW THE TOUR
                                     </a>
                                 </div>
-
                             </div>
                         </div>
 
-                        <div class="col-lg-7">
-
+                        <div class="col-sm-7">
                             <div class="tour-images">
-
                                 <div class="tour-img-large">
                                     @if (isset($randomTourImages[0]))
                                         <img src="{{ asset('storage/' . $randomTourImages[0]->image) }}"
@@ -256,22 +244,18 @@
                                             alt="{{ $randomTourImages[1]->city }}">
                                     @endif
                                 </div>
-
                             </div>
 
-                            {{-- Mobile Only --}}
-                            <div class="d-lg-none text-center mt-5">
+                            <div class="d-sm-none text-center mt-5">
                                 <a href="{{ route('tour') }}" class="tour-btn">
                                     VIEW THE TOUR
                                 </a>
                             </div>
-
                         </div>
 
                     </div>
                 </div>
             </div>
-
         </section>
 
         {{-- Counter section --}}
