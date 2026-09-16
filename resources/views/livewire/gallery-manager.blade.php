@@ -75,16 +75,13 @@
 
         @if ($image)
             <div class="mb-2">
-
-                <img src="{{ $image->temporaryUrl() }}"
+                <img src="{{ $image->temporaryUrl() }}" alt="Anteprima immagine caricata"
                     style="
-                        width:100%;
-                        max-width:250px;
-                        border:1px solid #ccc;
-                        object-fit:cover;
-                    ">
-
-            </div>
+            width:100%;
+            max-width:250px;
+            border:1px solid #ccc;
+            object-fit:cover;
+            ">
         @endif
 
         @error('image')
@@ -145,7 +142,6 @@
 
                         <img src="{{ asset($img->image_path) }}" class="card-img-top"
                             style="object-fit:cover;height:200px;">
-
                         @if ($img->is_featured)
                             <div
                                 style="

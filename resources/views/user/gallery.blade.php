@@ -48,17 +48,18 @@
     <div class="gallery-masonry container">
 
         @foreach ($images as $image)
-            <div class="gallery-item">
+    <div class="gallery-item">
 
-                <img src="{{ asset($image->image_path) }}"
-                     class="gallery-img"
-                     data-bs-toggle="modal"
-                     data-bs-target="#imageModal"
-                     data-image="{{ asset($image->image_path) }}"
-                     loading="lazy">
+        <img src="{{ asset($image->image_path) }}"
+             class="gallery-img"
+             alt="Foto gallery Liso Barber Shop"
+             data-bs-toggle="modal"
+             data-bs-target="#imageModal"
+             data-image="{{ asset($image->image_path) }}"
+             loading="lazy">
 
-            </div>
-        @endforeach
+    </div>
+@endforeach
 
     </div>
 
@@ -73,7 +74,7 @@
 
                 <button class="nav-btn left" id="prevImage">‹</button>
 
-                <img id="modalImage" class="modal-img">
+                <img id="modalImage" class="modal-img" alt="Foto gallery Liso Barber Shop">
 
                 <button class="nav-btn right" id="nextImage">›</button>
 

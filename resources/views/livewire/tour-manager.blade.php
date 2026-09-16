@@ -31,7 +31,7 @@
         @if ($image)
             <div class="mb-3">
                 <p class="small text-muted mb-1">Anteprima immagine ottimizzata:</p>
-                <img src="{{ $image->temporaryUrl() }}"
+                <img src="{{ $image->temporaryUrl() }}" alt="Anteprima immagine ottimizzata"
                     style="width:100%; max-width:250px; height:150px; object-fit:cover; border:1px solid #ccc; border-radius: 4px;">
             </div>
         @endif
@@ -84,6 +84,7 @@
             <div class="col" wire:key="tour-item-{{ $item->id }}">
                 <div class="card h-100 shadow-sm border">
                     <img src="{{ asset('storage/' . $item->image) }}" class="card-img-top"
+                        alt="Tappa tour {{ $item->city }} {{ $item->year }}"
                         style="object-fit: cover; height: 200px; width: 100%;">
 
                     <div class="card-body d-flex flex-column justify-content-between text-center">
@@ -134,5 +135,3 @@
         </div>
     @endif
 </div>
-
-
