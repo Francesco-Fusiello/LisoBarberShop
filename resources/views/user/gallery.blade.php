@@ -47,12 +47,14 @@
     {{-- GALLERY --}}
     <div class="gallery-masonry container">
 
-        @foreach ($images as $image)
+    @foreach ($images as $image)
     <div class="gallery-item">
 
         <img src="{{ asset($image->image_path) }}"
              class="gallery-img"
              alt="Foto gallery Liso Barber Shop"
+             width="{{ $image->width }}"
+             height="{{ $image->height }}"
              data-bs-toggle="modal"
              data-bs-target="#imageModal"
              data-image="{{ asset($image->image_path) }}"

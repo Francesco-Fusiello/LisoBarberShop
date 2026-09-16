@@ -12,6 +12,8 @@ class GalleryImage extends Model
     protected $fillable = [
         'image_path',
         'is_featured',
+        'width',
+        'height',
     ];
 
     protected $casts = [

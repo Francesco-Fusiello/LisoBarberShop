@@ -57,9 +57,15 @@ class GalleryManager extends Component
 
         $path = $this->image->store('gallery', 'public');
 
+        [$width, $height] = getimagesize(
+            $this->image->getRealPath()
+        );
+
         GalleryImage::create([
             'image_path' => 'storage/' . $path,
             'is_featured' => false,
+            'width' => $width,
+            'height' => $height,
         ]);
 
         return redirect()->to(request()->header('Referer'))
