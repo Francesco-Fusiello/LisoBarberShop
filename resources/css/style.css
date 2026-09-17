@@ -60,11 +60,6 @@ html, body {
     color: #fff; /* testo sempre bianco */
 }
 
-body {
-  background: url('/images/sfondo3.jpeg') no-repeat center center fixed;
-  background-size: cover;
-}
-
 .min-vh-100 {
   background-color: transparent !important;
 }

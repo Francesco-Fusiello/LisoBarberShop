@@ -216,7 +216,7 @@
             <div class="row align-items-center mb-0 g-0 flex-md-row-reverse" data-aos="fade-up"
                 style="margin-bottom: 2px !important;">
                 <div class="col-md-6 overflow-hidden">
-                    <img src="/images/services/trattamentiBarba.PNG" class="img-fluid w-100" alt="Trattamenti Barba"
+                    <img src="/images/services/trattamentiBarba.jpg" class="img-fluid w-100" alt="Trattamenti Barba"
                         style="height: 450px; object-fit: cover; filter: grayscale(20%) contrast(1.1) brightness(0.9);">
                 </div>
                 <div class="col-md-6 d-flex">

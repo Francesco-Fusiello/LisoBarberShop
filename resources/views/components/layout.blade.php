@@ -25,7 +25,6 @@
     <meta property="og:title" content="@yield('title', 'Barbiere ad Andria | Liso Barber Shop')">
     <meta property="og:description" content="@yield('meta_description', 'Liso Barber Shop è il barbiere di riferimento ad Andria.')">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="{{ asset('images/sfondo3.jpg') }}">
 
 </head>
 

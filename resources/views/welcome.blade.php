@@ -6,7 +6,7 @@
         <section class="hero-zara">
 
             <div class="hero-image">
-                <img src="/images/carouselHome/home2.jpeg" alt="Liso Barber Shop - Barbiere ad Andria">
+                <img src="/images/carouselHome/home2.webp" alt="Liso Barber Shop - Barbiere ad Andria">
                 <div class="hero-overlay"></div>
             </div>
 
