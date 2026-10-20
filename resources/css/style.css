@@ -1759,6 +1759,14 @@ section.container { background-color: #fff; }
     }
 }
 
+/* TABLET */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .hero-zara .hero-image img {
+        object-position: left center !important;
+        transform: scale(1.15) translateX(0);
+    }
+}
+
 
 /* ===== PAGE BASE ===== */
 
