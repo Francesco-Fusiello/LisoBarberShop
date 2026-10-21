@@ -48,6 +48,25 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentIndex = 0;
   const modalImage = document.getElementById('modalImage');
 
+  const imageModal = document.getElementById('imageModal');
+  let savedScrollY = 0;
+
+  imageModal?.addEventListener('show.bs.modal', () => {
+    savedScrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${savedScrollY}px`;
+    document.body.style.width = '100%';
+  });
+
+  imageModal?.addEventListener('hidden.bs.modal', () => {
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, savedScrollY);
+  });
+
+
+
   if (!modalImage || images.length === 0) return;
 
   // Apertura immagine
@@ -546,127 +565,127 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener('livewire:initialized', () => {
 
-    document.addEventListener('change', (e) => {
-        if (e.target && e.target.id === 'tourImageInput') {
-            handleTourUpload(e.target);
-        }
-    });
-
-    function handleTourUpload(input) {
-        const file = input.files[0];
-        if (!file) return;
-
-        const form = input.closest('form');
-        const tourBar = document.getElementById('tourUploadBar');
-        const tourPercent = document.getElementById('tourUploadPercent');
-        const tourBox = document.getElementById('tourUploadBox');
-        const tourBtn = form.querySelector('button[type="submit"]');
-
-        const component = Livewire.find(form.closest('[wire\\:id]').getAttribute('wire:id'));
-
-        const reader = new FileReader();
-        const img = new Image();
-
-        reader.onload = (event) => { img.src = event.target.result; };
-        reader.readAsDataURL(file);
-
-        img.onload = () => {
-            const canvas = document.createElement('canvas');
-            const ctx = canvas.getContext('2d');
-            const maxWidth = 800;
-            let width = img.width;
-            let height = img.height;
-
-            if (width > maxWidth) {
-                height = height * (maxWidth / width);
-                width = maxWidth;
-            }
-
-            canvas.width = width;
-            canvas.height = height;
-            ctx.drawImage(img, 0, 0, width, height);
-
-            canvas.toBlob((blob) => {
-                const compressedFile = new File([blob], file.name, {
-                    type: 'image/jpeg',
-                    lastModified: Date.now()
-                });
-
-                if (tourBox) tourBox.style.display = 'block';
-                if (tourBtn) tourBtn.disabled = true;
-
-                component.upload('image', compressedFile,
-                    () => { 
-                        if (tourBtn) tourBtn.disabled = false;
-                        if (tourPercent) tourPercent.innerText = "Caricato!";
-                        setTimeout(() => { if (tourBox) tourBox.style.display = 'none'; }, 2000);
-                    },
-                    () => { 
-                        if (tourBtn) tourBtn.disabled = false;
-                        if (tourPercent) tourPercent.innerText = "Errore";
-                    },
-                    (event) => { 
-                        const progress = event.detail.progress;
-                        if (tourBar) tourBar.style.width = progress + '%';
-                        if (tourPercent) tourPercent.innerText = progress + '%';
-                    }
-                );
-            }, 'image/jpeg', 0.80);
-        };
+  document.addEventListener('change', (e) => {
+    if (e.target && e.target.id === 'tourImageInput') {
+      handleTourUpload(e.target);
     }
+  });
 
-    Livewire.on('tour-saved', () => {
-        const form = document.getElementById('tourUploader');
-        if (form) form.reset();
-        
-        const input = document.getElementById('tourImageInput');
-        if (input) input.value = '';
-    });
-});
+  function handleTourUpload(input) {
+    const file = input.files[0];
+    if (!file) return;
 
-document.addEventListener('DOMContentLoaded', function() {
-    function setupAOSAnchors() {
-        const triggers = document.querySelectorAll('.anchor-trigger');
-        const isDesktop = window.innerWidth >= 768;
+    const form = input.closest('form');
+    const tourBar = document.getElementById('tourUploadBar');
+    const tourPercent = document.getElementById('tourUploadPercent');
+    const tourBox = document.getElementById('tourUploadBox');
+    const tourBtn = form.querySelector('button[type="submit"]');
 
-        triggers.forEach(el => {
-            if (isDesktop) {
-                // Su Desktop: Ancoriamo all'Hero per farle partire insieme
-                el.setAttribute('data-aos-anchor', '#hero-section');
-            } else {
-                // Su Mobile: Rimuoviamo l'ancora, AOS farà apparire ogni card allo scroll
-                el.removeAttribute('data-aos-anchor');
-            }
+    const component = Livewire.find(form.closest('[wire\\:id]').getAttribute('wire:id'));
+
+    const reader = new FileReader();
+    const img = new Image();
+
+    reader.onload = (event) => { img.src = event.target.result; };
+    reader.readAsDataURL(file);
+
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      const maxWidth = 800;
+      let width = img.width;
+      let height = img.height;
+
+      if (width > maxWidth) {
+        height = height * (maxWidth / width);
+        width = maxWidth;
+      }
+
+      canvas.width = width;
+      canvas.height = height;
+      ctx.drawImage(img, 0, 0, width, height);
+
+      canvas.toBlob((blob) => {
+        const compressedFile = new File([blob], file.name, {
+          type: 'image/jpeg',
+          lastModified: Date.now()
         });
 
-        // Forza AOS a ricalcolare le posizioni
-        if (typeof AOS !== 'undefined') {
-            AOS.refreshHard();
-        }
+        if (tourBox) tourBox.style.display = 'block';
+        if (tourBtn) tourBtn.disabled = true;
+
+        component.upload('image', compressedFile,
+          () => {
+            if (tourBtn) tourBtn.disabled = false;
+            if (tourPercent) tourPercent.innerText = "Caricato!";
+            setTimeout(() => { if (tourBox) tourBox.style.display = 'none'; }, 2000);
+          },
+          () => {
+            if (tourBtn) tourBtn.disabled = false;
+            if (tourPercent) tourPercent.innerText = "Errore";
+          },
+          (event) => {
+            const progress = event.detail.progress;
+            if (tourBar) tourBar.style.width = progress + '%';
+            if (tourPercent) tourPercent.innerText = progress + '%';
+          }
+        );
+      }, 'image/jpeg', 0.80);
+    };
+  }
+
+  Livewire.on('tour-saved', () => {
+    const form = document.getElementById('tourUploader');
+    if (form) form.reset();
+
+    const input = document.getElementById('tourImageInput');
+    if (input) input.value = '';
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  function setupAOSAnchors() {
+    const triggers = document.querySelectorAll('.anchor-trigger');
+    const isDesktop = window.innerWidth >= 768;
+
+    triggers.forEach(el => {
+      if (isDesktop) {
+        // Su Desktop: Ancoriamo all'Hero per farle partire insieme
+        el.setAttribute('data-aos-anchor', '#hero-section');
+      } else {
+        // Su Mobile: Rimuoviamo l'ancora, AOS farà apparire ogni card allo scroll
+        el.removeAttribute('data-aos-anchor');
+      }
+    });
+
+    // Forza AOS a ricalcolare le posizioni
+    if (typeof AOS !== 'undefined') {
+      AOS.refreshHard();
     }
+  }
 
-    // Esegui subito al caricamento
-    setupAOSAnchors();
+  // Esegui subito al caricamento
+  setupAOSAnchors();
 
-    // Esegui anche se ridimensionano la finestra (es. ruotano il telefono)
-    window.addEventListener('resize', setupAOSAnchors);
+  // Esegui anche se ridimensionano la finestra (es. ruotano il telefono)
+  window.addEventListener('resize', setupAOSAnchors);
 });
 
 // Gestione Selettore Paesi TomSelect
 document.addEventListener('livewire:initialized', () => {
-    const countrySelect = document.getElementById('country-search');
-    
-    if (countrySelect) {
-        const ts = new TomSelect("#country-search", {
-            create: false,
-            sortField: { field: "text", direction: "asc" }
-        });
+  const countrySelect = document.getElementById('country-search');
 
-        // Ascolta l'evento inviato dal componente Livewire
-        Livewire.on('tour-saved', () => {
-            ts.clear(); // Pulisce la tendina
-        });
-    }
+  if (countrySelect) {
+    const ts = new TomSelect("#country-search", {
+      create: false,
+      sortField: { field: "text", direction: "asc" }
+    });
+
+    // Ascolta l'evento inviato dal componente Livewire
+    Livewire.on('tour-saved', () => {
+      ts.clear(); // Pulisce la tendina
+    });
+  }
 });
 
 
