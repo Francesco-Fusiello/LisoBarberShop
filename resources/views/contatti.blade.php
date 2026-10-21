@@ -11,17 +11,21 @@
                     CONTATTI
                 </h1>
 
+
                 <!-- Mappa -->
                 <div class="row justify-content-center mt-4">
                     <div class="col-md-12">
                         <div class="embed-responsive embed-responsive-16by9" style="height: 400px;">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.926922891084!2d16.292020!3d41.216378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133a2f3e3d6ff927%3A0x5640eb67d88b8a8d!2sViale%20Pietro%20Nenni%2C%20324%2C%2041200%20Andria%2C%20Italia!5e0!3m2!1sit!2sit!4v1627057125456!5m2!1sit!2sit"
-                                frameborder="0" style="height: 100%; width: 100%;" allowfullscreen>
+                                title="Mappa Google Maps - Liso Barber Shop, Andria" loading="eager"
+                                style="height: 100%; width: 100%; border: 0;" allowfullscreen>
                             </iframe>
                         </div>
                     </div>
                 </div>
+
+
 
                 <p class="lead text-center fs-5 pt-5" style="color: #ffffff;">
                     Scarica la nostra app per avere sempre Liso Barber Shop a portata di mano. Prenota facilmente il tuo
@@ -30,21 +34,22 @@
                 <!-- Badge App Store & Google Play -->
                 <div class="row justify-content-center mt-4">
                     <div class="col-md-8">
-                        <div class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4"style="margin-left: -20px;">
+                        <div
+                            class="app-badges d-flex justify-content-center align-items-center flex-wrap gap-4"style="margin-left: -20px;">
 
-                    <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank"
-                        class="store-badge">
-                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=150x50"
-                            alt="App Store">
-                    </a>
+                            <a href="https://apps.apple.com/it/app/liso-barber-shop/id6502577739" target="_blank"
+                                class="store-badge">
+                                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=150x50"
+                                    alt="App Store">
+                            </a>
 
-                    <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank"
-                        class="store-badge">
-                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png"
-                            alt="Google Play">
-                    </a>
+                            <a href="https://play.google.com/store/search?q=liso+barber+shop&c=apps&hl=it" target="_blank"
+                                class="store-badge">
+                                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png"
+                                    alt="Google Play">
+                            </a>
 
-                </div>
+                        </div>
                     </div>
                 </div>
 
