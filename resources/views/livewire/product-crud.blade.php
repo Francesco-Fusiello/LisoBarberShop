@@ -100,31 +100,44 @@
         </div>
     @endif
 
-    <div class="row">
-        @foreach ($products as $p)
-            <div class="col-6 col-md-4 mb-4" wire:key="product-{{ $p->id }}">
-                <div class="card h-100 shadow-sm">
-                    @if ($p->image_path)
-                        <img src="{{ Storage::url($p->image_path) }}" alt="Immagine prodotto"
-                            style="object-fit: cover; height:250px" class="card-img-top">
-                    @else
-                        <div class="bg-secondary text-white text-center py-5">Nessuna immagine</div>
-                    @endif
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">{{ $p->name }}</h5>
-                        <p class="card-text">{{ $p->description }}</p>
-                        <strong>€{{ number_format($p->price, 2) }}</strong>
-                        <div class="mt-auto d-flex gap-1">
+   <div class="row">
+    @foreach ($products as $p)
+        {{-- d-flex sulla colonna forza l'altezza piena --}}
+        <div class="col-6 col-md-4 mb-4 d-flex" wire:key="product-{{ $p->id }}">
+            <div class="card w-100 h-100 shadow-sm border-0 d-flex flex-column">
+                @if ($p->image_path)
+                    <img src="{{ Storage::url($p->image_path) }}" alt="Immagine prodotto"
+                        style="object-fit: cover; height: 140px;" class="card-img-top">
+                @else
+                    <div class="bg-secondary text-white text-center d-flex align-items-center justify-content-center" style="height: 140px;">
+                        <small>Nessuna immagine</small>
+                    </div>
+                @endif
+                
+                <div class="card-body d-flex flex-column p-3">
+                    {{-- Titolo --}}
+                    <h5 class="card-title fs-6 fw-bold mb-2">{{ $p->name }}</h5>
+                    
+                    {{-- Descrizione completa al 100%, nessun taglio e nessuno scroll --}}
+                    <p class="card-text text-muted small mb-3">
+                        {{ $p->description }}
+                    </p>
+                    
+                    {{-- Prezzo e Bottoni spinti sempre in fondo alla card --}}
+                    <div class="mt-auto pt-2">
+                        <strong class="text-dark d-block mb-2 fs-6">€{{ number_format($p->price, 2) }}</strong>
+                        <div class="d-flex gap-1">
                             <button wire:click="editProduct({{ $p->id }})"
-                                class="btn btn-outline-success btn-sm flex-fill">Modifica</button>
+                                class="btn btn-outline-success btn-sm flex-fill py-1" style="font-size: 0.75rem;">Modifica</button>
                             <button wire:click="confirmDelete({{ $p->id }})"
-                                class="btn btn-outline-danger btn-sm flex-fill">Elimina</button>
+                                class="btn btn-outline-danger btn-sm flex-fill py-1" style="font-size: 0.75rem;">Elimina</button>
                         </div>
                     </div>
                 </div>
             </div>
-        @endforeach
-    </div>
+        </div>
+    @endforeach
+</div>
 
     <div class="container pt-5">
         <div class="pagination-custom">
