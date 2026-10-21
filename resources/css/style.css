@@ -2020,16 +2020,12 @@ section.container { background-color: #fff; }
     transform: translate(50%, -50%) scale(1.05);
 }
 
-/* Adattamento Mobile */
+/* Nasconde le frecce su smartphone e tablet */
 @media (max-width: 768px) {
-    #prevImage, #nextImage {
-        width: 45px;
-        height: 45px;
-        font-size: 1.5rem;
-        background: rgba(0, 0, 0, 0.5); 
+    #prevImage,
+    #nextImage {
+        display: none;
     }
-    #prevImage { left: 10px; }
-    #nextImage { right: 10px; }
 }
     
     .modal-img {
