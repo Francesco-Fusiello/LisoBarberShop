@@ -78,33 +78,33 @@
 
     <hr class="my-5">
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
-        @foreach ($tourItems as $item)
-            {{-- AGGIUNTA NECESSARIA: wire:key --}}
-            <div class="col" wire:key="tour-item-{{ $item->id }}">
-                <div class="card h-100 shadow-sm border">
-                    <img src="{{ asset('storage/' . $item->image) }}" class="card-img-top"
-                        alt="Tappa tour {{ $item->city }} {{ $item->year }}"
-                        style="object-fit: cover; height: 200px; width: 100%;">
+   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+    @foreach ($tourItems as $item)
+        {{-- d-flex sulla colonna garantisce altezze identiche su mobile/tablet in orizzontale --}}
+        <div class="col d-flex" wire:key="tour-item-{{ $item->id }}">
+            <div class="card w-100 h-100 shadow-sm border d-flex flex-column">
+                <img src="{{ asset('storage/' . $item->image) }}" class="card-img-top"
+                    alt="Tappa tour {{ $item->city }} {{ $item->year }}"
+                    style="object-fit: cover; height: 180px; width: 100%;">
 
-                    <div class="card-body d-flex flex-column justify-content-between text-center">
-                        <div>
-                            <h5 class="fw-bold m-0" style="font-size: 1.1rem;">{{ $item->city }}</h5>
-                            <p class="text-muted mb-1 small">{{ $item->country }}</p>
-                            <small class="badge bg-secondary mb-2">{{ $item->year }}</small>
-                        </div>
+                <div class="card-body d-flex flex-column justify-content-between text-center flex-grow-1 p-3">
+                    <div>
+                        <h5 class="fw-bold m-0" style="font-size: 1.05rem;">{{ $item->city }}</h5>
+                        <p class="text-muted mb-1 small">{{ $item->country }}</p>
+                        <small class="badge bg-secondary mb-2">{{ $item->year }}</small>
+                    </div>
 
-                        <div class="mt-3">
-                            <button wire:click="confirmDelete({{ $item->id }})"
-                                class="btn btn-danger btn-sm w-100">
-                                Elimina
-                            </button>
-                        </div>
+                    <div class="mt-auto pt-2">
+                        <button wire:click="confirmDelete({{ $item->id }})"
+                            class="btn btn-danger btn-sm w-100">
+                            Elimina
+                        </button>
                     </div>
                 </div>
             </div>
-        @endforeach
-    </div>
+        </div>
+    @endforeach
+</div>
 
     @if ($confirmingDelete)
         <div class="modal-admin-wrapper">
