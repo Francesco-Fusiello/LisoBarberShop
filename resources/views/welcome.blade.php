@@ -141,51 +141,42 @@
 
             <div class="row g-4 text-center mt-3">
 
-                <div class="col-md-4">
-                    <div class="card h-100 luxury-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center px-4 py-5">
-                            <img src="{{ asset('images/forbici1.png') }}" alt="Taglio Uomo" class="mb-4"
-                                style="width:60px; height:60px; object-fit:contain;">
-                            <h5 class="luxury-card-title">Taglio Uomo</h5>
-                            <p class="luxury-card-text">
+                <div class="col-md-4 d-flex">
+                    <div class="card w-100 h-100 luxury-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-body d-flex flex-column align-items-center px-4 py-4">
+                            <img src="{{ asset('images/forbici1.png') }}" alt="Taglio Uomo" class="mb-3"
+                                style="width:50px; height:50px; object-fit:contain;">
+                            <h5 class="luxury-card-title mb-2">Taglio Uomo</h5>
+                            <p class="luxury-card-text mb-0">
                                 Valorizziamo ogni tipo di volto e stile con tagli personalizzati.
                             </p>
-                            {{-- <a href="{{ route('services') }}#taglio-uomo" class="luxury-btn-dark mt-auto">
-                                Scopri di più
-                            </a> --}}
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="card h-100 luxury-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center px-4 py-5">
-                            <img src="{{ asset('images/macchinetta1.png') }}" alt="Rasatura Tradizionale" class="mb-4"
-                                style="width:60px; height:60px; object-fit:contain;">
-                            <h5 class="luxury-card-title">Rasatura Tradizionale</h5>
-                            <p class="luxury-card-text">
+                <div class="col-md-4 d-flex">
+                    <div class="card w-100 h-100 luxury-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-body d-flex flex-column align-items-center px-4 py-4">
+                            <img src="{{ asset('images/macchinetta1.png') }}" alt="Rasatura Tradizionale" class="mb-3"
+                                style="width:50px; height:50px; object-fit:contain;">
+                            <h5 class="luxury-card-title mb-2">Rasatura Tradizionale</h5>
+                            <p class="luxury-card-text mb-0">
                                 Rasatura con panno caldo e prodotti di alta qualità per un relax autentico.
                             </p>
-                            {{-- <a href="{{ route('services') }}#rasatura-tradizionale" class="luxury-btn-dark mt-auto">
-                                Scopri di più
-                            </a> --}}
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="card h-100 luxury-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center px-4 py-5">
-                            <img src="{{ asset('images/baffi1.png') }}" alt="Modellatura Barba" class="mb-4"
-                                style="width:60px; height:60px; object-fit:contain;">
-                            <h5 class="luxury-card-title">Modellatura Barba</h5>
-                            <p class="luxury-card-text">
+                <div class="col-md-4 d-flex">
+                    <div class="card w-100 h-100 luxury-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-body d-flex flex-column align-items-center px-4 py-4">
+                            <img src="{{ asset('images/baffi1.png') }}" alt="Modellatura Barba" class="mb-3"
+                                style="width:50px; height:50px; object-fit:contain;">
+                            <h5 class="luxury-card-title mb-2">Modellatura Barba</h5>
+                            <p class="luxury-card-text mb-0">
                                 Definizione e trattamenti personalizzati per una barba morbida, curata e valorizzata in
                                 ogni dettaglio.
                             </p>
-                            {{-- <a href="{{ route('services') }}#modellatura-barba" class="luxury-btn-dark mt-auto">
-                                Scopri di più
-                            </a> --}}
                         </div>
                     </div>
                 </div>
