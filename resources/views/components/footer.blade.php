@@ -34,7 +34,7 @@
             <h3 style="font-weight:700; font-size:1.3rem; margin-bottom:1rem; color:#D9C59B;">Contatti</h3>
             <p style="font-size:1rem; line-height:1.6; color:#C9B48F;">
                 Viale Pietro Nenni 324, Andria (BT)<br>
-                Tel: +39 329 978 01527<br>
+                Tel: <a href="tel:+3932997801527" style="color:#C9B48F; text-decoration:none;">+39 329 978 01527</a><br>
                 Email: lisogianfranco@yahoo.it
             </p>
         </div>
