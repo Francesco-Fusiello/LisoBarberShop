@@ -102,14 +102,13 @@
 
    <div class="row">
     @foreach ($products as $p)
-        {{-- d-flex sulla colonna forza l'altezza piena --}}
         <div class="col-6 col-md-4 mb-4 d-flex" wire:key="product-{{ $p->id }}">
             <div class="card w-100 h-100 shadow-sm border-0 d-flex flex-column">
                 @if ($p->image_path)
                     <img src="{{ Storage::url($p->image_path) }}" alt="Immagine prodotto"
-                        style="object-fit: cover; height: 140px;" class="card-img-top">
+                        class="card-img-top product-img-custom">
                 @else
-                    <div class="bg-secondary text-white text-center d-flex align-items-center justify-content-center" style="height: 140px;">
+                    <div class="bg-secondary text-white text-center d-flex align-items-center justify-content-center product-img-custom">
                         <small>Nessuna immagine</small>
                     </div>
                 @endif
@@ -118,12 +117,12 @@
                     {{-- Titolo --}}
                     <h5 class="card-title fs-6 fw-bold mb-2">{{ $p->name }}</h5>
                     
-                    {{-- Descrizione completa al 100%, nessun taglio e nessuno scroll --}}
+                    {{-- Descrizione completa --}}
                     <p class="card-text text-muted small mb-3">
                         {{ $p->description }}
                     </p>
                     
-                    {{-- Prezzo e Bottoni spinti sempre in fondo alla card --}}
+                    {{-- Prezzo e Bottoni --}}
                     <div class="mt-auto pt-2">
                         <strong class="text-dark d-block mb-2 fs-6">€{{ number_format($p->price, 2) }}</strong>
                         <div class="d-flex gap-1">
