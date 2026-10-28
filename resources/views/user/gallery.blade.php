@@ -65,6 +65,14 @@
 
     </div>
 
+            @if ($images->hasPages())
+            <div class="container pt-4" style="padding-bottom: 30px;">
+                <div class="pagination-custom">
+                    {{ $images->links() }}
+                </div>
+            </div>
+        @endif
+
 </div>
 
 {{-- MODAL --}}

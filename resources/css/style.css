@@ -238,12 +238,13 @@ header img {
     background: transparent !important;
 }
 .pagination-custom .page-item.active .page-link {
-    color: #171717 !important;
+    color: #ffffff !important;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
     font-weight: 700;
 }
+
 .pagination-custom .page-item.active .page-link::after {
     content: "";
     position: absolute;

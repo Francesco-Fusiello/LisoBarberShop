@@ -1,4 +1,4 @@
-```blade
+
 @if ($paginator->hasPages())
     <nav class="liso-pagination" aria-label="Navigazione prodotti">
         <a
@@ -40,4 +40,4 @@
         >&rarr;</a>
     </nav>
 @endif
-```
+
