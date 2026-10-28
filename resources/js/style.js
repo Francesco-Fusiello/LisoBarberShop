@@ -689,6 +689,28 @@ document.addEventListener('livewire:initialized', () => {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const menu = document.getElementById('navbarNav');
+
+    if (!menu) return;
+
+    menu.addEventListener('show.bs.collapse', function () {
+        menu.classList.remove('menu-animating');
+
+        // Riavvia l'animazione prima che la tendina sia completamente aperta.
+        void menu.offsetWidth;
+
+        menu.classList.add('menu-animating');
+    });
+
+    menu.addEventListener('hidden.bs.collapse', function () {
+        menu.classList.remove('menu-animating');
+    });
+});
+
+
+
+
 
 
 
