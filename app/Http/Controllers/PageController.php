@@ -55,7 +55,7 @@ class PageController extends Controller
 
     public function products()
     {
-        $products = Product::latest()->paginate(100);
+        $products = Product::latest()->paginate(10);
         $productsJson = $products->items();
 
         return view('user.products.products', compact('products', 'productsJson'));

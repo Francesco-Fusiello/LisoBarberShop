@@ -193,32 +193,86 @@ header img {
   object-fit: cover;
   border-bottom: 1px solid var(--nero);
 }
-
-/* ======= PAGINAZIONE ======= */
+/* ===== PAGINAZIONE LISO ===== */
 .pagination-custom {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 30px;
-  font-size: 0.85rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+    font-size: 0.9rem;
+}
+
+.pagination-custom nav {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-custom .pagination {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
 }
 
 .pagination-custom .page-link {
-  color: var(--nero);
-  padding: 6px 14px;
-  border-radius: 0;
-  background-color: var(--bianco-puro);
-  border: 1px solid var(--nero);
-  transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    height: 44px;
+    padding: 6px;
+    color: #ffffff !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .pagination-custom .page-link:hover {
-  background-color: var(--nero);
-  color: var(--bianco-puro);
+    color: #171717 !important;
+    background: transparent !important;
+}
+.pagination-custom .page-item.active .page-link {
+    color: #171717 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-weight: 700;
+}
+.pagination-custom .page-item.active .page-link::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 5px;
+    right: 5px;
+    height: 2px;
+    background: #C9B48F;
 }
 
-.pagination-custom .page-item.active .page-link {
-  background-color: var(--antracite);
-  color: var(--bianco-puro);
+.pagination-custom .page-item.disabled .page-link {
+    color: #d0d0d0 !important;
+    opacity: 0.65;
+}
+
+@media (max-width: 576px) {
+    .pagination-custom {
+        margin-top: 28px;
+    }
+
+    .pagination-custom .pagination {
+        gap: 8px;
+    }
+
+    .pagination-custom .page-link {
+        min-width: 36px;
+        height: 42px;
+        font-size: 14px;
+    }
 }
 /* ======= REVIEW DRAWER ======= */
 .review-drawer {

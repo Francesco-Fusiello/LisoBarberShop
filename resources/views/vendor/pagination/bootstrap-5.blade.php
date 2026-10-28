@@ -1,27 +1,43 @@
+```blade
 @if ($paginator->hasPages())
-    <nav>
-        <ul class="pagination justify-content-center flex-wrap">
+    <nav class="liso-pagination" aria-label="Navigazione prodotti">
+        <a
+            href="{{ $paginator->previousPageUrl() ?? '#' }}"
+            class="liso-pagination-arrow {{ $paginator->onFirstPage() ? 'is-disabled' : '' }}"
+            @if ($paginator->onFirstPage()) aria-disabled="true" tabindex="-1"
+            @else rel="prev" @endif
+            aria-label="Pagina precedente"
+        >&larr;</a>
+
+        <div class="liso-pagination-pages">
             @foreach ($elements as $element)
-                {{-- Separatore (es. "...") --}}
                 @if (is_string($element))
-                    <li class="page-item disabled"><span class="page-link">{{ $element }}</span></li>
+                    <span class="liso-pagination-dots">{{ $element }}</span>
                 @endif
 
-                {{-- Numeri di pagina --}}
                 @if (is_array($element))
                     @foreach ($element as $page => $url)
                         @if ($page == $paginator->currentPage())
-                            <li class="page-item active" aria-current="page">
-                                <span class="page-link">{{ $page }}</span>
-                            </li>
+                            <span class="liso-pagination-number is-active" aria-current="page">
+                                {{ sprintf('%02d', $page) }}
+                            </span>
                         @else
-                            <li class="page-item">
-                                <a class="page-link" href="{{ $url }}">{{ $page }}</a>
-                            </li>
+                            <a class="liso-pagination-number" href="{{ $url }}">
+                                {{ sprintf('%02d', $page) }}
+                            </a>
                         @endif
                     @endforeach
                 @endif
             @endforeach
-        </ul>
+        </div>
+
+        <a
+            href="{{ $paginator->nextPageUrl() ?? '#' }}"
+            class="liso-pagination-arrow {{ !$paginator->hasMorePages() ? 'is-disabled' : '' }}"
+            @if (!$paginator->hasMorePages()) aria-disabled="true" tabindex="-1"
+            @else rel="next" @endif
+            aria-label="Pagina successiva"
+        >&rarr;</a>
     </nav>
 @endif
+```
